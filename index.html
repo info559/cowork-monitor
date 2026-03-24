@@ -340,7 +340,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-24T23:09:09",
+  "generatedAt": "2026-03-24T23:41:05",
+  "lastUpdated": "23:41:05",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -365,12 +366,13 @@ const DATA = {
       "name": "Auguri Clienti",
       "icon": "🎂",
       "schedule": "Ogni giorno → 05:04",
-      "todayStatus": "success",
-      "todayTime": "09:04",
-      "todayNote": "Nessun compleanno oggi",
+      "todayStatus": "skipped",
+      "todayTime": "05:04",
+      "todayNote": "Nessun compleanno oggi (24/03/2026)",
       "todayDetails": [
-        "Nessun compleanno tra i clienti oggi",
-        "Prossimo: verificare lista domani mattina"
+        "Ricerca completa su ANAGRAFICA CLIENTI Notion",
+        "Nessun cliente con compleanno il 24 marzo",
+        "Controllo CF con pattern C24/C64 effettuato"
       ],
       "nextRun": "Domani alle 05:04"
     },
@@ -380,13 +382,14 @@ const DATA = {
       "icon": "🛡️",
       "schedule": "Trimestrale → giorno 10",
       "todayStatus": "warning",
-      "todayTime": "11:52",
-      "todayNote": "2 anomalie: PEPPERPOT S.R.L. documenti scaduti (KPI+LT)",
+      "todayTime": "23:30",
+      "todayNote": "25 anomalie: doc. scaduti, classe AM non coerente, cartelle mancanti",
       "todayDetails": [
         "18 clienti verificati (10 registro KPI + 8 registro LT)",
-        "🔴 PEPPERPOT S.R.L.: documento scaduto il 26/07/2025 in entrambi i registri",
-        "✓ 16 clienti: documenti validi, nessuna anomalia",
-        "📧 Bozza email sollecito creata per PEPPERPOT S.R.L.",
+        "🔴 PEPPERPOT S.R.L.: passaporto LR scaduto 26/07/2025 (241gg) + CI Forte Alessandro scaduta",
+        "⚠️ PEPPERPOT, OTPA (KPI) + OTPA, PEPPERPOT, MARICAP (LT): classe AM 'Ordinaria' vs RE ≤1.95",
+        "⚠️ 3 clienti LT senza cartella documenti (Vivere l'Aniene, RD'A, CH Relais)",
+        "⚠️ Cartella duplicata F.&G. S.r.l. in archivio LT (codici 100 e 201)",
         "Prossima verifica trimestrale: 10 aprile 2026"
       ],
       "nextRun": "10 aprile 2026 alle 09:00"
@@ -397,12 +400,15 @@ const DATA = {
       "icon": "📬",
       "schedule": "Lun→Sab → 08:07 · 13:07 · 18:07",
       "todayStatus": "success",
-      "todayTime": "22:55",
-      "todayNote": "5 record creati: 2 Da firmare + 3 Da ricevere",
+      "todayTime": "08:07",
+      "todayNote": "5 record creati: 2 Da firmare · 3 Da ricevere",
       "todayDetails": [
-        "📝 Da firmare: COSMI GIACOMO (Contratto incarico), PROTANO MICHELE (Contratto+doc)",
-        "📥 Da ricevere: PEPPERPOT S.R.L. (doc. identità), OTPA S.R.L. (doc. identità)",
-        "⚠️ F. e G. S.R.L. (CONTRATTO BMW) → tipo documento da completare su Notion"
+        "✓ COSMI GIACOMO — Lettera di Incarico (Da firmare)",
+        "✓ PROTANO MICHELE — Lettera di Incarico (Da firmare)",
+        "✓ PEPPERPOT S.R.L. — Richiesta Documento Identità (Da ricevere)",
+        "✓ OTPA S.R.L. — Richiesta Documento Identità (Da ricevere)",
+        "✓ F. e G. S.R.L. — Contratto BMW (Da ricevere, tipo da completare manualmente)",
+        "⚠️ Aggiornato filtro temporale: +7 giorni prima inserimento Notion"
       ],
       "nextRun": "Domani alle 08:07"
     },
@@ -411,12 +417,13 @@ const DATA = {
       "name": "Monitoraggio Documenti",
       "icon": "📂",
       "schedule": "Lun→Sab → 07:07 + 15:03",
-      "todayStatus": "pending",
-      "todayTime": "—",
-      "todayNote": "Attivo da oggi — prima esecuzione domani",
+      "todayStatus": "success",
+      "todayTime": "07:07",
+      "todayNote": "0 risposte ricevute · 5 clienti in attesa",
       "todayDetails": [
-        "Controlla Gmail per risposte clienti con allegati",
-        "Aggiorna stato su Notion MONITORAGGIO DOCUMENTI"
+        "Clienti in attesa: COSMI GIACOMO, PROTANO MICHELE, OTPA S.R.L., PEPPERPOT S.R.L., F. e G. S.R.L.",
+        "Nessuna risposta con allegato nelle ultime 48 ore",
+        "F. e G. S.R.L.: email con allegati trovate ma non pertinenti (documenti interni)"
       ],
       "nextRun": "Domani alle 07:07"
     },
@@ -426,67 +433,149 @@ const DATA = {
       "icon": "📊",
       "schedule": "Ogni giorno → 08:02",
       "todayStatus": "success",
-      "todayTime": "23:09",
-      "todayNote": "Dashboard aggiornata · Verifica AML: 2 anomalie · Fix encoding completo",
+      "todayTime": "23:41",
+      "todayNote": "Dashboard aggiornata · AML: 25 anomalie · 0 bozze con destinatario",
       "todayDetails": [
-        "✓ Task analizzati: Daily Briefing (success), Auguri (nessun compleanno), AML (2 anomalie)",
-        "⚠️ PEPPERPOT S.R.L.: documento scaduto il 26/07/2025 (KPI+LT)",
-        "✓ Inserimento Notion: 5 record creati (2 Da firmare + 3 Da ricevere)",
-        "✓ Bozze Gmail: 2 template invariate",
-        "✓ Fix double-encoding UTF-8: tutti i simboli corretti nel template React"
+        "✓ Daily Briefing: success — 3 urgenti, 17 email non lette",
+        "⏭ Auguri: skipped — nessun compleanno il 24 marzo",
+        "⚠️ Verifica AML: warning — 25 anomalie (doc. scaduti, classe AM, cartelle mancanti)",
+        "✓ Inserimento Notion: success — 5 record creati (2 firmare + 3 ricevere)",
+        "✓ Monitoraggio Documenti: success — 5 clienti in attesa",
+        "📧 Bozze Gmail: 2 template senza destinatario — coworkDrafts vuoto"
       ],
       "nextRun": "Domani alle 08:02"
     }
   ],
   "manualTasks": [
-    {"name": "Automazione Richieste Documenti", "status": "success", "category": "Sistema", "date": "Oggi"},
-    {"name": "Verifica Periodica Antiriciclaggio", "status": "warning", "category": "AML", "date": "Oggi"},
-    {"name": "Creazione Dashboard Cowork", "status": "success", "category": "Sistema", "date": "Oggi"},
-    {"name": "Superbonus: RdA vs COGERP", "status": "success", "category": "Documenti", "date": "Oggi"},
-    {"name": "Gestione Antiriciclaggio", "status": "success", "category": "AML", "date": "Oggi"},
-    {"name": "Edit Skill Antiriciclaggio", "status": "success", "category": "Sistema", "date": "Oggi"},
-    {"name": "Elaborazione Lista Anagrafiche", "status": "success", "category": "AML", "date": "Oggi"},
-    {"name": "Gestione Mandato + Privacy + AI", "status": "success", "category": "Documenti", "date": "Oggi"}
+    {
+      "name": "Automazione Richieste Documenti",
+      "status": "success",
+      "category": "Sistema",
+      "date": "Recente"
+    },
+    {
+      "name": "Schedule Verifica Antiriciclaggio",
+      "status": "success",
+      "category": "Sistema",
+      "date": "Recente"
+    },
+    {
+      "name": "Creazione Dashboard Cowork",
+      "status": "success",
+      "category": "Sistema",
+      "date": "Recente"
+    },
+    {
+      "name": "Superbonus: RdA vs COGERP",
+      "status": "success",
+      "category": "Documenti",
+      "date": "Recente"
+    },
+    {
+      "name": "Gestione Antiriciclaggio",
+      "status": "success",
+      "category": "AML",
+      "date": "Recente"
+    },
+    {
+      "name": "Edit Skill Antiriciclaggio",
+      "status": "success",
+      "category": "Sistema",
+      "date": "Recente"
+    },
+    {
+      "name": "Elaborazione Lista Anagrafiche",
+      "status": "success",
+      "category": "AML",
+      "date": "Recente"
+    },
+    {
+      "name": "Gestione Mandato + Privacy + AI",
+      "status": "success",
+      "category": "Documenti",
+      "date": "Recente"
+    }
   ],
   "history": [
     {
-      "date": "20 mar", "isToday": false,
+      "date": "20 mar",
+      "isToday": false,
       "tasks": {
-        "daily-briefing": {"status": "success"},
-        "auguri-clienti": {"status": "warning", "note": "5 esecuzioni (anomalia)"},
-        "verifica-aml": {"status": null}
+        "daily-briefing": {
+          "status": "success"
+        },
+        "auguri-clienti": {
+          "status": "warning",
+          "note": "5 esecuzioni (anomalia)"
+        },
+        "verifica-aml": {
+          "status": null
+        }
       }
     },
     {
-      "date": "21 mar", "isToday": false,
+      "date": "21 mar",
+      "isToday": false,
       "tasks": {
-        "daily-briefing": {"status": "success"},
-        "auguri-clienti": {"status": "skipped", "note": "Sabato"},
-        "verifica-aml": {"status": null}
+        "daily-briefing": {
+          "status": "success"
+        },
+        "auguri-clienti": {
+          "status": "skipped",
+          "note": "Sabato"
+        },
+        "verifica-aml": {
+          "status": null
+        }
       }
     },
     {
-      "date": "22 mar", "isToday": false,
+      "date": "22 mar",
+      "isToday": false,
       "tasks": {
-        "daily-briefing": {"status": "success"},
-        "auguri-clienti": {"status": "skipped", "note": "Domenica"},
-        "verifica-aml": {"status": null}
+        "daily-briefing": {
+          "status": "success"
+        },
+        "auguri-clienti": {
+          "status": "skipped",
+          "note": "Domenica"
+        },
+        "verifica-aml": {
+          "status": null
+        }
       }
     },
     {
-      "date": "23 mar", "isToday": false,
+      "date": "23 mar",
+      "isToday": false,
       "tasks": {
-        "daily-briefing": {"status": "success"},
-        "auguri-clienti": {"status": "success", "note": "Protano Michele 🎂"},
-        "verifica-aml": {"status": null}
+        "daily-briefing": {
+          "status": "success"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Protano Michele 🎂"
+        },
+        "verifica-aml": {
+          "status": null
+        }
       }
     },
     {
-      "date": "Oggi", "isToday": true,
+      "date": "24 mar",
+      "isToday": true,
       "tasks": {
-        "daily-briefing": {"status": "success"},
-        "auguri-clienti": {"status": "success"},
-        "verifica-aml": {"status": "warning", "note": "2 anomalie PEPPERPOT"}
+        "daily-briefing": {
+          "status": "success"
+        },
+        "auguri-clienti": {
+          "status": "skipped",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "warning",
+          "note": "25 anomalie rilevate"
+        }
       }
     }
   ],
