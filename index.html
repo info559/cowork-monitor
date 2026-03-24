@@ -345,26 +345,26 @@ const DATA = {
     {
       "id": "daily-briefing",
       "name": "Daily Briefing",
-      "icon": "ð",
-      "schedule": "Ogni giorno â 07:01",
+      "icon": "📋",
+      "schedule": "Ogni giorno → 07:01",
       "todayStatus": "success",
       "todayTime": "07:01",
-      "todayNote": "Agenda libera Â· 17 email non lette Â· 3 urgenti",
+      "todayNote": "Agenda libera · 17 email non lette · 3 urgenti",
       "todayDetails": [
-        "ð Calendario: nessun impegno oggi",
-        "ð¬ 17 email non lette (etichetta Lorenzo)",
-        "â ï¸ PEC Diffida WE-NET â non letta da 3 settimane, allegato PDF firmato",
-        "â ï¸ PM ELETTRIC (Protano Michele) â verifica cartelle AdE ~â¬28.900, in attesa 1+ mese",
-        "â ï¸ Francesca Raponi â chiarimenti regime IVA e 5x1000, in attesa 2 mesi",
-        "ð° 14 newsletter Ratio Quotidiano non lette"
+        "📅 Calendario: nessun impegno oggi",
+        "💬 17 email non lette (etichetta Lorenzo)",
+        "⚠️ PEC Diffida WE-NET → non letta da 3 settimane, allegato PDF firmato",
+        "⚠️ PM ELETTRIC (Protano Michele) → verifica cartelle AdE ~€28.900, in attesa 1+ mese",
+        "⚠️ Francesca Raponi → chiarimenti regime IVA e 5x1000, in attesa 2 mesi",
+        "📰 14 newsletter Ratio Quotidiano non lette"
       ],
       "nextRun": "Domani alle 07:01"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
-      "icon": "ð",
-      "schedule": "Ogni giorno â 05:04",
+      "icon": "🎂",
+      "schedule": "Ogni giorno → 05:04",
       "todayStatus": "success",
       "todayTime": "09:04",
       "todayNote": "Nessun compleanno oggi",
@@ -377,16 +377,16 @@ const DATA = {
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "icon": "ð¡ï¸",
-      "schedule": "Trimestrale â giorno 10",
+      "icon": "🛡️",
+      "schedule": "Trimestrale → giorno 10",
       "todayStatus": "warning",
       "todayTime": "11:52",
       "todayNote": "2 anomalie: PEPPERPOT S.R.L. documenti scaduti (KPI+LT)",
       "todayDetails": [
         "18 clienti verificati (10 registro KPI + 8 registro LT)",
-        "ð´ PEPPERPOT S.R.L.: documento scaduto il 26/07/2025 in entrambi i registri",
-        "â 16 clienti: documenti validi, nessuna anomalia",
-        "ð§ Bozza email sollecito creata per PEPPERPOT S.R.L.",
+        "🔴 PEPPERPOT S.R.L.: documento scaduto il 26/07/2025 in entrambi i registri",
+        "✓ 16 clienti: documenti validi, nessuna anomalia",
+        "📧 Bozza email sollecito creata per PEPPERPOT S.R.L.",
         "Prossima verifica trimestrale: 10 aprile 2026"
       ],
       "nextRun": "10 aprile 2026 alle 09:00"
@@ -394,207 +394,118 @@ const DATA = {
     {
       "id": "inserimento-notion-gmail",
       "name": "Inserimento Notion da Gmail",
-      "icon": "ð¬",
-      "schedule": "LunâSab â 08:07 Â· 13:07 Â· 18:07",
+      "icon": "📬",
+      "schedule": "Lun→Sab → 08:07 · 13:07 · 18:07",
       "todayStatus": "success",
       "todayTime": "22:55",
       "todayNote": "5 record creati: 2 Da firmare + 3 Da ricevere",
       "todayDetails": [
-        "ð Da firmare: COSMI GIACOMO (Contratto incarico), PROTANO MICHELE (Contratto+doc)",
-        "ð¥ Da ricevere: PEPPERPOT S.R.L. (doc. identitÃ ), OTPA S.R.L. (doc. identitÃ )",
-        "â ï¸ F. e G. S.R.L. (CONTRATTO BMW) â tipo documento da completare su Notion"
+        "📝 Da firmare: COSMI GIACOMO (Contratto incarico), PROTANO MICHELE (Contratto+doc)",
+        "📥 Da ricevere: PEPPERPOT S.R.L. (doc. identità), OTPA S.R.L. (doc. identità)",
+        "⚠️ F. e G. S.R.L. (CONTRATTO BMW) → tipo documento da completare su Notion"
       ],
       "nextRun": "Domani alle 08:07"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "icon": "ð",
-      "schedule": "LunâSab â 07:07 + 15:03",
+      "icon": "📂",
+      "schedule": "Lun→Sab → 07:07 + 15:03",
       "todayStatus": "pending",
-      "todayTime": "â",
-      "todayNote": "Attivo da oggi â prima esecuzione domani",
+      "todayTime": "—",
+      "todayNote": "Attivo da oggi — prima esecuzione domani",
       "todayDetails": [
-        "Controlla Gmail per risposte clienti con allegati firmati",
-        "Aggiorna Notion: Inviato â Ricevuto",
-        "Esecuzione mattino (07:07) e pomeriggio (15:03)"
+        "Controlla Gmail per risposte clienti con allegati",
+        "Aggiorna stato su Notion MONITORAGGIO DOCUMENTI"
       ],
       "nextRun": "Domani alle 07:07"
     },
     {
-      "id": "solleciti-settimanali",
-      "name": "Solleciti Settimanali",
-      "icon": "ð",
-      "schedule": "Ogni lunedÃ¬ â 09:10",
-      "todayStatus": "skipped",
-      "todayTime": "â",
-      "todayNote": "Non previsto oggi (martedÃ¬)",
-      "todayDetails": [
-        "Crea bozze Gmail di sollecito per clienti senza risposta da 7+ giorni",
-        "Controlla lista MONITORAGGIO DOCUMENTI in Notion"
-      ],
-      "nextRun": "LunedÃ¬ 30 marzo alle 09:10"
-    },
-    {
       "id": "aggiorna-cowork-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "icon": "ð",
-      "schedule": "Ogni giorno â 08:02",
+      "icon": "📊",
+      "schedule": "Ogni giorno → 08:02",
       "todayStatus": "success",
       "todayTime": "23:09",
       "todayNote": "Dashboard aggiornata · Verifica AML: 2 anomalie · 2 bozze template Gmail",
       "todayDetails": [
         "✓ Task analizzati: Daily Briefing (success), Auguri (nessun compleanno), AML (2 anomalie)",
-        "⚠️ PEPPERPOT S.R.L.: documento scaduto il 26/07/2025 in entrambi i registri KPI+LT",
+        "⚠️ PEPPERPOT S.R.L.: documento scaduto il 26/07/2025 (KPI+LT)",
         "✓ Inserimento Notion: 5 record creati (2 Da firmare + 3 Da ricevere)",
-        "✓ bozze Gmail: 2 template (SITUAZIONE CONTABILE ORDINARI/FORFETARI) — invariate"
+        "✓ Bozze Gmail: 2 template invariate",
+        "✓ Fix encoding UTF-8: simboli corretti nel DATA block"
       ],
       "nextRun": "Domani alle 08:02"
     }
   ],
   "manualTasks": [
-    {
-      "name": "Automazione Richieste Documenti",
-      "status": "success",
-      "category": "Sistema",
-      "date": "Oggi"
-    },
-    {
-      "name": "Verifica Periodica Antiriciclaggio",
-      "status": "warning",
-      "category": "AML",
-      "date": "Oggi"
-    },
-    {
-      "name": "Creazione Dashboard Cowork",
-      "status": "success",
-      "category": "Sistema",
-      "date": "Oggi"
-    },
-    {
-      "name": "Superbonus: RdA vs COGERP",
-      "status": "success",
-      "category": "Documenti",
-      "date": "Oggi"
-    },
-    {
-      "name": "Gestione Antiriciclaggio",
-      "status": "success",
-      "category": "AML",
-      "date": "Oggi"
-    },
-    {
-      "name": "Edit Skill Antiriciclaggio",
-      "status": "success",
-      "category": "Sistema",
-      "date": "Oggi"
-    },
-    {
-      "name": "Elaborazione Lista Anagrafiche",
-      "status": "success",
-      "category": "AML",
-      "date": "Oggi"
-    },
-    {
-      "name": "Gestione Mandato + Privacy + AI",
-      "status": "success",
-      "category": "Documenti",
-      "date": "Oggi"
-    }
+    {"name": "Automazione Richieste Documenti", "status": "success", "category": "Sistema", "date": "Oggi"},
+    {"name": "Verifica Periodica Antiriciclaggio", "status": "warning", "category": "AML", "date": "Oggi"},
+    {"name": "Creazione Dashboard Cowork", "status": "success", "category": "Sistema", "date": "Oggi"},
+    {"name": "Superbonus: RdA vs COGERP", "status": "success", "category": "Documenti", "date": "Oggi"},
+    {"name": "Gestione Antiriciclaggio", "status": "success", "category": "AML", "date": "Oggi"},
+    {"name": "Edit Skill Antiriciclaggio", "status": "success", "category": "Sistema", "date": "Oggi"},
+    {"name": "Elaborazione Lista Anagrafiche", "status": "success", "category": "AML", "date": "Oggi"},
+    {"name": "Gestione Mandato + Privacy + AI", "status": "success", "category": "Documenti", "date": "Oggi"}
   ],
   "history": [
     {
       "date": "20 mar",
       "isToday": false,
       "tasks": {
-        "daily-briefing": {
-          "status": "success"
-        },
-        "auguri-clienti": {
-          "status": "warning",
-          "note": "5 esecuzioni (anomalia)"
-        },
-        "verifica-aml": {
-          "status": null
-        }
+        "daily-briefing": {"status": "success"},
+        "auguri-clienti": {"status": "warning", "note": "5 esecuzioni (anomalia)"},
+        "verifica-aml": {"status": null}
       }
     },
     {
       "date": "21 mar",
       "isToday": false,
       "tasks": {
-        "daily-briefing": {
-          "status": "success"
-        },
-        "auguri-clienti": {
-          "status": "skipped",
-          "note": "Sabato"
-        },
-        "verifica-aml": {
-          "status": null
-        }
+        "daily-briefing": {"status": "success"},
+        "auguri-clienti": {"status": "skipped", "note": "Sabato"},
+        "verifica-aml": {"status": null}
       }
     },
     {
       "date": "22 mar",
       "isToday": false,
       "tasks": {
-        "daily-briefing": {
-          "status": "success"
-        },
-        "auguri-clienti": {
-          "status": "skipped",
-          "note": "Domenica"
-        },
-        "verifica-aml": {
-          "status": null
-        }
+        "daily-briefing": {"status": "success"},
+        "auguri-clienti": {"status": "skipped", "note": "Domenica"},
+        "verifica-aml": {"status": null}
       }
     },
     {
       "date": "23 mar",
       "isToday": false,
       "tasks": {
-        "daily-briefing": {
-          "status": "success"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Protano Michele ð"
-        },
-        "verifica-aml": {
-          "status": null
-        }
+        "daily-briefing": {"status": "success"},
+        "auguri-clienti": {"status": "success", "note": "Protano Michele 🎂"},
+        "verifica-aml": {"status": null}
       }
     },
     {
       "date": "Oggi",
       "isToday": true,
       "tasks": {
-        "daily-briefing": {
-          "status": "success"
-        },
-        "auguri-clienti": {
-          "status": "success"
-        },
-        "verifica-aml": {
-          "status": "warning",
-          "note": "2 anomalie PEPPERPOT"
-        }
+        "daily-briefing": {"status": "success"},
+        "auguri-clienti": {"status": "success"},
+        "verifica-aml": {"status": "warning", "note": "2 anomalie PEPPERPOT"}
       }
     }
   ],
   "coworkDrafts": [
     {
       "to": "",
-      "dest": "â (template)",
+      "dest": "— (template)",
       "subject": "SITUAZIONE CONTABILE ORDINARI",
       "date": "11 gen",
       "status": "template"
     },
     {
       "to": "",
-      "dest": "â (template)",
+      "dest": "— (template)",
       "subject": "SITUAZIONE CONTABILE FORFETARI",
       "date": "11 gen",
       "status": "template"
