@@ -4,3 +4,598 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KPI Cowork Monitor</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: #fff;
+      border-bottom: 4px solid #EFD656;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-brand { display: flex; align-items: center; gap: 12px; }
+    .header-brand h1 { font-size: 18px; font-weight: 700; color: #333; letter-spacing: -0.3px; }
+    .header-brand span { font-size: 13px; color: #888; }
+    .header-date { font-size: 13px; color: #666; text-align: right; }
+    .header-date strong { display: block; font-size: 15px; color: #333; }
+    .last-update { font-size: 11px; color: #aaa; margin-top: 2px; }
+
+    /* ── KPI BAR ── */
+    .kpi-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 20px 32px;
+    }
+    .kpi-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      border-left: 4px solid #EFD656;
+    }
+    .kpi-card.green { border-left-color: #BCD036; }
+    .kpi-card.blue  { border-left-color: #60a5fa; }
+    .kpi-icon { font-size: 26px; line-height: 1; }
+    .kpi-label { font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.6px; }
+    .kpi-value { font-size: 22px; font-weight: 700; color: #333; line-height: 1.1; }
+    .kpi-sub { font-size: 11px; color: #aaa; margin-top: 1px; }
+
+    /* ── SECTION ── */
+    .section { padding: 0 32px 24px; }
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    /* ── TASK CARDS ── */
+    .task-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .task-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+    .task-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .task-card.success::before { background: #BCD036; }
+    .task-card.warning::before { background: #f59e0b; }
+    .task-card.error::before   { background: #ef4444; }
+    .task-card.pending::before { background: #d1d5db; }
+    .task-card.skipped::before { background: #e5e7eb; }
+
+    .task-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .task-card-name { display: flex; align-items: center; gap: 8px; }
+    .task-card-name .icon { font-size: 20px; }
+    .task-card-name h3 { font-size: 14px; font-weight: 700; color: #333; }
+    .task-card-name .schedule { font-size: 11px; color: #aaa; margin-top: 2px; }
+
+    .status-badge {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .status-badge.success { background: #f0fdf4; color: #16a34a; }
+    .status-badge.warning { background: #fffbeb; color: #d97706; }
+    .status-badge.error   { background: #fef2f2; color: #dc2626; }
+    .status-badge.pending { background: #f3f4f6; color: #6b7280; }
+    .status-badge.running { background: #eff6ff; color: #2563eb; }
+    .status-badge.skipped { background: #f9fafb; color: #9ca3af; }
+
+    .task-time {
+      font-size: 22px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 4px;
+    }
+    .task-note {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.5;
+    }
+    .task-next {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #f3f4f6;
+      font-size: 11px;
+      color: #aaa;
+    }
+    .task-next strong { color: #666; }
+
+    /* ── HISTORY ── */
+    .history-grid {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      overflow-x: auto;
+    }
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .history-table th {
+      font-size: 11px;
+      color: #aaa;
+      font-weight: 600;
+      text-align: left;
+      padding: 0 8px 12px;
+      white-space: nowrap;
+    }
+    .history-table th.day-col {
+      text-align: center;
+      min-width: 72px;
+    }
+    .history-table td {
+      padding: 6px 8px;
+      vertical-align: middle;
+    }
+    .history-table td.task-label {
+      font-size: 12px;
+      color: #555;
+      white-space: nowrap;
+      padding-right: 16px;
+    }
+    .history-table td.task-label .task-icon { margin-right: 6px; }
+    .dot-cell { text-align: center; }
+    .dot {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      font-size: 13px;
+    }
+    .dot.success { background: #f0fdf4; color: #16a34a; }
+    .dot.warning { background: #fffbeb; color: #d97706; }
+    .dot.error   { background: #fef2f2; color: #dc2626; }
+    .dot.skipped { background: #f9fafb; color: #d1d5db; border: 1.5px dashed #e5e7eb; }
+    .dot.null    { color: #e5e7eb; font-size: 10px; }
+    .day-label-today { font-weight: 700; color: #333; }
+
+    /* ── MANUAL TASKS ── */
+    .manual-list { display: flex; flex-direction: column; gap: 8px; }
+    .manual-item {
+      background: #fff;
+      border-radius: 8px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+    .manual-item-left { display: flex; align-items: center; gap: 12px; }
+    .manual-item-date {
+      font-size: 11px;
+      color: #aaa;
+      min-width: 36px;
+    }
+    .manual-item-name { font-size: 13px; color: #333; font-weight: 500; }
+    .cat-badge {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 20px;
+      background: #f3f4f6;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    .cat-badge.AML      { background: #fef9ec; color: #b45309; }
+    .cat-badge.Sistema  { background: #eff6ff; color: #1d4ed8; }
+    .cat-badge.Documenti{ background: #f5f3ff; color: #7c3aed; }
+    .cat-badge.File     { background: #f0fdf4; color: #15803d; }
+
+    /* ── FOOTER ── */
+    .footer {
+      padding: 16px 32px 32px;
+      font-size: 11px;
+      color: #bbb;
+      text-align: center;
+    }
+    .footer a { color: #BCD036; text-decoration: none; }
+
+    /* ── LEGEND ── */
+    .legend {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      font-size: 11px;
+      color: #888;
+      margin-top: 10px;
+    }
+    .legend-item { display: flex; align-items: center; gap: 4px; }
+
+    @media (max-width: 768px) {
+      .kpi-bar, .task-cards { grid-template-columns: 1fr; }
+      .section, .kpi-bar { padding-left: 16px; padding-right: 16px; }
+      .header { padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+// ══════════════════════════════════════════════
+//  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 12:00
+// ══════════════════════════════════════════════
+const DATA = {
+  generatedAt: "2026-03-24T12:00:00",
+  scheduledTasks: [
+    {
+      id: "daily-briefing",
+      name: "Daily Briefing",
+      icon: "📋",
+      schedule: "Ogni giorno — 07:01",
+      todayStatus: "success",
+      todayTime: "07:01",
+      todayNote: "Agenda libera · 17 email non lette · 3 urgenti (WE-NET, PM ELETTRIC, F. Raponi)",
+      nextRun: "Domani alle 07:01"
+    },
+    {
+      id: "auguri-clienti",
+      name: "Auguri Clienti",
+      icon: "🎂",
+      schedule: "Ogni giorno — 09:04",
+      todayStatus: "success",
+      todayTime: "09:04",
+      todayNote: "Nessun compleanno oggi",
+      nextRun: "Domani alle 09:04"
+    },
+    {
+      id: "verifica-aml",
+      name: "Verifica Antiriciclaggio",
+      icon: "🛡️",
+      schedule: "Trimestrale — giorno 10",
+      todayStatus: "success",
+      todayTime: "11:52",
+      todayNote: "10 clienti verificati · Tutto regolare · Nessun documento scaduto",
+      nextRun: "10 aprile 2026 alle 09:00"
+    }
+  ],
+  history: [
+    {
+      date: "20 mar",
+      isToday: false,
+      tasks: {
+        "daily-briefing": { status: "success" },
+        "auguri-clienti":  { status: "warning", note: "5 esecuzioni (anomalia)" },
+        "verifica-aml":    { status: null }
+      }
+    },
+    {
+      date: "21 mar",
+      isToday: false,
+      tasks: {
+        "daily-briefing": { status: "success" },
+        "auguri-clienti":  { status: "skipped", note: "Sabato" },
+        "verifica-aml":    { status: null }
+      }
+    },
+    {
+      date: "22 mar",
+      isToday: false,
+      tasks: {
+        "daily-briefing": { status: "success" },
+        "auguri-clienti":  { status: "skipped", note: "Domenica" },
+        "verifica-aml":    { status: null }
+      }
+    },
+    {
+      date: "23 mar",
+      isToday: false,
+      tasks: {
+        "daily-briefing": { status: "success" },
+        "auguri-clienti":  { status: "success", note: "Protano Michele 🎂" },
+        "verifica-aml":    { status: null }
+      }
+    },
+    {
+      date: "Oggi",
+      isToday: true,
+      tasks: {
+        "daily-briefing": { status: "success" },
+        "auguri-clienti":  { status: "success" },
+        "verifica-aml":    { status: "success", note: "Trimestrale" }
+      }
+    }
+  ],
+  manualTasks: [
+    { name: "Gestione Antiriciclaggio",          status: "running",  category: "AML",       date: "Oggi" },
+    { name: "Verifica Periodica Registri AML",    status: "success",  category: "AML",       date: "Oggi" },
+    { name: "Elaborazione Lista Anagrafiche",     status: "success",  category: "AML",       date: "Oggi" },
+    { name: "Edit Skill Antiriciclaggio",         status: "success",  category: "Sistema",   date: "Oggi" },
+    { name: "Gestione Mandato + Privacy + AI",    status: "success",  category: "Documenti", date: "Recente" },
+    { name: "Organize Documents by Date",         status: "success",  category: "File",      date: "Recente" }
+  ]
+};
+
+// ══════════════════════════════════════════════
+//  HELPERS
+// ══════════════════════════════════════════════
+const { useState } = React;
+
+function formatDate() {
+  const d = new Date(2026, 2, 24); // 24 marzo 2026
+  return d.toLocaleDateString("it-IT", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+}
+
+function StatusBadge({ status }) {
+  const map = {
+    success: { label: "✓ OK",        cls: "success" },
+    warning: { label: "⚠ Anomalia",  cls: "warning" },
+    error:   { label: "✕ Errore",    cls: "error" },
+    pending: { label: "In attesa",   cls: "pending" },
+    running: { label: "● In corso",  cls: "running" },
+    skipped: { label: "–",           cls: "skipped" }
+  };
+  const m = map[status] || map["pending"];
+  return <span className={`status-badge ${m.cls}`}>{m.label}</span>;
+}
+
+function DotCell({ status, note }) {
+  if (!status) return <td className="dot-cell"><span className="dot null">·</span></td>;
+  const map = {
+    success: "✓",
+    warning: "⚠",
+    error:   "✕",
+    skipped: "–",
+    running: "●"
+  };
+  const icon = map[status] || "·";
+  return (
+    <td className="dot-cell" title={note || ""}>
+      <span className={`dot ${status}`}>{icon}</span>
+    </td>
+  );
+}
+
+// ══════════════════════════════════════════════
+//  KPI BAR
+// ══════════════════════════════════════════════
+function KpiBar() {
+  const todayTasks = DATA.scheduledTasks;
+  const completedToday = todayTasks.filter(t => t.todayStatus === "success").length;
+  const total = todayTasks.length;
+
+  // calcola tasso successo 7gg su daily + auguri (ignora AML che è trimestrale)
+  const relevant = ["daily-briefing", "auguri-clienti"];
+  let runs = 0, successes = 0;
+  DATA.history.forEach(day => {
+    relevant.forEach(id => {
+      const t = day.tasks[id];
+      if (t && t.status && t.status !== "skipped") {
+        runs++;
+        if (t.status === "success") successes++;
+      }
+    });
+  });
+  const rate = runs > 0 ? Math.round((successes / runs) * 100) : 0;
+
+  // prossimo task
+  const now = new Date(2026, 2, 24, 12, 0);
+  const nextLabel = "Domani — Daily Briefing 07:01";
+
+  return (
+    <div className="kpi-bar">
+      <div className="kpi-card">
+        <div className="kpi-icon">📅</div>
+        <div>
+          <div className="kpi-label">Task completati oggi</div>
+          <div className="kpi-value">{completedToday}/{total}</div>
+          <div className="kpi-sub">task pianificati</div>
+        </div>
+      </div>
+      <div className="kpi-card green">
+        <div className="kpi-icon">📊</div>
+        <div>
+          <div className="kpi-label">Tasso successo 5gg</div>
+          <div className="kpi-value">{rate}%</div>
+          <div className="kpi-sub">{successes}/{runs} esecuzioni OK</div>
+        </div>
+      </div>
+      <div className="kpi-card blue">
+        <div className="kpi-icon">⏭</div>
+        <div>
+          <div className="kpi-label">Prossima esecuzione</div>
+          <div className="kpi-value" style={{fontSize:"13px", marginTop:"2px"}}>{nextLabel}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ══════════════════════════════════════════════
+//  TASK CARDS (stato di oggi)
+// ══════════════════════════════════════════════
+function TaskCards() {
+  return (
+    <div className="section">
+      <div className="section-title">Oggi — Task pianificati</div>
+      <div className="task-cards">
+        {DATA.scheduledTasks.map(task => (
+          <div key={task.id} className={`task-card ${task.todayStatus}`}>
+            <div className="task-card-header">
+              <div className="task-card-name">
+                <span className="icon">{task.icon}</span>
+                <div>
+                  <h3>{task.name}</h3>
+                  <div className="schedule">{task.schedule}</div>
+                </div>
+              </div>
+              <StatusBadge status={task.todayStatus} />
+            </div>
+            <div className="task-time">{task.todayTime}</div>
+            <div className="task-note">{task.todayNote}</div>
+            <div className="task-next">
+              <strong>Prossima:</strong> {task.nextRun}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ══════════════════════════════════════════════
+//  STORICO 5 GIORNI
+// ══════════════════════════════════════════════
+function History() {
+  const taskRows = [
+    { id: "daily-briefing", icon: "📋", name: "Daily Briefing" },
+    { id: "auguri-clienti", icon: "🎂", name: "Auguri Clienti" },
+    { id: "verifica-aml",   icon: "🛡️", name: "Verifica AML" }
+  ];
+
+  return (
+    <div className="section">
+      <div className="section-title">Storico — ultimi 5 giorni</div>
+      <div className="history-grid">
+        <table className="history-table">
+          <thead>
+            <tr>
+              <th>Task</th>
+              {DATA.history.map((day, i) => (
+                <th key={i} className="day-col">
+                  <span className={day.isToday ? "day-label-today" : ""}>{day.date}</span>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {taskRows.map(row => (
+              <tr key={row.id]}>
+                <td className="task-label">
+                  <span className="task-icon">{row.icon}</span>
+                  {row.name}
+                </td>
+                {DATA.history.map((day, i) => {
+                  const t = day.tasks[row.id];
+                  return <DotCell key={i} status={t?.status} note={t?.note} />;
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div className="legend">
+          <span className="legend-item"><span className="dot success" style={{width:18,height:18,fontSize:10}}>✓</span> OK</span>
+          <span className="legend-item"><span className="dot warning" style={{width:18,height:18,fontSize:10}}>⚠</span> Anomalia</span>
+          <span className="legend-item"><span className="dot skipped" style={{width:18,height:18,fontSize:10}}>–</span> Non eseguito</span>
+          <span className="legend-item"><span className="dot null" style={{width:18,height:18,fontSize:10}}>�</span> Non previsto</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ══════════════════════════════════════════════
+//  TASK MANUALI
+// ══════════════════════════════════════════════
+function ManualTasks() {
+  return (
+    <div className="section">
+      <div className="section-title">Task manuali recenti</div>
+      <div className="manual-list">
+        {DATA.manualTasks.map((task, i) => (
+          <div key={i} className="manual-item">
+            <div className="manual-item-left">
+              <span className="manual-item-date">{task.date}</span>
+              <span className="manual-item-name">{task.name}</span>
+              <span className={`cat-badge ${task.category}`}>{task.category}</span>
+            </div>
+            <StatusBadge status={task.status} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ══════════════════════════════════════════════
+//  APP ROOT
+// ══════════════════════════════════════════════
+function App() {
+  const genDate = new Date(DATA.generatedAt);
+  const genLabel = genDate.toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" })
+    + " — " + genDate.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" });
+
+  return (
+    <div>
+      {/* ── HEADER ── */}
+      <div className="header">
+        <div className="header-brand">
+          <div>
+            <h1>🤖 KPI Cowork Monitor</h1>
+            <span>Dottori Commercialisti e Revisori Legali</span>
+          </div>
+        </div>
+        <div className="header-date">
+          <strong>{formatDate()}</strong>
+          <div className="last-update">Dati aggiornati il {genLabel}</div>
+        </div>
+      </div>
+
+      {/* ── KPI BAR ── */}
+      <KpiBar />
+
+      {/* ── TASK CARDS ── */}
+      <TaskCards />
+
+      {/* ── HISTORY ── */}
+      <History />
+
+      {/* ── MANUAL TASKS ── */}
+      <ManualTasks />
+
+      {/* ── FOOTER ── */}
+      <div className="footer">
+        KPI Consulting STP S.r.l. — Via Antonio Bertoloni, 29 —
+        <a href="https://www.kpiconsulting.it" target="_blank"> www.kpiconsulting.it</a>
+        <br/>Dashboard generata da Claude Cowork · i dati vengono aggiornati ad ogni nuova lettura delle sessioni
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
