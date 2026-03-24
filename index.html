@@ -340,17 +340,17 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  generatedAt: "2026-03-24T22:18:39",
-  scheduledTasks: [
+  "generatedAt": "2026-03-24T23:04:23",
+  "scheduledTasks": [
     {
-      id: "daily-briefing",
-      name: "Daily Briefing",
-      icon: "📋",
-      schedule: "Ogni giorno → 07:01",
-      todayStatus: "success",
-      todayTime: "07:01",
-      todayNote: "Agenda libera · 17 email non lette · 3 urgenti",
-      todayDetails: [
+      "id": "daily-briefing",
+      "name": "Daily Briefing",
+      "icon": "📋",
+      "schedule": "Ogni giorno → 07:01",
+      "todayStatus": "success",
+      "todayTime": "07:01",
+      "todayNote": "Agenda libera · 17 email non lette · 3 urgenti",
+      "todayDetails": [
         "📅 Calendario: nessun impegno oggi",
         "📬 17 email non lette (etichetta Lorenzo)",
         "⚠️ PEC Diffida WE-NET – non letta da 3 settimane, allegato PDF firmato",
@@ -358,111 +358,245 @@ const DATA = {
         "⚠️ Francesca Raponi – chiarimenti regime IVA e 5x1000, in attesa 2 mesi",
         "📰 14 newsletter Ratio Quotidiano non lette"
       ],
-      nextRun: "Domani alle 07:01"
+      "nextRun": "Domani alle 07:01"
     },
     {
-      id: "auguri-clienti",
-      name: "Auguri Clienti",
-      icon: "🎂",
-      schedule: "Ogni giorno → 05:04",
-      todayStatus: "success",
-      todayTime: "09:04",
-      todayNote: "Nessun compleanno oggi",
-      todayDetails: [
+      "id": "auguri-clienti",
+      "name": "Auguri Clienti",
+      "icon": "🎂",
+      "schedule": "Ogni giorno → 05:04",
+      "todayStatus": "success",
+      "todayTime": "09:04",
+      "todayNote": "Nessun compleanno oggi",
+      "todayDetails": [
         "Nessun compleanno tra i clienti oggi",
         "Prossimo: verificare lista domani mattina"
       ],
-      nextRun: "Domani alle 05:04"
+      "nextRun": "Domani alle 05:04"
     },
     {
-      id: "verifica-aml",
-      name: "Verifica Antiriciclaggio",
-      icon: "🛡️",
-      schedule: "Trimestrale → giorno 10",
-      todayStatus: "warning",
-      todayTime: "11:52",
-      todayNote: "2 anomalie: PEPPERPOT S.R.L. documenti scaduti (KPI+LT)",
-      todayDetails: [
+      "id": "verifica-aml",
+      "name": "Verifica Antiriciclaggio",
+      "icon": "🛡️",
+      "schedule": "Trimestrale → giorno 10",
+      "todayStatus": "warning",
+      "todayTime": "11:52",
+      "todayNote": "2 anomalie: PEPPERPOT S.R.L. documenti scaduti (KPI+LT)",
+      "todayDetails": [
         "18 clienti verificati (10 registro KPI + 8 registro LT)",
         "🔴 PEPPERPOT S.R.L.: documento scaduto il 26/07/2025 in entrambi i registri",
         "✅ 16 clienti: documenti validi, nessuna anomalia",
         "📧 Bozza email sollecito creata per PEPPERPOT S.R.L.",
         "Prossima verifica trimestrale: 10 aprile 2026"
       ],
-      nextRun: "10 aprile 2026 alle 09:00"
+      "nextRun": "10 aprile 2026 alle 09:00"
+    },
+    {
+      "id": "inserimento-notion-gmail",
+      "name": "Inserimento Notion da Gmail",
+      "icon": "📬",
+      "schedule": "Lun–Sab → 08:07 · 13:07 · 18:07",
+      "todayStatus": "success",
+      "todayTime": "22:55",
+      "todayNote": "5 record creati: 2 Da firmare + 3 Da ricevere",
+      "todayDetails": [
+        "📝 Da firmare: COSMI GIACOMO (Contratto incarico), PROTANO MICHELE (Contratto+doc)",
+        "📥 Da ricevere: PEPPERPOT S.R.L. (doc. identità), OTPA S.R.L. (doc. identità)",
+        "⚠️ F. e G. S.R.L. (CONTRATTO BMW) — tipo documento da completare su Notion"
+      ],
+      "nextRun": "Domani alle 08:07"
+    },
+    {
+      "id": "monitoraggio-documenti",
+      "name": "Monitoraggio Documenti",
+      "icon": "🔍",
+      "schedule": "Lun–Sab → 07:07 + 15:03",
+      "todayStatus": "pending",
+      "todayTime": "—",
+      "todayNote": "Attivo da oggi — prima esecuzione domani",
+      "todayDetails": [
+        "Controlla Gmail per risposte clienti con allegati firmati",
+        "Aggiorna Notion: Inviato → Ricevuto",
+        "Esecuzione mattino (07:07) e pomeriggio (15:03)"
+      ],
+      "nextRun": "Domani alle 07:07"
+    },
+    {
+      "id": "solleciti-settimanali",
+      "name": "Solleciti Settimanali",
+      "icon": "🔔",
+      "schedule": "Ogni lunedì → 09:10",
+      "todayStatus": "skipped",
+      "todayTime": "—",
+      "todayNote": "Non previsto oggi (martedì)",
+      "todayDetails": [
+        "Crea bozze Gmail di sollecito per clienti senza risposta da 7+ giorni",
+        "Controlla lista MONITORAGGIO DOCUMENTI in Notion"
+      ],
+      "nextRun": "Lunedì 30 marzo alle 09:10"
+    },
+    {
+      "id": "aggiorna-cowork-monitor",
+      "name": "Aggiorna Cowork Monitor",
+      "icon": "📊",
+      "schedule": "Ogni giorno → 08:02",
+      "todayStatus": "success",
+      "todayTime": "22:18",
+      "todayNote": "Dashboard aggiornata — fix encoding + 4 nuovi task widget",
+      "todayDetails": [
+        "✅ Fix encoding UTF-8 caratteri React (garbled chars corretti)",
+        "✅ Aggiunta sezione documenti: Inserimento Notion, Monitoraggio, Solleciti",
+        "✅ Aggiornamento coworkDrafts (bozze Gmail sincronizzate)"
+      ],
+      "nextRun": "Domani alle 08:02"
     }
   ],
-  history: [
+  "manualTasks": [
     {
-      date: "20 mar",
-      isToday: false,
-      tasks: {
-        "daily-briefing": { status: "success" },
-        "auguri-clienti":  { status: "warning", note: "5 esecuzioni (anomalia)" },
-        "verifica-aml":    { status: null }
+      "name": "Automazione Richieste Documenti",
+      "status": "success",
+      "category": "Sistema",
+      "date": "Oggi"
+    },
+    {
+      "name": "Verifica Periodica Antiriciclaggio",
+      "status": "warning",
+      "category": "AML",
+      "date": "Oggi"
+    },
+    {
+      "name": "Creazione Dashboard Cowork",
+      "status": "success",
+      "category": "Sistema",
+      "date": "Oggi"
+    },
+    {
+      "name": "Superbonus: RdA vs COGERP",
+      "status": "success",
+      "category": "Documenti",
+      "date": "Oggi"
+    },
+    {
+      "name": "Gestione Antiriciclaggio",
+      "status": "success",
+      "category": "AML",
+      "date": "Oggi"
+    },
+    {
+      "name": "Edit Skill Antiriciclaggio",
+      "status": "success",
+      "category": "Sistema",
+      "date": "Oggi"
+    },
+    {
+      "name": "Elaborazione Lista Anagrafiche",
+      "status": "success",
+      "category": "AML",
+      "date": "Oggi"
+    },
+    {
+      "name": "Gestione Mandato + Privacy + AI",
+      "status": "success",
+      "category": "Documenti",
+      "date": "Oggi"
+    }
+  ],
+  "history": [
+    {
+      "date": "20 mar",
+      "isToday": false,
+      "tasks": {
+        "daily-briefing": {
+          "status": "success"
+        },
+        "auguri-clienti": {
+          "status": "warning",
+          "note": "5 esecuzioni (anomalia)"
+        },
+        "verifica-aml": {
+          "status": null
+        }
       }
     },
     {
-      date: "21 mar",
-      isToday: false,
-      tasks: {
-        "daily-briefing": { status: "success" },
-        "auguri-clienti":  { status: "skipped", note: "Sabato" },
-        "verifica-aml":    { status: null }
+      "date": "21 mar",
+      "isToday": false,
+      "tasks": {
+        "daily-briefing": {
+          "status": "success"
+        },
+        "auguri-clienti": {
+          "status": "skipped",
+          "note": "Sabato"
+        },
+        "verifica-aml": {
+          "status": null
+        }
       }
     },
     {
-      date: "22 mar",
-      isToday: false,
-      tasks: {
-        "daily-briefing": { status: "success" },
-        "auguri-clienti":  { status: "skipped", note: "Domenica" },
-        "verifica-aml":    { status: null }
+      "date": "22 mar",
+      "isToday": false,
+      "tasks": {
+        "daily-briefing": {
+          "status": "success"
+        },
+        "auguri-clienti": {
+          "status": "skipped",
+          "note": "Domenica"
+        },
+        "verifica-aml": {
+          "status": null
+        }
       }
     },
     {
-      date: "23 mar",
-      isToday: false,
-      tasks: {
-        "daily-briefing": { status: "success" },
-        "auguri-clienti":  { status: "success", note: "Protano Michele 🎂" },
-        "verifica-aml":    { status: null }
+      "date": "23 mar",
+      "isToday": false,
+      "tasks": {
+        "daily-briefing": {
+          "status": "success"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Protano Michele 🎂"
+        },
+        "verifica-aml": {
+          "status": null
+        }
       }
     },
     {
-      date: "Oggi",
-      isToday: true,
-      tasks: {
-        "daily-briefing": { status: "success" },
-        "auguri-clienti":  { status: "success" },
-        "verifica-aml":    { status: "warning", note: "2 anomalie PEPPERPOT" }
+      "date": "Oggi",
+      "isToday": true,
+      "tasks": {
+        "daily-briefing": {
+          "status": "success"
+        },
+        "auguri-clienti": {
+          "status": "success"
+        },
+        "verifica-aml": {
+          "status": "warning",
+          "note": "2 anomalie PEPPERPOT"
+        }
       }
     }
   ],
-  manualTasks: [
-    { name: "Verifica Periodica Antiriciclaggio",  status: "warning",  category: "AML",       date: "Oggi" },
-    { name: "Creazione Dashboard Cowork",           status: "success",  category: "Sistema",   date: "Oggi" },
-    { name: "Superbonus: RdA vs COGERP",            status: "success",  category: "Documenti", date: "Oggi" },
-    { name: "Gestione Antiriciclaggio",             status: "success",  category: "AML",       date: "Oggi" },
-    { name: "Edit Skill Antiriciclaggio",           status: "success",  category: "Sistema",   date: "Oggi" },
-    { name: "Elaborazione Lista Anagrafiche",       status: "success",  category: "AML",       date: "Oggi" },
-    { name: "Gestione Mandato + Privacy + AI",      status: "success",  category: "Documenti", date: "Oggi" },
-    { name: "Create Custom Dashboard Monitor",      status: "success",  category: "Sistema",   date: "Oggi" }
-  ],
-  coworkDrafts: [
+  "coworkDrafts": [
     {
-      to: "",
-      dest: "– (template)",
-      subject: "Situazione contabile clienti ordinari",
-      date: "11 gen",
-      status: "template"
+      "to": "",
+      "dest": "– (template)",
+      "subject": "SITUAZIONE CONTABILE ORDINARI",
+      "date": "11 gen",
+      "status": "template"
     },
     {
-      to: "",
-      dest: "– (template)",
-      subject: "Situazione contabile clienti forfetari",
-      date: "11 gen",
-      status: "template"
+      "to": "",
+      "dest": "– (template)",
+      "subject": "SITUAZIONE CONTABILE FORFETARI",
+      "date": "11 gen",
+      "status": "template"
     }
   ]
 };
