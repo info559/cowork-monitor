@@ -502,7 +502,7 @@ function History() {
           </thead>
           <tbody>
             {taskRows.map(row => (
-              <tr key={row.id]}>
+              <tr key={row.id}>
                 <td className="task-label">
                   <span className="task-icon">{row.icon}</span>
                   {row.name}
@@ -519,7 +519,7 @@ function History() {
           <span className="legend-item"><span className="dot success" style={{width:18,height:18,fontSize:10}}>✓</span> OK</span>
           <span className="legend-item"><span className="dot warning" style={{width:18,height:18,fontSize:10}}>⚠</span> Anomalia</span>
           <span className="legend-item"><span className="dot skipped" style={{width:18,height:18,fontSize:10}}>–</span> Non eseguito</span>
-          <span className="legend-item"><span className="dot null" style={{width:18,height:18,fontSize:10}}>�</span> Non previsto</span>
+          <span className="legend-item"><span className="dot null" style={{width:18,height:18,fontSize:10}}>·</span> Non previsto</span>
         </div>
       </div>
     </div>
