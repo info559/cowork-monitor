@@ -340,18 +340,21 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-25T00:02:43",
-  "lastUpdated": "00:02:43",
+  "generatedAt": "2026-03-25T00:07:03",
+  "lastUpdated": "00:07:03",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
       "name": "Daily Briefing",
       "icon": "📋",
       "schedule": "Ogni giorno → 07:01",
-      "todayStatus": null,
+      "todayStatus": "pending",
       "todayTime": null,
-      "todayNote": "In attesa — task non ancora eseguito (07:01)",
-      "todayDetails": [],
+      "todayNote": "Non ancora eseguito · in attesa delle 07:01",
+      "todayDetails": [
+        "Task programmato per le 07:01",
+        "Non ancora avviato (ore 00:07)"
+      ],
       "nextRun": "Oggi alle 07:01"
     },
     {
@@ -359,10 +362,13 @@ const DATA = {
       "name": "Auguri Clienti",
       "icon": "🎂",
       "schedule": "Ogni giorno → 05:04",
-      "todayStatus": null,
+      "todayStatus": "pending",
       "todayTime": null,
-      "todayNote": "In attesa — task non ancora eseguito (05:04)",
-      "todayDetails": [],
+      "todayNote": "Non ancora eseguito · in attesa delle 05:04",
+      "todayDetails": [
+        "Task programmato per le 05:04",
+        "Non ancora avviato (ore 00:07)"
+      ],
       "nextRun": "Oggi alle 05:04"
     },
     {
@@ -370,27 +376,28 @@ const DATA = {
       "name": "Verifica Antiriciclaggio",
       "icon": "🛡️",
       "schedule": "Trimestrale → giorno 10",
-      "todayStatus": null,
-      "todayTime": null,
-      "todayNote": "Prossima verifica: 10 aprile 2026",
+      "todayStatus": "running",
+      "todayTime": "00:07",
+      "todayNote": "In esecuzione · analisi archivi e documenti",
       "todayDetails": [
-        "Ultima esecuzione: 24 mar — warning",
-        "37 righe corrette nei registri KPI+LT (classi AM allineate a RE calcolato)",
-        "Cartelle LT sincronizzate: +3 aggiunte, 1 duplicato rimosso",
-        "Prossima verifica trimestrale: 10 aprile 2026"
+        "Sessione attiva: 11+ turni completati",
+        "Operazioni Bash in corso (analisi archivi registri KPI e LT)"
       ],
-      "nextRun": "10 aprile 2026 alle 09:00"
+      "nextRun": "Prossimo trimestre"
     },
     {
       "id": "inserimento-notion-gmail",
       "name": "Inserimento Notion da Gmail",
       "icon": "📬",
       "schedule": "Lun→Sab → 08:07 · 13:07 · 18:07",
-      "todayStatus": null,
-      "todayTime": null,
-      "todayNote": "In attesa — task non ancora eseguito (08:07)",
+      "todayStatus": "skipped",
+      "todayTime": "00:07",
+      "todayNote": "0 record inseriti · tutte le email entro 7 giorni",
       "todayDetails": [
-        "Ultimo inserimento 24 mar: 5 record creati (2 Da firmare + 3 Da ricevere)"
+        "2 email 'Da firmare' (Cosmi 24/03, Protano 24/03) → filtrate (<7gg)",
+        "3 email 'Da ricevere' (Mastronardi 24/03, Ottavi 24/03, F&G 23/03) → filtrate (<7gg)",
+        "⚠️ F&G 'CONTRATTO BMW' — oggetto non standard, richiede verifica manuale",
+        "Prossima finestra utile: da mercoledì 1 aprile 2026"
       ],
       "nextRun": "Oggi alle 08:07"
     },
@@ -399,11 +406,13 @@ const DATA = {
       "name": "Monitoraggio Documenti",
       "icon": "📂",
       "schedule": "Lun→Sab → 07:07 + 15:03",
-      "todayStatus": null,
-      "todayTime": null,
-      "todayNote": "In attesa — task non ancora eseguito (07:07)",
+      "todayStatus": "running",
+      "todayTime": "00:07",
+      "todayNote": "In esecuzione · verifica risposte Gmail per 5 clienti",
       "todayDetails": [
-        "5 clienti ancora in attesa: COSMI, PROTANO, OTPA, PEPPERPOT, F.&G."
+        "5 clienti in attesa: COSMI, PROTANO, OTPA, PEPPERPOT, F. e G. S.R.L.",
+        "F. e G. S.R.L.: email con allegati trovate — verifica pertinenza in corso",
+        "28+ turni completati nella sessione"
       ],
       "nextRun": "Oggi alle 07:07"
     },
@@ -411,50 +420,39 @@ const DATA = {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
       "icon": "📨",
-      "schedule": "Lunedì → 09:00",
-      "todayStatus": null,
-      "todayTime": null,
-      "todayNote": "Prossima esecuzione: lunedì 30 marzo",
+      "schedule": "Ogni lunedì → 06:00",
+      "todayStatus": "skipped",
+      "todayTime": "00:07",
+      "todayNote": "0 bozze create · tutti i documenti entro 7 giorni",
       "todayDetails": [
-        "Ultima esecuzione: 24 mar — skipped",
-        "Nessun record con ≥7 giorni di attesa (tutti inviati il 23-24 mar)",
-        "Prossimi solleciti idonei dal: 30-31 marzo 2026"
+        "5 record verificati con stato Inviato/Sollecitato",
+        "F. e G. S.R.L.: 2 giorni attesa (soglia min 7gg)",
+        "COSMI, PROTANO, OTPA, PEPPERPOT: 1 giorno attesa",
+        "Primo sollecito atteso: lun 30 mar (F&G) / mer 1 apr (altri 4)"
       ],
-      "nextRun": "Lunedì 30 marzo 2026"
+      "nextRun": "Lunedì 30 mar"
     },
     {
       "id": "aggiorna-cowork-monitor",
       "name": "Aggiorna Cowork Monitor",
       "icon": "📊",
-      "schedule": "Ogni giorno → 00:01 · 08:02",
-      "todayStatus": "success",
-      "todayTime": "00:02",
-      "todayNote": "Dashboard aggiornata · ieri: 4 success + 2 skipped · 0 bozze",
+      "schedule": "Ogni giorno → 08:02",
+      "todayStatus": "running",
+      "todayTime": "00:07",
+      "todayNote": "In esecuzione · aggiornamento dashboard",
       "todayDetails": [
-        "✓ Daily Briefing (24 mar): success — agenda libera, 3 urgenti, 17 email",
-        "⏭ Auguri (24 mar): skipped — nessun compleanno",
-        "⚠ Verifica AML (24 mar): warning — 37 righe corrette (classi AM+LT sync)",
-        "✓ Inserimento Notion (24 mar): success — 5 record creati",
-        "✓ Monitoraggio (24 mar): success — 5 clienti in attesa",
-        "⏭ Solleciti (24 mar): skipped — nessun record ≥7 giorni",
-        "✉ Bozze Gmail: 2 template senza destinatario — coworkDrafts vuoto"
+        "⏳ Daily Briefing: pending — ore 07:01",
+        "⏳ Auguri: pending — ore 05:04",
+        "🔄 Verifica AML: running — analisi in corso",
+        "⏭ Inserimento Notion: skipped — 0 record (email tutte <7gg)",
+        "🔄 Monitoraggio Documenti: running — verifica risposte in corso",
+        "⏭ Solleciti Settimanali: skipped — 0 bozze (docs tutti <7gg)",
+        "0 bozze Gmail con destinatario"
       ],
-      "nextRun": "Oggi alle 08:02"
+      "nextRun": "Domani alle 08:02"
     }
   ],
   "manualTasks": [
-    {
-      "name": "Correzione Classi AM Registri AML",
-      "status": "success",
-      "category": "AML",
-      "date": "24 mar"
-    },
-    {
-      "name": "Sync Cartelle LT Antiriciclaggio",
-      "status": "success",
-      "category": "AML",
-      "date": "24 mar"
-    },
     {
       "name": "Creazione Dashboard Cowork",
       "status": "success",
@@ -554,7 +552,7 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "warning",
-          "note": "37 righe corrette"
+          "note": "25 anomalie rilevate"
         }
       }
     },
@@ -563,13 +561,13 @@ const DATA = {
       "isToday": true,
       "tasks": {
         "daily-briefing": {
-          "status": null
+          "status": "pending"
         },
         "auguri-clienti": {
-          "status": null
+          "status": "pending"
         },
         "verifica-aml": {
-          "status": null
+          "status": "running"
         }
       }
     }
