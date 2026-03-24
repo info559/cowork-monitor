@@ -6,6 +6,7 @@
   <title>KPI Cowork Monitor</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -312,314 +313,271 @@
       padding: 8px 18px; font-size: 13px; font-weight: 600; cursor: pointer; color: #333;
     }
     .modal-btn:hover { background: #e5c840; }
+
+    /* ─── BOZZE COWORK ─── */
+    .drafts-list { display: flex; flex-direction: column; gap: 8px; }
+    .draft-item {
+      background: #fff; border-radius: 8px; padding: 12px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      border-left: 3px solid #EFD656;
+    }
+    .draft-item.template { border-left-color: #d1d5db; }
+    .draft-item-left { display: flex; align-items: center; gap: 12px; }
+    .draft-date { font-size: 11px; color: #aaa; min-width: 36px; }
+    .draft-dest { font-size: 12px; color: #888; white-space: nowrap; }
+    .draft-subject { font-size: 13px; color: #333; font-weight: 500; }
+    .draft-meta { display: flex; flex-direction: column; gap: 2px; }
+    .draft-badge-ready   { background: #fefce8; color: #854d0e; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+    .draft-badge-template{ background: #f3f4f6; color: #9ca3af; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
   </style>
 </head>
 <body>
 <div id="root"></div>
 
-<script>
+<script type="text/babel">
 // ══════════════════════════════════════════════
-//  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 19:21
+//  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  generatedAt: "2026-03-24T19:21:44",
-  scheduledTasks: [{
-    id: "daily-briefing",
-    name: "Daily Briefing",
-    icon: "📋",
-    schedule: "Ogni giorno — 07:01",
-    todayStatus: "success",
-    todayTime: "07:01",
-    todayNote: "Agenda libera · 17 email non lette · 3 urgenti (WE-NET, PM ELETTRIC, F. Raponi)",
-    todayDetails: ["📅 Calendario: nessun impegno oggi", "📬 17 email non lette (etichetta Lorenzo)", "⚠️ PEC Diffida WE-NET – non letta da 3 settimane, allegato PDF firmato, richiede attenzione immediata", "⚠️ PM ELETTRIC (Protano Michele) – verifica cartelle AdE ~8.000+5.900+11.000+3.000€, in attesa 1+ mese", "⚠️ Francesca Raponi – chiarimenti regime IVA agevolato e 5x1000, bonifici inviati, in attesa 2 mesi", "📰 14 newsletter Ratio Quotidiano (13–24 mar) non lette"],
-    nextRun: "Domani alle 07:01"
-  }, {
-    id: "auguri-clienti",
-    name: "Auguri Clienti",
-    icon: "🎂",
-    schedule: "Ogni giorno — 09:04",
-    todayStatus: "success",
-    todayTime: "09:04",
-    todayNote: "Nessun compleanno oggi",
-    todayDetails: ["Nessun compleanno tra i clienti oggi", "Prossimo: verificare lista domani mattina"],
-    nextRun: "Domani alle 09:04"
-  }, {
-    id: "verifica-aml",
-    name: "Verifica Antiriciclaggio",
-    icon: "🛡️",
-    schedule: "Trimestrale — giorno 10",
-    todayStatus: "success",
-    todayTime: "11:52",
-    todayNote: "10 clienti verificati · Tutto regolare · Nessun documento scaduto",
-    todayDetails: ["10 clienti verificati nel registro AML", "Nessun documento di identità scaduto", "Nessuna anomalia nelle valutazioni di rischio", "Prossima verifica trimestrale: 10 aprile 2026"],
-    nextRun: "10 aprile 2026 alle 09:00"
-  }],
-  history: [{
-    date: "20 mar",
-    isToday: false,
-    tasks: {
-      "daily-briefing": {
-        status: "success"
-      },
-      "auguri-clienti": {
-        status: "warning",
-        note: "5 esecuzioni (anomalia)"
-      },
-      "verifica-aml": {
-        status: null
+  generatedAt: "2026-03-24T14:21:18",
+  scheduledTasks: [
+    {
+      id: "daily-briefing",
+      name: "Daily Briefing",
+      icon: "📋",
+      schedule: "Ogni giorno — 07:01",
+      todayStatus: "success",
+      todayTime: "07:01",
+      todayNote: "Agenda libera · 17 email non lette · 3 urgenti (WE-NET, PM ELETTRIC, F. Raponi)",
+      todayDetails: [
+        "📅 Calendario: nessun impegno oggi",
+        "📬 17 email non lette (etichetta Lorenzo)",
+        "⚠️ PEC Diffida WE-NET – non letta da 3 settimane, allegato PDF firmato, richiede attenzione immediata",
+        "⚠️ PM ELETTRIC (Protano Michele) – verifica cartelle AdE ~8.000+5.900+11.000+3.000€, in attesa 1+ mese",
+        "⚠️ Francesca Raponi – chiarimenti regime IVA agevolato e 5x1000, bonifici inviati, in attesa 2 mesi",
+        "📰 14 newsletter Ratio Quotidiano (13–24 mar) non lette"
+      ],
+      nextRun: "Domani alle 07:01"
+    },
+    {
+      id: "auguri-clienti",
+      name: "Auguri Clienti",
+      icon: "🎂",
+      schedule: "Ogni giorno — 05:04",
+      todayStatus: "success",
+      todayTime: "09:04",
+      todayNote: "Nessun compleanno oggi",
+      todayDetails: [
+        "Nessun compleanno tra i clienti oggi",
+        "Prossimo: verificare lista domani mattina"
+      ],
+      nextRun: "Domani alle 05:04"
+    },
+    {
+      id: "verifica-aml",
+      name: "Verifica Antiriciclaggio",
+      icon: "🛡️",
+      schedule: "Trimestrale — giorno 10",
+      todayStatus: "success",
+      todayTime: "11:52",
+      todayNote: "10 clienti verificati · Tutto regolare · Nessun documento scaduto",
+      todayDetails: [
+        "10 clienti verificati nel registro AML",
+        "Nessun documento di identità scaduto",
+        "Nessuna anomalia nelle valutazioni di rischio",
+        "Prossima verifica trimestrale: 10 aprile 2026"
+      ],
+      nextRun: "10 aprile 2026 alle 09:00"
+    }
+  ],
+  history: [
+    {
+      date: "20 mar",
+      isToday: false,
+      tasks: {
+        "daily-briefing": { status: "success" },
+        "auguri-clienti":  { status: "warning", note: "5 esecuzioni (anomalia)" },
+        "verifica-aml":    { status: null }
+      }
+    },
+    {
+      date: "21 mar",
+      isToday: false,
+      tasks: {
+        "daily-briefing": { status: "success" },
+        "auguri-clienti":  { status: "skipped", note: "Sabato" },
+        "verifica-aml":    { status: null }
+      }
+    },
+    {
+      date: "22 mar",
+      isToday: false,
+      tasks: {
+        "daily-briefing": { status: "success" },
+        "auguri-clienti":  { status: "skipped", note: "Domenica" },
+        "verifica-aml":    { status: null }
+      }
+    },
+    {
+      date: "23 mar",
+      isToday: false,
+      tasks: {
+        "daily-briefing": { status: "success" },
+        "auguri-clienti":  { status: "success", note: "Protano Michele 🎂" },
+        "verifica-aml":    { status: null }
+      }
+    },
+    {
+      date: "Oggi",
+      isToday: true,
+      tasks: {
+        "daily-briefing": { status: "success" },
+        "auguri-clienti":  { status: "success" },
+        "verifica-aml":    { status: "success", note: "Trimestrale" }
       }
     }
-  }, {
-    date: "21 mar",
-    isToday: false,
-    tasks: {
-      "daily-briefing": {
-        status: "success"
-      },
-      "auguri-clienti": {
-        status: "skipped",
-        note: "Sabato"
-      },
-      "verifica-aml": {
-        status: null
-      }
+  ],
+  manualTasks: [
+    { name: "Create Custom Dashboard Monitor",    status: "success",  category: "Sistema",   date: "Oggi" },
+    { name: "Gestione Antiriciclaggio",           status: "success",  category: "AML",       date: "Oggi" },
+    { name: "Verifica Periodica Registri AML",    status: "success",  category: "AML",       date: "Oggi" },
+    { name: "Elaborazione Lista Anagrafiche",     status: "success",  category: "AML",       date: "Oggi" },
+    { name: "Edit Skill Antiriciclaggio",         status: "success",  category: "Sistema",   date: "Oggi" },
+    { name: "Gestione Mandato + Privacy + AI",    status: "success",  category: "Documenti", date: "Recente" }
+  ],
+  coworkDrafts: [
+    {
+      to: "otpa.srls@legalmail.it",
+      dest: "OTPA S.R.L.S.",
+      subject: "Incarico professionale – documentazione da sottoscrivere",
+      date: "24 mar",
+      status: "ready"
+    },
+    {
+      to: "amministrazione@honiro.it",
+      dest: "Honiro – Veronica",
+      subject: "Re: Crediti di imposta – disponibilità ~€96.000 sconto 15%",
+      date: "24 mar",
+      status: "ready"
+    },
+    {
+      to: "tivoli@postacert.inail.it",
+      dest: "INAIL Tivoli",
+      subject: "Re: Cessazione PAT – Ass. Centro Musica Subiaco A.P.S.",
+      date: "6 feb",
+      status: "ready"
+    },
+    {
+      to: "",
+      dest: "– (template)",
+      subject: "Situazione contabile clienti ordinari",
+      date: "11 gen",
+      status: "template"
+    },
+    {
+      to: "",
+      dest: "– (template)",
+      subject: "Situazione contabile clienti forfetari",
+      date: "11 gen",
+      status: "template"
     }
-  }, {
-    date: "22 mar",
-    isToday: false,
-    tasks: {
-      "daily-briefing": {
-        status: "success"
-      },
-      "auguri-clienti": {
-        status: "skipped",
-        note: "Domenica"
-      },
-      "verifica-aml": {
-        status: null
-      }
-    }
-  }, {
-    date: "23 mar",
-    isToday: false,
-    tasks: {
-      "daily-briefing": {
-        status: "success"
-      },
-      "auguri-clienti": {
-        status: "success",
-        note: "Protano Michele 🎂"
-      },
-      "verifica-aml": {
-        status: null
-      }
-    }
-  }, {
-    date: "Oggi",
-    isToday: true,
-    tasks: {
-      "daily-briefing": {
-        status: "success"
-      },
-      "auguri-clienti": {
-        status: "success"
-      },
-      "verifica-aml": {
-        status: "success",
-        note: "Trimestrale"
-      }
-    }
-  }],
-  manualTasks: [{
-    name: "Create Custom Dashboard Monitor",
-    status: "success",
-    category: "Sistema",
-    date: "Oggi"
-  }, {
-    name: "Gestione Antiriciclaggio",
-    status: "success",
-    category: "AML",
-    date: "Oggi"
-  }, {
-    name: "Draft Email con Gmail",
-    status: "success",
-    category: "Email",
-    date: "Oggi"
-  }, {
-    name: "Verifica Periodica Registri AML",
-    status: "success",
-    category: "AML",
-    date: "Oggi"
-  }, {
-    name: "Elaborazione Lista Anagrafiche",
-    status: "success",
-    category: "AML",
-    date: "Oggi"
-  }, {
-    name: "Edit Skill Antiriciclaggio",
-    status: "success",
-    category: "Sistema",
-    date: "Oggi"
-  }, {
-    name: "Gestione Mandato + Privacy + AI",
-    status: "success",
-    category: "Documenti",
-    date: "Recente"
-  }, {
-    name: "Organize Documents by Date",
-    status: "success",
-    category: "File",
-    date: "Recente"
-  }]
+  ],
 };
 
 // ══════════════════════════════════════════════
 //  HELPERS
 // ══════════════════════════════════════════════
-const {
-  useState
-} = React;
+const { useState } = React;
+
 function formatDate() {
   const d = new Date(2026, 2, 24); // 24 marzo 2026
-  return d.toLocaleDateString("it-IT", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  });
+  return d.toLocaleDateString("it-IT", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
 }
-function StatusBadge({
-  status
-}) {
+
+function StatusBadge({ status }) {
   const map = {
-    success: {
-      label: "✓ OK",
-      cls: "success"
-    },
-    warning: {
-      label: "⚠ Anomalia",
-      cls: "warning"
-    },
-    error: {
-      label: "✕ Errore",
-      cls: "error"
-    },
-    pending: {
-      label: "In attesa",
-      cls: "pending"
-    },
-    running: {
-      label: "● In corso",
-      cls: "running"
-    },
-    skipped: {
-      label: "–",
-      cls: "skipped"
-    }
+    success: { label: "✓ OK",        cls: "success" },
+    warning: { label: "⚠ Anomalia",  cls: "warning" },
+    error:   { label: "✕ Errore",    cls: "error" },
+    pending: { label: "In attesa",   cls: "pending" },
+    running: { label: "● In corso",  cls: "running" },
+    skipped: { label: "–",           cls: "skipped" }
   };
   const m = map[status] || map["pending"];
-  return /*#__PURE__*/React.createElement("span", {
-    className: `status-badge ${m.cls}`
-  }, m.label);
+  return <span className={`status-badge ${m.cls}`}>{m.label}</span>;
 }
-function DotCell({
-  status,
-  note
-}) {
-  if (!status) return /*#__PURE__*/React.createElement("td", {
-    className: "dot-cell"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "dot null"
-  }, "\xB7"));
+
+function DotCell({ status, note }) {
+  if (!status) return <td className="dot-cell"><span className="dot null">·</span></td>;
   const map = {
     success: "✓",
     warning: "⚠",
-    error: "✕",
+    error:   "✕",
     skipped: "–",
     running: "●"
   };
   const icon = map[status] || "·";
-  return /*#__PURE__*/React.createElement("td", {
-    className: "dot-cell",
-    title: note || ""
-  }, /*#__PURE__*/React.createElement("span", {
-    className: `dot ${status}`
-  }, icon));
+  return (
+    <td className="dot-cell" title={note || ""}>
+      <span className={`dot ${status}`}>{icon}</span>
+    </td>
+  );
 }
 
 // ══════════════════════════════════════════════
 //  MODAL
 // ══════════════════════════════════════════════
-function Modal({
-  data,
-  onClose
-}) {
+function Modal({ data, onClose }) {
   if (!data) return null;
-  const dotMap = {
-    success: "✓",
-    warning: "⚠",
-    error: "✕",
-    skipped: "–",
-    running: "●"
-  };
-  return /*#__PURE__*/React.createElement("div", {
-    className: "modal-backdrop",
-    onClick: onClose
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "modal",
-    onClick: e => e.stopPropagation()
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "modal-header"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "modal-header-left"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "modal-icon"
-  }, data.icon), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    className: "modal-title"
-  }, data.name), data.schedule && /*#__PURE__*/React.createElement("div", {
-    className: "modal-subtitle"
-  }, data.schedule))), /*#__PURE__*/React.createElement("div", {
-    style: {
-      display: "flex",
-      alignItems: "center",
-      gap: "10px"
-    }
-  }, /*#__PURE__*/React.createElement(StatusBadge, {
-    status: data.status
-  }), /*#__PURE__*/React.createElement("button", {
-    className: "modal-close",
-    onClick: onClose
-  }, "\xD7"))), /*#__PURE__*/React.createElement("div", {
-    className: "modal-body"
-  }, data.time && /*#__PURE__*/React.createElement("div", {
-    className: "modal-time"
-  }, data.time), data.note && !data.details?.length && /*#__PURE__*/React.createElement("div", {
-    className: "modal-note"
-  }, data.note), data.details && data.details.length > 0 && /*#__PURE__*/React.createElement("ul", {
-    className: "modal-details"
-  }, data.details.map((d, i) => /*#__PURE__*/React.createElement("li", {
-    key: i
-  }, d))), data.historyRow && data.historyRow.some(h => h.status) && /*#__PURE__*/React.createElement("div", {
-    className: "modal-history-row"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "modal-history-label"
-  }, "Storico"), data.historyRow.map((h, i) => /*#__PURE__*/React.createElement("span", {
-    key: i,
-    title: h.date + (h.note ? ": " + h.note : ""),
-    className: `dot ${h.status || "null"}`,
-    style: {
-      width: 26,
-      height: 26,
-      fontSize: 12
-    }
-  }, h.status ? dotMap[h.status] || "·" : "·")))), (data.nextRun || data.closeable !== false) && /*#__PURE__*/React.createElement("div", {
-    className: "modal-footer"
-  }, data.nextRun ? /*#__PURE__*/React.createElement("div", {
-    className: "modal-next"
-  }, /*#__PURE__*/React.createElement("strong", null, "Prossima:"), " ", data.nextRun) : /*#__PURE__*/React.createElement("div", null), /*#__PURE__*/React.createElement("button", {
-    className: "modal-btn",
-    onClick: onClose
-  }, "Chiudi"))));
+  const dotMap = { success:"✓", warning:"⚠", error:"✕", skipped:"–", running:"●" };
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal" onClick={e => e.stopPropagation()}>
+        <div className="modal-header">
+          <div className="modal-header-left">
+            <span className="modal-icon">{data.icon}</span>
+            <div>
+              <div className="modal-title">{data.name}</div>
+              {data.schedule && <div className="modal-subtitle">{data.schedule}</div>}
+            </div>
+          </div>
+          <div style={{display:"flex", alignItems:"center", gap:"10px"}}>
+            <StatusBadge status={data.status} />
+            <button className="modal-close" onClick={onClose}>×</button>
+          </div>
+        </div>
+        <div className="modal-body">
+          {data.time && <div className="modal-time">{data.time}</div>}
+          {data.note && !data.details?.length && <div className="modal-note">{data.note}</div>}
+          {data.details && data.details.length > 0 && (
+            <ul className="modal-details">
+              {data.details.map((d, i) => <li key={i}>{d}</li>)}
+            </ul>
+          )}
+          {data.historyRow && data.historyRow.some(h => h.status) && (
+            <div className="modal-history-row">
+              <span className="modal-history-label">Storico</span>
+              {data.historyRow.map((h, i) => (
+                <span key={i} title={h.date + (h.note ? ": " + h.note : "")}
+                  className={`dot ${h.status || "null"}`} style={{width:26,height:26,fontSize:12}}>
+                  {h.status ? (dotMap[h.status]||"·") : "·"}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+        {(data.nextRun || data.closeable !== false) && (
+          <div className="modal-footer">
+            {data.nextRun
+              ? <div className="modal-next"><strong>Prossima:</strong> {data.nextRun}</div>
+              : <div />}
+            <button className="modal-btn" onClick={onClose}>Chiudi</button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
 
 // ══════════════════════════════════════════════
@@ -632,8 +590,7 @@ function KpiBar() {
 
   // calcola tasso successo 7gg su daily + auguri (ignora AML che è trimestrale)
   const relevant = ["daily-briefing", "auguri-clienti"];
-  let runs = 0,
-    successes = 0;
+  let runs = 0, successes = 0;
   DATA.history.forEach(day => {
     relevant.forEach(id => {
       const t = day.tasks[id];
@@ -643,55 +600,46 @@ function KpiBar() {
       }
     });
   });
-  const rate = runs > 0 ? Math.round(successes / runs * 100) : 0;
+  const rate = runs > 0 ? Math.round((successes / runs) * 100) : 0;
 
   // prossimo task
   const now = new Date(2026, 2, 24, 12, 0);
   const nextLabel = "Domani — Daily Briefing 07:01";
-  return /*#__PURE__*/React.createElement("div", {
-    className: "kpi-bar"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "kpi-card"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "kpi-icon"
-  }, "\uD83D\uDCC5"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    className: "kpi-label"
-  }, "Task completati oggi"), /*#__PURE__*/React.createElement("div", {
-    className: "kpi-value"
-  }, completedToday, "/", total), /*#__PURE__*/React.createElement("div", {
-    className: "kpi-sub"
-  }, "task pianificati"))), /*#__PURE__*/React.createElement("div", {
-    className: "kpi-card green"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "kpi-icon"
-  }, "\uD83D\uDCCA"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    className: "kpi-label"
-  }, "Tasso successo 5gg"), /*#__PURE__*/React.createElement("div", {
-    className: "kpi-value"
-  }, rate, "%"), /*#__PURE__*/React.createElement("div", {
-    className: "kpi-sub"
-  }, successes, "/", runs, " esecuzioni OK"))), /*#__PURE__*/React.createElement("div", {
-    className: "kpi-card blue"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "kpi-icon"
-  }, "\u23ED"), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
-    className: "kpi-label"
-  }, "Prossima esecuzione"), /*#__PURE__*/React.createElement("div", {
-    className: "kpi-value",
-    style: {
-      fontSize: "13px",
-      marginTop: "2px"
-    }
-  }, nextLabel))));
+
+  return (
+    <div className="kpi-bar">
+      <div className="kpi-card">
+        <div className="kpi-icon">📅</div>
+        <div>
+          <div className="kpi-label">Task completati oggi</div>
+          <div className="kpi-value">{completedToday}/{total}</div>
+          <div className="kpi-sub">task pianificati</div>
+        </div>
+      </div>
+      <div className="kpi-card green">
+        <div className="kpi-icon">📊</div>
+        <div>
+          <div className="kpi-label">Tasso successo 5gg</div>
+          <div className="kpi-value">{rate}%</div>
+          <div className="kpi-sub">{successes}/{runs} esecuzioni OK</div>
+        </div>
+      </div>
+      <div className="kpi-card blue">
+        <div className="kpi-icon">⏭</div>
+        <div>
+          <div className="kpi-label">Prossima esecuzione</div>
+          <div className="kpi-value" style={{fontSize:"13px", marginTop:"2px"}}>{nextLabel}</div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 // ══════════════════════════════════════════════
 //  TASK CARDS (stato di oggi)
 // ══════════════════════════════════════════════
-function TaskCards({
-  onOpen
-}) {
-  const handleClick = task => {
+function TaskCards({ onOpen }) {
+  const handleClick = (task) => {
     const historyRow = DATA.history.map(day => ({
       date: day.date,
       status: day.tasks[task.id]?.status,
@@ -709,134 +657,91 @@ function TaskCards({
       nextRun: task.nextRun
     });
   };
-  return /*#__PURE__*/React.createElement("div", {
-    className: "section"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "section-title"
-  }, "Oggi \u2014 Task pianificati"), /*#__PURE__*/React.createElement("div", {
-    className: "task-cards"
-  }, DATA.scheduledTasks.map(task => /*#__PURE__*/React.createElement("div", {
-    key: task.id,
-    className: `task-card ${task.todayStatus}`,
-    onClick: () => handleClick(task)
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "task-card-header"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "task-card-name"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "icon"
-  }, task.icon), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h3", null, task.name), /*#__PURE__*/React.createElement("div", {
-    className: "schedule"
-  }, task.schedule))), /*#__PURE__*/React.createElement(StatusBadge, {
-    status: task.todayStatus
-  })), /*#__PURE__*/React.createElement("div", {
-    className: "task-time"
-  }, task.todayTime), /*#__PURE__*/React.createElement("div", {
-    className: "task-note"
-  }, task.todayNote), /*#__PURE__*/React.createElement("div", {
-    className: "task-next"
-  }, /*#__PURE__*/React.createElement("strong", null, "Prossima:"), " ", task.nextRun)))));
+  return (
+    <div className="section">
+      <div className="section-title">Oggi — Task pianificati</div>
+      <div className="task-cards">
+        {DATA.scheduledTasks.map(task => (
+          <div key={task.id} className={`task-card ${task.todayStatus}`} onClick={() => handleClick(task)}>
+            <div className="task-card-header">
+              <div className="task-card-name">
+                <span className="icon">{task.icon}</span>
+                <div>
+                  <h3>{task.name}</h3>
+                  <div className="schedule">{task.schedule}</div>
+                </div>
+              </div>
+              <StatusBadge status={task.todayStatus} />
+            </div>
+            <div className="task-time">{task.todayTime}</div>
+            <div className="task-note">{task.todayNote}</div>
+            <div className="task-next">
+              <strong>Prossima:</strong> {task.nextRun}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 // ══════════════════════════════════════════════
 //  STORICO 5 GIORNI
 // ══════════════════════════════════════════════
 function History() {
-  const taskRows = [{
-    id: "daily-briefing",
-    icon: "📋",
-    name: "Daily Briefing"
-  }, {
-    id: "auguri-clienti",
-    icon: "🎂",
-    name: "Auguri Clienti"
-  }, {
-    id: "verifica-aml",
-    icon: "🛡️",
-    name: "Verifica AML"
-  }];
-  return /*#__PURE__*/React.createElement("div", {
-    className: "section"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "section-title"
-  }, "Storico \u2014 ultimi 5 giorni"), /*#__PURE__*/React.createElement("div", {
-    className: "history-grid"
-  }, /*#__PURE__*/React.createElement("table", {
-    className: "history-table"
-  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Task"), DATA.history.map((day, i) => /*#__PURE__*/React.createElement("th", {
-    key: i,
-    className: "day-col"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: day.isToday ? "day-label-today" : ""
-  }, day.date))))), /*#__PURE__*/React.createElement("tbody", null, taskRows.map(row => /*#__PURE__*/React.createElement("tr", {
-    key: row.id
-  }, /*#__PURE__*/React.createElement("td", {
-    className: "task-label"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "task-icon"
-  }, row.icon), row.name), DATA.history.map((day, i) => {
-    const t = day.tasks[row.id];
-    return /*#__PURE__*/React.createElement(DotCell, {
-      key: i,
-      status: t?.status,
-      note: t?.note
-    });
-  }))))), /*#__PURE__*/React.createElement("div", {
-    className: "legend"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "legend-item"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "dot success",
-    style: {
-      width: 18,
-      height: 18,
-      fontSize: 10
-    }
-  }, "\u2713"), " OK"), /*#__PURE__*/React.createElement("span", {
-    className: "legend-item"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "dot warning",
-    style: {
-      width: 18,
-      height: 18,
-      fontSize: 10
-    }
-  }, "\u26A0"), " Anomalia"), /*#__PURE__*/React.createElement("span", {
-    className: "legend-item"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "dot skipped",
-    style: {
-      width: 18,
-      height: 18,
-      fontSize: 10
-    }
-  }, "\u2013"), " Non eseguito"), /*#__PURE__*/React.createElement("span", {
-    className: "legend-item"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "dot null",
-    style: {
-      width: 18,
-      height: 18,
-      fontSize: 10
-    }
-  }, "\xB7"), " Non previsto"))));
+  const taskRows = [
+    { id: "daily-briefing", icon: "📋", name: "Daily Briefing" },
+    { id: "auguri-clienti", icon: "🎂", name: "Auguri Clienti" },
+    { id: "verifica-aml",   icon: "🛡️", name: "Verifica AML" }
+  ];
+
+  return (
+    <div className="section">
+      <div className="section-title">Storico — ultimi 5 giorni</div>
+      <div className="history-grid">
+        <table className="history-table">
+          <thead>
+            <tr>
+              <th>Task</th>
+              {DATA.history.map((day, i) => (
+                <th key={i} className="day-col">
+                  <span className={day.isToday ? "day-label-today" : ""}>{day.date}</span>
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {taskRows.map(row => (
+              <tr key={row.id}>
+                <td className="task-label">
+                  <span className="task-icon">{row.icon}</span>
+                  {row.name}
+                </td>
+                {DATA.history.map((day, i) => {
+                  const t = day.tasks[row.id];
+                  return <DotCell key={i} status={t?.status} note={t?.note} />;
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div className="legend">
+          <span className="legend-item"><span className="dot success" style={{width:18,height:18,fontSize:10}}>✓</span> OK</span>
+          <span className="legend-item"><span className="dot warning" style={{width:18,height:18,fontSize:10}}>⚠</span> Anomalia</span>
+          <span className="legend-item"><span className="dot skipped" style={{width:18,height:18,fontSize:10}}>–</span> Non eseguito</span>
+          <span className="legend-item"><span className="dot null" style={{width:18,height:18,fontSize:10}}>·</span> Non previsto</span>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 // ══════════════════════════════════════════════
 //  TASK MANUALI
 // ══════════════════════════════════════════════
-function ManualTasks({
-  onOpen
-}) {
-  const catIcon = {
-    AML: "🛡️",
-    Sistema: "⚙️",
-    Documenti: "📄",
-    File: "📁",
-    Email: "✉️",
-    Altro: "📌"
-  };
-  const handleClick = task => {
+function ManualTasks({ onOpen }) {
+  const catIcon = { AML:"🛡️", Sistema:"⚙️", Documenti:"📄", File:"📁", Email:"✉️", Altro:"📌" };
+  const handleClick = (task) => {
     onOpen({
       icon: catIcon[task.category] || "📌",
       name: task.name,
@@ -847,66 +752,106 @@ function ManualTasks({
       closeable: false
     });
   };
-  return /*#__PURE__*/React.createElement("div", {
-    className: "section"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "section-title"
-  }, "Task manuali recenti"), /*#__PURE__*/React.createElement("div", {
-    className: "manual-list"
-  }, DATA.manualTasks.map((task, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
-    className: "manual-item",
-    onClick: () => handleClick(task)
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "manual-item-left"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "manual-item-date"
-  }, task.date), /*#__PURE__*/React.createElement("span", {
-    className: "manual-item-name"
-  }, task.name), /*#__PURE__*/React.createElement("span", {
-    className: `cat-badge ${task.category}`
-  }, task.category)), /*#__PURE__*/React.createElement(StatusBadge, {
-    status: task.status
-  })))));
+  return (
+    <div className="section">
+      <div className="section-title">Task manuali recenti</div>
+      <div className="manual-list">
+        {DATA.manualTasks.map((task, i) => (
+          <div key={i} className="manual-item" onClick={() => handleClick(task)}>
+            <div className="manual-item-left">
+              <span className="manual-item-date">{task.date}</span>
+              <span className="manual-item-name">{task.name}</span>
+              <span className={`cat-badge ${task.category}`}>{task.category}</span>
+            </div>
+            <StatusBadge status={task.status} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 // ══════════════════════════════════════════════
 //  APP ROOT
 // ══════════════════════════════════════════════
+
+// ══════════════════════════════════════════════════════
+//  BOZZE COWORK
+// ══════════════════════════════════════════════════════
+function DraftEmails() {
+  return (
+    <div className="section">
+      <div className="section-title">✉️ Bozze Cowork – pronte a partire</div>
+      <div className="drafts-list">
+        {DATA.coworkDrafts.map((d, i) => (
+          <div key={i} className={`draft-item ${d.status}`}>
+            <div className="draft-item-left">
+              <span className="draft-date">{d.date}</span>
+              <div className="draft-meta">
+                <span className="draft-subject">{d.subject}</span>
+                <span className="draft-dest">{d.to ? `→ ${d.to}` : d.dest}</span>
+              </div>
+            </div>
+            <span className={`draft-badge-${d.status}`}>
+              {d.status === "ready" ? "📤 Pronta" : "📝 Template"}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [modal, setModal] = useState(null);
   const genDate = new Date(DATA.generatedAt);
-  const genLabel = genDate.toLocaleDateString("it-IT", {
-    day: "2-digit",
-    month: "short",
-    year: "numeric"
-  }) + " — " + genDate.toLocaleTimeString("it-IT", {
-    hour: "2-digit",
-    minute: "2-digit"
-  });
-  return /*#__PURE__*/React.createElement("div", null, modal && /*#__PURE__*/React.createElement(Modal, {
-    data: modal,
-    onClose: () => setModal(null)
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "header"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "header-brand"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, "\uD83E\uDD16 KPI Cowork Monitor"), /*#__PURE__*/React.createElement("span", null, "Dottori Commercialisti e Revisori Legali"))), /*#__PURE__*/React.createElement("div", {
-    className: "header-date"
-  }, /*#__PURE__*/React.createElement("strong", null, formatDate()), /*#__PURE__*/React.createElement("div", {
-    className: "last-update"
-  }, "Dati aggiornati il ", genLabel))), /*#__PURE__*/React.createElement(KpiBar, null), /*#__PURE__*/React.createElement(TaskCards, {
-    onOpen: setModal
-  }), /*#__PURE__*/React.createElement(History, null), /*#__PURE__*/React.createElement(ManualTasks, {
-    onOpen: setModal
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "footer"
-  }, "KPI Consulting STP S.r.l. \u2014 Via Antonio Bertoloni, 29 \u2014", /*#__PURE__*/React.createElement("a", {
-    href: "https://www.kpiconsulting.it",
-    target: "_blank"
-  }, " www.kpiconsulting.it"), /*#__PURE__*/React.createElement("br", null), "Dashboard generata da Claude Cowork \xB7 i dati vengono aggiornati ad ogni nuova lettura delle sessioni"));
+  const genLabel = genDate.toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" })
+    + " — " + genDate.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" });
+
+  return (
+    <div>
+      {modal && <Modal data={modal} onClose={() => setModal(null)} />}
+
+      {/* ── HEADER ── */}
+      <div className="header">
+        <div className="header-brand">
+          <div>
+            <h1>🤖 KPI Cowork Monitor</h1>
+            <span>Dottori Commercialisti e Revisori Legali</span>
+          </div>
+        </div>
+        <div className="header-date">
+          <strong>{formatDate()}</strong>
+          <div className="last-update">Dati aggiornati il {genLabel}</div>
+        </div>
+      </div>
+
+      {/* ── KPI BAR ── */}
+      <KpiBar />
+
+      {/* ── TASK CARDS ── */}
+      <TaskCards onOpen={setModal} />
+
+      {/* ── HISTORY ── */}
+      <History />
+
+      {/* ── MANUAL TASKS ── */}
+      <ManualTasks onOpen={setModal} />
+
+      {/* ── BOZZE ── */}
+      <DraftEmails />
+
+      {/* ── FOOTER ── */}
+      <div className="footer">
+        KPI Consulting STP S.r.l. — Via Antonio Bertoloni, 29 —
+        <a href="https://www.kpiconsulting.it" target="_blank"> www.kpiconsulting.it</a>
+        <br/>Dashboard generata da Claude Cowork · i dati vengono aggiornati ad ogni nuova lettura delle sessioni
+      </div>
+    </div>
+  );
 }
-ReactDOM.createRoot(document.getElementById("root")).render(/*#__PURE__*/React.createElement(App, null));
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 </script>
 </body>
 </html>
