@@ -16,7 +16,7 @@
       min-height: 100vh;
     }
 
-    /* ── HEADER ── */
+    /* ââ HEADER ââ */
     .header {
       background: #fff;
       border-bottom: 4px solid #EFD656;
@@ -32,7 +32,7 @@
     .header-date strong { display: block; font-size: 15px; color: #333; }
     .last-update { font-size: 11px; color: #aaa; margin-top: 2px; }
 
-    /* ── KPI BAR ── */
+    /* ââ KPI BAR ââ */
     .kpi-bar {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -56,7 +56,7 @@
     .kpi-value { font-size: 22px; font-weight: 700; color: #333; line-height: 1.1; }
     .kpi-sub { font-size: 11px; color: #aaa; margin-top: 1px; }
 
-    /* ── SECTION ── */
+    /* ââ SECTION ââ */
     .section { padding: 0 32px 24px; }
     .section-title {
       font-size: 11px;
@@ -67,7 +67,7 @@
       margin-bottom: 12px;
     }
 
-    /* ── TASK CARDS ── */
+    /* ââ TASK CARDS ââ */
     .task-cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -138,7 +138,7 @@
     }
     .task-next strong { color: #666; }
 
-    /* ── HISTORY ── */
+    /* ââ HISTORY ââ */
     .history-grid {
       background: #fff;
       border-radius: 10px;
@@ -190,7 +190,7 @@
     .dot.null    { color: #e5e7eb; font-size: 10px; }
     .day-label-today { font-weight: 700; color: #333; }
 
-    /* ── MANUAL TASKS ── */
+    /* ââ MANUAL TASKS ââ */
     .manual-list { display: flex; flex-direction: column; gap: 8px; }
     .manual-item {
       background: #fff;
@@ -223,7 +223,7 @@
     .cat-badge.Documenti{ background: #f5f3ff; color: #7c3aed; }
     .cat-badge.File     { background: #f0fdf4; color: #15803d; }
 
-    /* ── FOOTER ── */
+    /* ââ FOOTER ââ */
     .footer {
       padding: 16px 32px 32px;
       font-size: 11px;
@@ -232,7 +232,7 @@
     }
     .footer a { color: #BCD036; text-decoration: none; }
 
-    /* ── LEGEND ── */
+    /* ââ LEGEND ââ */
     .legend {
       display: flex;
       gap: 16px;
@@ -249,14 +249,14 @@
       .header { padding: 12px 16px; }
     }
 
-    /* ── CLICKABLE ── */
+    /* ââ CLICKABLE ââ */
     .task-card  { cursor: pointer; transition: transform 0.1s, box-shadow 0.1s; }
     .task-card:hover  { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
     .manual-item { cursor: pointer; transition: background 0.1s; }
     .manual-item:hover { background: #f9fafb; }
     .dot-clickable { cursor: pointer; }
 
-    /* ── MODAL ── */
+    /* ââ MODAL ââ */
     .modal-backdrop {
       position: fixed; inset: 0;
       background: rgba(0,0,0,0.45);
@@ -299,7 +299,7 @@
       font-size: 13px; color: #444; line-height: 1.5; display: flex; gap: 8px;
     }
     .modal-details li:last-child { border-bottom: none; }
-    .modal-details li::before { content: '→'; color: #BCD036; font-weight: 700; flex-shrink: 0; }
+    .modal-details li::before { content: 'â'; color: #BCD036; font-weight: 700; flex-shrink: 0; }
     .modal-history-row {
       display: flex; align-items: center; gap: 6px;
       padding-top: 16px; margin-top: 16px; border-top: 1px solid #f3f4f6;
@@ -314,7 +314,7 @@
     }
     .modal-btn:hover { background: #e5c840; }
 
-    /* ─── BOZZE COWORK ─── */
+    /* âââ BOZZE COWORK âââ */
     .drafts-list { display: flex; flex-direction: column; gap: 8px; }
     .draft-item {
       background: #fff; border-radius: 8px; padding: 12px 16px;
@@ -336,35 +336,35 @@
 <div id="root"></div>
 
 <script type="text/babel">
-// ══════════════════════════════════════════════
-//  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
+//  DATI â aggiornati da Claude Cowork il 24/03/2026 alle 14:21
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 const DATA = {
-  "generatedAt": "2026-03-24T23:04:23",
+  "generatedAt": "2026-03-24T23:09:09",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
       "name": "Daily Briefing",
-      "icon": "📋",
-      "schedule": "Ogni giorno → 07:01",
+      "icon": "ð",
+      "schedule": "Ogni giorno â 07:01",
       "todayStatus": "success",
       "todayTime": "07:01",
-      "todayNote": "Agenda libera · 17 email non lette · 3 urgenti",
+      "todayNote": "Agenda libera Â· 17 email non lette Â· 3 urgenti",
       "todayDetails": [
-        "📅 Calendario: nessun impegno oggi",
-        "📬 17 email non lette (etichetta Lorenzo)",
-        "⚠️ PEC Diffida WE-NET – non letta da 3 settimane, allegato PDF firmato",
-        "⚠️ PM ELETTRIC (Protano Michele) – verifica cartelle AdE ~€28.900, in attesa 1+ mese",
-        "⚠️ Francesca Raponi – chiarimenti regime IVA e 5x1000, in attesa 2 mesi",
-        "📰 14 newsletter Ratio Quotidiano non lette"
+        "ð Calendario: nessun impegno oggi",
+        "ð¬ 17 email non lette (etichetta Lorenzo)",
+        "â ï¸ PEC Diffida WE-NET â non letta da 3 settimane, allegato PDF firmato",
+        "â ï¸ PM ELETTRIC (Protano Michele) â verifica cartelle AdE ~â¬28.900, in attesa 1+ mese",
+        "â ï¸ Francesca Raponi â chiarimenti regime IVA e 5x1000, in attesa 2 mesi",
+        "ð° 14 newsletter Ratio Quotidiano non lette"
       ],
       "nextRun": "Domani alle 07:01"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
-      "icon": "🎂",
-      "schedule": "Ogni giorno → 05:04",
+      "icon": "ð",
+      "schedule": "Ogni giorno â 05:04",
       "todayStatus": "success",
       "todayTime": "09:04",
       "todayNote": "Nessun compleanno oggi",
@@ -377,16 +377,16 @@ const DATA = {
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "icon": "🛡️",
-      "schedule": "Trimestrale → giorno 10",
+      "icon": "ð¡ï¸",
+      "schedule": "Trimestrale â giorno 10",
       "todayStatus": "warning",
       "todayTime": "11:52",
       "todayNote": "2 anomalie: PEPPERPOT S.R.L. documenti scaduti (KPI+LT)",
       "todayDetails": [
         "18 clienti verificati (10 registro KPI + 8 registro LT)",
-        "🔴 PEPPERPOT S.R.L.: documento scaduto il 26/07/2025 in entrambi i registri",
-        "✅ 16 clienti: documenti validi, nessuna anomalia",
-        "📧 Bozza email sollecito creata per PEPPERPOT S.R.L.",
+        "ð´ PEPPERPOT S.R.L.: documento scaduto il 26/07/2025 in entrambi i registri",
+        "â 16 clienti: documenti validi, nessuna anomalia",
+        "ð§ Bozza email sollecito creata per PEPPERPOT S.R.L.",
         "Prossima verifica trimestrale: 10 aprile 2026"
       ],
       "nextRun": "10 aprile 2026 alle 09:00"
@@ -394,29 +394,29 @@ const DATA = {
     {
       "id": "inserimento-notion-gmail",
       "name": "Inserimento Notion da Gmail",
-      "icon": "📬",
-      "schedule": "Lun–Sab → 08:07 · 13:07 · 18:07",
+      "icon": "ð¬",
+      "schedule": "LunâSab â 08:07 Â· 13:07 Â· 18:07",
       "todayStatus": "success",
       "todayTime": "22:55",
       "todayNote": "5 record creati: 2 Da firmare + 3 Da ricevere",
       "todayDetails": [
-        "📝 Da firmare: COSMI GIACOMO (Contratto incarico), PROTANO MICHELE (Contratto+doc)",
-        "📥 Da ricevere: PEPPERPOT S.R.L. (doc. identità), OTPA S.R.L. (doc. identità)",
-        "⚠️ F. e G. S.R.L. (CONTRATTO BMW) — tipo documento da completare su Notion"
+        "ð Da firmare: COSMI GIACOMO (Contratto incarico), PROTANO MICHELE (Contratto+doc)",
+        "ð¥ Da ricevere: PEPPERPOT S.R.L. (doc. identitÃ ), OTPA S.R.L. (doc. identitÃ )",
+        "â ï¸ F. e G. S.R.L. (CONTRATTO BMW) â tipo documento da completare su Notion"
       ],
       "nextRun": "Domani alle 08:07"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "icon": "🔍",
-      "schedule": "Lun–Sab → 07:07 + 15:03",
+      "icon": "ð",
+      "schedule": "LunâSab â 07:07 + 15:03",
       "todayStatus": "pending",
-      "todayTime": "—",
-      "todayNote": "Attivo da oggi — prima esecuzione domani",
+      "todayTime": "â",
+      "todayNote": "Attivo da oggi â prima esecuzione domani",
       "todayDetails": [
         "Controlla Gmail per risposte clienti con allegati firmati",
-        "Aggiorna Notion: Inviato → Ricevuto",
+        "Aggiorna Notion: Inviato â Ricevuto",
         "Esecuzione mattino (07:07) e pomeriggio (15:03)"
       ],
       "nextRun": "Domani alle 07:07"
@@ -424,29 +424,30 @@ const DATA = {
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "icon": "🔔",
-      "schedule": "Ogni lunedì → 09:10",
+      "icon": "ð",
+      "schedule": "Ogni lunedÃ¬ â 09:10",
       "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non previsto oggi (martedì)",
+      "todayTime": "â",
+      "todayNote": "Non previsto oggi (martedÃ¬)",
       "todayDetails": [
         "Crea bozze Gmail di sollecito per clienti senza risposta da 7+ giorni",
         "Controlla lista MONITORAGGIO DOCUMENTI in Notion"
       ],
-      "nextRun": "Lunedì 30 marzo alle 09:10"
+      "nextRun": "LunedÃ¬ 30 marzo alle 09:10"
     },
     {
       "id": "aggiorna-cowork-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "icon": "📊",
-      "schedule": "Ogni giorno → 08:02",
+      "icon": "ð",
+      "schedule": "Ogni giorno â 08:02",
       "todayStatus": "success",
-      "todayTime": "22:18",
-      "todayNote": "Dashboard aggiornata — fix encoding + 4 nuovi task widget",
+      "todayTime": "23:09",
+      "todayNote": "Dashboard aggiornata · Verifica AML: 2 anomalie · 2 bozze template Gmail",
       "todayDetails": [
-        "✅ Fix encoding UTF-8 caratteri React (garbled chars corretti)",
-        "✅ Aggiunta sezione documenti: Inserimento Notion, Monitoraggio, Solleciti",
-        "✅ Aggiornamento coworkDrafts (bozze Gmail sincronizzate)"
+        "✓ Task analizzati: Daily Briefing (success), Auguri (nessun compleanno), AML (2 anomalie)",
+        "⚠️ PEPPERPOT S.R.L.: documento scaduto il 26/07/2025 in entrambi i registri KPI+LT",
+        "✓ Inserimento Notion: 5 record creati (2 Da firmare + 3 Da ricevere)",
+        "✓ bozze Gmail: 2 template (SITUAZIONE CONTABILE ORDINARI/FORFETARI) — invariate"
       ],
       "nextRun": "Domani alle 08:02"
     }
@@ -559,7 +560,7 @@ const DATA = {
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Protano Michele 🎂"
+          "note": "Protano Michele ð"
         },
         "verifica-aml": {
           "status": null
@@ -586,14 +587,14 @@ const DATA = {
   "coworkDrafts": [
     {
       "to": "",
-      "dest": "– (template)",
+      "dest": "â (template)",
       "subject": "SITUAZIONE CONTABILE ORDINARI",
       "date": "11 gen",
       "status": "template"
     },
     {
       "to": "",
-      "dest": "– (template)",
+      "dest": "â (template)",
       "subject": "SITUAZIONE CONTABILE FORFETARI",
       "date": "11 gen",
       "status": "template"
@@ -601,9 +602,9 @@ const DATA = {
   ]
 };
 
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 //  HELPERS
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 const { useState } = React;
 
 function formatDate() {
@@ -613,27 +614,27 @@ function formatDate() {
 
 function StatusBadge({ status }) {
   const map = {
-    success: { label: "✓ OK",        cls: "success" },
-    warning: { label: "⚠ Anomalia",  cls: "warning" },
-    error:   { label: "✕ Errore",    cls: "error" },
+    success: { label: "â OK",        cls: "success" },
+    warning: { label: "â  Anomalia",  cls: "warning" },
+    error:   { label: "â Errore",    cls: "error" },
     pending: { label: "In attesa",   cls: "pending" },
-    running: { label: "● In corso",  cls: "running" },
-    skipped: { label: "–",           cls: "skipped" }
+    running: { label: "â In corso",  cls: "running" },
+    skipped: { label: "â",           cls: "skipped" }
   };
   const m = map[status] || map["pending"];
   return <span className={`status-badge ${m.cls}`}>{m.label}</span>;
 }
 
 function DotCell({ status, note }) {
-  if (!status) return <td className="dot-cell"><span className="dot null">·</span></td>;
+  if (!status) return <td className="dot-cell"><span className="dot null">Â·</span></td>;
   const map = {
-    success: "✓",
-    warning: "⚠",
-    error:   "✕",
-    skipped: "–",
-    running: "●"
+    success: "â",
+    warning: "â ",
+    error:   "â",
+    skipped: "â",
+    running: "â"
   };
-  const icon = map[status] || "·";
+  const icon = map[status] || "Â·";
   return (
     <td className="dot-cell" title={note || ""}>
       <span className={`dot ${status}`}>{icon}</span>
@@ -641,12 +642,12 @@ function DotCell({ status, note }) {
   );
 }
 
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 //  MODAL
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 function Modal({ data, onClose }) {
   if (!data) return null;
-  const dotMap = { success:"✓", warning:"⚠", error:"✕", skipped:"–", running:"●" };
+  const dotMap = { success:"â", warning:"â ", error:"â", skipped:"â", running:"â" };
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div className="modal" onClick={e => e.stopPropagation()}>
@@ -660,7 +661,7 @@ function Modal({ data, onClose }) {
           </div>
           <div style={{display:"flex", alignItems:"center", gap:"10px"}}>
             <StatusBadge status={data.status} />
-            <button className="modal-close" onClick={onClose}>×</button>
+            <button className="modal-close" onClick={onClose}>Ã</button>
           </div>
         </div>
         <div className="modal-body">
@@ -677,7 +678,7 @@ function Modal({ data, onClose }) {
               {data.historyRow.map((h, i) => (
                 <span key={i} title={h.date + (h.note ? ": " + h.note : "")}
                   className={`dot ${h.status || "null"}`} style={{width:26,height:26,fontSize:12}}>
-                  {h.status ? (dotMap[h.status]||"·") : "·"}
+                  {h.status ? (dotMap[h.status]||"Â·") : "Â·"}
                 </span>
               ))}
             </div>
@@ -696,15 +697,15 @@ function Modal({ data, onClose }) {
   );
 }
 
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 //  KPI BAR
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 function KpiBar() {
   const todayTasks = DATA.scheduledTasks;
   const completedToday = todayTasks.filter(t => t.todayStatus === "success").length;
   const total = todayTasks.length;
 
-  // calcola tasso successo 7gg su daily + auguri (ignora AML che è trimestrale)
+  // calcola tasso successo 7gg su daily + auguri (ignora AML che Ã¨ trimestrale)
   const relevant = ["daily-briefing", "auguri-clienti"];
   let runs = 0, successes = 0;
   DATA.history.forEach(day => {
@@ -720,12 +721,12 @@ function KpiBar() {
 
   // prossimo task
   const now = new Date(2026, 2, 24, 12, 0);
-  const nextLabel = "Domani — Daily Briefing 07:01";
+  const nextLabel = "Domani â Daily Briefing 07:01";
 
   return (
     <div className="kpi-bar">
       <div className="kpi-card">
-        <div className="kpi-icon">📅</div>
+        <div className="kpi-icon">ð</div>
         <div>
           <div className="kpi-label">Task completati oggi</div>
           <div className="kpi-value">{completedToday}/{total}</div>
@@ -733,7 +734,7 @@ function KpiBar() {
         </div>
       </div>
       <div className="kpi-card green">
-        <div className="kpi-icon">📊</div>
+        <div className="kpi-icon">ð</div>
         <div>
           <div className="kpi-label">Tasso successo 5gg</div>
           <div className="kpi-value">{rate}%</div>
@@ -741,7 +742,7 @@ function KpiBar() {
         </div>
       </div>
       <div className="kpi-card blue">
-        <div className="kpi-icon">⏭</div>
+        <div className="kpi-icon">â­</div>
         <div>
           <div className="kpi-label">Prossima esecuzione</div>
           <div className="kpi-value" style={{fontSize:"13px", marginTop:"2px"}}>{nextLabel}</div>
@@ -751,9 +752,9 @@ function KpiBar() {
   );
 }
 
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 //  TASK CARDS (stato di oggi)
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 function TaskCards({ onOpen }) {
   const handleClick = (task) => {
     const historyRow = DATA.history.map(day => ({
@@ -775,7 +776,7 @@ function TaskCards({ onOpen }) {
   };
   return (
     <div className="section">
-      <div className="section-title">Oggi — Task pianificati</div>
+      <div className="section-title">Oggi â Task pianificati</div>
       <div className="task-cards">
         {DATA.scheduledTasks.map(task => (
           <div key={task.id} className={`task-card ${task.todayStatus}`} onClick={() => handleClick(task)}>
@@ -801,19 +802,19 @@ function TaskCards({ onOpen }) {
   );
 }
 
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 //  STORICO 5 GIORNI
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 function History() {
   const taskRows = [
-    { id: "daily-briefing", icon: "📋", name: "Daily Briefing" },
-    { id: "auguri-clienti", icon: "🎂", name: "Auguri Clienti" },
-    { id: "verifica-aml",   icon: "🛡️", name: "Verifica AML" }
+    { id: "daily-briefing", icon: "ð", name: "Daily Briefing" },
+    { id: "auguri-clienti", icon: "ð", name: "Auguri Clienti" },
+    { id: "verifica-aml",   icon: "ð¡ï¸", name: "Verifica AML" }
   ];
 
   return (
     <div className="section">
-      <div className="section-title">Storico — ultimi 5 giorni</div>
+      <div className="section-title">Storico â ultimi 5 giorni</div>
       <div className="history-grid">
         <table className="history-table">
           <thead>
@@ -842,24 +843,24 @@ function History() {
           </tbody>
         </table>
         <div className="legend">
-          <span className="legend-item"><span className="dot success" style={{width:18,height:18,fontSize:10}}>✓</span> OK</span>
-          <span className="legend-item"><span className="dot warning" style={{width:18,height:18,fontSize:10}}>⚠</span> Anomalia</span>
-          <span className="legend-item"><span className="dot skipped" style={{width:18,height:18,fontSize:10}}>–</span> Non eseguito</span>
-          <span className="legend-item"><span className="dot null" style={{width:18,height:18,fontSize:10}}>·</span> Non previsto</span>
+          <span className="legend-item"><span className="dot success" style={{width:18,height:18,fontSize:10}}>â</span> OK</span>
+          <span className="legend-item"><span className="dot warning" style={{width:18,height:18,fontSize:10}}>â </span> Anomalia</span>
+          <span className="legend-item"><span className="dot skipped" style={{width:18,height:18,fontSize:10}}>â</span> Non eseguito</span>
+          <span className="legend-item"><span className="dot null" style={{width:18,height:18,fontSize:10}}>Â·</span> Non previsto</span>
         </div>
       </div>
     </div>
   );
 }
 
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 //  TASK MANUALI
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 function ManualTasks({ onOpen }) {
-  const catIcon = { AML:"🛡️", Sistema:"⚙️", Documenti:"📄", File:"📁", Email:"✉️", Altro:"📌" };
+  const catIcon = { AML:"ð¡ï¸", Sistema:"âï¸", Documenti:"ð", File:"ð", Email:"âï¸", Altro:"ð" };
   const handleClick = (task) => {
     onOpen({
-      icon: catIcon[task.category] || "📌",
+      icon: catIcon[task.category] || "ð",
       name: task.name,
       schedule: task.category,
       status: task.status,
@@ -887,17 +888,17 @@ function ManualTasks({ onOpen }) {
   );
 }
 
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 //  APP ROOT
-// ══════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââ
 
-// ══════════════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 //  BOZZE COWORK
-// ══════════════════════════════════════════════════════
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 function DraftEmails() {
   return (
     <div className="section">
-      <div className="section-title">✉️ Bozze Cowork – pronte a partire</div>
+      <div className="section-title">âï¸ Bozze Cowork â pronte a partire</div>
       <div className="drafts-list">
         {DATA.coworkDrafts.map((d, i) => (
           <div key={i} className={`draft-item ${d.status}`}>
@@ -905,11 +906,11 @@ function DraftEmails() {
               <span className="draft-date">{d.date}</span>
               <div className="draft-meta">
                 <span className="draft-subject">{d.subject}</span>
-                <span className="draft-dest">{d.to ? `→ ${d.to}` : d.dest}</span>
+                <span className="draft-dest">{d.to ? `â ${d.to}` : d.dest}</span>
               </div>
             </div>
             <span className={`draft-badge-${d.status}`}>
-              {d.status === "ready" ? "📤 Pronta" : "📝 Template"}
+              {d.status === "ready" ? "ð¤ Pronta" : "ð Template"}
             </span>
           </div>
         ))}
@@ -922,17 +923,17 @@ function App() {
   const [modal, setModal] = useState(null);
   const genDate = new Date(DATA.generatedAt);
   const genLabel = genDate.toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" })
-    + " — " + genDate.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" });
+    + " â " + genDate.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" });
 
   return (
     <div>
       {modal && <Modal data={modal} onClose={() => setModal(null)} />}
 
-      {/* ── HEADER ── */}
+      {/* ââ HEADER ââ */}
       <div className="header">
         <div className="header-brand">
           <div>
-            <h1>🤖 KPI Cowork Monitor</h1>
+            <h1>ð¤ KPI Cowork Monitor</h1>
             <span>Dottori Commercialisti e Revisori Legali</span>
           </div>
         </div>
@@ -942,26 +943,26 @@ function App() {
         </div>
       </div>
 
-      {/* ── KPI BAR ── */}
+      {/* ââ KPI BAR ââ */}
       <KpiBar />
 
-      {/* ── TASK CARDS ── */}
+      {/* ââ TASK CARDS ââ */}
       <TaskCards onOpen={setModal} />
 
-      {/* ── HISTORY ── */}
+      {/* ââ HISTORY ââ */}
       <History />
 
-      {/* ── MANUAL TASKS ── */}
+      {/* ââ MANUAL TASKS ââ */}
       <ManualTasks onOpen={setModal} />
 
-      {/* ── BOZZE ── */}
+      {/* ââ BOZZE ââ */}
       <DraftEmails />
 
-      {/* ── FOOTER ── */}
+      {/* ââ FOOTER ââ */}
       <div className="footer">
-        KPI Consulting STP S.r.l. — Via Antonio Bertoloni, 29 —
+        KPI Consulting STP S.r.l. â Via Antonio Bertoloni, 29 â
         <a href="https://www.kpiconsulting.it" target="_blank"> www.kpiconsulting.it</a>
-        <br/>Dashboard generata da Claude Cowork · i dati vengono aggiornati ad ogni nuova lettura delle sessioni
+        <br/>Dashboard generata da Claude Cowork Â· i dati vengono aggiornati ad ogni nuova lettura delle sessioni
       </div>
     </div>
   );
