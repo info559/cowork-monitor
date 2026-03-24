@@ -356,7 +356,7 @@ const DATA = {
         "⚠️ PEC Diffida WE-NET – non letta da 3 settimane, allegato PDF firmato",
         "⚠️ PM ELETTRIC (Protano Michele) – verifica cartelle AdE ~€28.900, in attesa 1+ mese",
         "⚠️ Francesca Raponi – chiarimenti regime IVA e 5x1000, in attesa 2 mesi",
-        "📰 14 newsletter Ratio Quotidiano (13–24 mar) non lette"
+        "📰 14 newsletter Ratio Quotidiano non lette"
       ],
       nextRun: "Domani alle 07:01"
     },
@@ -381,11 +381,11 @@ const DATA = {
       schedule: "Trimestrale → giorno 10",
       todayStatus: "warning",
       todayTime: "11:52",
-      todayNote: "2 anomalie: PEPPERPOT S.R.L. doc. scaduti (KPI+LT)",
+      todayNote: "2 anomalie: PEPPERPOT S.R.L. documenti scaduti (KPI+LT)",
       todayDetails: [
         "18 clienti verificati (10 registro KPI + 8 registro LT)",
         "🔴 PEPPERPOT S.R.L.: documento scaduto il 26/07/2025 in entrambi i registri",
-        "✅ Tutti gli altri 16 clienti: documenti validi, aggiornamenti regolari",
+        "✅ 16 clienti: documenti validi, nessuna anomalia",
         "📧 Bozza email sollecito creata per PEPPERPOT S.R.L.",
         "Prossima verifica trimestrale: 10 aprile 2026"
       ],
@@ -435,7 +435,7 @@ const DATA = {
       tasks: {
         "daily-briefing": { status: "success" },
         "auguri-clienti":  { status: "success" },
-        "verifica-aml":    { status: "warning", note: "2 anomalie" }
+        "verifica-aml":    { status: "warning", note: "2 anomalie PEPPERPOT" }
       }
     }
   ],
@@ -465,7 +465,28 @@ const DATA = {
       status: "template"
     }
   ]
-};  const m = map[status] || map["pending"];
+};
+
+// ââââââââââââââââââââââââââââââââââââââââââââââ
+//  HELPERS
+// ââââââââââââââââââââââââââââââââââââââââââââââ
+const { useState } = React;
+
+function formatDate() {
+  const d = new Date(2026, 2, 24); // 24 marzo 2026
+  return d.toLocaleDateString("it-IT", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+}
+
+function StatusBadge({ status }) {
+  const map = {
+    success: { label: "â OK",        cls: "success" },
+    warning: { label: "â  Anomalia",  cls: "warning" },
+    error:   { label: "â Errore",    cls: "error" },
+    pending: { label: "In attesa",   cls: "pending" },
+    running: { label: "â In corso",  cls: "running" },
+    skipped: { label: "â",           cls: "skipped" }
+  };
+  const m = map[status] || map["pending"];
   return <span className={`status-badge ${m.cls}`}>{m.label}</span>;
 }
 
