@@ -248,6 +248,71 @@
       .section, .kpi-bar { padding-left: 16px; padding-right: 16px; }
       .header { padding: 12px 16px; }
     }
+
+    /* ── CLICKABLE ── */
+    .task-card  { cursor: pointer; transition: transform 0.1s, box-shadow 0.1s; }
+    .task-card:hover  { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .manual-item { cursor: pointer; transition: background 0.1s; }
+    .manual-item:hover { background: #f9fafb; }
+    .dot-clickable { cursor: pointer; }
+
+    /* ── MODAL ── */
+    .modal-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 1000;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+      animation: fadeIn 0.15s ease;
+    }
+    @keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
+    .modal {
+      background: #fff; border-radius: 14px;
+      max-width: 480px; width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      overflow: hidden;
+      animation: slideUp 0.15s ease;
+    }
+    @keyframes slideUp { from { transform:translateY(16px); opacity:0 } to { transform:translateY(0); opacity:1 } }
+    .modal-header {
+      padding: 20px 24px 16px;
+      border-bottom: 4px solid #EFD656;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .modal-header-left { display: flex; align-items: center; gap: 12px; }
+    .modal-icon { font-size: 28px; line-height: 1; }
+    .modal-title { font-size: 16px; font-weight: 700; color: #333; }
+    .modal-subtitle { font-size: 12px; color: #aaa; margin-top: 2px; }
+    .modal-close {
+      background: #f3f4f6; border: none; border-radius: 50%;
+      width: 32px; height: 32px; font-size: 20px; line-height: 1;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      color: #666; flex-shrink: 0;
+    }
+    .modal-close:hover { background: #e5e7eb; color: #333; }
+    .modal-body { padding: 20px 24px; }
+    .modal-time { font-size: 36px; font-weight: 700; color: #333; margin-bottom: 14px; letter-spacing: -1px; }
+    .modal-note { font-size: 13px; color: #666; margin-bottom: 14px; line-height: 1.5; }
+    .modal-details { list-style: none; margin: 0; padding: 0; }
+    .modal-details li {
+      padding: 9px 0; border-bottom: 1px solid #f3f4f6;
+      font-size: 13px; color: #444; line-height: 1.5; display: flex; gap: 8px;
+    }
+    .modal-details li:last-child { border-bottom: none; }
+    .modal-details li::before { content: '→'; color: #BCD036; font-weight: 700; flex-shrink: 0; }
+    .modal-history-row {
+      display: flex; align-items: center; gap: 6px;
+      padding-top: 16px; margin-top: 16px; border-top: 1px solid #f3f4f6;
+    }
+    .modal-history-label { font-size: 11px; color: #aaa; text-transform: uppercase; letter-spacing: 0.5px; margin-right: 6px; }
+    .modal-footer { padding: 0 24px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .modal-next { font-size: 12px; color: #888; }
+    .modal-next strong { color: #555; }
+    .modal-btn {
+      background: #EFD656; border: none; border-radius: 8px;
+      padding: 8px 18px; font-size: 13px; font-weight: 600; cursor: pointer; color: #333;
+    }
+    .modal-btn:hover { background: #e5c840; }
   </style>
 </head>
 <body>
@@ -268,6 +333,11 @@ const DATA = {
       todayStatus: "success",
       todayTime: "07:01",
       todayNote: "Agenda libera · 17 email non lette · 3 urgenti (WE-NET, PM ELETTRIC, F. Raponi)",
+      todayDetails: [
+        "Agenda del giorno: libera",
+        "17 email non lette in arrivo",
+        "3 urgenti: WE-NET, PM ELETTRIC, F. Raponi"
+      ],
       nextRun: "Domani alle 07:01"
     },
     {
@@ -278,6 +348,10 @@ const DATA = {
       todayStatus: "success",
       todayTime: "09:04",
       todayNote: "Nessun compleanno oggi",
+      todayDetails: [
+        "Nessun compleanno tra i clienti oggi",
+        "Prossimo: verificare lista domani mattina"
+      ],
       nextRun: "Domani alle 09:04"
     },
     {
@@ -288,6 +362,12 @@ const DATA = {
       todayStatus: "success",
       todayTime: "11:52",
       todayNote: "10 clienti verificati · Tutto regolare · Nessun documento scaduto",
+      todayDetails: [
+        "10 clienti verificati nel registro AML",
+        "Nessun documento di identità scaduto",
+        "Nessuna anomalia nelle valutazioni di rischio",
+        "Prossima verifica trimestrale: 10 aprile 2026"
+      ],
       nextRun: "10 aprile 2026 alle 09:00"
     }
   ],
@@ -344,7 +424,7 @@ const DATA = {
     { name: "Verifica Periodica Registri AML",    status: "success",  category: "AML",       date: "Oggi" },
     { name: "Elaborazione Lista Anagrafiche",     status: "success",  category: "AML",       date: "Oggi" },
     { name: "Edit Skill Antiriciclaggio",         status: "success",  category: "Sistema",   date: "Oggi" },
-    { name: "Gestione Mandato + Privacy + AI",    status: "success",  category: "Documenti", date: "Recente" },
+    { name: "Gestione Mandato + Privacy + AI",    status: "success",  category: "Documenti", date: "Recente" }
   ]
 };
 
@@ -385,6 +465,61 @@ function DotCell({ status, note }) {
     <td className="dot-cell" title={note || ""}>
       <span className={`dot ${status}`}>{icon}</span>
     </td>
+  );
+}
+
+// ══════════════════════════════════════════════
+//  MODAL
+// ══════════════════════════════════════════════
+function Modal({ data, onClose }) {
+  if (!data) return null;
+  const dotMap = { success:"✓", warning:"⚠", error:"✕", skipped:"–", running:"●" };
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal" onClick={e => e.stopPropagation()}>
+        <div className="modal-header">
+          <div className="modal-header-left">
+            <span className="modal-icon">{data.icon}</span>
+            <div>
+              <div className="modal-title">{data.name}</div>
+              {data.schedule && <div className="modal-subtitle">{data.schedule}</div>}
+            </div>
+          </div>
+          <div style={{display:"flex", alignItems:"center", gap:"10px"}}>
+            <StatusBadge status={data.status} />
+            <button className="modal-close" onClick={onClose}>×</button>
+          </div>
+        </div>
+        <div className="modal-body">
+          {data.time && <div className="modal-time">{data.time}</div>}
+          {data.note && !data.details?.length && <div className="modal-note">{data.note}</div>}
+          {data.details && data.details.length > 0 && (
+            <ul className="modal-details">
+              {data.details.map((d, i) => <li key={i}>{d}</li>)}
+            </ul>
+          )}
+          {data.historyRow && data.historyRow.some(h => h.status) && (
+            <div className="modal-history-row">
+              <span className="modal-history-label">Storico</span>
+              {data.historyRow.map((h, i) => (
+                <span key={i} title={h.date + (h.note ? ": " + h.note : "")}
+                  className={`dot ${h.status || "null"}`} style={{width:26,height:26,fontSize:12}}>
+                  {h.status ? (dotMap[h.status]||"·") : "·"}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+        {(data.nextRun || data.closeable !== false) && (
+          <div className="modal-footer">
+            {data.nextRun
+              ? <div className="modal-next"><strong>Prossima:</strong> {data.nextRun}</div>
+              : <div />}
+            <button className="modal-btn" onClick={onClose}>Chiudi</button>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
@@ -446,13 +581,31 @@ function KpiBar() {
 // ══════════════════════════════════════════════
 //  TASK CARDS (stato di oggi)
 // ══════════════════════════════════════════════
-function TaskCards() {
+function TaskCards({ onOpen }) {
+  const handleClick = (task) => {
+    const historyRow = DATA.history.map(day => ({
+      date: day.date,
+      status: day.tasks[task.id]?.status,
+      note: day.tasks[task.id]?.note
+    }));
+    onOpen({
+      icon: task.icon,
+      name: task.name,
+      schedule: task.schedule,
+      status: task.todayStatus,
+      time: task.todayTime,
+      note: task.todayNote,
+      details: task.todayDetails || [],
+      historyRow,
+      nextRun: task.nextRun
+    });
+  };
   return (
     <div className="section">
       <div className="section-title">Oggi — Task pianificati</div>
       <div className="task-cards">
         {DATA.scheduledTasks.map(task => (
-          <div key={task.id} className={`task-card ${task.todayStatus}`}>
+          <div key={task.id} className={`task-card ${task.todayStatus}`} onClick={() => handleClick(task)}>
             <div className="task-card-header">
               <div className="task-card-name">
                 <span className="icon">{task.icon}</span>
@@ -529,13 +682,25 @@ function History() {
 // ══════════════════════════════════════════════
 //  TASK MANUALI
 // ══════════════════════════════════════════════
-function ManualTasks() {
+function ManualTasks({ onOpen }) {
+  const catIcon = { AML:"🛡️", Sistema:"⚙️", Documenti:"📄", File:"📁", Email:"✉️", Altro:"📌" };
+  const handleClick = (task) => {
+    onOpen({
+      icon: catIcon[task.category] || "📌",
+      name: task.name,
+      schedule: task.category,
+      status: task.status,
+      note: task.date,
+      details: task.details || [],
+      closeable: false
+    });
+  };
   return (
     <div className="section">
       <div className="section-title">Task manuali recenti</div>
       <div className="manual-list">
         {DATA.manualTasks.map((task, i) => (
-          <div key={i} className="manual-item">
+          <div key={i} className="manual-item" onClick={() => handleClick(task)}>
             <div className="manual-item-left">
               <span className="manual-item-date">{task.date}</span>
               <span className="manual-item-name">{task.name}</span>
@@ -553,12 +718,15 @@ function ManualTasks() {
 //  APP ROOT
 // ══════════════════════════════════════════════
 function App() {
+  const [modal, setModal] = useState(null);
   const genDate = new Date(DATA.generatedAt);
   const genLabel = genDate.toLocaleDateString("it-IT", { day: "2-digit", month: "short", year: "numeric" })
     + " — " + genDate.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit" });
 
   return (
     <div>
+      {modal && <Modal data={modal} onClose={() => setModal(null)} />}
+
       {/* ── HEADER ── */}
       <div className="header">
         <div className="header-brand">
@@ -577,13 +745,13 @@ function App() {
       <KpiBar />
 
       {/* ── TASK CARDS ── */}
-      <TaskCards />
+      <TaskCards onOpen={setModal} />
 
       {/* ── HISTORY ── */}
       <History />
 
       {/* ── MANUAL TASKS ── */}
-      <ManualTasks />
+      <ManualTasks onOpen={setModal} />
 
       {/* ── FOOTER ── */}
       <div className="footer">
