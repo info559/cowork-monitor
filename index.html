@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-25T16:14:08+01:00",
-  "lastUpdated": "16:14:08",
+  "generatedAt": "2026-03-25T17:02:30Z",
+  "lastUpdated": "18:02:30",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -358,7 +358,7 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "07:01",
       "todayNote": "19 email · 2 urgenti (PEC WE-NET + Edilfem)",
-      "todayDetails": "PEC WE-NET scaduta 19gg, link Edilfem scade 31/03, crediti 97.900€",
+      "todayDetails": "PEC WE-NET scaduta 19gg, link Edilfem scade 31/03, crediti €97.900,50",
       "nextRun": "26/03 07:00"
     },
     {
@@ -380,52 +380,52 @@ const DATA = {
       "todayStatus": "warning",
       "todayTime": "07:00",
       "todayNote": "Passaporto PEPPERPOT S.R.L. scaduto da 242 giorni",
-      "todayDetails": "KPI 10 clienti + LT 8 clienti. Tutti i controlli OK tranne: PEPPERPOT passaporto YA8145509 scaduto il 26/07/2025.",
+      "todayDetails": "KPI 10 clienti + LT 8 clienti. Tutti i controlli OK tranne: PEPPERPOT passaporto YA8145509 scaduto il 26/07/2025 (242 gg fa). Da richiedere aggiornamento.",
       "nextRun": "01/04 07:00"
     },
     {
       "id": "inserimento-notion",
-      "name": "Inserimento Notion da Gmail",
+      "name": "Inserimento Notion",
       "icon": "📥",
-      "schedule": "Ogni giorno → 08:07",
+      "schedule": "06:00 / 13:00 / 20:00 lun-ven",
       "todayStatus": "success",
       "todayTime": "13:10",
-      "todayNote": "3 nuovi record: RD'A Ingegneria (Dich. AI + Privacy) · F&G (Contratto BMW)",
-      "todayDetails": "6 email scansionate: 3 già in Notion, 3 nuovi inseriti. F&G: tipo documento da classificare manualmente.",
-      "nextRun": "26/03 13:00"
+      "todayNote": "3 nuovi record: RD'A Ingegneria ×2 + F&G S.r.l.",
+      "todayDetails": "RD'A Ingegneria: Dichiarazione AI + Privacy (2 record). F. e G. S.R.L.: CONTRATTO BMW (tipo da classificare manualmente). Già presenti: Cosmi, Protano, Pepperpot, OTPA.",
+      "nextRun": "25/03 20:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "icon": "📄",
-      "schedule": "Ogni giorno → 07:07 e 15:03",
-      "todayStatus": "success",
-      "todayTime": "15:03",
-      "todayNote": "OTPA e F&G ricevuti · 3 in attesa (Cosmi, Protano, Pepperpot)",
-      "todayDetails": "OTPA: doc identità Ottavi Giovanni ricevuto 15:02. F&G: documentazione contabile (15 allegati). Gestione Antiriciclaggio in corso per aggiornamento OTPA.",
-      "nextRun": "26/03 08:00"
+      "icon": "📡",
+      "schedule": "Mattino + pomeriggio",
+      "todayStatus": "running",
+      "todayTime": "17:55",
+      "todayNote": "In corso — verifica risposta RD'A Ingegneria",
+      "todayDetails": "Run mattino (15:03): OTPA S.R.L. → Ricevuto (doc identità Ottavi Giovanni). 6 clienti in attesa: Cosmi, Protano, RD'A×2, F&G, Pepperpot. Pomeriggio: risposta RD'A rilevata, aggiornamento in corso.",
+      "nextRun": "26/03 mattina"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "icon": "📨",
+      "icon": "🔔",
       "schedule": "Ogni lunedì → 06:00",
       "todayStatus": "skipped",
       "todayTime": "06:00",
-      "todayNote": "Nessun documento ≥7 giorni · prossimo lunedì 30 mar",
-      "todayDetails": "5 doc in attesa: tutti inviati il 23-24/03 (1-2 giorni). F&G sarà il primo a raggiungere 7gg il 30/03.",
-      "nextRun": "01/04 06:00"
+      "todayNote": "Nessun doc ≥7 giorni · prossimo 30 mar",
+      "todayDetails": "5 record monitorati, tutti inviati il 23-24/03. Nessuno supera la soglia di 7 giorni. F&G (5 gg), Cosmi/OTPA/Protano/Pepperpot (6 gg). Soglia raggiunta dal 30/03.",
+      "nextRun": "30/03 06:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Monitor",
       "icon": "🔄",
-      "schedule": "Ogni giorno → 07:05, 14:00, 16:00",
-      "todayStatus": "success",
-      "todayTime": "16:11",
-      "todayNote": "Dashboard aggiornata · bozze: 0",
-      "todayDetails": "Aggiornamento ore 16:11. Tutte le sessioni di oggi analizzate. 2 bozze Gmail escluse (template senza destinatario).",
-      "nextRun": "25/03 17:00"
+      "schedule": "Ogni ora",
+      "todayStatus": "running",
+      "todayTime": "18:02",
+      "todayNote": "Aggiornamento in corso",
+      "todayDetails": "Sessione attuale: raccolta dati sessioni + bozze Gmail + aggiornamento dashboard.",
+      "nextRun": "25/03 19:00"
     }
   ],
   "manualTasks": [
@@ -434,12 +434,12 @@ const DATA = {
       "time": "16:09",
       "date": "25 mar",
       "title": "Gestione Antiriciclaggio",
-      "description": "Aggiornamento documento OTTAVI Giovanni — CIE CA74209TC (val. 14/08/2033)",
+      "description": "Creazione database Notion KPI + inserimento 40 righe registro antiriciclaggio — in corso",
       "status": "running"
     },
     {
       "id": "mandato-privacy-ai",
-      "time": "oggi",
+      "time": "15:30",
       "date": "25 mar",
       "title": "Gestione Mandato+Privacy+AI",
       "description": "Modifica skill: rimossa Fase 7 (Aggiornamento Notion) su richiesta di Lorenzo",
@@ -461,25 +461,13 @@ const DATA = {
       "name": "Creazione Dashboard Cowork",
       "time": "25 mar",
       "status": "success",
-      "note": "Aggiunto orologio Roma in tempo reale nell’header"
+      "note": "Aggiunto orologio Roma in tempo reale nell'header"
     },
     {
       "name": "Gestione Antiriciclaggio",
       "time": "24 mar",
       "status": "success",
       "note": "Bozza email PEPPERPOT (doc scaduti) + skill aggiornata"
-    },
-    {
-      "name": "Elaborazione Lista Anagrafiche Clienti",
-      "time": "24 mar",
-      "status": "success",
-      "note": "231 checkbox su 115 clienti matchati Sheets → Notion"
-    },
-    {
-      "name": "Superbonus-RdA vs COGERP",
-      "time": "24 mar",
-      "status": "success",
-      "note": "Bozza email parere tecnico – rimosso riferimento compenso"
     }
   ],
   "history": [
@@ -566,7 +554,15 @@ const DATA = {
       }
     }
   ],
-  "coworkDrafts": []
+  "coworkDrafts": [
+    {
+      "id": "r-6813824371345144608",
+      "subject": "SITUAZIONE CREDITI VS AMMINISTRATORE AL 31.12.2025 - ALTIPIANI MEDICAL SRL",
+      "to": "Filomena Pietrobono",
+      "date": "25 mar",
+      "status": "ready"
+    }
+  ]
 };
 
 // ══════════════════════════════════════════════
