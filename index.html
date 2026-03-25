@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-25T12:15:00",
-  "lastUpdated": "12:15:00",
+  "generatedAt": "2026-03-25T14:04:01",
+  "lastUpdated": "14:04:01",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -376,11 +376,9 @@ const DATA = {
       "schedule": "Ogni giorno → 05:04",
       "todayStatus": "skipped",
       "todayTime": "05:04",
-      "todayNote": "Nessun compleanno il 25/03 · 151 clienti scansionati",
+      "todayNote": "Nessun compleanno il 25/03 (151 clienti verificati)",
       "todayDetails": [
-        "151 clienti scansionati su Notion",
-        "111 con data di nascita registrata, 40 senza",
-        "Nessun cliente nato il 25 marzo"
+        "151 clienti scansionati – nessuno nato il 25 marzo"
       ],
       "nextRun": "Domani alle 05:04"
     },
@@ -388,34 +386,33 @@ const DATA = {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
       "icon": "🔍",
-      "schedule": "Ogni martedì → 07:00",
+      "schedule": "Ogni mercoledì → 07:00",
       "todayStatus": "warning",
       "todayTime": "07:00",
-      "todayNote": "⚠️ Passaporto PEPPERPOT scaduto da 242 gg",
+      "todayNote": "⚠️ Passaporto PEPPERPOT scaduto (242gg fa)",
       "todayDetails": [
-        "Registri analizzati: KPI (10 clienti, 40 righe) + LT (8 clienti, 32 righe)",
-        "Tutti i controlli superati: date, numerazione, formule, rischi",
-        "⚠️ PEPPERPOT S.R.L. – Passaporto YA8145509 scaduto 26/07/2025 (242 gg)",
-        "Documento presente in entrambi i registri KPI e LT",
-        "Necessario richiedere documento d’identità aggiornato al cliente"
+        "KPI: 10 clienti, 40 righe – controlli OK tranne 1",
+        "LT: 8 clienti, 32 righe – controlli OK tranne 1",
+        "⚠️ PEPPERPOT S.R.L. – Passaporto YA8145509 scaduto il 26/07/2025 (242 giorni fa)",
+        "Richiesta documento identità aggiornato già inviata il 24/03"
       ],
-      "nextRun": "Martedì 31 mar alle 07:00"
+      "nextRun": "Mercoledì prossimo alle 07:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "icon": "📥",
-      "schedule": "Lun–Ven → 06:00, 13:00, 20:00",
-      "todayStatus": "skipped",
-      "todayTime": "06:00",
-      "todayNote": "0 nuovi record · 5 email entro soglia 7 giorni",
+      "schedule": "Ogni giorno → 08:07",
+      "todayStatus": "success",
+      "todayTime": "13:10",
+      "todayNote": "3 nuovi record creati in Notion",
       "todayDetails": [
-        "2 email ‘Da firmare’: Cosmi Giacomo + Protano Michele (24/03)",
-        "3 email ‘Da ricevere’: Pepperpot, OTPA, F&G (23–24/03)",
-        "Tutte inviate negli ultimi 1–2 giorni → sotto soglia 7gg",
-        "Periodicità aggiornata: 06:00, 13:00, 20:00 (Lun–Ven)"
+        "✅ RD’A Ingegneria – Informativa IA + Privacy (2 record)",
+        "✅ F. e G. S.R.L. – CONTRATTO BMW (1 record, tipo da classificare)",
+        "⏭️ COSMI, PROTANO, OTPA, PEPPERPOT – già in Notion",
+        "⚠️ F&G: tipo documento non classificato, richiede revisione manuale"
       ],
-      "nextRun": "Oggi alle 13:00"
+      "nextRun": "Domani alle 08:07"
     },
     {
       "id": "monitoraggio-documenti",
@@ -423,15 +420,15 @@ const DATA = {
       "icon": "📄",
       "schedule": "Ogni giorno → 07:07 e 15:03",
       "todayStatus": "success",
-      "todayTime": "07:07",
-      "todayNote": "5 clienti in attesa · nessuna risposta ricevuta",
+      "todayTime": "13:15",
+      "todayNote": "5 in attesa · aggiornato campo Oggetto Email",
       "todayDetails": [
-        "F. e G. S.R.L. – Richiesta Doc. Contabile inviata 23/03 (2 gg fa) → Inviato",
-        "COSMI GIACOMO – Lettera Incarico inviata 24/03 (1 gg fa) → Inviato",
-        "PROTANO MICHELE – Lettera Incarico inviata 24/03 (1 gg fa) → Inviato",
-        "OTPA S.R.L. – Richiesta Doc. Identità inviata 24/03 (1 gg fa) → Inviato",
-        "PEPPERPOT S.R.L. – Richiesta Doc. Identità inviata 24/03 (1 gg fa) → Inviato",
-        "Prossimo controllo alle 15:03"
+        "F. e G. S.R.L. – Richiesta Doc. Contabile inviata 23/03 → Inviato",
+        "COSMI GIACOMO – Lettera Incarico inviata 24/03 → Inviato",
+        "PROTANO MICHELE – Lettera Incarico inviata 24/03 → Inviato",
+        "OTPA S.R.L. – Richiesta Doc. Identità inviata 24/03 → Inviato",
+        "PEPPERPOT S.R.L. – Richiesta Doc. Identità inviata 24/03 → Inviato",
+        "✅ Colonna Oggetto Email aggiornata per tutti i record"
       ],
       "nextRun": "Oggi alle 15:03"
     },
@@ -449,24 +446,23 @@ const DATA = {
         "Nessuno supera la soglia dei 7 giorni",
         "Prossimo sollecito previsto: lunedì 30 marzo 2026"
       ],
-      "nextRun": "Lunedì 31 mar alle 06:00"
+      "nextRun": "Lunedì 30 mar alle 06:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "icon": "📊",
-      "schedule": "Ogni giorno → 08:00 e 15:30",
+      "icon": "🖥️",
+      "schedule": "Ogni ora",
       "todayStatus": "success",
-      "todayTime": "12:15",
-      "todayNote": "Dashboard corretta · F.&G. = Inviato (non Ricevuto) · 0 bozze",
+      "todayTime": "14:04",
+      "todayNote": "Dashboard aggiornata · 2 bozze Gmail",
       "todayDetails": [
-        "Sessioni analizzate: 40",
-        "Task pianificati di oggi verificati: 7",
-        "Bozze Gmail reali: 0 (2 template senza destinatario esclusi)",
-        "Correzione: F. e G. S.R.L. ancora in stato Inviato (verificato su Notion)",
-        "Task manuali recenti: 8 nelle ultime 48h"
+        "Sessioni analizzate: 7 task pianificati + task manuali recenti",
+        "Bozze Gmail reali: 2 (Re: f&g clienti fornitori + F&G)",
+        "Inserimento Notion: 3 nuovi record creati nel pomeriggio",
+        "Monitoraggio pomeriggio: campo Oggetto Email aggiornato"
       ],
-      "nextRun": "Oggi alle 15:30"
+      "nextRun": "Tra circa 1 ora"
     }
   ],
   "manualTasks": [
@@ -603,7 +599,20 @@ const DATA = {
       }
     }
   ],
-  "coworkDrafts": []
+  "coworkDrafts": [
+    {
+      "to": "Federico Dionisi",
+      "subject": "Re: f&g clienti fornitori",
+      "date": "25 mar",
+      "status": "ready"
+    },
+    {
+      "to": "Avv. Federica Croce",
+      "subject": "F&G",
+      "date": "25 mar",
+      "status": "ready"
+    }
+  ]
 };
 
 // ══════════════════════════════════════════════
