@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-25T16:07:12",
-  "lastUpdated": "16:07:12",
+  "generatedAt": "2026-03-25T16:14:08+01:00",
+  "lastUpdated": "16:14:08",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -357,17 +357,9 @@ const DATA = {
       "schedule": "Ogni giorno → 07:01",
       "todayStatus": "success",
       "todayTime": "07:01",
-      "todayNote": "19 email non lette · agenda libera · 2 urgenti",
-      "todayDetails": [
-        "Nessun appuntamento in calendario",
-        "19 email non lette (etichetta Lorenzo)",
-        "🔴 PEC diffida WE-NET – 6 mar (19 giorni fa, non gestita)",
-        "🔴 Edilfem – 18 PDF Condominio Anicia da scaricare entro 31/03",
-        "🟠 Edilfem – Crediti 2026 € 97.900,50 da analizzare",
-        "🟡 PM ELETTRIC – in attesa di risposta da 1 mese",
-        "🟡 Francesca Raponi – in attesa di risposta da 2 mesi"
-      ],
-      "nextRun": "Domani alle 07:01"
+      "todayNote": "19 email · 2 urgenti (PEC WE-NET + Edilfem)",
+      "todayDetails": "PEC WE-NET scaduta 19gg, link Edilfem scade 31/03, crediti 97.900€",
+      "nextRun": "26/03 07:00"
     },
     {
       "id": "auguri-clienti",
@@ -376,12 +368,9 @@ const DATA = {
       "schedule": "Ogni giorno → 05:04",
       "todayStatus": "skipped",
       "todayTime": "05:04",
-      "todayNote": "Nessun compleanno il 25/03",
-      "todayDetails": [
-        "Scansionati 151 clienti (111 con data di nascita)",
-        "Nessun cliente nato il 25 marzo"
-      ],
-      "nextRun": "Domani alle 05:04"
+      "todayNote": "Nessun compleanno (151 clienti)",
+      "todayDetails": "Scansionati 151 clienti: 111 con data di nascita, 40 senza. Nessun nato il 25/03.",
+      "nextRun": "26/03 05:00"
     },
     {
       "id": "verifica-aml",
@@ -390,15 +379,9 @@ const DATA = {
       "schedule": "Ogni mercoledì → 07:00",
       "todayStatus": "warning",
       "todayTime": "07:00",
-      "todayNote": "⚠️ Passaporto PEPPERPOT scaduto (242gg fa)",
-      "todayDetails": [
-        "Registri analizzati: KPI (10 clienti, 40 righe) + LT (8 clienti, 32 righe)",
-        "Tutti i controlli strutturali superati senza anomalie",
-        "⚠️ PEPPERPOT S.R.L. – Passaporto YA8145509 scaduto il 26/07/2025 (242gg fa)",
-        "Anomalia presente in entrambi i registri KPI e LT",
-        "Azione richiesta: richiedere documento d'identità aggiornato"
-      ],
-      "nextRun": "Mercoledì 1 apr"
+      "todayNote": "Passaporto PEPPERPOT S.R.L. scaduto da 242 giorni",
+      "todayDetails": "KPI 10 clienti + LT 8 clienti. Tutti i controlli OK tranne: PEPPERPOT passaporto YA8145509 scaduto il 26/07/2025.",
+      "nextRun": "01/04 07:00"
     },
     {
       "id": "inserimento-notion",
@@ -407,14 +390,9 @@ const DATA = {
       "schedule": "Ogni giorno → 08:07",
       "todayStatus": "success",
       "todayTime": "13:10",
-      "todayNote": "3 nuovi record creati in Notion",
-      "todayDetails": [
-        "✅ RD'A Ingegneria – Informativa IA + Privacy (2 record)",
-        "✅ F. e G. S.R.L. – CONTRATTO BMW (1 record, tipo da classificare)",
-        "⏭️ COSMI, PROTANO, OTPA, PEPPERPOT – già in Notion",
-        "⚠️ F&G: tipo documento non classificato, richiede revisione manuale"
-      ],
-      "nextRun": "Domani alle 08:07"
+      "todayNote": "3 nuovi record: RD'A Ingegneria (Dich. AI + Privacy) · F&G (Contratto BMW)",
+      "todayDetails": "6 email scansionate: 3 già in Notion, 3 nuovi inseriti. F&G: tipo documento da classificare manualmente.",
+      "nextRun": "26/03 13:00"
     },
     {
       "id": "monitoraggio-documenti",
@@ -423,15 +401,9 @@ const DATA = {
       "schedule": "Ogni giorno → 07:07 e 15:03",
       "todayStatus": "success",
       "todayTime": "15:03",
-      "todayNote": "F&G ricevuto ✓ · 4 in attesa",
-      "todayDetails": [
-        "✅ F. e G. S.R.L. – 15 allegati ricevuti (24/03), stato aggiornato a Ricevuto",
-        "⏳ COSMI GIACOMO – Lettera Incarico inviata 24/03, nessuna risposta",
-        "⏳ PROTANO MICHELE – Lettera Incarico inviata 24/03, nessuna risposta",
-        "⏳ OTPA S.R.L. – Richiesta Doc. Identità inviata 24/03, nessuna risposta",
-        "⏳ PEPPERPOT S.R.L. – Richiesta Doc. Identità inviata 24/03, nessuna risposta"
-      ],
-      "nextRun": "Domani alle 07:07"
+      "todayNote": "OTPA e F&G ricevuti · 3 in attesa (Cosmi, Protano, Pepperpot)",
+      "todayDetails": "OTPA: doc identità Ottavi Giovanni ricevuto 15:02. F&G: documentazione contabile (15 allegati). Gestione Antiriciclaggio in corso per aggiornamento OTPA.",
+      "nextRun": "26/03 08:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -440,14 +412,9 @@ const DATA = {
       "schedule": "Ogni lunedì → 06:00",
       "todayStatus": "skipped",
       "todayTime": "06:00",
-      "todayNote": "Nessun documento ≥7 giorni · prossimo: 30 mar",
-      "todayDetails": [
-        "5 documenti in attesa, tutti inviati il 23-24/03 (< 7 giorni)",
-        "F. e G. S.R.L. – mancano 5 giorni al sollecito",
-        "COSMI, PROTANO, OTPA, PEPPERPOT – mancano 6 giorni",
-        "Prossima esecuzione con solleciti attivi: lunedì 30 marzo 2026"
-      ],
-      "nextRun": "Lunedì 30 mar"
+      "todayNote": "Nessun documento ≥7 giorni · prossimo lunedì 30 mar",
+      "todayDetails": "5 doc in attesa: tutti inviati il 23-24/03 (1-2 giorni). F&G sarà il primo a raggiungere 7gg il 30/03.",
+      "nextRun": "01/04 06:00"
     },
     {
       "id": "aggiorna-monitor",
@@ -455,18 +422,29 @@ const DATA = {
       "icon": "🔄",
       "schedule": "Ogni giorno → 07:05, 14:00, 16:00",
       "todayStatus": "success",
-      "todayTime": "16:07",
-      "todayNote": "Dashboard aggiornata · 0 bozze attive",
-      "todayDetails": [
-        "Analizzate sessioni giornaliere di tutti i 7 task pianificati",
-        "Gmail: 2 bozze template senza destinatario (non mostrate)",
-        "Monitoraggio pomeriggio: F&G ricevuto, 4 in attesa",
-        "Storico 5 giorni lavorativi aggiornato"
-      ],
-      "nextRun": "Domani alle 07:05"
+      "todayTime": "16:11",
+      "todayNote": "Dashboard aggiornata · bozze: 0",
+      "todayDetails": "Aggiornamento ore 16:11. Tutte le sessioni di oggi analizzate. 2 bozze Gmail escluse (template senza destinatario).",
+      "nextRun": "25/03 17:00"
     }
   ],
   "manualTasks": [
+    {
+      "id": "gestione-aml-ottavi",
+      "time": "16:09",
+      "date": "25 mar",
+      "title": "Gestione Antiriciclaggio",
+      "description": "Aggiornamento documento OTTAVI Giovanni — CIE CA74209TC (val. 14/08/2033)",
+      "status": "running"
+    },
+    {
+      "id": "mandato-privacy-ai",
+      "time": "oggi",
+      "date": "25 mar",
+      "title": "Gestione Mandato+Privacy+AI",
+      "description": "Modifica skill: rimossa Fase 7 (Aggiornamento Notion) su richiesta di Lorenzo",
+      "status": "success"
+    },
     {
       "name": "Gestione Mandato+Privacy+AI",
       "time": "25 mar",
@@ -502,18 +480,6 @@ const DATA = {
       "time": "24 mar",
       "status": "success",
       "note": "Bozza email parere tecnico – rimosso riferimento compenso"
-    },
-    {
-      "name": "Schedule Verifica Antiriciclaggio",
-      "time": "24 mar",
-      "status": "success",
-      "note": "Configurato task settimanale verifica AML"
-    },
-    {
-      "name": "Verifica Periodica Registri Antiriciclaggio",
-      "time": "24 mar",
-      "status": "success",
-      "note": "Correzione classi adeguata verifica (37 righe aggiornate)"
     }
   ],
   "history": [
