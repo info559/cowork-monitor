@@ -347,201 +347,114 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-25T17:02:30Z",
-  "lastUpdated": "18:02:30",
+  "generatedAt": "2026-03-25T17:07:39.671Z",
+  "lastUpdated": "18:07:39",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
       "name": "Daily Briefing",
-      "icon": "📋",
-      "schedule": "Ogni giorno → 07:01",
+      "schedule": "Lun–Ven 07:00",
       "todayStatus": "success",
       "todayTime": "07:01",
-      "todayNote": "19 email · 2 urgenti (PEC WE-NET + Edilfem)",
-      "todayDetails": "PEC WE-NET scaduta 19gg, link Edilfem scade 31/03, crediti €97.900,50",
-      "nextRun": "26/03 07:00"
+      "todayNote": "19 email · PEC WE-NET urgente + Edilfem scade 31/03",
+      "todayDetails": "19 messaggi non letti etichetta Lorenzo. Priorità alta: PEC diffida WE-NET (19 giorni fa), Edilfem 18 PDF da scaricare entro 31/03. Da gestire: PM Elettric (31 giorni), Francesca Raponi (2 mesi). 14 newsletter Ratio da archiviare.",
+      "nextRun": "2026-03-26T07:00:00"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
-      "icon": "🎂",
-      "schedule": "Ogni giorno → 05:04",
+      "schedule": "Ogni giorno 05:00",
       "todayStatus": "skipped",
       "todayTime": "05:04",
-      "todayNote": "Nessun compleanno (151 clienti)",
-      "todayDetails": "Scansionati 151 clienti: 111 con data di nascita, 40 senza. Nessun nato il 25/03.",
-      "nextRun": "26/03 05:00"
+      "todayNote": "Nessun compleanno oggi (151 clienti)",
+      "todayDetails": "Scansione completata su 151 clienti: 111 con data di nascita, 40 senza. Nessun cliente nato il 25 marzo.",
+      "nextRun": "2026-03-26T05:00:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "icon": "🛡️",
-      "schedule": "Ogni mercoledì → 07:00",
+      "schedule": "Lun 07:00",
       "todayStatus": "warning",
       "todayTime": "07:00",
-      "todayNote": "Passaporto PEPPERPOT S.R.L. scaduto da 242 giorni",
-      "todayDetails": "KPI 10 clienti + LT 8 clienti. Tutti i controlli OK tranne: PEPPERPOT passaporto YA8145509 scaduto il 26/07/2025 (242 gg fa). Da richiedere aggiornamento.",
-      "nextRun": "01/04 07:00"
+      "todayNote": "⚠️ Passaporto PEPPERPOT scaduto da 242 giorni",
+      "todayDetails": "KPI 10 clienti (40 righe) + LT 8 clienti (32 righe). Tutti i controlli OK tranne: PEPPERPOT S.R.L. — Passaporto YA8145509 scaduto il 26/07/2025 (242 giorni fa). Presente in entrambi i registri. Richiede documento aggiornato.",
+      "nextRun": "2026-03-30T07:00:00"
     },
     {
       "id": "inserimento-notion",
-      "name": "Inserimento Notion",
-      "icon": "📥",
-      "schedule": "06:00 / 13:00 / 20:00 lun-ven",
+      "name": "Inserimento Notion da Gmail",
+      "schedule": "Lun–Ven 13:00",
       "todayStatus": "success",
       "todayTime": "13:10",
-      "todayNote": "3 nuovi record: RD'A Ingegneria ×2 + F&G S.r.l.",
-      "todayDetails": "RD'A Ingegneria: Dichiarazione AI + Privacy (2 record). F. e G. S.R.L.: CONTRATTO BMW (tipo da classificare manualmente). Già presenti: Cosmi, Protano, Pepperpot, OTPA.",
-      "nextRun": "25/03 20:00"
+      "todayNote": "3 nuovi record: RD'A ×2 + F&G S.r.l.",
+      "todayDetails": "6 email analizzate. Creati 3 record: RD'A Ingegneria (Dichiarazione AI + Privacy), F.&G. S.r.l. (Contratto BMW - tipo da classificare manualmente). 3 già presenti in Notion. Attenzione: F.&G. S.r.l. tipo documento non classificato.",
+      "nextRun": "2026-03-26T13:00:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "icon": "📡",
-      "schedule": "Mattino + pomeriggio",
-      "todayStatus": "running",
-      "todayTime": "17:55",
-      "todayNote": "In corso — verifica risposta RD'A Ingegneria",
-      "todayDetails": "Run mattino (15:03): OTPA S.R.L. → Ricevuto (doc identità Ottavi Giovanni). 6 clienti in attesa: Cosmi, Protano, RD'A×2, F&G, Pepperpot. Pomeriggio: risposta RD'A rilevata, aggiornamento in corso.",
-      "nextRun": "26/03 mattina"
+      "schedule": "Lun–Ven 09:00 e 17:00",
+      "todayStatus": "success",
+      "todayTime": "17:xx",
+      "todayNote": "Risposte: RD'A (mattino) + OTPA S.r.l. (pomeriggio)",
+      "todayDetails": "Mattino: RD'A Ingegneria ha inviato PDF firmato con Dichiarazione AI + Privacy — 2 record aggiornati a Ricevuto. Pomeriggio: OTPA S.R.L. ha inviato doc identità Ottavi Giovanni — 1 record aggiornato a Ricevuto. Ancora in attesa: Cosmi, Protano, RD'A (nuovi invii odierni), F.&G. S.r.l., Pepperpot.",
+      "nextRun": "2026-03-26T09:00:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "icon": "🔔",
-      "schedule": "Ogni lunedì → 06:00",
+      "schedule": "Lun 06:00",
       "todayStatus": "skipped",
       "todayTime": "06:00",
       "todayNote": "Nessun doc ≥7 giorni · prossimo 30 mar",
-      "todayDetails": "5 record monitorati, tutti inviati il 23-24/03. Nessuno supera la soglia di 7 giorni. F&G (5 gg), Cosmi/OTPA/Protano/Pepperpot (6 gg). Soglia raggiunta dal 30/03.",
-      "nextRun": "30/03 06:00"
+      "todayDetails": "5 documenti monitorati, tutti inviati il 23-24/03. Nessuno ha raggiunto la soglia 7 giorni. Primo candidato: F.&G. S.r.l. (lunedì 30/03). Gli altri dall'1 aprile.",
+      "nextRun": "2026-03-30T06:00:00"
     },
     {
       "id": "aggiorna-monitor",
-      "name": "Aggiorna Monitor",
-      "icon": "🔄",
-      "schedule": "Ogni ora",
-      "todayStatus": "running",
-      "todayTime": "18:02",
-      "todayNote": "Aggiornamento in corso",
-      "todayDetails": "Sessione attuale: raccolta dati sessioni + bozze Gmail + aggiornamento dashboard.",
-      "nextRun": "25/03 19:00"
+      "name": "Aggiorna Cowork Monitor",
+      "schedule": "Lun–Ven ogni 2h",
+      "todayStatus": "success",
+      "todayTime": "18:07",
+      "todayNote": "Dashboard aggiornata con dati sessioni di oggi",
+      "todayDetails": "Sessioni analizzate: Daily Briefing, Auguri Clienti, Verifica AML, Inserimento Notion, Monitoraggio Docs (mattino+pomeriggio), Solleciti. Bozze Gmail: 1 reale (Altipiani Medical). Task manuale in corso: Gestione Antiriciclaggio.",
+      "nextRun": "2026-03-25T19:07:39.671Z"
     }
   ],
   "manualTasks": [
     {
-      "id": "gestione-aml-ottavi",
-      "time": "16:09",
-      "date": "25 mar",
-      "title": "Gestione Antiriciclaggio",
-      "description": "Creazione database Notion KPI + inserimento 40 righe registro antiriciclaggio — in corso",
-      "status": "running"
-    },
-    {
-      "id": "mandato-privacy-ai",
-      "time": "15:30",
-      "date": "25 mar",
-      "title": "Gestione Mandato+Privacy+AI",
-      "description": "Modifica skill: rimossa Fase 7 (Aggiornamento Notion) su richiesta di Lorenzo",
-      "status": "success"
-    },
-    {
-      "name": "Gestione Mandato+Privacy+AI",
-      "time": "25 mar",
-      "status": "success",
-      "note": "OTPA S.R.L.S.: incarico, privacy, AML + bozze Gmail + Notion aggiornato"
-    },
-    {
-      "name": "Automazione richieste documenti",
-      "time": "25 mar",
-      "status": "success",
-      "note": "Aggiunta colonna Oggetto Email in Notion + viste aggiornate"
-    },
-    {
-      "name": "Creazione Dashboard Cowork",
-      "time": "25 mar",
-      "status": "success",
-      "note": "Aggiunto orologio Roma in tempo reale nell'header"
-    },
-    {
+      "id": "gestione-antiriciclaggio-25mar",
       "name": "Gestione Antiriciclaggio",
-      "time": "24 mar",
+      "date": "2026-03-25",
+      "time": "in corso",
+      "status": "running",
+      "note": "Task in esecuzione — popola database antiriciclaggio"
+    },
+    {
+      "id": "gestione-mandato-25mar",
+      "name": "Gestione Mandato+Privacy+AI",
+      "date": "2026-03-25",
+      "time": "",
       "status": "success",
-      "note": "Bozza email PEPPERPOT (doc scaduti) + skill aggiornata"
+      "note": "Aggiornamento skill: rimossa Fase 7 (Aggiornamento Notion)"
+    },
+    {
+      "id": "automazione-richieste-25mar",
+      "name": "Automazione richieste documenti",
+      "date": "2026-03-25",
+      "time": "",
+      "status": "success",
+      "note": "Aggiunta colonna Oggetto Email al DB Notion e alle viste In Attesa/Sollecitati"
     }
   ],
   "history": [
     {
-      "date": "21 mar",
-      "isToday": false,
+      "date": "2026-03-25",
+      "label": "Mer 25",
       "tasks": {
         "daily-briefing": {
-          "status": "success"
-        },
-        "auguri-clienti": {
-          "status": "skipped",
-          "note": "Sabato"
-        },
-        "verifica-aml": {
-          "status": null
-        }
-      }
-    },
-    {
-      "date": "22 mar",
-      "isToday": false,
-      "tasks": {
-        "daily-briefing": {
-          "status": "success"
-        },
-        "auguri-clienti": {
-          "status": "skipped",
-          "note": "Domenica"
-        },
-        "verifica-aml": {
-          "status": null
-        }
-      }
-    },
-    {
-      "date": "23 mar",
-      "isToday": false,
-      "tasks": {
-        "daily-briefing": {
-          "status": "success"
-        },
-        "auguri-clienti": {
           "status": "success",
-          "note": "Protano Michele 🎂"
-        },
-        "verifica-aml": {
-          "status": null
-        }
-      }
-    },
-    {
-      "date": "24 mar",
-      "isToday": false,
-      "tasks": {
-        "daily-briefing": {
-          "status": "success"
-        },
-        "auguri-clienti": {
-          "status": "skipped",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "success",
-          "note": "Archivio LT completato + 37 righe RE corrette"
-        }
-      }
-    },
-    {
-      "date": "25 mar",
-      "isToday": true,
-      "tasks": {
-        "daily-briefing": {
-          "status": "success"
+          "note": "19 email · PEC WE-NET"
         },
         "auguri-clienti": {
           "status": "skipped",
@@ -549,7 +462,79 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "warning",
-          "note": "PEPPERPOT passaporto scaduto"
+          "note": "Passaporto PEPPERPOT scaduto"
+        }
+      }
+    },
+    {
+      "date": "2026-03-24",
+      "label": "Mar 24",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": ""
+        },
+        "auguri-clienti": {
+          "status": "skipped",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmato (lun)"
+        }
+      }
+    },
+    {
+      "date": "2026-03-23",
+      "label": "Lun 23",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": ""
+        },
+        "auguri-clienti": {
+          "status": "skipped",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "success",
+          "note": ""
+        }
+      }
+    },
+    {
+      "date": "2026-03-21",
+      "label": "Ven 21",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": ""
+        },
+        "auguri-clienti": {
+          "status": "skipped",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmato"
+        }
+      }
+    },
+    {
+      "date": "2026-03-20",
+      "label": "Gio 20",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": ""
+        },
+        "auguri-clienti": {
+          "status": "skipped",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmato"
         }
       }
     }
@@ -558,7 +543,7 @@ const DATA = {
     {
       "id": "r-6813824371345144608",
       "subject": "SITUAZIONE CREDITI VS AMMINISTRATORE AL 31.12.2025 - ALTIPIANI MEDICAL SRL",
-      "to": "Filomena Pietrobono",
+      "to": "Filomena Pietrobono <filomenapietrobono@gmail.com>",
       "date": "25 mar",
       "status": "ready"
     }
