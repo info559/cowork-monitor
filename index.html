@@ -31,6 +31,13 @@
     .header-date { font-size: 13px; color: #666; text-align: right; }
     .header-date strong { display: block; font-size: 15px; color: #333; }
     .last-update { font-size: 11px; color: #aaa; margin-top: 2px; }
+    .live-clock { text-align: right; }
+    .live-clock-time {
+      font-size: 26px; font-weight: 700; color: #222;
+      font-variant-numeric: tabular-nums; letter-spacing: 1px;
+      font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+    }
+    .live-clock-label { font-size: 10px; color: #bbb; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 1px; }
 
     /* ── KPI BAR ── */
     .kpi-bar {
@@ -620,6 +627,24 @@ function StatusBadge({ status }) {
   return <span className={`status-badge ${m.cls}`}>{m.label}</span>;
 }
 
+function LiveClock() {
+  const [time, setTime] = React.useState(
+    () => new Date().toLocaleTimeString('it-IT', { timeZone: 'Europe/Rome', hour: '2-digit', minute: '2-digit', second: '2-digit' })
+  );
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(new Date().toLocaleTimeString('it-IT', { timeZone: 'Europe/Rome', hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+  return (
+    <div className="live-clock">
+      <div className="live-clock-time">{time}</div>
+      <div className="live-clock-label">Roma</div>
+    </div>
+  );
+}
+
 function DotCell({ status, note }) {
   if (!status) return <td className="dot-cell"><span className="dot null">·</span></td>;
   const map = {
@@ -936,6 +961,7 @@ function App() {
           <strong>{formatDate()}</strong>
           <div className="last-update">Dati aggiornati il {genLabel}</div>
         </div>
+        <LiveClock />
       </div>
 
       {/* ── KPI BAR ── */}
