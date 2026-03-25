@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-25T19:06:59.951Z",
-  "lastUpdated": "20:06:59",
+  "generatedAt": "2026-03-25T22:04:04.000Z",
+  "lastUpdated": "22:04:04",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -366,8 +366,8 @@ const DATA = {
       "schedule": "Ogni giorno 05:00",
       "todayStatus": "skipped",
       "todayTime": "05:04",
-      "todayNote": "Nessun compleanno oggi (151 clienti)",
-      "todayDetails": "Scansione completata su 151 clienti: 111 con data di nascita, 40 senza. Nessun cliente nato il 25 marzo.",
+      "todayNote": "Nessun compleanno (151 clienti scansionati)",
+      "todayDetails": "Scansionati 151 clienti: 111 con data di nascita registrata, 40 senza. Nessun cliente nato il 25 marzo.",
       "nextRun": "2026-03-26T05:00:00"
     },
     {
@@ -376,8 +376,8 @@ const DATA = {
       "schedule": "Lun 07:00",
       "todayStatus": "warning",
       "todayTime": "07:10",
-      "todayNote": "1 anomalia: passaporto PEPPERPOT S.R.L. scaduto",
-      "todayDetails": "Registri analizzati: KPI (10 clienti, 40 righe) + LT (8 clienti, 32 righe). Tutti i controlli superati tranne uno: PEPPERPOT S.R.L. — Passaporto YA8145509 scaduto il 26/07/2025 (242 giorni fa). Presente in entrambi i registri. Richiedere documento d'identità aggiornato. Report: Verifica_Settimanale_20260325.md",
+      "todayNote": "1 anomalia: passaporto PEPPERPOT S.R.L. scaduto (242gg)",
+      "todayDetails": "Registri analizzati: KPI (10 clienti, 40 righe) + LT (8 clienti, 32 righe). Tutti i controlli superati tranne uno: PEPPERPOT S.R.L. — Passaporto YA8145509 scaduto il 26/07/2025 (242 giorni fa). Presente in entrambi i registri. Richiedere documento d’identità aggiornato. Report: Verifica_Settimanale_20260325.md",
       "nextRun": "2026-03-30T07:00:00"
     },
     {
@@ -386,19 +386,19 @@ const DATA = {
       "schedule": "Lun–Ven 13:00",
       "todayStatus": "success",
       "todayTime": "13:10",
-      "todayNote": "3 nuovi record: RD’A ×2 + F&G S.r.l.",
-      "todayDetails": "6 email analizzate. Creati 3 record: RD’A Ingegneria (Dichiarazione AI + Privacy), F.&G. S.r.l. (Contratto BMW - tipo da classificare manualmente). 3 già presenti in Notion. Attenzione: F.&G. S.r.l. tipo documento non classificato.",
+      "todayNote": "6 email analizzate · 0 nuovi record (tutti già in Notion)",
+      "todayDetails": "6 email analizzate (3 Da firmare + 3 Da ricevere). Tutti i Thread Gmail ID già presenti in Notion: RD’A (Dichiarazione AI + Privacy, stato Ricevuto), COSMI GIACOMO e PROTANO MICHELE (Lettera Incarico), PEPPERPOT (Richiesta Doc Identità), OTPA (Richiesta Doc Identità, Ricevuto), F.&G. S.r.l. (Richiesta Doc Contabile). Nessun record nuovo creato.",
       "nextRun": "2026-03-26T13:00:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun–Ven 09:00 e 17:00",
+      "schedule": "Lun–Ven 08:00 e 17:00",
       "todayStatus": "success",
       "todayTime": "17:00",
-      "todayNote": "Risposte: RD’A ×2 Ricevuti · 4 clienti ancora in attesa",
-      "todayDetails": "RD’A Ingegneria ha inviato PDF firmato con Dichiarazione AI + Privacy — 2 record aggiornati a Ricevuto. Ancora in attesa: PEPPERPOT S.R.L. (doc identità), PROTANO MICHELE (lettera incarico), COSMI GIACOMO (lettera incarico), F.&G. S.r.l. (Contratto BMW). OTPA S.R.L.: ricevuto in sessione precedente.",
-      "nextRun": "2026-03-26T09:00:00"
+      "todayNote": "RD’A ×2 ricevuti · 4 clienti ancora in attesa",
+      "todayDetails": "6 record in stato Inviato controllati. Aggiornati a Ricevuto: RD’A Ingegneria (Dichiarazione AI + Privacy, PDF firmato allegato). In attesa: PEPPERPOT S.R.L. (Doc Identità), PROTANO MICHELE (Lettera Incarico), COSMI GIACOMO (Lettera Incarico), F.&G. S.R.L. (Doc Contabile).",
+      "nextRun": "2026-03-26T08:00:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -407,7 +407,7 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "09:30",
       "todayNote": "Nessun sollecito — tutti i doc inviati < 7 giorni fa",
-      "todayDetails": "5 documenti monitorati: F.&G. S.r.l. (23/03), COSMI GIACOMO (24/03), OTPA S.R.L. (24/03), PROTANO MICHELE (24/03), PEPPERPOT S.R.L. (24/03). Nessuno ha raggiunto soglia 7 giorni. Prossimo lunedì 30/03 F.&G. sarà la prima.",
+      "todayDetails": "5 documenti monitorati: F.&G. S.r.l. (23/03), COSMI GIACOMO (24/03), OTPA S.R.L. (24/03), PROTANO MICHELE (24/03), PEPPERPOT S.R.L. (24/03). Nessuno ha raggiunto soglia 7 giorni. Prossimo lunedì 30/03.",
       "nextRun": "2026-03-30T09:00:00"
     },
     {
@@ -415,13 +415,21 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Lun–Ven ogni 2h",
       "todayStatus": "success",
-      "todayTime": "20:06",
+      "todayTime": "22:04",
       "todayNote": "Dashboard aggiornata — tutte le sessioni analizzate",
-      "todayDetails": "Sessioni analizzate: Daily Briefing ✓, Auguri Clienti ✓, Verifica AML ⚠️ (PEPPERPOT passaporto scaduto), Inserimento Notion ✓ (3 record), Monitoraggio Docs ✓ (RD’A ×2 ricevuti), Solleciti ✓ (nessuno). Bozze Gmail: 0 reali (2 template senza destinatario esclusi). Task manuali: Antiriciclaggio, Mandato+Privacy+AI, Automazione documenti.",
+      "todayDetails": "Sessioni analizzate: Daily Briefing ✓, Auguri Clienti ✓, Verifica AML ⚠️ (PEPPERPOT passaporto scaduto 242gg), Inserimento Notion ✓ (0 nuovi, tutti già in Notion), Monitoraggio Docs ✓ (RD’A ×2 ricevuti), Solleciti ✓ (nessuno). Bozze Gmail: 0 reali (2 template senza destinatario). Task manuali: Skill Antiriciclaggio aggiornata (Notion), Gestione AML, Mandato+Privacy+AI, Automazione documenti.",
       "nextRun": "2026-03-26T07:00:00"
     }
   ],
   "manualTasks": [
+    {
+      "id": "agg-skill-antiriciclaggio-25mar",
+      "name": "Aggiornamento Skill Antiriciclaggio",
+      "date": "2026-03-25",
+      "time": "22:00",
+      "status": "success",
+      "note": "Aggiunta sezione Caricamento Dati su Notion: schema 46 colonne, procedura 3 fasi, errori noti, mappa colonne. Aggiornati trigger description."
+    },
     {
       "id": "gestione-antiriciclaggio-25mar",
       "name": "Gestione Antiriciclaggio",
@@ -480,7 +488,7 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "skipped",
-          "note": "Non programmato (lun)"
+          "note": "Non programmato"
         }
       }
     },
