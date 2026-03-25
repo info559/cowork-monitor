@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-25T10:06:08",
-  "lastUpdated": "10:06:08",
+  "generatedAt": "2026-03-25T12:03:39",
+  "lastUpdated": "12:03:39",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -376,9 +376,9 @@ const DATA = {
       "schedule": "Ogni giorno → 05:04",
       "todayStatus": "skipped",
       "todayTime": "05:04",
-      "todayNote": "Nessun compleanno il 25/03",
+      "todayNote": "Nessun compleanno il 25/03 · 151 clienti scansionati",
       "todayDetails": [
-        "151 clienti scansionati nel database Notion",
+        "151 clienti scansionati su Notion",
         "111 con data di nascita registrata, 40 senza",
         "Nessun cliente nato il 25 marzo"
       ],
@@ -391,13 +391,13 @@ const DATA = {
       "schedule": "Ogni martedì → 07:00",
       "todayStatus": "warning",
       "todayTime": "07:00",
-      "todayNote": "1 anomalia – Passaporto PEPPERPOT scaduto (242 gg)",
+      "todayNote": "⚠️ Passaporto PEPPERPOT scaduto da 242 gg",
       "todayDetails": [
         "Registri analizzati: KPI (10 clienti, 40 righe) + LT (8 clienti, 32 righe)",
-        "Tutti i controlli standard superati senza anomalie",
-        "⚠️ PEPPERPOT S.R.L.: Passaporto YA8145509 scaduto il 26/07/2025",
-        "Documento scaduto presente in entrambi i registri KPI e LT",
-        "Necessario richiedere documento aggiornato al cliente"
+        "Tutti i controlli superati: date, numerazione, formule, rischi",
+        "⚠️ PEPPERPOT S.R.L. – Passaporto YA8145509 scaduto 26/07/2025 (242 gg)",
+        "Documento presente in entrambi i registri KPI e LT",
+        "Necessario richiedere documento d’identità aggiornato al cliente"
       ],
       "nextRun": "Martedì 31 mar alle 07:00"
     },
@@ -407,11 +407,11 @@ const DATA = {
       "icon": "📥",
       "schedule": "Lun–Ven → 06:00, 13:00, 20:00",
       "todayStatus": "skipped",
-      "todayTime": "08:07",
+      "todayTime": "06:00",
       "todayNote": "0 nuovi record · 5 email entro soglia 7 giorni",
       "todayDetails": [
-        "2 email 'Da firmare': Cosmi Giacomo + Protano Michele (24/03)",
-        "3 email 'Da ricevere': Pepperpot, OTPA, F&G (23–24/03)",
+        "2 email ‘Da firmare’: Cosmi Giacomo + Protano Michele (24/03)",
+        "3 email ‘Da ricevere’: Pepperpot, OTPA, F&G (23–24/03)",
         "Tutte inviate negli ultimi 1–2 giorni → sotto soglia 7gg",
         "Periodicità aggiornata: 06:00, 13:00, 20:00 (Lun–Ven)"
       ],
@@ -423,28 +423,27 @@ const DATA = {
       "icon": "📄",
       "schedule": "Ogni giorno → 07:07 e 15:03",
       "todayStatus": "success",
-      "todayTime": "15:03",
-      "todayNote": "5 clienti in attesa · 0 risposte pertinenti trovate",
+      "todayTime": "07:07",
+      "todayNote": "F. e G. S.R.L. → Ricevuto · 4 clienti ancora in attesa",
       "todayDetails": [
-        "5 clienti con stato 'Inviato' monitorati",
-        "❌ COSMI GIACOMO: nessuna risposta (incarico inviato 24/03)",
-        "❌ PROTANO MICHELE: nessuna risposta (incarico inviato 24/03)",
-        "❌ F. e G. S.R.L.: email trovate ma non pertinenti alla richiesta (CONTRATTO BMW)",
-        "❌ OTPA S.R.L.: nessuna risposta (richiesta doc 24/03)",
-        "❌ PEPPERPOT S.R.L.: nessuna risposta (richiesta doc 24/03)"
+        "Mattina (07:07): F. e G. S.R.L. → Ricevuto (15 allegati documentazione contabile)",
+        "COSMI GIACOMO – Lettera Incarico 24/03 → nessuna risposta",
+        "PROTANO MICHELE – Lettera Incarico 24/03 → nessuna risposta",
+        "OTPA S.R.L. – Documento Identità 24/03 → nessuna risposta",
+        "PEPPERPOT S.R.L. – Documento Identità 24/03 → nessuna risposta",
+        "Prossimo controllo alle 15:03"
       ],
-      "nextRun": "Domani alle 07:07"
+      "nextRun": "Oggi alle 15:03"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "icon": "📨",
+      "icon": "📮",
       "schedule": "Ogni lunedì → 06:00",
       "todayStatus": "skipped",
       "todayTime": "06:00",
-      "todayNote": "0 bozze create · nessun record ≥ 7 giorni",
+      "todayNote": "Nessun documento ≥ 7 giorni · prossimi dal 30 mar",
       "todayDetails": [
-        "5 record verificati con stato Inviato",
         "F. e G. S.R.L.: inviato 23/03 – 2 giorni fa (sollecito tra 5 gg)",
         "COSMI, PROTANO, OTPA, PEPPERPOT: inviati 24/03 – 1 giorno fa",
         "Nessuno supera la soglia dei 7 giorni",
@@ -458,23 +457,24 @@ const DATA = {
       "icon": "📊",
       "schedule": "Ogni giorno → 08:00 e 15:30",
       "todayStatus": "success",
-      "todayTime": "10:06",
+      "todayTime": "12:03",
       "todayNote": "Dashboard aggiornata · 7 task analizzati · 0 bozze",
       "todayDetails": [
         "Sessioni analizzate: 40",
         "Task pianificati di oggi verificati: 7",
         "Bozze Gmail reali: 0 (2 template senza destinatario esclusi)",
-        "Task manuali recenti: 7 nelle ultime 48h"
+        "Task manuali recenti: 8 nelle ultime 48h",
+        "Gestione Mandato+Privacy+AI completata (OTPA S.R.L.S.)"
       ],
-      "nextRun": "Domani alle 08:00"
+      "nextRun": "Oggi alle 15:30"
     }
   ],
   "manualTasks": [
     {
       "name": "Gestione Mandato+Privacy+AI",
       "time": "25 mar",
-      "status": "running",
-      "note": "Sessione complessa in corso – 183 turni"
+      "status": "success",
+      "note": "OTPA S.R.L.S.: incarico, privacy, AML + bozze Gmail + Notion aggiornato"
     },
     {
       "name": "Automazione richieste documenti",
@@ -486,7 +486,7 @@ const DATA = {
       "name": "Creazione Dashboard Cowork",
       "time": "25 mar",
       "status": "success",
-      "note": "Aggiunto orologio Roma in tempo reale nell'header"
+      "note": "Aggiunto orologio Roma in tempo reale nell’header"
     },
     {
       "name": "Gestione Antiriciclaggio",
@@ -513,10 +513,10 @@ const DATA = {
       "note": "Configurato task settimanale verifica AML"
     },
     {
-      "name": "Verifica Periodica Registri AML",
+      "name": "Verifica Periodica Registri Antiriciclaggio",
       "time": "24 mar",
       "status": "success",
-      "note": "Archivio LT completato: 3 cartelle aggiunte, 1 duplicato rimosso"
+      "note": "Correzione classi adeguata verifica (37 righe aggiornate)"
     }
   ],
   "history": [
@@ -598,7 +598,7 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "warning",
-          "note": "Passaporto PEPPERPOT scaduto"
+          "note": "PEPPERPOT passaporto scaduto"
         }
       }
     }
