@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-25T08:05:33",
-  "lastUpdated": "08:05:33",
+  "generatedAt": "2026-03-25T10:06:08",
+  "lastUpdated": "10:06:08",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -376,9 +376,10 @@ const DATA = {
       "schedule": "Ogni giorno → 05:04",
       "todayStatus": "skipped",
       "todayTime": "05:04",
-      "todayNote": "Nessun compleanno oggi · 151 clienti scansionati",
+      "todayNote": "Nessun compleanno il 25/03",
       "todayDetails": [
-        "Scansionati 151 clienti (111 con data di nascita, 40 senza)",
+        "151 clienti scansionati nel database Notion",
+        "111 con data di nascita registrata, 40 senza",
         "Nessun cliente nato il 25 marzo"
       ],
       "nextRun": "Domani alle 05:04"
@@ -386,54 +387,53 @@ const DATA = {
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "icon": "🛡️",
-      "schedule": "Trimestrale → giorno 10",
+      "icon": "🔍",
+      "schedule": "Ogni martedì → 07:00",
       "todayStatus": "warning",
       "todayTime": "07:00",
-      "todayNote": "1 anomalia · passaporto PEPPERPOT scaduto (242 gg)",
+      "todayNote": "1 anomalia – Passaporto PEPPERPOT scaduto (242 gg)",
       "todayDetails": [
         "Registri analizzati: KPI (10 clienti, 40 righe) + LT (8 clienti, 32 righe)",
-        "Tutti i controlli superati (date, numerazione, formule, rischi, campi obbligatori)",
-        "⚠️ PEPPERPOT S.R.L. – Passaporto YA8145509 scaduto il 26/07/2025 (242 giorni fa)",
-        "Documento presente in entrambi i registri KPI e LT",
-        "Azione richiesta: richiedere documento d'identità aggiornato al cliente"
+        "Tutti i controlli standard superati senza anomalie",
+        "⚠️ PEPPERPOT S.R.L.: Passaporto YA8145509 scaduto il 26/07/2025",
+        "Documento scaduto presente in entrambi i registri KPI e LT",
+        "Necessario richiedere documento aggiornato al cliente"
       ],
-      "nextRun": "Prossima verifica periodica"
+      "nextRun": "Martedì 31 mar alle 07:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "icon": "📝",
-      "schedule": "Ogni giorno → 08:07",
+      "icon": "📥",
+      "schedule": "Lun–Ven → 06:00, 13:00, 20:00",
       "todayStatus": "skipped",
       "todayTime": "08:07",
-      "todayNote": "0 record inseriti · tutte le email < 7 giorni",
+      "todayNote": "0 nuovi record · 5 email entro soglia 7 giorni",
       "todayDetails": [
-        "Email 'Da firmare': 2 trovate, filtrate (inviate il 24/03 – < 7 gg)",
-        "Email 'Da ricevere': 3 trovate, filtrate (inviate il 23-24/03 – < 7 gg)",
-        "Cosmi G. e Protano M.: lettere di incarico in attesa",
-        "OTPA, PEPPERPOT, F.G. SRL: richieste documenti identità/contabilità",
-        "Prossima elaborazione eleggibile dal 1 aprile 2026 in poi"
+        "2 email 'Da firmare': Cosmi Giacomo + Protano Michele (24/03)",
+        "3 email 'Da ricevere': Pepperpot, OTPA, F&G (23–24/03)",
+        "Tutte inviate negli ultimi 1–2 giorni → sotto soglia 7gg",
+        "Periodicità aggiornata: 06:00, 13:00, 20:00 (Lun–Ven)"
       ],
-      "nextRun": "Domani alle 08:07"
+      "nextRun": "Oggi alle 13:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "icon": "📂",
-      "schedule": "Lun→Sab → 07:07 + 15:03",
+      "icon": "📄",
+      "schedule": "Ogni giorno → 07:07 e 15:03",
       "todayStatus": "success",
-      "todayTime": "07:07",
-      "todayNote": "F. e G. S.R.L. → Ricevuto · 4 ancora in attesa",
+      "todayTime": "15:03",
+      "todayNote": "5 clienti in attesa · 0 risposte pertinenti trovate",
       "todayDetails": [
-        "5 clienti in attesa monitorati",
-        "✅ F. e G. S.R.L.: email con 15 allegati ricevuta → Notion aggiornato (Ricevuto)",
-        "❌ COSMI GIACOMO: nessuna risposta (incarico inviato il 24/03)",
-        "❌ PROTANO MICHELE: nessuna risposta (incarico inviato il 24/03)",
-        "❌ OTPA S.R.L.: nessuna risposta (richiesta doc inviata il 24/03)",
-        "❌ PEPPERPOT S.R.L.: nessuna risposta (richiesta doc inviata il 24/03)"
+        "5 clienti con stato 'Inviato' monitorati",
+        "❌ COSMI GIACOMO: nessuna risposta (incarico inviato 24/03)",
+        "❌ PROTANO MICHELE: nessuna risposta (incarico inviato 24/03)",
+        "❌ F. e G. S.R.L.: email trovate ma non pertinenti alla richiesta (CONTRATTO BMW)",
+        "❌ OTPA S.R.L.: nessuna risposta (richiesta doc 24/03)",
+        "❌ PEPPERPOT S.R.L.: nessuna risposta (richiesta doc 24/03)"
       ],
-      "nextRun": "Oggi alle 15:03"
+      "nextRun": "Domani alle 07:07"
     },
     {
       "id": "solleciti-settimanali",
@@ -445,76 +445,78 @@ const DATA = {
       "todayNote": "0 bozze create · nessun record ≥ 7 giorni",
       "todayDetails": [
         "5 record verificati con stato Inviato",
-        "F. e G. S.R.L.: inviato 23/03 – 2 giorni fa (soglia: 7 gg)",
+        "F. e G. S.R.L.: inviato 23/03 – 2 giorni fa (sollecito tra 5 gg)",
         "COSMI, PROTANO, OTPA, PEPPERPOT: inviati 24/03 – 1 giorno fa",
-        "Prossimi solleciti eleggibili da lunedì 30 marzo 2026"
+        "Nessuno supera la soglia dei 7 giorni",
+        "Prossimo sollecito previsto: lunedì 30 marzo 2026"
       ],
-      "nextRun": "Lunedì 30 marzo"
+      "nextRun": "Lunedì 31 mar alle 06:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "icon": "📊",
-      "schedule": "Ogni giorno → 00:02",
+      "schedule": "Ogni giorno → 08:00 e 15:30",
       "todayStatus": "success",
-      "todayTime": "08:05",
+      "todayTime": "10:06",
       "todayNote": "Dashboard aggiornata · 7 task analizzati · 0 bozze",
       "todayDetails": [
-        "Sessioni analizzate: 7 task pianificati (25 mar) + manuali recenti",
-        "Bozze Gmail: 2 template senza destinatario → coworkDrafts vuoto",
-        "Pubblicazione su GitHub Pages completata"
+        "Sessioni analizzate: 40",
+        "Task pianificati di oggi verificati: 7",
+        "Bozze Gmail reali: 0 (2 template senza destinatario esclusi)",
+        "Task manuali recenti: 7 nelle ultime 48h"
       ],
-      "nextRun": "Domani alle 00:02"
+      "nextRun": "Domani alle 08:00"
     }
   ],
   "manualTasks": [
     {
-      "name": "Automazione richieste documenti",
-      "status": "success",
-      "category": "Sistema",
-      "date": "24 mar"
+      "name": "Gestione Mandato+Privacy+AI",
+      "time": "25 mar",
+      "status": "running",
+      "note": "Sessione complessa in corso – 183 turni"
     },
     {
-      "name": "Schedule verifica AML settimanale",
+      "name": "Automazione richieste documenti",
+      "time": "25 mar",
       "status": "success",
-      "category": "AML",
-      "date": "24 mar"
+      "note": "Aggiunta colonna Oggetto Email in Notion + viste aggiornate"
     },
     {
       "name": "Creazione Dashboard Cowork",
+      "time": "25 mar",
       "status": "success",
-      "category": "Sistema",
-      "date": "Recente"
-    },
-    {
-      "name": "Superbonus: RdA vs COGERP",
-      "status": "success",
-      "category": "Documenti",
-      "date": "Recente"
+      "note": "Aggiunto orologio Roma in tempo reale nell'header"
     },
     {
       "name": "Gestione Antiriciclaggio",
+      "time": "24 mar",
       "status": "success",
-      "category": "AML",
-      "date": "Recente"
+      "note": "Bozza email PEPPERPOT (doc scaduti) + skill aggiornata"
     },
     {
-      "name": "Edit Skill Antiriciclaggio",
+      "name": "Elaborazione Lista Anagrafiche Clienti",
+      "time": "24 mar",
       "status": "success",
-      "category": "Sistema",
-      "date": "Recente"
+      "note": "231 checkbox su 115 clienti matchati Sheets → Notion"
     },
     {
-      "name": "Elaborazione Lista Anagrafiche",
+      "name": "Superbonus-RdA vs COGERP",
+      "time": "24 mar",
       "status": "success",
-      "category": "AML",
-      "date": "Recente"
+      "note": "Bozza email parere tecnico – rimosso riferimento compenso"
     },
     {
-      "name": "Gestione Mandato + Privacy + AI",
+      "name": "Schedule Verifica Antiriciclaggio",
+      "time": "24 mar",
       "status": "success",
-      "category": "Documenti",
-      "date": "Recente"
+      "note": "Configurato task settimanale verifica AML"
+    },
+    {
+      "name": "Verifica Periodica Registri AML",
+      "time": "24 mar",
+      "status": "success",
+      "note": "Archivio LT completato: 3 cartelle aggiunte, 1 duplicato rimosso"
     }
   ],
   "history": [
@@ -578,8 +580,8 @@ const DATA = {
           "note": "Nessun compleanno"
         },
         "verifica-aml": {
-          "status": "warning",
-          "note": "37 righe corrette (AM)"
+          "status": "success",
+          "note": "Archivio LT completato"
         }
       }
     },
