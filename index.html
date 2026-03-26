@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-26T19:07:10.377Z",
-  "lastUpdated": "20:07:10",
+  "generatedAt": "2026-03-26T21:05:46.013Z",
+  "lastUpdated": "22:05:46",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,7 +367,7 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "05:04",
       "todayNote": "Nessun compleanno oggi (26/03)",
-      "todayDetails": "Ricerca su Notion tramite codice fiscale (C26=maschio, C66=femmina nati il 26/03). Nessun record corrispondente trovato.",
+      "todayDetails": "Ricerca su Notion tramite codice fiscale (C26 maschio, C66 femmina per il 26 marzo). Nessun match trovato. Vista temporanea eliminata.",
       "nextRun": "2026-03-27T05:00:00"
     },
     {
@@ -376,8 +376,8 @@ const DATA = {
       "schedule": "Lunedì 09:00",
       "todayStatus": "skipped",
       "todayTime": "—",
-      "todayNote": "Non programmato oggi (prossimo: lunedì 30/03)",
-      "todayDetails": "",
+      "todayNote": "Non programmato oggi (giovedì)",
+      "todayDetails": "Task settimanale, prossima esecuzione lunedì 30/03.",
       "nextRun": "2026-03-30T09:00:00"
     },
     {
@@ -386,18 +386,18 @@ const DATA = {
       "schedule": "Lun–Ven 13:00",
       "todayStatus": "warning",
       "todayTime": "13:00",
-      "todayNote": "Errore mount (apostrofo nel path) · nessuna email target elaborata",
-      "todayDetails": "Errore di sistema: impossibile montare cartella con apostrofo nel nome (RD’A vs COGERP). Sessione interrotta senza elaborazione email.",
+      "todayNote": "Errore mount (apostrofo nel path) · nessuna email elaborata",
+      "todayDetails": "Sessione avviata ma il mount è fallito per un apostrofo nel path della cartella (RD’A). Nessuna email con etichetta processata. La skill antiriciclaggio è stata aggiornata con integrazione Notion completa (sezione caricamento dati, schema 46 colonne, procedura batch).",
       "nextRun": "2026-03-27T13:00:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun–Ven 09:00, 15:00",
+      "schedule": "Lun–Ven 09:00/15:00",
       "todayStatus": "success",
       "todayTime": "09:00",
-      "todayNote": "4 clienti in attesa · 0 ricevuti · pomeridiana non eseguita",
-      "todayDetails": "Mattina: 4 record “Inviato” su Notion (Cosmi Giacomo, Protano Michele, Pepperpot S.R.L., F. e G. S.R.L.). Nessuna risposta con allegati trovata su Gmail. 0 aggiornamenti Notion. Sessione pomeridiana (15:00) non eseguita (transcript vuoto).",
+      "todayNote": "4 clienti in attesa · 0 documenti ricevuti · pomeridiana non eseguita",
+      "todayDetails": "Controllati 4 record Notion con stato Inviato: Cosmi Giacomo, Protano Michele, Pepperpot S.R.L., F. e G. S.R.L. Nessuna risposta con allegati pertinenti trovata su Gmail. Run pomeridiano (15:00) non eseguito (sessione vuota).",
       "nextRun": "2026-03-27T09:00:00"
     },
     {
@@ -406,17 +406,17 @@ const DATA = {
       "schedule": "Lunedì 10:00",
       "todayStatus": "skipped",
       "todayTime": "—",
-      "todayNote": "Non programmato oggi (prossimo: lunedì 30/03)",
-      "todayDetails": "",
+      "todayNote": "Non programmato oggi (giovedì)",
+      "todayDetails": "Task settimanale, prossima esecuzione lunedì 30/03.",
       "nextRun": "2026-03-30T10:00:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Lun–Ven */2h",
+      "schedule": "Lun–Ven 08:00–20:00",
       "todayStatus": "success",
-      "todayTime": "20:07",
-      "todayNote": "7° aggiornamento odierno",
+      "todayTime": "22:05",
+      "todayNote": "8° aggiornamento odierno",
       "todayDetails": "Dashboard aggiornata con dati sessioni, bozze Gmail e task manuali recenti.",
       "nextRun": "2026-03-27T08:00:00"
     }
@@ -442,57 +442,57 @@ const DATA = {
       "id": "aml-cessione-rischio-26mar",
       "name": "Consulenza rischio AML cessione crediti",
       "date": "2026-03-26",
-      "time": "16:30",
+      "time": "16:00",
       "status": "success",
-      "note": "Analisi rischio antiriciclaggio cessione crediti d’imposta: RI=3/4, adeguata verifica ordinaria/rafforzata."
-    },
-    {
-      "id": "articolo-forfetario-26mar",
-      "name": "Articolo+LinkedIn regime forfetario",
-      "date": "2026-03-26",
-      "time": "15:00",
-      "status": "success",
-      "note": "Articolo pubblicato su WordPress (compensi indebiti e regime forfetario) + post LinkedIn pubblicato."
-    },
-    {
-      "id": "linkedin-workflow-26mar",
-      "name": "Skill content-publisher creata",
-      "date": "2026-03-26",
-      "time": "14:30",
-      "status": "success",
-      "note": "Nuova skill content-publisher per flusso completo: ricerca, articolo WordPress, immagine, pubblicazione, post LinkedIn."
+      "note": "Analisi rischio antiriciclaggio per cessione crediti d’imposta: RI=3/4, verifica rafforzata consigliata."
     },
     {
       "id": "honiro-mandato-26mar",
-      "name": "Mandato+Privacy+AI HONIRO S.R.L.",
+      "name": "Mandato+Privacy+AI Honiro S.R.L.",
+      "date": "2026-03-26",
+      "time": "14:30",
+      "status": "success",
+      "note": "Compilati incarico professionale, dichiarazione AI+Privacy e scheda AML per Honiro/La Vecchia Jacopo. Bozza email creata."
+    },
+    {
+      "id": "skill-contentpub-nano-26mar",
+      "name": "Skill content-publisher: Nano Banana AI",
+      "date": "2026-03-26",
+      "time": "13:30",
+      "status": "success",
+      "note": "Aggiornata skill con generazione immagini AI tramite Nano Banana (Gemini) come approccio preferito."
+    },
+    {
+      "id": "skill-contentpub-cta-26mar",
+      "name": "Skill content-publisher: CTA box + img specs",
       "date": "2026-03-26",
       "time": "12:00",
       "status": "success",
-      "note": "Incarico professionale, dichiarazione AI+Privacy e scheda antiriciclaggio per HONIRO S.R.L. (La Vecchia Jacopo). Bozza email creata."
+      "note": "Aggiunti box CTA obbligatorio e specifiche immagini 2560px + upload via REST API alla skill."
     },
     {
-      "id": "ux-audit-26mar",
-      "name": "Audit UX/UI sito kpiconsulting.it",
+      "id": "article-forfetario-26mar",
+      "name": "Articolo + LinkedIn: Regime Forfetario",
       "date": "2026-03-26",
       "time": "11:00",
       "status": "success",
-      "note": "Report completo: 12 criticità, piano interventi, accessibilità e SEO."
+      "note": "Articolo pubblicato su WordPress + post LinkedIn su compensi indebiti e regime forfetario."
     },
     {
-      "id": "honiro-cessione-26mar",
-      "name": "Incarico cessione crediti HONIRO",
+      "id": "ux-audit-26mar",
+      "name": "Audit UX/UI kpiconsulting.it",
       "date": "2026-03-26",
       "time": "10:00",
       "status": "success",
-      "note": "Preventivo compilato per gestione cessione crediti Superbonus EDILFEM → HONIRO (compenso 2%, €1.958,01)."
+      "note": "Report completo UX/UI: 12 criticità (alt mancanti, 3 H1, 37 CSS render-blocking, link errati)."
     },
     {
-      "id": "aml-skill-update-26mar",
-      "name": "Aggiornamento skill antiriciclaggio",
-      "date": "2026-03-26",
-      "time": "09:30",
+      "id": "honiro-cessione-25mar",
+      "name": "Preventivo cessione crediti Honiro",
+      "date": "2026-03-25",
+      "time": "19:00",
       "status": "success",
-      "note": "Aggiunta sezione Notion: schema DB 46 colonne, procedura batch, regola anti-fabbricazione, errori noti."
+      "note": "Incarico professionale compilato per cessione crediti Superbonus 110% EDILFEM → HONIRO (2% = €1.958,01)."
     },
     {
       "id": "script-email-25mar",
