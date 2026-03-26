@@ -651,7 +651,7 @@ function Modal({ data, onClose }) {
           {data.note && !data.details?.length && <div className="modal-note">{data.note}</div>}
           {data.details && data.details.length > 0 && (
             <ul className="modal-details">
-              {data.details.map((d, i) => <li key={i}>{d}</li>)}
+              {(Array.isArray(data.details) ? data.details : [data.details]).map((d, i) => <li key={i}>{d}</li>)}
             </ul>
           )}
           {data.historyRow && data.historyRow.some(h => h.status) && (
