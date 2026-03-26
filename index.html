@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-26T15:06:28.215Z",
-  "lastUpdated": "16:06:28",
+  "generatedAt": "2026-03-26T17:06:04.000Z",
+  "lastUpdated": "18:06:04",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,27 +367,27 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "05:04",
       "todayNote": "Nessun compleanno oggi (26/03)",
-      "todayDetails": "Analizzati tutti i codici fiscali nel database Notion (logica CF italiano: C26=maschio, C66=femmina nati il 26/03). Nessun record corrispondente trovato.",
+      "todayDetails": "Ricerca su Notion tramite codice fiscale (C26 maschi, C66 femmine). Nessun record corrispondente trovato.",
       "nextRun": "2026-03-27T05:00:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Lunedì 08:00",
+      "schedule": "Lunedì 09:00",
       "todayStatus": "skipped",
-      "todayTime": "",
-      "todayNote": "Non programmato oggi (giov). Prossima: lunedì 30/03",
+      "todayTime": "—",
+      "todayNote": "Non programmato oggi (prossimo: lunedì 30/03)",
       "todayDetails": "",
-      "nextRun": "2026-03-30T08:00:00"
+      "nextRun": "2026-03-30T09:00:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Lun–Ven 13:00",
-      "todayStatus": "skipped",
+      "todayStatus": "warning",
       "todayTime": "13:00",
-      "todayNote": "Errore mount cartella (apostrofo nel path) — nessun inserimento",
-      "todayDetails": "Sessione avviata ma errore di sistema: mount fallito per apostrofo nel nome cartella (RD’A). Utente ha indicato di ignorare. Nessuna email con etichetta Gmail target trovata nella seconda esecuzione.",
+      "todayNote": "Errore mount (apostrofo nel path) · nessuna email target",
+      "todayDetails": "Prima esecuzione vuota (nessun messaggio). Seconda esecuzione: errore mount VirtioFS causato dall’apostrofo nel nome cartella (RD’A). L’utente ha ignorato l’errore. Nessun inserimento effettuato.",
       "nextRun": "2026-03-27T13:00:00"
     },
     {
@@ -396,32 +396,40 @@ const DATA = {
       "schedule": "Lun–Ven 09:00, 15:00",
       "todayStatus": "success",
       "todayTime": "09:00",
-      "todayNote": "4 clienti in attesa · 0 documenti ricevuti",
-      "todayDetails": "4 record con Stato ‘Inviato’ su Notion: COSMI GIACOMO (lettera incarico, 24/03), PROTANO MICHELE (lettera incarico, 24/03), PEPPERPOT S.R.L. (richiesta doc identità, 24/03), F. e G. S.R.L. (richiesta doc contabile, 23/03). Nessuna risposta con allegato firmato trovata in Gmail. Sessione pomeridiana (15:00): non eseguita (nessun messaggio).",
+      "todayNote": "4 clienti in attesa · 0 ricevuti · pomeridiana non eseguita",
+      "todayDetails": "Mattina: 4 record “Inviato” su Notion (Cosmi Giacomo, Protano Michele, Pepperpot S.R.L., F. e G. S.R.L.). Nessuna risposta con allegati trovata su Gmail. 0 aggiornamenti Notion. Sessione pomeridiana (15:00) non eseguita (transcript vuoto).",
       "nextRun": "2026-03-27T09:00:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Lunedì 09:00",
+      "schedule": "Lunedì 10:00",
       "todayStatus": "skipped",
-      "todayTime": "",
-      "todayNote": "Non programmato oggi (giov). Prossima: lunedì 30/03",
+      "todayTime": "—",
+      "todayNote": "Non programmato oggi (prossimo: lunedì 30/03)",
       "todayDetails": "",
-      "nextRun": "2026-03-30T09:00:00"
+      "nextRun": "2026-03-30T10:00:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Lun–Ven 09:30, 13:00, 17:00",
       "todayStatus": "success",
-      "todayTime": "16:06",
-      "todayNote": "Questa sessione — 5° aggiornamento oggi",
-      "todayDetails": "Dashboard aggiornata con dati sessioni odierne. Bozze Gmail verificate: 1 reale (HONIRO), 2 template esclusi.",
+      "todayTime": "18:06",
+      "todayNote": "Questa sessione — 6° aggiornamento oggi",
+      "todayDetails": "Dashboard aggiornata con dati sessioni odierne. Bozze Gmail verificate: 1 reale (Honiro — Re: Crediti di imposta), template esclusi. Nuovi task manuali: articolo IVA osteopati/massoterapisti.",
       "nextRun": "2026-03-27T09:30:00"
     }
   ],
   "manualTasks": [
+    {
+      "id": "articolo-iva-osteopati-26mar",
+      "name": "Articolo IVA Osteopati/Massoterapisti",
+      "date": "2026-03-26",
+      "time": "17:30",
+      "status": "warning",
+      "note": "Articolo Risoluzione 9/2026 (esenzione IVA osteopati, chiropratici, massoterapisti) scritto e in attesa approvazione. Post LinkedIn preparato."
+    },
     {
       "id": "articolo-forfetario-26mar",
       "name": "Articolo + LinkedIn Regime Forfetario",
@@ -434,57 +442,41 @@ const DATA = {
       "id": "linkedin-workflow-26mar",
       "name": "Aggiornamento Skill Articoli+LinkedIn",
       "date": "2026-03-26",
-      "time": "14:00",
+      "time": "14:30",
       "status": "success",
-      "note": "Corretta skill: verifica notizia pre-scrittura, meta description max 150 char, limite 1000 parole, post LinkedIn singolo."
+      "note": "Nuova skill content-publisher per flusso completo: ricerca notizia, articolo WordPress, immagine, pubblicazione, post LinkedIn con approvazione."
     },
     {
       "id": "honiro-mandato-26mar",
-      "name": "Gestione Mandato+Privacy+AI HONIRO",
+      "name": "Mandato+Privacy+AI HONIRO S.R.L.",
       "date": "2026-03-26",
-      "time": "11:00",
+      "time": "12:00",
       "status": "success",
-      "note": "Elaborati 3 documenti (incarico professionale cessione crediti EDILFEM→HONIRO, dichiarazione AI+Privacy, scheda AML). Bozza email creata per invio a La Vecchia Jacopo."
+      "note": "Incarico professionale, dichiarazione AI+Privacy e scheda antiriciclaggio per HONIRO S.R.L. (La Vecchia Jacopo). Bozza email creata."
     },
     {
       "id": "ux-audit-26mar",
       "name": "Audit UX/UI sito kpiconsulting.it",
       "date": "2026-03-26",
-      "time": "10:00",
+      "time": "11:00",
       "status": "success",
-      "note": "Report completo: 12 criticità (7 img senza alt, 3 H1, 37 CSS + 35 JS render-blocking, spazi vuoti, link CTA errati). Piano interventi."
+      "note": "Report completo: 12 criticità (alt mancanti, 3xH1, 37 CSS + 35 JS render-blocking, spazi vuoti, link errati). Report .docx generato."
     },
     {
       "id": "cessione-crediti-26mar",
-      "name": "Incarico Cessione Crediti HONIRO/EDILFEM",
+      "name": "Cessione Crediti HONIRO/EDILFEM",
       "date": "2026-03-26",
-      "time": "09:30",
+      "time": "10:00",
       "status": "success",
-      "note": "Compilato preventivo SP HONIRO S.R.L. per cessione crediti Superbonus 110% (97.900,50€). Compenso 2% = 1.958,01€."
+      "note": "Incarico professionale compilato: cessione Superbonus 110° EDILFEM → HONIRO €97.900,50. Compenso 2% (€1.958,01)."
     },
     {
       "id": "skill-preventivi-suap-26mar",
-      "name": "Skill Preventivi: tariffario SUAP Subiaco",
+      "name": "Skill Preventivi: tariffario SUAP",
       "date": "2026-03-26",
-      "time": "09:00",
+      "time": "09:30",
       "status": "success",
-      "note": "Aggiunta sezione recupero costi SCIA/SUAP con 45 categorie tariffario Comune di Subiaco."
-    },
-    {
-      "id": "script-email-26mar",
-      "name": "Script invio email SMTP",
-      "date": "2026-03-26",
-      "time": "08:30",
-      "status": "success",
-      "note": "Creato invia_email.py con SMTP Gmail + firma HTML KPI Consulting."
-    },
-    {
-      "id": "automazione-documenti-25mar",
-      "name": "Automazione Richieste Documenti",
-      "date": "2026-03-25",
-      "time": "18:00",
-      "status": "success",
-      "note": "Aggiunta colonna Oggetto Email al database Notion e alle viste In Attesa/Sollecitati. Task inserimento aggiornato."
+      "note": "Aggiunta sezione recupero costi SCIA/SUAP con tariffario Comune di Subiaco (45 categorie)."
     },
     {
       "id": "skill-aml-notion-26mar",
@@ -495,12 +487,20 @@ const DATA = {
       "note": "Aggiunta procedura caricamento dati su Notion (schema 46 colonne, batch da 8, regola anti-fabbricazione, errori noti)."
     },
     {
-      "id": "skill-content-publisher-26mar",
-      "name": "Creazione Skill Content Publisher",
+      "id": "aml-cessione-rischio-26mar",
+      "name": "Consulenza rischio AML cessione crediti",
       "date": "2026-03-26",
-      "time": "14:30",
+      "time": "16:30",
       "status": "success",
-      "note": "Nuova skill per flusso completo: ricerca notizia, articolo WordPress, immagine, pubblicazione, post LinkedIn con approvazione."
+      "note": "Analisi rischio antiriciclaggio cessione crediti d’imposta: RI=3/4, adeguata verifica ordinaria/rafforzata, riferimenti normativi."
+    },
+    {
+      "id": "script-email-26mar",
+      "name": "Script invio email Python",
+      "date": "2026-03-25",
+      "time": "18:00",
+      "status": "success",
+      "note": "Creazione script Python per invio email tramite SMTP con password app Google."
     }
   ],
   "history": [
@@ -518,43 +518,43 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "skipped",
-          "note": "Non programmato"
+          "note": "Non programmato (gio)"
         }
       }
     },
     {
       "date": "2026-03-25",
-      "label": "Mar 25",
+      "label": "Mer 25",
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "19 email · PEC WE-NET + Edilfem crediti"
+          "note": "Briefing completato"
         },
         "auguri-clienti": {
           "status": "skipped",
           "note": "Nessun compleanno"
         },
         "verifica-aml": {
-          "status": "success",
-          "note": "1 anomalia: PEPPERPOT passaporto scaduto"
+          "status": "skipped",
+          "note": "Non programmato (mer)"
         }
       }
     },
     {
       "date": "2026-03-24",
-      "label": "Lun 24",
+      "label": "Mar 24",
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": ""
+          "note": "Briefing completato"
         },
         "auguri-clienti": {
           "status": "skipped",
-          "note": ""
+          "note": "Nessun compleanno"
         },
         "verifica-aml": {
-          "status": "success",
-          "note": ""
+          "status": "skipped",
+          "note": "Non programmato (mar)"
         }
       }
     },
@@ -564,15 +564,15 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": ""
+          "note": "Briefing completato"
         },
         "auguri-clienti": {
           "status": "skipped",
-          "note": ""
+          "note": "Nessun compleanno"
         },
         "verifica-aml": {
           "status": "skipped",
-          "note": ""
+          "note": "Non programmato (ven)"
         }
       }
     },
@@ -582,24 +582,24 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": ""
+          "note": "Briefing completato"
         },
         "auguri-clienti": {
-          "status": "skipped",
-          "note": ""
+          "status": "success",
+          "note": "1 auguri inviato"
         },
         "verifica-aml": {
           "status": "skipped",
-          "note": ""
+          "note": "Non programmato (gio)"
         }
       }
     }
   ],
   "coworkDrafts": [
     {
-      "id": "draft-honiro-incarico",
-      "to": "honiro@example.com",
-      "subject": "Contratto di incarico professionale - KPI Consulting STP S.r.l.",
+      "id": "draft-honiro-crediti",
+      "to": "amministrazione@honiro.it",
+      "subject": "Re: Re: Crediti di imposta",
       "date": "26 mar",
       "status": "ready"
     }
