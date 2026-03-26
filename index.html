@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-26T07:08:32.456Z",
-  "lastUpdated": "08:08:32",
+  "generatedAt": "2026-03-26T09:06:57.295Z",
+  "lastUpdated": "10:06:57",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,7 +356,7 @@ const DATA = {
       "schedule": "Lun–Ven 07:00",
       "todayStatus": "success",
       "todayTime": "07:01",
-      "todayNote": "7 email · avviso Google + doc Honiro attesi + scadenza OSEN 31/03",
+      "todayNote": "7 email · avviso Google + Honiro attesi + scadenza OSEN 31/03",
       "todayDetails": "7 messaggi etichetta Lorenzo analizzati. Urgente: avviso sicurezza Google (password app Co-work SMTP su segreteria@kpiconsulting.it — verificare autorizzazione). Atteso oggi: documenti Honiro da Veronica. Ricevuti: doc identità OTPA/Ottavi Giovanni (CI aggiornata), dichiarazione AI+Privacy RD'A Ingegneria. Scadenza 31/03: OSEN S.R.L. F24 avviso bonario IVA 2022.",
       "nextRun": "2026-03-27T07:00:00"
     },
@@ -367,7 +367,7 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "05:04",
       "todayNote": "Nessun compleanno oggi (26/03)",
-      "todayDetails": "Ricerca tramite codice fiscale (C26 maschi / C66 femmine per 26 marzo). Nessun cliente nato il 26 marzo tra i clienti scansionati.",
+      "todayDetails": "Ricerca tramite codice fiscale (C26 maschi / C66 femmine per 26 marzo). Nessun cliente nato il 26 marzo nel database Notion.",
       "nextRun": "2026-03-27T05:00:00"
     },
     {
@@ -376,28 +376,28 @@ const DATA = {
       "schedule": "Lun 07:00",
       "todayStatus": "skipped",
       "todayTime": "",
-      "todayNote": "Non programmato (giovedì)",
-      "todayDetails": "La verifica antiriciclaggio è schedulata ogni lunedì. Oggi è giovedì. Prossima esecuzione: lunedì 30 marzo 2026.",
+      "todayNote": "Non programmato oggi",
+      "todayDetails": "La verifica AML è programmata settimanalmente il lunedì. Prossima esecuzione: lunedì 30 marzo 2026.",
       "nextRun": "2026-03-30T07:00:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Lun–Ven 13:00",
-      "todayStatus": "warning",
+      "todayStatus": "skipped",
       "todayTime": "13:00",
-      "todayNote": "Sessione avviata senza output",
-      "todayDetails": "La sessione è stata creata ma non ha prodotto alcun output. Il task potrebbe non aver trovato email da processare o aver incontrato un problema di avvio. Verificare alla prossima esecuzione.",
+      "todayNote": "Nessuna email da elaborare",
+      "todayDetails": "Sessione avviata regolarmente alle 13:00. Nessuna email con etichetta Gmail da elaborare e inserire in Notion.",
       "nextRun": "2026-03-27T13:00:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun–Ven 08:00 e 17:00",
-      "todayStatus": "warning",
-      "todayTime": "08:00",
-      "todayNote": "Sessione mattutina avviata senza output",
-      "todayDetails": "La sessione mattutina (08:00) è stata creata ma non ha prodotto output. Possibile problema di avvio. La sessione pomeridiana (17:00) è ancora da eseguire.",
+      "todayStatus": "success",
+      "todayTime": "09:00",
+      "todayNote": "4 clienti in attesa · 0 documenti ricevuti",
+      "todayDetails": "4 record con Stato=Inviato: COSMI GIACOMO (lettera incarico 24/03), PROTANO MICHELE (lettera incarico 24/03), PEPPERPOT S.R.L. (richiesta doc identità 24/03), F. e G. S.R.L. (richiesta doc contabile 23/03). 0 risposte con allegati pertinenti trovate. Nota: F. e G. ha inviato doc contabili il 24/03 ma non relativi al contratto BMW richiesto.",
       "nextRun": "2026-03-26T17:00:00"
     },
     {
@@ -406,29 +406,29 @@ const DATA = {
       "schedule": "Lun 09:00",
       "todayStatus": "skipped",
       "todayTime": "",
-      "todayNote": "Non programmato (giovedì)",
-      "todayDetails": "I solleciti settimanali sono schedulati ogni lunedì. Oggi è giovedì. Prossima esecuzione: lunedì 30 marzo 2026.",
+      "todayNote": "Non programmato oggi",
+      "todayDetails": "I solleciti settimanali sono programmati il lunedì. Prossima esecuzione: lunedì 30 marzo 2026.",
       "nextRun": "2026-03-30T09:00:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Lun–Ven 07:00",
+      "schedule": "Lun–Ven 07:00 e 17:00",
       "todayStatus": "success",
-      "todayTime": "08:08",
-      "todayNote": "Daily Briefing ✓, Auguri ⏭️ (no bday), Notion ⚠️ (no output), Monitor ⚠️ (no output). Bozze: 0 reali.",
-      "todayDetails": "Daily Briefing ✓ (avviso Google + Honiro), Auguri Clienti ⏭️ (nessun compleanno), Verifica AML ⏭️ (non programmato), Inserimento Notion ⚠️ (sessione vuota), Monitoraggio Docs ⚠️ (sessione vuota), Solleciti ⏭️ (non programmato). Bozze Gmail: 0 reali (2 template senza destinatario). Task manuali: creazione nuova skill in corso.",
-      "nextRun": "2026-03-27T07:00:00"
+      "todayTime": "10:06",
+      "todayNote": "Dashboard aggiornata · pomeriggio monitoraggio ancora in attesa",
+      "todayDetails": "Aggiornamento completato alle 10:06. Sessioni analizzate: Daily Briefing (success), Auguri (skipped), Notion (skipped), Monitoraggio mattino (success, 4 in attesa). Bozze Gmail: 2 template senza destinatario, nessuna bozza reale da mostrare.",
+      "nextRun": "2026-03-26T17:00:00"
     }
   ],
   "manualTasks": [
     {
-      "id": "nuova-skill-26mar",
-      "name": "Creazione nuova skill",
+      "id": "agg-skill-preventivi-26mar",
+      "name": "Aggiornamento Skill Preventivi",
       "date": "2026-03-26",
-      "time": "08:00",
-      "status": "running",
-      "note": "Lorenzo sta creando una nuova skill personalizzata tramite il skill-creator. Sessione in corso."
+      "time": "10:00",
+      "status": "success",
+      "note": "Skill preventivi aggiornata: integrazione portale SARI per recupero automatico costi pratiche CCIAA (imposta di bollo e diritti di segreteria)."
     },
     {
       "id": "script-email-26mar",
@@ -452,23 +452,23 @@ const DATA = {
       "date": "2026-03-25",
       "time": "",
       "status": "success",
-      "note": "Correzione classi adeguata verifica: 37 righe aggiornate in KPI+LT. Popolamento DB Notion da registri Excel."
+      "note": "Correzione classi adeguata verifica: 37 righe aggiornate in KPI+LT. Popolamento Notion con dati registro."
     },
     {
       "id": "gestione-mandato-25mar",
-      "name": "Gestione Mandato+Privacy+AI",
+      "name": "Aggiornamento Skill Mandato",
       "date": "2026-03-25",
       "time": "",
       "status": "success",
-      "note": "Aggiornamento skill mandato-professionale: rimossa Fase 7 (Aggiornamento Notion su richiesta utente)."
+      "note": "Rimossa Fase 7 (Aggiornamento Notion superfluo). Ottimizzata skill mandato-professionale."
     },
     {
       "id": "automazione-richieste-25mar",
-      "name": "Automazione richieste documenti",
+      "name": "Automazione Richieste Documenti",
       "date": "2026-03-25",
       "time": "",
       "status": "success",
-      "note": "Aggiunta colonna Oggetto Email al DB Notion e alle viste In Attesa/Sollecitati. Task schedulato aggiornato."
+      "note": "Aggiunta colonna Oggetto Email al DB Notion e alle viste In Attesa/Sollecitati. Script automazione aggiornato."
     }
   ],
   "history": [
@@ -527,24 +527,6 @@ const DATA = {
       }
     },
     {
-      "date": "2026-03-23",
-      "label": "Lun 23",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": ""
-        },
-        "auguri-clienti": {
-          "status": "skipped",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "success",
-          "note": ""
-        }
-      }
-    },
-    {
       "date": "2026-03-21",
       "label": "Ven 21",
       "tasks": {
@@ -554,7 +536,25 @@ const DATA = {
         },
         "auguri-clienti": {
           "status": "skipped",
-          "note": "Nessun compleanno"
+          "note": ""
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmato"
+        }
+      }
+    },
+    {
+      "date": "2026-03-20",
+      "label": "Gio 20",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": ""
+        },
+        "auguri-clienti": {
+          "status": "skipped",
+          "note": ""
         },
         "verifica-aml": {
           "status": "skipped",
