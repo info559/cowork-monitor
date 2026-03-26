@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-26T11:05:53.125Z",
-  "lastUpdated": "13:05:53",
+  "generatedAt": "2026-03-26T13:06:03.000Z",
+  "lastUpdated": "14:06:03",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,18 +367,18 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "05:04",
       "todayNote": "Nessun compleanno oggi (26/03)",
-      "todayDetails": "Ricerca tramite codice fiscale (C26 maschi / C66 femmine per 26 marzo). Nessun cliente nato il 26 marzo nel database Notion.",
+      "todayDetails": "Scansionati 151 clienti su Notion (111 con data di nascita). Nessun codice fiscale con C26 (maschio) o C66 (femmina) nato il 26 marzo.",
       "nextRun": "2026-03-27T05:00:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Lun 07:00",
+      "schedule": "Lunedì 07:30",
       "todayStatus": "skipped",
       "todayTime": "",
-      "todayNote": "Non programmato oggi",
-      "todayDetails": "La verifica AML è programmata settimanalmente il lunedì. Prossima esecuzione: lunedì 30 marzo 2026. Ultima esecuzione 25/03: 1 anomalia (PEPPERPOT S.R.L. passaporto scaduto 26/07/2025).",
-      "nextRun": "2026-03-30T07:00:00"
+      "todayNote": "Non programmato oggi (giov). Prossima: lunedì 30/03",
+      "todayDetails": "Esecuzione solo il lunedì. Prossima esecuzione: lunedì 30 marzo 2026. Ultima esecuzione 25/03: 1 anomalia (PEPPERPOT S.R.L. passaporto YA8145509 scaduto il 26/07/2025).",
+      "nextRun": "2026-03-30T07:30:00"
     },
     {
       "id": "inserimento-notion",
@@ -386,28 +386,28 @@ const DATA = {
       "schedule": "Lun–Ven 13:00",
       "todayStatus": "skipped",
       "todayTime": "13:00",
-      "todayNote": "Nessuna email da elaborare",
-      "todayDetails": "Sessione avviata ma nessun messaggio da processare. Nessuna email con etichetta dedicata trovata.",
+      "todayNote": "Nessuna email con etichetta da elaborare",
+      "todayDetails": "Sessione avviata ma nessuna email trovata con etichetta Gmail target. Nessun inserimento effettuato su Notion.",
       "nextRun": "2026-03-27T13:00:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun–Ven 09:00 e 17:00",
+      "schedule": "Lun–Ven 09:00, 15:00",
       "todayStatus": "success",
       "todayTime": "09:00",
       "todayNote": "4 clienti in attesa · 0 documenti ricevuti",
-      "todayDetails": "Esecuzione pomeridiana completata. 4 record con stato Inviato: COSMI GIACOMO (Lettera Incarico, 24/03), PROTANO MICHELE (Lettera Incarico, 24/03), PEPPERPOT S.R.L. (Richiesta Doc Identità, 24/03), F. e G. S.R.L. (Richiesta Doc Contabile, 23/03). Nessuna risposta con allegato pertinente trovata. OTPA e RD’A già marcati Ricevuto.",
+      "todayDetails": "4 record con Stato ‘Inviato’ su Notion: COSMI GIACOMO (lettera incarico, 24/03), PROTANO MICHELE (lettera incarico, 24/03), PEPPERPOT S.R.L. (richiesta doc identità, 24/03), F. e G. S.R.L. (richiesta doc contabile, 23/03). Nessuna risposta con allegato firmato trovata in Gmail. 0 aggiornamenti Notion.",
       "nextRun": "2026-03-27T09:00:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Lun 09:00",
+      "schedule": "Lunedì 09:00",
       "todayStatus": "skipped",
       "todayTime": "",
-      "todayNote": "Non programmato oggi",
-      "todayDetails": "I solleciti settimanali sono programmati il lunedì. Prossima esecuzione: lunedì 30 marzo 2026. Ultima esecuzione 25/03: 0 solleciti inviati (tutti i documenti inviati da meno di 7 giorni).",
+      "todayNote": "Non programmato oggi (giov). Prossima: lunedì 30/03",
+      "todayDetails": "Esecuzione solo il lunedì. Prossima esecuzione: lunedì 30 marzo 2026. Ultima esecuzione 25/03: 0 solleciti inviati (tutti i documenti inviati da meno di 7 giorni).",
       "nextRun": "2026-03-30T09:00:00"
     },
     {
@@ -415,66 +415,66 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Lun–Ven 07:00 e 17:00",
       "todayStatus": "success",
-      "todayTime": "13:05",
-      "todayNote": "Dashboard aggiornata · 1 bozza Gmail HONIRO aggiunta",
-      "todayDetails": "Aggiornamento pomeridiano completato alle 13:05:53. Sessioni analizzate: Daily Briefing (success), Auguri (skipped), Notion (skipped), Monitoraggio (success, 4 in attesa). Bozze Gmail: 1 reale (HONIRO SRL) + 2 template esclusi. Task manuali aggiornati: HONIRO mandato+privacy+AML, UX audit sito, cessione crediti, skill updates.",
+      "todayTime": "14:06",
+      "todayNote": "Dashboard aggiornata · 1 bozza Gmail HONIRO confermata",
+      "todayDetails": "Aggiornamento pomeridiano completato alle 14:06. Sessioni analizzate: Daily Briefing (success), Auguri (skipped), Notion (skipped), Monitoraggio (success, 4 in attesa). Bozze Gmail: 1 reale (HONIRO SRL contratto incarico) + 2 template esclusi. Task manuali aggiornati: aggiunto workflow LinkedIn/articoli.",
       "nextRun": "2026-03-27T07:00:00"
     }
   ],
   "manualTasks": [
     {
+      "id": "linkedin-workflow-26mar",
+      "name": "Aggiornamento Skill Articoli+LinkedIn",
+      "date": "2026-03-26",
+      "time": "14:00",
+      "status": "success",
+      "note": "Corretta skill: verifica notizia pre-scrittura, meta description max 150 char, limite 1000 parole, post LinkedIn singolo."
+    },
+    {
       "id": "honiro-mandato-26mar",
       "name": "Gestione Mandato+Privacy+AI HONIRO",
       "date": "2026-03-26",
-      "time": "11:03",
+      "time": "11:00",
       "status": "success",
-      "note": "Elaborati 3 documenti per HONIRO S.R.L. (La Vecchia Jacopo): incarico professionale cessione crediti, dichiarazione AI+Privacy, scheda antiriciclaggio. Creata bozza email per invio."
+      "note": "Elaborati 3 documenti (incarico professionale cessione crediti EDILFEM→HONIRO, dichiarazione AI+Privacy, scheda AML). Bozza email creata per invio a La Vecchia Jacopo."
     },
     {
-      "id": "ux-audit-sito-26mar",
+      "id": "ux-audit-26mar",
       "name": "Audit UX/UI sito kpiconsulting.it",
       "date": "2026-03-26",
-      "time": "",
+      "time": "10:00",
       "status": "success",
-      "note": "Report completo: 12 criticità (immagini senza alt, 3 H1, 37 CSS + 35 JS render-blocking, link CTA errati). Piano interventi generato."
+      "note": "Report completo: 12 criticità (7 img senza alt, 3 H1, 37 CSS + 35 JS render-blocking, spazi vuoti, link CTA errati). Piano interventi immediati/breve/medio."
     },
     {
-      "id": "cessione-crediti-honiro-26mar",
-      "name": "Incarico Cessione Crediti HONIRO",
+      "id": "cessione-crediti-26mar",
+      "name": "Incarico Cessione Crediti HONIRO/EDILFEM",
       "date": "2026-03-26",
-      "time": "",
+      "time": "09:30",
       "status": "success",
-      "note": "Preventivo compilato: cessione crediti Superbonus 110% EDILFEM → HONIRO €97.900,50. Compenso 2% = €1.958,01."
+      "note": "Compilato preventivo SP per HONIRO S.R.L.: cessione crediti Superbonus 110 % € 97.900,50. Compenso 2 % = € 1.958,01. Bonifico 83 % = € 81.257,42."
     },
     {
-      "id": "agg-skill-preventivi-26mar",
-      "name": "Aggiornamento Skill Preventivi (SUAP)",
+      "id": "skill-preventivi-suap-26mar",
+      "name": "Aggiornamento Skill Preventivi + SUAP",
       "date": "2026-03-26",
-      "time": "",
+      "time": "09:00",
       "status": "success",
-      "note": "Aggiunta sezione tariffario SUAP Subiaco: 45 categorie attività con importi, integrazione automatica diritti segreteria nei preventivi SCIA."
+      "note": "Aggiunta sezione Recupero Costi SCIA/SUAP con tariffario Subiaco (45 categorie). 3 fonti spese: SUAP Subiaco, SARI CCIAA, input manuale."
     },
     {
       "id": "script-email-26mar",
-      "name": "Script Python invio email",
+      "name": "Script Invio Email Python",
       "date": "2026-03-26",
-      "time": "",
+      "time": "08:30",
       "status": "success",
-      "note": "Creato script invia_email.py per invio email via Gmail SMTP. Nota sicurezza: consigliato uso variabili d’ambiente per password."
+      "note": "Creato invia_email.py con SMTP Gmail (smtplib + firma HTML KPI). Avviso sicurezza: password app in chiaro."
     },
     {
-      "id": "linkedin-workflow-26mar",
-      "name": "Workflow Articoli + LinkedIn",
-      "date": "2026-03-26",
-      "time": "",
-      "status": "running",
-      "note": "Progettazione flusso di lavoro per pubblicazione articoli e post LinkedIn. In corso."
-    },
-    {
-      "id": "agg-skill-antiriciclaggio-25mar",
-      "name": "Aggiornamento Skill Antiriciclaggio",
+      "id": "aml-skill-notion-25mar",
+      "name": "Aggiornamento Skill AML + Notion",
       "date": "2026-03-25",
-      "time": "22:00",
+      "time": "",
       "status": "success",
       "note": "Aggiunta sezione Caricamento Dati su Notion: schema 46 colonne, procedura batch, regola anti-fabbricazione, verifica post-caricamento."
     },
@@ -500,7 +500,7 @@ const DATA = {
       "date": "2026-03-25",
       "time": "",
       "status": "success",
-      "note": "Aggiunta colonna Oggetto Email al DB Notion e alle viste In Attesa/Sollecitati. Script automazione aggiornato."
+      "note": "Aggiunta colonna Oggetto Email al DB Notion e alle viste In Attesa/Sollecitati. Monitoraggio automatico attivato."
     }
   ],
   "history": [
@@ -572,7 +572,7 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "skipped",
-          "note": "Non programmato"
+          "note": ""
         }
       }
     },
@@ -590,7 +590,7 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "skipped",
-          "note": "Non programmato"
+          "note": ""
         }
       }
     }
