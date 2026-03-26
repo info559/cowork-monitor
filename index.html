@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-26T09:06:57.295Z",
-  "lastUpdated": "10:06:57",
+  "generatedAt": "2026-03-26T11:05:53.125Z",
+  "lastUpdated": "13:05:53",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -357,7 +357,7 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "07:01",
       "todayNote": "7 email · avviso Google + Honiro attesi + scadenza OSEN 31/03",
-      "todayDetails": "7 messaggi etichetta Lorenzo analizzati. Urgente: avviso sicurezza Google (password app Co-work SMTP su segreteria@kpiconsulting.it — verificare autorizzazione). Atteso oggi: documenti Honiro da Veronica. Ricevuti: doc identità OTPA/Ottavi Giovanni (CI aggiornata), dichiarazione AI+Privacy RD'A Ingegneria. Scadenza 31/03: OSEN S.R.L. F24 avviso bonario IVA 2022.",
+      "todayDetails": "7 messaggi etichetta Lorenzo analizzati. Urgente: avviso sicurezza Google (password app Co-work SMTP su segreteria@kpiconsulting.it — verificare autorizzazione). Atteso oggi: documenti Honiro da Veronica. Ricevuti: doc identità OTPA/Ottavi Giovanni (CI aggiornata), dichiarazione AI+Privacy RD’A Ingegneria. Scadenza 31/03: OSEN S.R.L. F24 avviso bonario IVA 2022.",
       "nextRun": "2026-03-27T07:00:00"
     },
     {
@@ -377,7 +377,7 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "",
       "todayNote": "Non programmato oggi",
-      "todayDetails": "La verifica AML è programmata settimanalmente il lunedì. Prossima esecuzione: lunedì 30 marzo 2026.",
+      "todayDetails": "La verifica AML è programmata settimanalmente il lunedì. Prossima esecuzione: lunedì 30 marzo 2026. Ultima esecuzione 25/03: 1 anomalia (PEPPERPOT S.R.L. passaporto scaduto 26/07/2025).",
       "nextRun": "2026-03-30T07:00:00"
     },
     {
@@ -387,18 +387,18 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "13:00",
       "todayNote": "Nessuna email da elaborare",
-      "todayDetails": "Sessione avviata regolarmente alle 13:00. Nessuna email con etichetta Gmail da elaborare e inserire in Notion.",
+      "todayDetails": "Sessione avviata ma nessun messaggio da processare. Nessuna email con etichetta dedicata trovata.",
       "nextRun": "2026-03-27T13:00:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun–Ven 08:00 e 17:00",
+      "schedule": "Lun–Ven 09:00 e 17:00",
       "todayStatus": "success",
       "todayTime": "09:00",
       "todayNote": "4 clienti in attesa · 0 documenti ricevuti",
-      "todayDetails": "4 record con Stato=Inviato: COSMI GIACOMO (lettera incarico 24/03), PROTANO MICHELE (lettera incarico 24/03), PEPPERPOT S.R.L. (richiesta doc identità 24/03), F. e G. S.R.L. (richiesta doc contabile 23/03). 0 risposte con allegati pertinenti trovate. Nota: F. e G. ha inviato doc contabili il 24/03 ma non relativi al contratto BMW richiesto.",
-      "nextRun": "2026-03-26T17:00:00"
+      "todayDetails": "Esecuzione pomeridiana completata. 4 record con stato Inviato: COSMI GIACOMO (Lettera Incarico, 24/03), PROTANO MICHELE (Lettera Incarico, 24/03), PEPPERPOT S.R.L. (Richiesta Doc Identità, 24/03), F. e G. S.R.L. (Richiesta Doc Contabile, 23/03). Nessuna risposta con allegato pertinente trovata. OTPA e RD’A già marcati Ricevuto.",
+      "nextRun": "2026-03-27T09:00:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -407,7 +407,7 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "",
       "todayNote": "Non programmato oggi",
-      "todayDetails": "I solleciti settimanali sono programmati il lunedì. Prossima esecuzione: lunedì 30 marzo 2026.",
+      "todayDetails": "I solleciti settimanali sono programmati il lunedì. Prossima esecuzione: lunedì 30 marzo 2026. Ultima esecuzione 25/03: 0 solleciti inviati (tutti i documenti inviati da meno di 7 giorni).",
       "nextRun": "2026-03-30T09:00:00"
     },
     {
@@ -415,20 +415,44 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Lun–Ven 07:00 e 17:00",
       "todayStatus": "success",
-      "todayTime": "10:06",
-      "todayNote": "Dashboard aggiornata · pomeriggio monitoraggio ancora in attesa",
-      "todayDetails": "Aggiornamento completato alle 10:06. Sessioni analizzate: Daily Briefing (success), Auguri (skipped), Notion (skipped), Monitoraggio mattino (success, 4 in attesa). Bozze Gmail: 2 template senza destinatario, nessuna bozza reale da mostrare.",
-      "nextRun": "2026-03-26T17:00:00"
+      "todayTime": "13:05",
+      "todayNote": "Dashboard aggiornata · 1 bozza Gmail HONIRO aggiunta",
+      "todayDetails": "Aggiornamento pomeridiano completato alle 13:05:53. Sessioni analizzate: Daily Briefing (success), Auguri (skipped), Notion (skipped), Monitoraggio (success, 4 in attesa). Bozze Gmail: 1 reale (HONIRO SRL) + 2 template esclusi. Task manuali aggiornati: HONIRO mandato+privacy+AML, UX audit sito, cessione crediti, skill updates.",
+      "nextRun": "2026-03-27T07:00:00"
     }
   ],
   "manualTasks": [
     {
-      "id": "agg-skill-preventivi-26mar",
-      "name": "Aggiornamento Skill Preventivi",
+      "id": "honiro-mandato-26mar",
+      "name": "Gestione Mandato+Privacy+AI HONIRO",
       "date": "2026-03-26",
-      "time": "10:00",
+      "time": "11:03",
       "status": "success",
-      "note": "Skill preventivi aggiornata: integrazione portale SARI per recupero automatico costi pratiche CCIAA (imposta di bollo e diritti di segreteria)."
+      "note": "Elaborati 3 documenti per HONIRO S.R.L. (La Vecchia Jacopo): incarico professionale cessione crediti, dichiarazione AI+Privacy, scheda antiriciclaggio. Creata bozza email per invio."
+    },
+    {
+      "id": "ux-audit-sito-26mar",
+      "name": "Audit UX/UI sito kpiconsulting.it",
+      "date": "2026-03-26",
+      "time": "",
+      "status": "success",
+      "note": "Report completo: 12 criticità (immagini senza alt, 3 H1, 37 CSS + 35 JS render-blocking, link CTA errati). Piano interventi generato."
+    },
+    {
+      "id": "cessione-crediti-honiro-26mar",
+      "name": "Incarico Cessione Crediti HONIRO",
+      "date": "2026-03-26",
+      "time": "",
+      "status": "success",
+      "note": "Preventivo compilato: cessione crediti Superbonus 110% EDILFEM → HONIRO €97.900,50. Compenso 2% = €1.958,01."
+    },
+    {
+      "id": "agg-skill-preventivi-26mar",
+      "name": "Aggiornamento Skill Preventivi (SUAP)",
+      "date": "2026-03-26",
+      "time": "",
+      "status": "success",
+      "note": "Aggiunta sezione tariffario SUAP Subiaco: 45 categorie attività con importi, integrazione automatica diritti segreteria nei preventivi SCIA."
     },
     {
       "id": "script-email-26mar",
@@ -436,7 +460,15 @@ const DATA = {
       "date": "2026-03-26",
       "time": "",
       "status": "success",
-      "note": "Creato script invia_email.py per invio email via Gmail SMTP. Nota sicurezza: consigliato uso variabili d'ambiente per password."
+      "note": "Creato script invia_email.py per invio email via Gmail SMTP. Nota sicurezza: consigliato uso variabili d’ambiente per password."
+    },
+    {
+      "id": "linkedin-workflow-26mar",
+      "name": "Workflow Articoli + LinkedIn",
+      "date": "2026-03-26",
+      "time": "",
+      "status": "running",
+      "note": "Progettazione flusso di lavoro per pubblicazione articoli e post LinkedIn. In corso."
     },
     {
       "id": "agg-skill-antiriciclaggio-25mar",
@@ -444,18 +476,18 @@ const DATA = {
       "date": "2026-03-25",
       "time": "22:00",
       "status": "success",
-      "note": "Aggiunta sezione Caricamento Dati su Notion: schema 46 colonne, procedura 3 fasi, errori noti, mappa colonne. Aggiornati trigger description."
+      "note": "Aggiunta sezione Caricamento Dati su Notion: schema 46 colonne, procedura batch, regola anti-fabbricazione, verifica post-caricamento."
     },
     {
-      "id": "gestione-antiriciclaggio-25mar",
-      "name": "Gestione Antiriciclaggio",
+      "id": "consulenza-aml-cessione-25mar",
+      "name": "Consulenza AML Cessione Crediti",
       "date": "2026-03-25",
       "time": "",
       "status": "success",
-      "note": "Correzione classi adeguata verifica: 37 righe aggiornate in KPI+LT. Popolamento Notion con dati registro."
+      "note": "Analisi rischio antiriciclaggio cessione crediti d’imposta: RI=3/4, verifica rafforzata consigliata, obblighi SOS se anomalie."
     },
     {
-      "id": "gestione-mandato-25mar",
+      "id": "agg-skill-mandato-25mar",
       "name": "Aggiornamento Skill Mandato",
       "date": "2026-03-25",
       "time": "",
@@ -492,25 +524,25 @@ const DATA = {
     },
     {
       "date": "2026-03-25",
-      "label": "Mer 25",
+      "label": "Mar 25",
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "19 email · PEC WE-NET urgente"
+          "note": "19 email · PEC WE-NET + Edilfem crediti"
         },
         "auguri-clienti": {
           "status": "skipped",
           "note": "Nessun compleanno"
         },
         "verifica-aml": {
-          "status": "warning",
-          "note": "Passaporto PEPPERPOT scaduto (242gg)"
+          "status": "success",
+          "note": "1 anomalia: PEPPERPOT passaporto scaduto"
         }
       }
     },
     {
       "date": "2026-03-24",
-      "label": "Mar 24",
+      "label": "Lun 24",
       "tasks": {
         "daily-briefing": {
           "status": "success",
@@ -518,11 +550,11 @@ const DATA = {
         },
         "auguri-clienti": {
           "status": "skipped",
-          "note": "Nessun compleanno"
+          "note": ""
         },
         "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmato"
+          "status": "success",
+          "note": ""
         }
       }
     },
@@ -563,7 +595,14 @@ const DATA = {
       }
     }
   ],
-  "coworkDrafts": []
+  "coworkDrafts": [
+    {
+      "to": "HONIRO S.R.L. (La Vecchia Jacopo)",
+      "subject": "Contratto di incarico professionale - KPI Consulting STP S.r.l.",
+      "date": "26 mar",
+      "status": "ready"
+    }
+  ]
 };
 
 // ══════════════════════════════════════════════
