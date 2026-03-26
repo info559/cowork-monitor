@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-26T17:06:04.000Z",
-  "lastUpdated": "18:06:04",
+  "generatedAt": "2026-03-26T19:07:10.377Z",
+  "lastUpdated": "20:07:10",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,7 +367,7 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "05:04",
       "todayNote": "Nessun compleanno oggi (26/03)",
-      "todayDetails": "Ricerca su Notion tramite codice fiscale (C26 maschi, C66 femmine). Nessun record corrispondente trovato.",
+      "todayDetails": "Ricerca su Notion tramite codice fiscale (C26=maschio, C66=femmina nati il 26/03). Nessun record corrispondente trovato.",
       "nextRun": "2026-03-27T05:00:00"
     },
     {
@@ -386,8 +386,8 @@ const DATA = {
       "schedule": "Lun–Ven 13:00",
       "todayStatus": "warning",
       "todayTime": "13:00",
-      "todayNote": "Errore mount (apostrofo nel path) · nessuna email target",
-      "todayDetails": "Prima esecuzione vuota (nessun messaggio). Seconda esecuzione: errore mount VirtioFS causato dall’apostrofo nel nome cartella (RD’A). L’utente ha ignorato l’errore. Nessun inserimento effettuato.",
+      "todayNote": "Errore mount (apostrofo nel path) · nessuna email target elaborata",
+      "todayDetails": "Errore di sistema: impossibile montare cartella con apostrofo nel nome (RD’A vs COGERP). Sessione interrotta senza elaborazione email.",
       "nextRun": "2026-03-27T13:00:00"
     },
     {
@@ -413,38 +413,54 @@ const DATA = {
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Lun–Ven 09:30, 13:00, 17:00",
+      "schedule": "Lun–Ven */2h",
       "todayStatus": "success",
-      "todayTime": "18:06",
-      "todayNote": "Questa sessione — 6° aggiornamento oggi",
-      "todayDetails": "Dashboard aggiornata con dati sessioni odierne. Bozze Gmail verificate: 1 reale (Honiro — Re: Crediti di imposta), template esclusi. Nuovi task manuali: articolo IVA osteopati/massoterapisti.",
-      "nextRun": "2026-03-27T09:30:00"
+      "todayTime": "20:07",
+      "todayNote": "7° aggiornamento odierno",
+      "todayDetails": "Dashboard aggiornata con dati sessioni, bozze Gmail e task manuali recenti.",
+      "nextRun": "2026-03-27T08:00:00"
     }
   ],
   "manualTasks": [
     {
-      "id": "articolo-iva-osteopati-26mar",
-      "name": "Articolo IVA Osteopati/Massoterapisti",
+      "id": "cta-wordpress-26mar",
+      "name": "CTA su tutti gli articoli WordPress",
       "date": "2026-03-26",
-      "time": "17:30",
-      "status": "warning",
-      "note": "Articolo Risoluzione 9/2026 (esenzione IVA osteopati, chiropratici, massoterapisti) scritto e in attesa approvazione. Post LinkedIn preparato."
+      "time": "18:30",
+      "status": "success",
+      "note": "Aggiunto box CTA “Prenota consulenza” a tutti i 18 articoli su kpiconsulting.it (7 nuovi + 11 già presenti)."
+    },
+    {
+      "id": "linkedin-aml-26mar",
+      "name": "Post LinkedIn AML Automation",
+      "date": "2026-03-26",
+      "time": "17:00",
+      "status": "success",
+      "note": "Post pubblicato sul profilo KPI Consulting su LinkedIn con anteprima link kpiconsulting.it."
+    },
+    {
+      "id": "aml-cessione-rischio-26mar",
+      "name": "Consulenza rischio AML cessione crediti",
+      "date": "2026-03-26",
+      "time": "16:30",
+      "status": "success",
+      "note": "Analisi rischio antiriciclaggio cessione crediti d’imposta: RI=3/4, adeguata verifica ordinaria/rafforzata."
     },
     {
       "id": "articolo-forfetario-26mar",
-      "name": "Articolo + LinkedIn Regime Forfetario",
+      "name": "Articolo+LinkedIn regime forfetario",
       "date": "2026-03-26",
       "time": "15:00",
       "status": "success",
-      "note": "Articolo pubblicato su WordPress (compensi indebiti e regime forfetario) + post LinkedIn pubblicato. Immagine Pexels, CTA studio, hashtag."
+      "note": "Articolo pubblicato su WordPress (compensi indebiti e regime forfetario) + post LinkedIn pubblicato."
     },
     {
       "id": "linkedin-workflow-26mar",
-      "name": "Aggiornamento Skill Articoli+LinkedIn",
+      "name": "Skill content-publisher creata",
       "date": "2026-03-26",
       "time": "14:30",
       "status": "success",
-      "note": "Nuova skill content-publisher per flusso completo: ricerca notizia, articolo WordPress, immagine, pubblicazione, post LinkedIn con approvazione."
+      "note": "Nuova skill content-publisher per flusso completo: ricerca, articolo WordPress, immagine, pubblicazione, post LinkedIn."
     },
     {
       "id": "honiro-mandato-26mar",
@@ -460,42 +476,26 @@ const DATA = {
       "date": "2026-03-26",
       "time": "11:00",
       "status": "success",
-      "note": "Report completo: 12 criticità (alt mancanti, 3xH1, 37 CSS + 35 JS render-blocking, spazi vuoti, link errati). Report .docx generato."
+      "note": "Report completo: 12 criticità, piano interventi, accessibilità e SEO."
     },
     {
-      "id": "cessione-crediti-26mar",
-      "name": "Cessione Crediti HONIRO/EDILFEM",
+      "id": "honiro-cessione-26mar",
+      "name": "Incarico cessione crediti HONIRO",
       "date": "2026-03-26",
       "time": "10:00",
       "status": "success",
-      "note": "Incarico professionale compilato: cessione Superbonus 110° EDILFEM → HONIRO €97.900,50. Compenso 2% (€1.958,01)."
+      "note": "Preventivo compilato per gestione cessione crediti Superbonus EDILFEM → HONIRO (compenso 2%, €1.958,01)."
     },
     {
-      "id": "skill-preventivi-suap-26mar",
-      "name": "Skill Preventivi: tariffario SUAP",
+      "id": "aml-skill-update-26mar",
+      "name": "Aggiornamento skill antiriciclaggio",
       "date": "2026-03-26",
       "time": "09:30",
       "status": "success",
-      "note": "Aggiunta sezione recupero costi SCIA/SUAP con tariffario Comune di Subiaco (45 categorie)."
+      "note": "Aggiunta sezione Notion: schema DB 46 colonne, procedura batch, regola anti-fabbricazione, errori noti."
     },
     {
-      "id": "skill-aml-notion-26mar",
-      "name": "Skill AML: sezione caricamento Notion",
-      "date": "2026-03-26",
-      "time": "08:00",
-      "status": "success",
-      "note": "Aggiunta procedura caricamento dati su Notion (schema 46 colonne, batch da 8, regola anti-fabbricazione, errori noti)."
-    },
-    {
-      "id": "aml-cessione-rischio-26mar",
-      "name": "Consulenza rischio AML cessione crediti",
-      "date": "2026-03-26",
-      "time": "16:30",
-      "status": "success",
-      "note": "Analisi rischio antiriciclaggio cessione crediti d’imposta: RI=3/4, adeguata verifica ordinaria/rafforzata, riferimenti normativi."
-    },
-    {
-      "id": "script-email-26mar",
+      "id": "script-email-25mar",
       "name": "Script invio email Python",
       "date": "2026-03-25",
       "time": "18:00",
@@ -559,8 +559,26 @@ const DATA = {
       }
     },
     {
-      "date": "2026-03-21",
-      "label": "Ven 21",
+      "date": "2026-03-23",
+      "label": "Lun 23",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "Briefing completato"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Auguri inviati"
+        },
+        "verifica-aml": {
+          "status": "success",
+          "note": "Verifica completata"
+        }
+      }
+    },
+    {
+      "date": "2026-03-20",
+      "label": "Ven 20",
       "tasks": {
         "daily-briefing": {
           "status": "success",
@@ -575,35 +593,9 @@ const DATA = {
           "note": "Non programmato (ven)"
         }
       }
-    },
-    {
-      "date": "2026-03-20",
-      "label": "Gio 20",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "Briefing completato"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "1 auguri inviato"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmato (gio)"
-        }
-      }
     }
   ],
-  "coworkDrafts": [
-    {
-      "id": "draft-honiro-crediti",
-      "to": "amministrazione@honiro.it",
-      "subject": "Re: Re: Crediti di imposta",
-      "date": "26 mar",
-      "status": "ready"
-    }
-  ]
+  "coworkDrafts": []
 };
 
 // ══════════════════════════════════════════════
