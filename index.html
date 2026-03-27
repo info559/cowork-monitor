@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-26T21:05:46.013Z",
-  "lastUpdated": "22:05:46",
+  "generatedAt": "2026-03-27T07:18:47.291Z",
+  "lastUpdated": "08:18:47",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,9 +356,9 @@ const DATA = {
       "schedule": "Lun–Ven 07:00",
       "todayStatus": "success",
       "todayTime": "07:01",
-      "todayNote": "7 email · avviso Google + Honiro attesi + scadenza OSEN 31/03",
-      "todayDetails": "7 messaggi etichetta Lorenzo analizzati. Urgente: avviso sicurezza Google (password app Co-work SMTP su segreteria@kpiconsulting.it — verificare autorizzazione). Atteso oggi: documenti Honiro da Veronica. Ricevuti: doc identità OTPA/Ottavi Giovanni (CI aggiornata), dichiarazione AI+Privacy RD’A Ingegneria. Scadenza 31/03: OSEN S.R.L. F24 avviso bonario IVA 2022.",
-      "nextRun": "2026-03-27T07:00:00"
+      "todayNote": "Nessun appuntamento · 201 email non lette · urgente diffida WE-NET",
+      "todayDetails": "Giornata libera. Urgente: diffida PEC WE-NET ferma da 3 settimane, verificare scadenze. Link Edilfem (doc condominio Via Anicia) scade 31/03. Buste paga gen-feb 2026 da archiviare.",
+      "nextRun": "2026-03-30T07:00:00"
     },
     {
       "id": "auguri-clienti",
@@ -366,29 +366,29 @@ const DATA = {
       "schedule": "Ogni giorno 05:00",
       "todayStatus": "skipped",
       "todayTime": "05:04",
-      "todayNote": "Nessun compleanno oggi (26/03)",
-      "todayDetails": "Ricerca su Notion tramite codice fiscale (C26 maschio, C66 femmina per il 26 marzo). Nessun match trovato. Vista temporanea eliminata.",
-      "nextRun": "2026-03-27T05:00:00"
+      "todayNote": "Nessun compleanno oggi",
+      "todayDetails": "Verificati 24 clienti nel database Notion. Nessuno con data di nascita 27/03.",
+      "nextRun": "2026-03-28T05:00:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
       "schedule": "Lunedì 09:00",
-      "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non programmato oggi (giovedì)",
-      "todayDetails": "Task settimanale, prossima esecuzione lunedì 30/03.",
+      "todayStatus": "success",
+      "todayTime": "09:00",
+      "todayNote": "3 anomalie su 2 registri (KPI 11 clienti, LT 9 clienti)",
+      "todayDetails": "1) Doc scaduto PEPPERPOT S.R.L. (CI scad. 26/07/2025) — richiedere aggiornamento. 2) Cartella PM ELETTRIC GROUP: nome con doppia L ('ELLETTRIC') da uniformare. Tutti gli altri controlli conformi.",
       "nextRun": "2026-03-30T09:00:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Lun–Ven 13:00",
-      "todayStatus": "warning",
+      "todayStatus": "success",
       "todayTime": "13:00",
-      "todayNote": "Errore mount (apostrofo nel path) · nessuna email elaborata",
-      "todayDetails": "Sessione avviata ma il mount è fallito per un apostrofo nel path della cartella (RD’A). Nessuna email con etichetta processata. La skill antiriciclaggio è stata aggiornata con integrazione Notion completa (sezione caricamento dati, schema 46 colonne, procedura batch).",
-      "nextRun": "2026-03-27T13:00:00"
+      "todayNote": "Inserito record Protano Michele (Cod. 90)",
+      "todayDetails": "Record Protano Michele collegato correttamente all’anagrafica Notion con Codice 90 tramite rollup automatico.",
+      "nextRun": "2026-03-30T13:00:00"
     },
     {
       "id": "monitoraggio-documenti",
@@ -396,17 +396,17 @@ const DATA = {
       "schedule": "Lun–Ven 09:00/15:00",
       "todayStatus": "success",
       "todayTime": "09:00",
-      "todayNote": "4 clienti in attesa · 0 documenti ricevuti · pomeridiana non eseguita",
-      "todayDetails": "Controllati 4 record Notion con stato Inviato: Cosmi Giacomo, Protano Michele, Pepperpot S.R.L., F. e G. S.R.L. Nessuna risposta con allegati pertinenti trovata su Gmail. Run pomeridiano (15:00) non eseguito (sessione vuota).",
-      "nextRun": "2026-03-27T09:00:00"
+      "todayNote": "HONIRO: 3 doc ricevuti · 5 clienti ancora in attesa",
+      "todayDetails": "HONIRO SRL: ricevuti incarico professionale, antiriciclaggio e dichiarazione AI+Privacy firmati (Veronica Onesti, 26/03). Stato Notion aggiornato a Ricevuto. In attesa: PEPPERPOT (doc identità, 3gg), PROTANO MICHELE (Redditi 2023, 9gg + Incarico, 3gg), COSMI GIACOMO (Incarico, 3gg), F. e G. SRL (doc contabile, 4gg).",
+      "nextRun": "2026-03-30T09:00:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
       "schedule": "Lunedì 10:00",
       "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non programmato oggi (giovedì)",
+      "todayTime": null,
+      "todayNote": "Non programmato (venerdì), prossima esecuzione lunedì 30/03",
       "todayDetails": "Task settimanale, prossima esecuzione lunedì 30/03.",
       "nextRun": "2026-03-30T10:00:00"
     },
@@ -415,20 +415,28 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Lun–Ven 08:00–20:00",
       "todayStatus": "success",
-      "todayTime": "22:05",
-      "todayNote": "8° aggiornamento odierno",
-      "todayDetails": "Dashboard aggiornata con dati sessioni, bozze Gmail e task manuali recenti.",
-      "nextRun": "2026-03-27T08:00:00"
+      "todayTime": "08:18",
+      "todayNote": "1° aggiornamento odierno",
+      "todayDetails": "Dashboard aggiornata con dati sessioni 27/03, bozze Gmail e task manuali recenti.",
+      "nextRun": "2026-03-27T09:00:00"
     }
   ],
   "manualTasks": [
+    {
+      "id": "notion-protano-27mar",
+      "name": "Inserimento Notion Protano Michele",
+      "date": "2026-03-27",
+      "time": "13:00",
+      "status": "success",
+      "note": "Record Protano Michele (Cod. 90) inserito e collegato su Notion Monitoraggio Documenti."
+    },
     {
       "id": "cta-wordpress-26mar",
       "name": "CTA su tutti gli articoli WordPress",
       "date": "2026-03-26",
       "time": "18:30",
       "status": "success",
-      "note": "Aggiunto box CTA “Prenota consulenza” a tutti i 18 articoli su kpiconsulting.it (7 nuovi + 11 già presenti)."
+      "note": "Aggiunto box CTA “Prenota consulenza” a tutti i 18 articoli su kpiconsulting.it."
     },
     {
       "id": "linkedin-aml-26mar",
@@ -436,7 +444,7 @@ const DATA = {
       "date": "2026-03-26",
       "time": "17:00",
       "status": "success",
-      "note": "Post pubblicato sul profilo KPI Consulting su LinkedIn con anteprima link kpiconsulting.it."
+      "note": "Post pubblicato sul profilo KPI Consulting su LinkedIn sull’automazione antiriciclaggio."
     },
     {
       "id": "aml-cessione-rischio-26mar",
@@ -444,66 +452,76 @@ const DATA = {
       "date": "2026-03-26",
       "time": "16:00",
       "status": "success",
-      "note": "Analisi rischio antiriciclaggio per cessione crediti d’imposta: RI=3/4, verifica rafforzata consigliata."
+      "note": "Analisi rischio antiriciclaggio cessione crediti d’imposta: RI = 3–4, verifica rafforzata consigliata."
     },
     {
       "id": "honiro-mandato-26mar",
-      "name": "Mandato+Privacy+AI Honiro S.R.L.",
+      "name": "Mandato + Privacy + AI HONIRO SRL",
       "date": "2026-03-26",
-      "time": "14:30",
+      "time": "14:00",
       "status": "success",
-      "note": "Compilati incarico professionale, dichiarazione AI+Privacy e scheda AML per Honiro/La Vecchia Jacopo. Bozza email creata."
-    },
-    {
-      "id": "skill-contentpub-nano-26mar",
-      "name": "Skill content-publisher: Nano Banana AI",
-      "date": "2026-03-26",
-      "time": "13:30",
-      "status": "success",
-      "note": "Aggiornata skill con generazione immagini AI tramite Nano Banana (Gemini) come approccio preferito."
+      "note": "Bozza email con incarico professionale, dichiarazione AI+Privacy e antiriciclaggio per HONIRO SRL."
     },
     {
       "id": "skill-contentpub-cta-26mar",
-      "name": "Skill content-publisher: CTA box + img specs",
+      "name": "Skill content-publisher: CTA + immagini",
       "date": "2026-03-26",
       "time": "12:00",
       "status": "success",
-      "note": "Aggiunti box CTA obbligatorio e specifiche immagini 2560px + upload via REST API alla skill."
+      "note": "Aggiornata skill con box CTA obbligatorio e specifiche immagini 2560px via REST API."
     },
     {
       "id": "article-forfetario-26mar",
-      "name": "Articolo + LinkedIn: Regime Forfetario",
+      "name": "Articolo regime forfetario",
       "date": "2026-03-26",
       "time": "11:00",
       "status": "success",
-      "note": "Articolo pubblicato su WordPress + post LinkedIn su compensi indebiti e regime forfetario."
+      "note": "Articolo pubblicato su WordPress sul regime forfetario 2026."
     },
     {
       "id": "ux-audit-26mar",
-      "name": "Audit UX/UI kpiconsulting.it",
+      "name": "Audit UX/UI sito kpiconsulting.it",
       "date": "2026-03-26",
       "time": "10:00",
       "status": "success",
-      "note": "Report completo UX/UI: 12 criticità (alt mancanti, 3 H1, 37 CSS render-blocking, link errati)."
+      "note": "Report completo: 12 criticità, mancano alt immagini, 3 tag H1, link CTA errati. Piano interventi generato."
     },
     {
       "id": "honiro-cessione-25mar",
-      "name": "Preventivo cessione crediti Honiro",
+      "name": "Incarico cessione crediti HONIRO",
       "date": "2026-03-25",
-      "time": "19:00",
+      "time": "15:00",
       "status": "success",
-      "note": "Incarico professionale compilato per cessione crediti Superbonus 110% EDILFEM → HONIRO (2% = €1.958,01)."
+      "note": "Compilato incarico professionale cessione crediti Superbonus 110% EDILFEM→HONIRO €97.900,50."
     },
     {
-      "id": "script-email-25mar",
-      "name": "Script invio email Python",
+      "id": "skill-preventivi-25mar",
+      "name": "Skill preventivi: tariffario SUAP",
       "date": "2026-03-25",
-      "time": "18:00",
+      "time": "14:00",
       "status": "success",
-      "note": "Creazione script Python per invio email tramite SMTP con password app Google."
+      "note": "Aggiunta sezione recupero costi SCIA/SUAP con 45 categorie tariffario Subiaco."
     }
   ],
   "history": [
+    {
+      "date": "2026-03-27",
+      "label": "Ven 27",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "201 email · diffida WE-NET urgente"
+        },
+        "auguri-clienti": {
+          "status": "skipped",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "success",
+          "note": "3 anomalie trovate"
+        }
+      }
+    },
     {
       "date": "2026-03-26",
       "label": "Gio 26",
@@ -575,27 +593,16 @@ const DATA = {
           "note": "Verifica completata"
         }
       }
-    },
-    {
-      "date": "2026-03-20",
-      "label": "Ven 20",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "Briefing completato"
-        },
-        "auguri-clienti": {
-          "status": "skipped",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmato (ven)"
-        }
-      }
     }
   ],
-  "coworkDrafts": []
+  "coworkDrafts": [
+    {
+      "to": "HONIRO SRL",
+      "subject": "Contratto di incarico professionale - KPI Consulting STP S.r.l.",
+      "date": "26 mar",
+      "status": "ready"
+    }
+  ]
 };
 
 // ══════════════════════════════════════════════
