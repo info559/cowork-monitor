@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-27T16:13:02",
-  "lastUpdated": "16:13:02",
+  "generatedAt": "2026-03-27T18:40:16",
+  "lastUpdated": "18:40:16",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -376,8 +376,8 @@ const DATA = {
       "schedule": "Ven 09:00",
       "todayStatus": "warning",
       "todayTime": "09:00",
-      "todayNote": "3 anomalie rilevate nei registri",
-      "todayDetails": "Registri KPI (11 clienti, 41 righe) e LT (9 clienti, 36 righe) analizzati. Anomalie: 1) PEPPERPOT S.R.L. — documento identità scaduto il 26/07/2025 (presente in entrambi i registri). 2) PM ELETTRIC GROUP SRLS (KPI) — cartella archivio denominata 'ELLETTRIC' (doppia L) vs registro 'ELETTRIC'. Report salvato.",
+      "todayNote": "3 anomalie: doc scaduto PEPPERPOT + cartella PM ELETTRIC",
+      "todayDetails": "3 anomalie su 2 registri (KPI: 11 clienti, LT: 9 clienti). 1) Doc identità PEPPERPOT S.R.L. scaduto 26/07/2025 (KPI+LT). 2) Cartella ‘ELLETTRIC’ (doppia L) vs registro ‘ELETTRIC’ in KPI. Tutti gli altri controlli conformi.",
       "nextRun": "Ven 03/04 09:00"
     },
     {
@@ -386,8 +386,8 @@ const DATA = {
       "schedule": "Lun-Ven 10:00",
       "todayStatus": "success",
       "todayTime": "10:00",
-      "todayNote": "2 nuovi record inseriti in Notion",
-      "todayDetails": "Da firmare: HONIRO SRL (amministrazione@honiro.it, thread 19c71de08486a062, 26/03). Da ricevere: PROTANO MICHELE cod.90 (pmelettric79@gmail.com, thread 19cfca75537aee87, 18/03). 2 email richiedono classificazione manuale tipo documento.",
+      "todayNote": "2 nuovi record: HONIRO SRL + PROTANO MICHELE",
+      "todayDetails": "Email ‘Da firmare’: 7 trovate, 1 nuovo (HONIRO SRL, crediti imposta). Email ‘Da ricevere’: 5 trovate, 1 nuovo (PROTANO MICHELE cod.90, redditi 2023). Entrambi richiedono classificazione manuale tipo documento.",
       "nextRun": "Lun 30/03 10:00"
     },
     {
@@ -413,15 +413,23 @@ const DATA = {
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Monitor",
-      "schedule": "Ogni ora (lun-ven)",
+      "schedule": "Ogni ora 8:00-19:00",
       "todayStatus": "success",
-      "todayTime": "16:13",
-      "todayNote": "5° aggiornamento odierno · 16:13",
-      "todayDetails": "Aggiornamento dashboard: sessioni analizzate, bozze Gmail verificate (1 reale: HONIRO SRL), dati pubblicati su GitHub Pages.",
-      "nextRun": "Lun 30/03 08:00"
+      "todayTime": "18:40",
+      "todayNote": "6° aggiornamento · bozze: 0",
+      "todayDetails": "6° run del giorno. Bozza HONIRO SRL inviata/rimossa da Gmail. 0 bozze reali. Nuovo task: aggiornamento IBAN STR82L cessione crediti.",
+      "nextRun": "Oggi 19:00"
     }
   ],
   "manualTasks": [
+    {
+      "id": "iban-str82l-27mar",
+      "name": "Aggiornamento IBAN cessione credito STR82L",
+      "date": "2026-03-27",
+      "time": "16:30",
+      "status": "success",
+      "note": "Sostituito IBAN beneficiario C. Tecnorestauri in bozza cessione credito STR82L: IT64R0622039440000001000026 (Cassa di Risparmio di Orvieto)."
+    },
     {
       "id": "skill-linkedin-publisher-27mar",
       "name": "Aggiornamento skill LinkedIn Publisher",
@@ -444,15 +452,15 @@ const DATA = {
       "date": "2026-03-27",
       "time": "11:30",
       "status": "warning",
-      "note": "Controllo incrociato CF cessione crediti. Anomalia: CF cedente Excel 2 (86000560580) non presente nelle comunicazioni ADE. Da verificare."
+      "note": "Anomalia: CF cedente Excel 2 (86000560580) non presente nelle comunicazioni ADE. CF Condominio Via Anicia 94039980589. Da verificare."
     },
     {
-      "id": "articolo-risoluzione9-27mar",
-      "name": "Pubblica articolo Risoluzione 9/2026",
+      "id": "articolo-iva-27mar",
+      "name": "Articolo WordPress: IVA osteopati/chiropratici",
       "date": "2026-03-27",
       "time": "11:00",
       "status": "warning",
-      "note": "Articolo IVA osteopati/chiropratici su WordPress. Pubblicazione interrotta da errore API 529 (overloaded). SEO Rank Math configurato."
+      "note": "Pubblicazione interrotta da errore API 529 (overloaded). SEO Rank Math configurato. Ripubblicare."
     },
     {
       "id": "mandato-honiro-27mar",
@@ -485,22 +493,6 @@ const DATA = {
       "time": "14:00",
       "status": "success",
       "note": "Post LinkedIn pubblicato su automazione adempimenti antiriciclaggio D.Lgs. 231/2007."
-    },
-    {
-      "id": "skill-aml-notion-26mar",
-      "name": "Ottimizzazione skill antiriciclaggio",
-      "date": "2026-03-26",
-      "time": "12:00",
-      "status": "success",
-      "note": "Skill antiriciclaggio migliorata con sincronizzazione Notion e gestione titolari effettivi."
-    },
-    {
-      "id": "skill-research-topics-26mar",
-      "name": "Nuova skill ricerca temi clienti",
-      "date": "2026-03-26",
-      "time": "10:00",
-      "status": "success",
-      "note": "Creata nuova skill per ricerca e classificazione temi di interesse per i clienti dello studio."
     }
   ],
   "history": [
@@ -595,15 +587,7 @@ const DATA = {
       }
     }
   ],
-  "coworkDrafts": [
-    {
-      "id": "r-999527665350790749",
-      "to": "amministrazione@honiro.it",
-      "subject": "Contratto di incarico professionale - KPI Consulting STP S.r.l.",
-      "date": "26 mar",
-      "status": "ready"
-    }
-  ]
+  "coworkDrafts": []
 };
 
 // ══════════════════════════════════════════════
