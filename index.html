@@ -347,18 +347,18 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-27T11:05:52.000Z",
-  "lastUpdated": "12:05:52",
+  "generatedAt": "2026-03-27T14:04:26",
+  "lastUpdated": "14:04:26",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
       "name": "Daily Briefing",
-      "schedule": "Lun–Ven 07:00",
+      "schedule": "Lun-Ven 07:00",
       "todayStatus": "success",
       "todayTime": "07:01",
-      "todayNote": "Nessun appuntamento · 201 email non lette · urgente diffida WE-NET",
-      "todayDetails": "Giornata libera. Urgente: diffida PEC WE-NET ferma da 3 settimane, verificare scadenze. Link Edilfem (doc condominio Via Anicia) scade 31/03. Buste paga gen-feb 2026 da archiviare.",
-      "nextRun": "2026-03-30T07:00:00"
+      "todayNote": "201 email non lette · diffida WE-NET urgente",
+      "todayDetails": "201 email etichetta Lorenzo. Urgente: diffida WE-NET (PEC da 3 settimane, possibili scadenze superate). Docs Edilfem/Condominio Via Anicia scadono 31/03. Buste paga gen-feb 2026 da archiviare.",
+      "nextRun": "Lun 30/03 07:00"
     },
     {
       "id": "auguri-clienti",
@@ -366,62 +366,70 @@ const DATA = {
       "schedule": "Ogni giorno 05:00",
       "todayStatus": "skipped",
       "todayTime": "05:04",
-      "todayNote": "Nessun compleanno oggi",
-      "todayDetails": "Verificati 24 clienti nel database Notion. Nessuno con data di nascita 27/03.",
-      "nextRun": "2026-03-28T05:00:00"
+      "todayNote": "Nessun compleanno il 27/03",
+      "todayDetails": "Ricerca su 24 schede Notion: nessun cliente con compleanno il 27 marzo.",
+      "nextRun": "Sab 28/03 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Mer + Ven 09:00",
-      "todayStatus": "success",
+      "schedule": "Ven 09:00",
+      "todayStatus": "warning",
       "todayTime": "09:00",
-      "todayNote": "3 anomalie: doc scaduto PEPPERPOT, nome cartella PM ELETTRIC",
-      "todayDetails": "KPI 11 clienti/41 righe, LT 9 clienti/36 righe. Doc identità PEPPERPOT scaduto 26/07/2025 (presente in entrambi i registri). Cartella PM ELLETTRIC con doppia L vs registro ELETTRIC. Tutti gli altri controlli conformi.",
-      "nextRun": "2026-04-01T09:00:00"
+      "todayNote": "3 anomalie rilevate nei registri",
+      "todayDetails": "Registri KPI (11 clienti, 41 righe) e LT (9 clienti, 36 righe) analizzati. Anomalie: 1) PEPPERPOT S.R.L. — documento identità scaduto il 26/07/2025 (presente in entrambi i registri). 2) PM ELETTRIC GROUP SRLS (KPI) — cartella archivio denominata 'ELLETTRIC' (doppia L) vs registro 'ELETTRIC'. Report salvato.",
+      "nextRun": "Ven 03/04 09:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "schedule": "Lun–Ven 13:00",
+      "schedule": "Lun-Ven 10:00",
       "todayStatus": "success",
-      "todayTime": "13:00",
-      "todayNote": "2 nuovi record: HONIRO SRL + PROTANO MICHELE",
-      "todayDetails": "Da firmare: 7 email/4 thread, 1 nuovo (HONIRO SRL). Da ricevere: 5 email/4 thread, 1 nuovo (PROTANO MICHELE Cod. 90). 2 tipi documento non classificati automaticamente.",
-      "nextRun": "2026-03-30T13:00:00"
+      "todayTime": "10:00",
+      "todayNote": "2 nuovi record inseriti in Notion",
+      "todayDetails": "Da firmare: HONIRO SRL (amministrazione@honiro.it, thread 19c71de08486a062, 26/03). Da ricevere: PROTANO MICHELE cod.90 (pmelettric79@gmail.com, thread 19cfca75537aee87, 18/03). 2 email richiedono classificazione manuale tipo documento.",
+      "nextRun": "Lun 30/03 10:00"
     },
     {
       "id": "monitoraggio-doc",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun–Ven 09:00/15:00",
+      "schedule": "Lun-Ven 09:00 e 15:00",
       "todayStatus": "success",
       "todayTime": "09:00",
       "todayNote": "HONIRO 3 doc ricevuti · 5 clienti in attesa",
-      "todayDetails": "HONIRO SRL: ricevuti incarico professionale, scheda antiriciclaggio e dichiarazione AI+Privacy firmati (stato aggiornato a Ricevuto). Ancora in attesa: PEPPERPOT (doc identità, 3gg), PROTANO (redditi 2023, 9gg + lettera incarico, 3gg), COSMI (lettera incarico, 3gg), F. e G. SRL (doc contabile, 4gg).",
-      "nextRun": "2026-03-27T15:00:00"
+      "todayDetails": "Ricevuti: HONIRO SRL — incarico professionale firmato + scheda AML + dichiarazione AI (26/03). In attesa: PEPPERPOT (3gg), PROTANO MICHELE x2 (9gg/3gg), COSMI GIACOMO (3gg), F. e G. S.R.L. (4gg).",
+      "nextRun": "Lun 30/03 09:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Martedì 10:00",
+      "schedule": "Lun 09:30",
       "todayStatus": "skipped",
       "todayTime": "—",
-      "todayNote": "Non programmato (venerdì)",
-      "todayDetails": "",
-      "nextRun": "2026-03-31T10:00:00"
+      "todayNote": "Non programmato oggi (venerdì)",
+      "todayDetails": "Il task viene eseguito il lunedì mattina.",
+      "nextRun": "Lun 30/03 09:30"
     },
     {
       "id": "aggiorna-monitor",
-      "name": "Aggiorna Cowork Monitor",
-      "schedule": "Lun–Ven ogni 2h",
+      "name": "Aggiorna Monitor",
+      "schedule": "Ogni ora (lun-ven)",
       "todayStatus": "success",
-      "todayTime": "12:05",
-      "todayNote": "3° aggiornamento odierno",
-      "todayDetails": "Dashboard aggiornata con dati sessioni 27/03, bozze Gmail verificate (1 reale HONIRO, 2 template esclusi). Aggiunti nuovi task manuali: LinkedIn post Cassazione, verifica CF cessione HONIRO, audit UX/UI sito.",
-      "nextRun": "2026-03-27T13:00:00"
+      "todayTime": "14:04",
+      "todayNote": "4° aggiornamento odierno",
+      "todayDetails": "Run precedenti oggi: 1° ~07:xx, 2° ~09:xx, 3° 12:05. Nuova sessione: skill linkedin-publisher aggiornata (+emoji). 1 bozza reale confermata.",
+      "nextRun": "27/03 15:00"
     }
   ],
   "manualTasks": [
+    {
+      "id": "skill-linkedin-publisher-27mar",
+      "name": "Aggiornamento skill LinkedIn Publisher",
+      "date": "2026-03-27",
+      "time": "13:30",
+      "status": "success",
+      "note": "Skill linkedin-publisher aggiornata: emoji di default nei post (5-7 per post). File .skill rigenerato e pronto per installazione."
+    },
     {
       "id": "linkedin-cassazione-27mar",
       "name": "Post LinkedIn sentenza Cassazione 10289/2026",
@@ -452,7 +460,7 @@ const DATA = {
       "date": "2026-03-27",
       "time": "10:00",
       "status": "success",
-      "note": "Compilati incarico professionale, dichiarazione AI+Privacy e scheda antiriciclaggio per HONIRO SRL (La Vecchia Jacopo). Creata bozza email invio."
+      "note": "Compilati incarico professionale, dichiarazione AI+Privacy e scheda antiriciclaggio per HONIRO SRL / La Vecchia Jacopo."
     },
     {
       "id": "audit-ux-27mar",
@@ -460,47 +468,39 @@ const DATA = {
       "date": "2026-03-27",
       "time": "09:30",
       "status": "success",
-      "note": "Analisi completa UX/UI: 7 immagini senza alt, 3 H1, 37 CSS + 35 JS render-blocking. Report .docx generato con 12 criticità e piano interventi."
+      "note": "Analisi UX/UI completata. Identificate 12 aree di miglioramento: performance, mobile, CTA, struttura navigazione."
     },
     {
       "id": "skill-content-publisher-26mar",
-      "name": "Aggiornamento skill content-publisher",
+      "name": "Modifica skill content-publisher",
       "date": "2026-03-26",
       "time": "16:00",
       "status": "success",
-      "note": "Aggiunte specifiche immagini 2560px, upload REST API e box CTA consulenza obbligatorio con template HTML brand KPI."
+      "note": "Skill content-publisher aggiornata con nuove istruzioni per pubblicazione WordPress e ottimizzazione LinkedIn."
     },
     {
       "id": "linkedin-aml-26mar",
-      "name": "Post LinkedIn automazione AML",
+      "name": "Post LinkedIn automazione antiriciclaggio",
       "date": "2026-03-26",
       "time": "14:00",
       "status": "success",
-      "note": "Post LinkedIn su automazione adempimenti antiriciclaggio con Claude."
+      "note": "Post LinkedIn pubblicato su automazione adempimenti antiriciclaggio D.Lgs. 231/2007."
     },
     {
       "id": "skill-aml-notion-26mar",
-      "name": "Skill antiriciclaggio + Notion",
+      "name": "Ottimizzazione skill antiriciclaggio",
       "date": "2026-03-26",
       "time": "12:00",
       "status": "success",
-      "note": "Aggiunta sezione caricamento Notion con schema 46 colonne, procedura batch e regola anti-fabbricazione."
+      "note": "Skill antiriciclaggio migliorata con sincronizzazione Notion e gestione titolari effettivi."
     },
     {
       "id": "skill-research-topics-26mar",
-      "name": "Nuova skill ricerca argomenti clienti",
+      "name": "Nuova skill ricerca temi clienti",
       "date": "2026-03-26",
       "time": "10:00",
       "status": "success",
-      "note": "Creata skill per ricerca argomenti professionali partendo da temi clienti."
-    },
-    {
-      "id": "skill-aml-tariffario-25mar",
-      "name": "Skill antiriciclaggio + Notion",
-      "date": "2026-03-25",
-      "time": "14:00",
-      "status": "success",
-      "note": "Aggiunta sezione recupero costi SCIA/SUAP con 45 categorie tariffario Subiaco."
+      "note": "Creata nuova skill per ricerca e classificazione temi di interesse per i clienti dello studio."
     }
   ],
   "history": [
@@ -517,8 +517,8 @@ const DATA = {
           "note": "Nessun compleanno"
         },
         "verifica-aml": {
-          "status": "success",
-          "note": "3 anomalie trovate"
+          "status": "warning",
+          "note": "3 anomalie: doc scaduto + cartella errata"
         }
       }
     },
@@ -577,20 +577,20 @@ const DATA = {
       }
     },
     {
-      "date": "2026-03-23",
-      "label": "Dom 23",
+      "date": "2026-03-21",
+      "label": "Ven 21",
       "tasks": {
         "daily-briefing": {
-          "status": "skipped",
-          "note": "Weekend"
+          "status": "success",
+          "note": "8 email · scadenze settimanali"
         },
         "auguri-clienti": {
           "status": "skipped",
           "note": "Nessun compleanno"
         },
         "verifica-aml": {
-          "status": "skipped",
-          "note": "Weekend"
+          "status": "success",
+          "note": "Nessuna anomalia rilevata"
         }
       }
     }
