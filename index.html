@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-27T09:08:54.285Z",
-  "lastUpdated": "10:08:54",
+  "generatedAt": "2026-03-27T11:05:52.000Z",
+  "lastUpdated": "12:05:52",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -373,12 +373,12 @@ const DATA = {
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ven 09:00",
+      "schedule": "Mer + Ven 09:00",
       "todayStatus": "success",
       "todayTime": "09:00",
       "todayNote": "3 anomalie: doc scaduto PEPPERPOT, nome cartella PM ELETTRIC",
-      "todayDetails": "KPI: 11 clienti, 41 righe. LT: 9 clienti, 36 righe. Anomalie: 1) doc identità PEPPERPOT scaduto 26/07/2025, 2) cartella PM ELLETTRIC (doppia L) non conforme al registro.",
-      "nextRun": "2026-04-03T09:00:00"
+      "todayDetails": "KPI 11 clienti/41 righe, LT 9 clienti/36 righe. Doc identità PEPPERPOT scaduto 26/07/2025 (presente in entrambi i registri). Cartella PM ELLETTRIC con doppia L vs registro ELETTRIC. Tutti gli altri controlli conformi.",
+      "nextRun": "2026-04-01T09:00:00"
     },
     {
       "id": "inserimento-notion",
@@ -386,8 +386,8 @@ const DATA = {
       "schedule": "Lun–Ven 13:00",
       "todayStatus": "success",
       "todayTime": "13:00",
-      "todayNote": "2 nuovi record: HONIRO SRL + PROTANO MICHELE (Cod. 90)",
-      "todayDetails": "Da firmare: 7 email, 4 thread, 1 nuovo (HONIRO SRL). Da ricevere: 5 email, 4 thread, 1 nuovo (PROTANO MICHELE Cod. 90). Tipo documento non classificato per entrambi.",
+      "todayNote": "2 nuovi record: HONIRO SRL + PROTANO MICHELE",
+      "todayDetails": "Da firmare: 7 email/4 thread, 1 nuovo (HONIRO SRL). Da ricevere: 5 email/4 thread, 1 nuovo (PROTANO MICHELE Cod. 90). 2 tipi documento non classificati automaticamente.",
       "nextRun": "2026-03-30T13:00:00"
     },
     {
@@ -397,31 +397,47 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "09:00",
       "todayNote": "HONIRO 3 doc ricevuti · 5 clienti in attesa",
-      "todayDetails": "HONIRO SRL: ricevuti 3 documenti firmati (incarico, antiriciclaggio, AI+Privacy). Aggiornato su Notion a Ricevuto. Ancora in attesa: PEPPERPOT (3gg), PROTANO x2 (9gg/3gg), COSMI (3gg), F.e G. (4gg).",
+      "todayDetails": "HONIRO SRL: ricevuti incarico professionale, scheda antiriciclaggio e dichiarazione AI+Privacy firmati (stato aggiornato a Ricevuto). Ancora in attesa: PEPPERPOT (doc identità, 3gg), PROTANO (redditi 2023, 9gg + lettera incarico, 3gg), COSMI (lettera incarico, 3gg), F. e G. SRL (doc contabile, 4gg).",
       "nextRun": "2026-03-27T15:00:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Mer 10:00",
+      "schedule": "Martedì 10:00",
       "todayStatus": "skipped",
       "todayTime": "—",
       "todayNote": "Non programmato (venerdì)",
-      "todayDetails": "Il task è schedulato solo il mercoledì. Prossima esecuzione mercoledì 1 aprile.",
-      "nextRun": "2026-04-01T10:00:00"
+      "todayDetails": "",
+      "nextRun": "2026-03-31T10:00:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Lun–Ven 08:00–20:00",
+      "schedule": "Lun–Ven ogni 2h",
       "todayStatus": "success",
-      "todayTime": "10:08",
-      "todayNote": "2° aggiornamento odierno",
-      "todayDetails": "Dashboard aggiornata con dati sessioni 27/03, bozze Gmail verificate (1 reale HONIRO, 2 template esclusi), task manuali e articolo Risoluzione 9/2026.",
-      "nextRun": "2026-03-27T11:00:00"
+      "todayTime": "12:05",
+      "todayNote": "3° aggiornamento odierno",
+      "todayDetails": "Dashboard aggiornata con dati sessioni 27/03, bozze Gmail verificate (1 reale HONIRO, 2 template esclusi). Aggiunti nuovi task manuali: LinkedIn post Cassazione, verifica CF cessione HONIRO, audit UX/UI sito.",
+      "nextRun": "2026-03-27T13:00:00"
     }
   ],
   "manualTasks": [
+    {
+      "id": "linkedin-cassazione-27mar",
+      "name": "Post LinkedIn sentenza Cassazione 10289/2026",
+      "date": "2026-03-27",
+      "time": "12:00",
+      "status": "success",
+      "note": "Post LinkedIn su omesso versamento IVA senza dichiarazione (Cass. n. 10289/2026). Bozza pronta per approvazione."
+    },
+    {
+      "id": "verifica-cf-honiro-27mar",
+      "name": "Verifica CF cessione crediti HONIRO SRL",
+      "date": "2026-03-27",
+      "time": "11:30",
+      "status": "warning",
+      "note": "Controllo incrociato CF cessione crediti. Anomalia: CF cedente Excel 2 (86000560580) non presente nelle comunicazioni ADE. Da verificare."
+    },
     {
       "id": "articolo-risoluzione9-27mar",
       "name": "Pubblica articolo Risoluzione 9/2026",
@@ -439,63 +455,47 @@ const DATA = {
       "note": "Compilati incarico professionale, dichiarazione AI+Privacy e scheda antiriciclaggio per HONIRO SRL (La Vecchia Jacopo). Creata bozza email invio."
     },
     {
-      "id": "notion-protano-27mar",
-      "name": "Inserimento Notion Protano Michele",
+      "id": "audit-ux-27mar",
+      "name": "Audit UX/UI sito kpiconsulting.it",
       "date": "2026-03-27",
-      "time": "13:00",
+      "time": "09:30",
       "status": "success",
-      "note": "Record Protano Michele (Cod. 90) inserito e collegato su Notion Monitoraggio Documenti."
+      "note": "Analisi completa UX/UI: 7 immagini senza alt, 3 H1, 37 CSS + 35 JS render-blocking. Report .docx generato con 12 criticità e piano interventi."
     },
     {
-      "id": "cta-wordpress-26mar",
-      "name": "CTA su tutti gli articoli WordPress",
+      "id": "skill-content-publisher-26mar",
+      "name": "Aggiornamento skill content-publisher",
       "date": "2026-03-26",
-      "time": "18:30",
+      "time": "16:00",
       "status": "success",
-      "note": "Aggiunto box CTA “Prenota consulenza” a tutti i 18 articoli su kpiconsulting.it."
+      "note": "Aggiunte specifiche immagini 2560px, upload REST API e box CTA consulenza obbligatorio con template HTML brand KPI."
     },
     {
       "id": "linkedin-aml-26mar",
-      "name": "Post LinkedIn AML Automation",
-      "date": "2026-03-26",
-      "time": "17:00",
-      "status": "success",
-      "note": "Post pubblicato su profilo KPI Consulting con link articolo antiriciclaggio."
-    },
-    {
-      "id": "articolo-forfetario-26mar",
-      "name": "Articolo regime forfetario",
-      "date": "2026-03-26",
-      "time": "15:00",
-      "status": "success",
-      "note": "Articolo su compensi indebiti e regime forfetario pubblicato su WordPress + post LinkedIn."
-    },
-    {
-      "id": "skill-nanob-26mar",
-      "name": "Skill content-publisher + Nano Banana",
+      "name": "Post LinkedIn automazione AML",
       "date": "2026-03-26",
       "time": "14:00",
       "status": "success",
-      "note": "Integrato generatore immagini AI Nano Banana nella skill content-publisher."
+      "note": "Post LinkedIn su automazione adempimenti antiriciclaggio con Claude."
     },
     {
-      "id": "ux-audit-26mar",
-      "name": "Audit UX/UI kpiconsulting.it",
+      "id": "skill-aml-notion-26mar",
+      "name": "Skill antiriciclaggio + Notion",
       "date": "2026-03-26",
       "time": "12:00",
       "status": "success",
-      "note": "Report completo: 12 criticità, immagini senza alt, 3 H1, 37 CSS + 35 JS render-blocking."
+      "note": "Aggiunta sezione caricamento Notion con schema 46 colonne, procedura batch e regola anti-fabbricazione."
     },
     {
-      "id": "cessione-crediti-26mar",
-      "name": "Incarico cessione crediti HONIRO/EDILFEM",
+      "id": "skill-research-topics-26mar",
+      "name": "Nuova skill ricerca argomenti clienti",
       "date": "2026-03-26",
-      "time": "11:00",
+      "time": "10:00",
       "status": "success",
-      "note": "Compilato preventivo cessione crediti Superbonus 110% EDILFEM→HONIRO (97.900,50€, compenso 2%)."
+      "note": "Creata skill per ricerca argomenti professionali partendo da temi clienti."
     },
     {
-      "id": "skill-aml-notion-25mar",
+      "id": "skill-aml-tariffario-25mar",
       "name": "Skill antiriciclaggio + Notion",
       "date": "2026-03-25",
       "time": "14:00",
@@ -546,7 +546,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Calendario + 5 email prioritarie"
+          "note": "12 email · scadenza F24"
         },
         "auguri-clienti": {
           "status": "skipped",
