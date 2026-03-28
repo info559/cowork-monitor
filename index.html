@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-27T22:06:47",
-  "lastUpdated": "22:06:47",
+  "generatedAt": "2026-03-28T19:22:11",
+  "lastUpdated": "19:22:11",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,8 +356,8 @@ const DATA = {
       "schedule": "Lun-Ven 07:00",
       "todayStatus": "success",
       "todayTime": "07:01",
-      "todayNote": "201 email non lette · diffida WE-NET urgente",
-      "todayDetails": "201 email non lette con etichetta Lorenzo. Priorità: (1) Diffida WE-NET PEC da 3 settimane — verificare scadenze. (2) Documenti Edilfem Via Anicia — link scade 31/03. (3) Buste paga gen-feb 2026 da archiviare.",
+      "todayNote": "19 email non lette · diffida WE-NET urgente",
+      "todayDetails": "19 email non lette (label Lorenzo). Priorità: (1) Diffida WE-NET — PEC con valore legale da 3 settimane, scadenze da verificare urgentemente. (2) PM Elettric — richiesta consulenza su comunicazione AdE per ditta individuale. (3) Francesca Raponi — chiarimento proforma 2025 senza risposta da 2 mesi. 15 newsletter Ratio Quotidiano non urgenti.",
       "nextRun": "Lun 30/03 07:00"
     },
     {
@@ -366,120 +366,88 @@ const DATA = {
       "schedule": "Ogni giorno 05:00",
       "todayStatus": "skipped",
       "todayTime": "05:04",
-      "todayNote": "Nessun compleanno il 27/03",
-      "todayDetails": "Ricerca effettuata su oltre 24 pagine clienti in Notion. Nessun codice fiscale con data di nascita 27 marzo.",
-      "nextRun": "Sab 28/03 05:00"
+      "todayNote": "Nessun compleanno il 28/03",
+      "todayDetails": "Ricerca effettuata su oltre 40 pagine clienti in Notion. Nessun codice fiscale con data di nascita 28 marzo.",
+      "nextRun": "Dom 29/03 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica AML",
-      "schedule": "Ven 09:00",
-      "todayStatus": "warning",
-      "todayTime": "09:00",
-      "todayNote": "3 anomalie: doc scaduto PEPPERPOT + cartella PM ELETTRIC",
-      "todayDetails": "KPI: 11 clienti, 41 righe. LT: 9 clienti, 36 righe. Anomalie: (1) Documento identità scaduto 26/07/2025 — PEPPERPOT S.R.L. (KPI+LT). (2) Cartella nominata 'PM ELLETTRIC' (doppia L) vs registro 'PM ELETTRIC' — da uniformare. Tutti gli altri controlli conformi.",
-      "nextRun": "Ven 03/04 09:00"
+      "schedule": "Lun e Gio 09:00",
+      "todayStatus": "skipped",
+      "todayTime": "—",
+      "todayNote": "Non programmato (sabato)",
+      "todayDetails": "Verifica AML non eseguita oggi (sabato). Ultima esecuzione ven 27/03: 3 anomalie — documento scaduto PEPPERPOT S.R.L., incongruenza nome cartella PM ELETTRIC GROUP SRLS.",
+      "nextRun": "Lun 30/03 09:00"
     },
     {
       "id": "inserimento-notion",
-      "name": "Inserimento Notion",
-      "schedule": "Lun-Ven 10:00 + 19:00",
-      "todayStatus": "success",
-      "todayTime": "19:20",
-      "todayNote": "3 nuovi record oggi: HONIRO, PROTANO + STR82L (Contratto)",
-      "todayDetails": "Run sera: 1 nuovo record creato — STR82L S.r.l. / Nardi Paolo / 'Contratto' (27/03). Tipo documento non classificato: richiede classificazione manuale. Run mattino: HONIRO SRL + PROTANO MICHELE. Totale oggi: 3 inserimenti.",
-      "nextRun": "Lun 30/03 10:00"
+      "name": "Inserimento Notion da Gmail",
+      "schedule": "Lun-Ven 06:00",
+      "todayStatus": "skipped",
+      "todayTime": "—",
+      "todayNote": "Non programmato (sabato)",
+      "todayDetails": "Non eseguito oggi (sabato). Ultima esecuzione ven 27/03: 1 nuovo record creato (STR82L S.r.l. — Nardi Paolo). 4 thread già presenti confermati.",
+      "nextRun": "Lun 30/03 06:00"
     },
     {
       "id": "monitoraggio-doc",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 09:00 + 17:00",
+      "schedule": "Ogni giorno 09:00 e 15:00",
       "todayStatus": "success",
       "todayTime": "09:00",
-      "todayNote": "HONIRO 3 doc ricevuti · 5 clienti in attesa",
-      "todayDetails": "HONIRO SRL: Veronica Onesti ha inviato Incarico Professionale + Antiriciclaggio + Dichiarazione AI+Privacy firmati (26/03). Record aggiornato a Ricevuto. In attesa: PEPPERPOT (doc identità), PROTANO MICHELE ×2, COSMI GIACOMO, F. e G. S.R.L.",
-      "nextRun": "Lun 30/03 09:00"
+      "todayNote": "5 clienti in attesa · 0 documenti ricevuti",
+      "todayDetails": "Sessione mattutina completata: 5 record in attesa (Cosmi Giacomo, Protano Michele ×2, Pepperpot SRL, STR82L SRL). Pepperpot ha inviato email INPS — non pertinente. Protano Michele (REDDITI 2023, dal 18/03) è candidato a sollecito. STR82L contattato ieri — troppo presto. Sessione pomeridiana in corso.",
+      "nextRun": "Dom 29/03 09:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Lun 09:30",
+      "schedule": "Venerdì 08:00",
       "todayStatus": "skipped",
       "todayTime": "—",
-      "todayNote": "Non programmato oggi (venerdì)",
-      "todayDetails": "Il task viene eseguito il lunedì mattina.",
-      "nextRun": "Lun 30/03 09:30"
+      "todayNote": "Non programmato (sabato)",
+      "todayDetails": "Solleciti settimanali non eseguiti oggi (sabato). Prossima esecuzione venerdì 03/04.",
+      "nextRun": "Ven 03/04 08:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Monitor",
       "schedule": "Ogni ora 8:00-22:00",
       "todayStatus": "success",
-      "todayTime": "22:06",
-      "todayNote": "8° aggiornamento odierno · bozze Gmail: 0",
-      "todayDetails": "Aggiornamento completato. Sessioni analizzate: daily-briefing, auguri-clienti, verifica-aml, inserimento-notion (2 run), monitoraggio-doc, solleciti-settimanali. Bozze Gmail: 2 template (senza destinatario) escluse. Nessuna bozza reale.",
-      "nextRun": "Sab 28/03 —"
+      "todayTime": "19:22",
+      "todayNote": "Aggiornamento serale · bozze Gmail: 0 reali",
+      "todayDetails": "Sessioni analizzate: daily-briefing (✓ success), auguri-clienti (⏭ skipped), verifica-aml (⏭ sabato), inserimento-notion (⏭ sabato), monitoraggio-doc (✓ 2 sessioni), solleciti (⏭ sabato). Bozze Gmail: 2 template senza destinatario escluse. 0 bozze reali nell'array coworkDrafts.",
+      "nextRun": "Dom 29/03 —"
     }
   ],
   "manualTasks": [
+    {
+      "id": "verifica-cf-honiro-27mar",
+      "name": "Verifica CF e cessione credito HONIRO SRL",
+      "date": "2026-03-27",
+      "time": "17:00",
+      "status": "warning",
+      "note": "Verifica incrociata importi e CF: anomalia rilevata — CF 86000560580 non corrisponde ad alcuna comunicazione ADE Condominio Via Anicia 3. Importo totale confermato: €97.900,50."
+    },
     {
       "id": "iban-str82l-27mar",
       "name": "Aggiornamento IBAN cessione credito STR82L",
       "date": "2026-03-27",
       "time": "16:30",
       "status": "success",
-      "note": "Sostituito IBAN beneficiario C. Tecnorestauri in bozza cessione credito STR82L: IT64R0622039440000001000026 (Cassa di Risparmio di Orvieto)."
+      "note": "Sostituito IBAN beneficiario C. Tecnorestauri: IT64R0622039440000001000026 (Cassa di Risparmio di Orvieto)."
     },
     {
       "id": "skill-linkedin-publisher-27mar",
       "name": "Aggiornamento skill LinkedIn Publisher",
       "date": "2026-03-27",
-      "time": "13:30",
+      "time": "15:00",
       "status": "success",
-      "note": "Skill linkedin-publisher aggiornata: emoji di default nei post (5-7 per post). File .skill rigenerato e pronto per installazione."
+      "note": "Aggiornata skill LinkedIn Publisher: emoji obbligatorie per ogni paragrafo (5-7 per post)."
     },
     {
-      "id": "linkedin-cassazione-27mar",
-      "name": "Post LinkedIn sentenza Cassazione 10289/2026",
-      "date": "2026-03-27",
-      "time": "12:00",
-      "status": "success",
-      "note": "Post LinkedIn su omesso versamento IVA senza dichiarazione (Cass. n. 10289/2026). Bozza pronta per approvazione."
-    },
-    {
-      "id": "verifica-cf-honiro-27mar",
-      "name": "Verifica CF cessione crediti HONIRO SRL",
-      "date": "2026-03-27",
-      "time": "11:30",
-      "status": "warning",
-      "note": "Anomalia: CF cedente Excel[2] (86000560580) non corrisponde a CF Condominio Via Anicia nelle comunicazioni ADE (94039980589). Da verificare a chi appartiene il codice e se esistono le relative comunicazioni ADE."
-    },
-    {
-      "id": "mandato-privacy-honiro-27mar",
-      "name": "Gestione Mandato+Privacy+AI HONIRO SRL",
-      "date": "2026-03-27",
-      "time": "10:00",
-      "status": "success",
-      "note": "Compilati incarico professionale, dichiarazione AI+Privacy e scheda antiriciclaggio per HONIRO SRL / La Vecchia Jacopo."
-    },
-    {
-      "id": "audit-ux-27mar",
-      "name": "Audit UX/UI sito kpiconsulting.it",
-      "date": "2026-03-27",
-      "time": "09:30",
-      "status": "success",
-      "note": "Analisi UX/UI completata. Identificate 12 aree di miglioramento: performance, mobile, CTA, struttura navigazione."
-    },
-    {
-      "id": "skill-content-publisher-26mar",
-      "name": "Modifica skill content-publisher",
-      "date": "2026-03-26",
-      "time": "16:00",
-      "status": "success",
-      "note": "Skill content-publisher aggiornata con nuove istruzioni per pubblicazione WordPress e ottimizzazione LinkedIn."
-    },
-    {
-      "id": "linkedin-aml-26mar",
+      "id": "post-linkedin-aml-26mar",
       "name": "Post LinkedIn automazione antiriciclaggio",
       "date": "2026-03-26",
       "time": "15:00",
@@ -505,6 +473,24 @@ const DATA = {
   ],
   "history": [
     {
+      "date": "2026-03-28",
+      "label": "Sab 28",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "19 email · diffida WE-NET urgente"
+        },
+        "auguri-clienti": {
+          "status": "skipped",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmato (sabato)"
+        }
+      }
+    },
+    {
       "date": "2026-03-27",
       "label": "Ven 27",
       "tasks": {
@@ -518,7 +504,7 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "warning",
-          "note": "3 anomalie: doc scaduto + cartella errata"
+          "note": "3 anomalie: doc scaduto PEPPERPOT + cartella PM ELETTRIC"
         }
       }
     },
@@ -528,7 +514,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "7 email · avviso Google + Honiro"
+          "note": "7 email · avviso Google + Honiro + scadenza OSEN 31/03"
         },
         "auguri-clienti": {
           "status": "skipped",
@@ -573,24 +559,6 @@ const DATA = {
         "verifica-aml": {
           "status": "skipped",
           "note": "Non in programma (lunedì)"
-        }
-      }
-    },
-    {
-      "date": "2026-03-20",
-      "label": "Ven 20",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "5 email · nessuna urgenza"
-        },
-        "auguri-clienti": {
-          "status": "skipped",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "success",
-          "note": "Nessuna anomalia riscontrata"
         }
       }
     }
