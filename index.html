@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-29T12:03:40",
-  "lastUpdated": "12:03:40",
+  "generatedAt": "2026-03-29T14:04:53",
+  "lastUpdated": "14:04:53",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -373,32 +373,32 @@ const DATA = {
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ven 09:00",
+      "schedule": "Lun/Mer/Ven 08:00",
       "todayStatus": "skipped",
       "todayTime": "—",
       "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Ultimo eseguito venerdì 27/03: 3 anomalie rilevate — documento scaduto PEPPERPOT S.R.L., typo cartella PM ELLETTRIC. KPI: 11 clienti 41 righe. LT: 9 clienti 36 righe.",
-      "nextRun": "Ven 03/04 09:00"
+      "todayDetails": "Task attivo solo lunedì, mercoledì e venerdì. Ultimo eseguito venerdì 27/03: 3 anomalie rilevate (documento scaduto PEPPERPOT, typo cartella PM ELLETTRIC). Prossima esecuzione lunedì 30/03.",
+      "nextRun": "Lun 30/03 08:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion",
-      "schedule": "Lun-Ven 08:00",
+      "schedule": "Lun-Ven 09:00",
       "todayStatus": "skipped",
       "todayTime": "—",
       "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Task attivo solo nei giorni feriali. Ultimo eseguito venerdì 27/03.",
-      "nextRun": "Lun 30/03 08:00"
+      "todayDetails": "Task attivo solo nei giorni feriali. Prossima esecuzione lunedì 30/03.",
+      "nextRun": "Lun 30/03 09:00"
     },
     {
       "id": "monitoraggio-doc",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 09:00 / 16:00",
+      "schedule": "Lun-Ven 10:00 e 16:00",
       "todayStatus": "skipped",
       "todayTime": "—",
       "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Ultimo eseguito sabato 28/03: 5 clienti in attesa (PROTANO MICHELE ×2, COSMI GIACOMO, PEPPERPOT S.R.L., STR82L S.R.L.). Nessuna risposta pertinente ricevuta.",
-      "nextRun": "Lun 30/03 09:00"
+      "todayDetails": "Task attivo solo nei giorni feriali. Ultimo eseguito sabato 28/03: 5 clienti in attesa di documenti. Prossima esecuzione lunedì 30/03.",
+      "nextRun": "Lun 30/03 10:00"
     },
     {
       "id": "solleciti",
@@ -415,10 +415,10 @@ const DATA = {
       "name": "Aggiorna Monitor",
       "schedule": "Ogni ora 8:00-22:00",
       "todayStatus": "success",
-      "todayTime": "12:03",
-      "todayNote": "Aggiornamento completato · 0 bozze reali",
-      "todayDetails": "Sessioni analizzate: daily-briefing (✓ success 07:00, 201 email, diffida WE-NET urgente), auguri-clienti (⏭ skipped 05:00, nessun compleanno), verifica-aml (⏭ domenica), inserimento-notion (⏭ domenica), monitoraggio-doc (⏭ domenica, ultimo 28/03: 5 clienti in attesa), solleciti (⏭ domenica). Bozze Gmail: 2 template senza destinatario escluse. 0 bozze reali.",
-      "nextRun": "Dom 29/03 13:00"
+      "todayTime": "14:05",
+      "todayNote": "4° aggiornamento della giornata · 0 bozze reali",
+      "todayDetails": "Sessioni analizzate: daily-briefing (✓ success 07:00, 201 email, diffida WE-NET urgente), auguri-clienti (⏭ skipped 05:00, nessun compleanno), verifica-aml (⏭ domenica), inserimento-notion (⏭ domenica), monitoraggio-doc (⏭ domenica, ultimo 28/03: 5 clienti in attesa), solleciti (⏭ domenica). Gmail: 2 bozze template senza destinatario escluse. coworkDrafts = [].",
+      "nextRun": "Dom 29/03 15:00"
     }
   ],
   "manualTasks": [
@@ -452,15 +452,15 @@ const DATA = {
       "date": "2026-03-26",
       "time": "15:00",
       "status": "success",
-      "note": "Post LinkedIn pubblicato su automazione adempimenti antiriciclaggio con Claude Cowork."
+      "note": "Post LinkedIn pubblicato su automazione antiriciclaggio con AI. Visibilità: profilo Lorenzo Trastulli."
     },
     {
-      "id": "articolo-forfettari-26mar",
-      "name": "Articolo blog regime forfettario",
+      "id": "content-publisher-26mar",
+      "name": "Articolo blog + LinkedIn su novità fiscali",
       "date": "2026-03-26",
-      "time": "11:00",
+      "time": "14:00",
       "status": "success",
-      "note": "Articolo WordPress pubblicato su regime forfettario 2026 con aggiornamenti normativi."
+      "note": "Articolo pubblicato su kpiconsulting.it e post LinkedIn preparato per approvazione."
     }
   ],
   "history": [
