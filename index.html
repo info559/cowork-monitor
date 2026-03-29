@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-29T06:06:03",
-  "lastUpdated": "08:06:03",
+  "generatedAt": "2026-03-29T10:05:05",
+  "lastUpdated": "10:05:05",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,58 +367,58 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "05:00",
       "todayNote": "Nessun compleanno il 29/03",
-      "todayDetails": "Verificati 151 clienti del database ANAGRAFICA CLIENTI: 111 con data di nascita registrata. Nessuno nato il 29 marzo.",
+      "todayDetails": "Verificati 151 clienti nel database ANAGRAFICA CLIENTI: 111 con data di nascita. Nessuno nato il 29 marzo.",
       "nextRun": "Lun 30/03 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Lun e Ven 09:00",
+      "schedule": "Ven 09:00",
       "todayStatus": "skipped",
       "todayTime": "—",
       "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Verifica antiriciclaggio non eseguita oggi (domenica). Prossima esecuzione lunedì 30/03.",
-      "nextRun": "Lun 30/03 09:00"
+      "todayDetails": "Ultimo eseguito venerdì 27/03: 3 anomalie rilevate — documento scaduto PEPPERPOT S.R.L., typo cartella PM ELLETTRIC. KPI: 11 clienti 41 righe. LT: 9 clienti 36 righe.",
+      "nextRun": "Ven 03/04 09:00"
     },
     {
       "id": "inserimento-notion",
-      "name": "Inserimento Notion da Gmail",
-      "schedule": "Lun-Ven 11:00",
+      "name": "Inserimento Notion",
+      "schedule": "Lun-Ven 08:00",
       "todayStatus": "skipped",
       "todayTime": "—",
       "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Inserimento Notion da etichetta Gmail non eseguito oggi (domenica). Prossima esecuzione lunedì 30/03.",
-      "nextRun": "Lun 30/03 11:00"
+      "todayDetails": "Task attivo solo nei giorni feriali. Ultimo eseguito venerdì 27/03.",
+      "nextRun": "Lun 30/03 08:00"
     },
     {
       "id": "monitoraggio-doc",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 09:00 e 15:00",
+      "schedule": "Lun-Ven 09:00 / 16:00",
       "todayStatus": "skipped",
       "todayTime": "—",
       "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Monitoraggio documenti non eseguito oggi (domenica). Ultimo controllo: 28/03 — 5 clienti in attesa, 0 documenti ricevuti. PROTANO MICHELE: Lettera di Incarico (18/03) in attesa da 11 giorni. COSMI GIACOMO, PEPPERPOT S.R.L.: in attesa da 5 giorni. STR82L S.R.L.: in attesa da 2 giorni.",
+      "todayDetails": "Ultimo eseguito sabato 28/03: 5 clienti in attesa (PROTANO MICHELE ×2, COSMI GIACOMO, PEPPERPOT S.R.L., STR82L S.R.L.). Nessuna risposta pertinente ricevuta.",
       "nextRun": "Lun 30/03 09:00"
     },
     {
-      "id": "solleciti-settimanali",
+      "id": "solleciti",
       "name": "Solleciti Settimanali",
-      "schedule": "Venerdì 08:00",
+      "schedule": "Ven 16:00",
       "todayStatus": "skipped",
       "todayTime": "—",
       "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Solleciti settimanali non eseguiti oggi (domenica). Prossima esecuzione venerdì 03/04.",
-      "nextRun": "Ven 03/04 08:00"
+      "todayDetails": "Task attivo solo il venerdì. Prossima esecuzione venerdì 03/04.",
+      "nextRun": "Ven 03/04 16:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Monitor",
       "schedule": "Ogni ora 8:00-22:00",
       "todayStatus": "success",
-      "todayTime": "08:06",
-      "todayNote": "Aggiornamento ore 08:06 · bozze Gmail: 0 reali",
-      "todayDetails": "Sessioni analizzate: daily-briefing (✓ success 07:00, 201 email, diffida WE-NET urgente), auguri-clienti (⏭ skipped 05:00, nessun compleanno), verifica-aml (⏭ domenica non programmato), inserimento-notion (⏭ domenica), monitoraggio-doc (⏭ domenica, ultimo 28/03: 5 clienti in attesa), solleciti (⏭ domenica). Bozze Gmail: 2 template senza destinatario escluse. 0 bozze reali.",
-      "nextRun": "Dom 29/03 —"
+      "todayTime": "10:05",
+      "todayNote": "Aggiornamento ore 10:05 · bozze Gmail: 0 reali",
+      "todayDetails": "Sessioni analizzate: daily-briefing (✓ success 07:00, 201 email, diffida WE-NET urgente), auguri-clienti (⏭ skipped 05:00, nessun compleanno), verifica-aml (⏭ domenica), inserimento-notion (⏭ domenica), monitoraggio-doc (⏭ domenica, ultimo 28/03: 5 clienti in attesa), solleciti (⏭ domenica). Bozze Gmail: 2 template senza destinatario escluse. 0 bozze reali.",
+      "nextRun": "Dom 29/03 11:00"
     }
   ],
   "manualTasks": [
@@ -506,15 +506,15 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Agenda libera"
+          "note": "201 email · diffida WE-NET + doc Edilfem"
         },
         "auguri-clienti": {
           "status": "skipped",
           "note": "Nessun compleanno"
         },
         "verifica-aml": {
-          "status": "success",
-          "note": "3 anomalie rilevate"
+          "status": "warning",
+          "note": "3 anomalie: doc scaduto PEPPERPOT, typo cartella PM ELLETTRIC"
         }
       }
     },
