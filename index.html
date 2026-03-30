@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-30T16:05:01",
-  "lastUpdated": "16:05:01",
+  "generatedAt": "2026-03-30T18:05:19",
+  "lastUpdated": "18:05:19",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,27 +367,27 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:00",
       "todayNote": "1 compleanno · Bozza per ORLANDI PIERFRANCESCO",
-      "todayDetails": "Trovato 1 compleanno: ORLANDI PIERFRANCESCO (30/03/1980). Bozza email auguri creata e salvata in Gmail per p.orlandi@avpm.it.",
+      "todayDetails": "Trovato 1 compleanno: ORLANDI PIERFRANCESCO (nato il 30/03/1980). Bozza email di auguri creata per p.orlandi@avpm.it.",
       "nextRun": "Mar 31/03 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Mar-Gio 10:00",
+      "schedule": "Mer-Ven 06:00",
       "todayStatus": "skipped",
-      "todayTime": null,
+      "todayTime": "—",
       "todayNote": "Non programmato (lunedì)",
-      "todayDetails": "Verifica AML non prevista per il lunedì. Prossima esecuzione martedì.",
-      "nextRun": "Mar 31/03 10:00"
+      "todayDetails": "Task programmato solo mercoledì, giovedì e venerdì.",
+      "nextRun": "Mer 01/04 06:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "schedule": "Lun-Ven 08:00",
+      "schedule": "Lun-Sab 08:00",
       "todayStatus": "success",
       "todayTime": "08:00",
       "todayNote": "9 thread verificati · 0 nuovi inserimenti",
-      "todayDetails": "Scansione label 'Da firmare' (5 thread) e 'Da ricevere' (4 thread). Tutti i 9 thread già presenti in Notion. Nessun nuovo record creato. Database Monitoraggio Documenti aggiornato.",
+      "todayDetails": "Scansionate email con etichette 'Da firmare' (5 thread) e 'Da ricevere' (4 thread). Tutti i 9 thread già presenti in Notion. Database MONITORAGGIO DOCUMENTI aggiornato, nessun duplicato.",
       "nextRun": "Mar 31/03 08:00"
     },
     {
@@ -396,18 +396,18 @@ const DATA = {
       "schedule": "Lun-Ven 08:00/14:00",
       "todayStatus": "success",
       "todayTime": "08:00",
-      "todayNote": "5 clienti in attesa · 0 risposte trovate",
-      "todayDetails": "Monitoraggio mattino e pomeriggio completato. 5 record in attesa (Pepperpot, Cosmi, Protano x2, STR82L). Nessuna risposta con allegati trovata nelle ultime 48h. Nessun aggiornamento Notion necessario. Protano (REDDITI 2023) è il più datato: 12 giorni.",
+      "todayNote": "5 clienti in attesa · 0 risposte ricevute",
+      "todayDetails": "Mattino: 2 record in stato Inviato (Cosmi Giacomo, Protano Michele). Pomeriggio: 5 record totali (+ Pepperpot, STR82L, Protano REDDITI 2023 sollecitato). Nessuna risposta con allegati trovata. Nessun aggiornamento Notion effettuato.",
       "nextRun": "Mar 31/03 08:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Lun 09:00",
+      "schedule": "Lunedì 09:00",
       "todayStatus": "success",
       "todayTime": "09:00",
-      "todayNote": "1 sollecito · PROTANO MICHELE (12 gg attesa)",
-      "todayDetails": "Scansionati 10 record. 1 eleggibile (≥7 gg): PROTANO MICHELE Lettera di Incarico (18/03, 12 gg). Bozza sollecito creata in reply al thread originale. Notion aggiornato: stato → Sollecitato, N° Solleciti → 1. 4 clienti non ancora eleggibili (Pepperpot, Cosmi, Protano 2°, STR82L).",
+      "todayNote": "1 sollecito · PROTANO MICHELE (REDDITI 2023)",
+      "todayDetails": "Analizzati 10 record. 1 eleggibile (Protano Michele — Lettera di Incarico REDDITI 2023, inviata 18/03, 12 gg attesa). Bozza sollecito creata in Gmail, Notion aggiornato (stato → Sollecitato, 1 sollecito). 4 record diventeranno eleggibili nei prossimi giorni.",
       "nextRun": "Lun 06/04 09:00"
     },
     {
@@ -415,13 +415,21 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2 ore",
       "todayStatus": "success",
-      "todayTime": "16:05",
+      "todayTime": "18:05",
       "todayNote": "Dashboard aggiornata · 1 bozza reale",
-      "todayDetails": "Quinto aggiornamento del 30/03. Tutti i 7 task analizzati: 6 completati con successo + 1 skipped (AML non programmato lunedì). Bozze Gmail: 1 reale (preventivo STAYFIT). 2 bozze Protano e Orlandi non più presenti (inviate/eliminate). 2 template senza destinatario escluse.",
-      "nextRun": "30/03 18:00"
+      "todayDetails": "Aggiornamento serale. Tutti i task della giornata completati con successo. 1 bozza Gmail reale presente (preventivo Stayfit).",
+      "nextRun": "Lun 30/03 20:00"
     }
   ],
   "manualTasks": [
+    {
+      "id": "preventivo-stayfit-revoca-30mar",
+      "name": "Preventivo revoca amm.re Malci + inizio attività",
+      "date": "2026-03-30",
+      "time": "16:00",
+      "status": "running",
+      "note": "Elaborazione preventivi per STAYFIT: revoca amministratore Malci e inizio attività. Bozza email pronta per invio."
+    },
     {
       "id": "preventivi-skill-update-30mar",
       "name": "Aggiornamento skill Preventivi (sezionali SC/SP)",
@@ -444,7 +452,7 @@ const DATA = {
       "date": "2026-03-27",
       "time": "17:00",
       "status": "warning",
-      "note": "Verifica incrociata importi e CF: anomalia rilevata — CF 86000560580 non corrisponde ad alcuna comunicazione ADE Condominio Via Anicia 3. Importo totale confermato: €97.900,50."
+      "note": "Verifica incrociata importi e CF: anomalia rilevata — CF 86000560580 non corrisponde ad alcuna comunicazione ADE."
     },
     {
       "id": "iban-str82l-27mar",
@@ -452,13 +460,13 @@ const DATA = {
       "date": "2026-03-27",
       "time": "16:30",
       "status": "success",
-      "note": "Sostituito IBAN beneficiario C. Tecnorestauri: IT64R0622039440000001000026 (Cassa di Risparmio di Orvieto)."
+      "note": "Sostituito IBAN beneficiario C. Tecnorestauri nel contratto di cessione crediti STR82L SRL."
     },
     {
-      "id": "skill-linkedin-publisher-27mar",
+      "id": "linkedin-skill-update-27mar",
       "name": "Aggiornamento skill LinkedIn Publisher",
       "date": "2026-03-27",
-      "time": "15:00",
+      "time": "15:30",
       "status": "success",
       "note": "Aggiornata skill LinkedIn Publisher: emoji obbligatorie per ogni paragrafo, CTA finale con link al sito."
     },
@@ -476,7 +484,7 @@ const DATA = {
       "date": "2026-03-27",
       "time": "11:00",
       "status": "success",
-      "note": "Generato contratto di cessione crediti d’imposta STR82L SRL → C. Tecnorestauri."
+      "note": "Generato contratto di cessione crediti d'imposta STR82L SRL → C. Tecnorestauri."
     },
     {
       "id": "due-diligence-honiro-26mar",
@@ -484,7 +492,15 @@ const DATA = {
       "date": "2026-03-26",
       "time": "16:00",
       "status": "success",
-      "note": "Compilata Due Diligence per attestazione crediti d’imposta HONIRO SRL. 3 comunicazioni AdE analizzate."
+      "note": "Compilata Due Diligence per attestazione crediti d'imposta HONIRO SRL. 3 comunicazioni ADE verificate."
+    },
+    {
+      "id": "aml-honiro-26mar",
+      "name": "Adeguata verifica HONIRO SRL",
+      "date": "2026-03-26",
+      "time": "14:00",
+      "status": "success",
+      "note": "Scheda AV e registro antiriciclaggio compilati per HONIRO SRL. Caricamento su Notion completato."
     }
   ],
   "history": [
@@ -530,15 +546,15 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "19 email · diffida WE-NET urgente"
+          "note": "6 email · nessuna urgenza"
         },
         "auguri-clienti": {
-          "status": "skipped",
-          "note": "Nessun compleanno"
+          "status": "success",
+          "note": "Nessun compleanno trovato"
         },
         "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmato (sabato)"
+          "status": "success",
+          "note": "3 schede scadenza ≤ 30gg"
         }
       }
     },
@@ -548,15 +564,15 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Briefing completato"
+          "note": "8 email · urgenza Francesca Raponi"
         },
         "auguri-clienti": {
-          "status": "skipped",
-          "note": "Nessun compleanno"
+          "status": "success",
+          "note": "Nessun compleanno trovato"
         },
         "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmato (giovedì)"
+          "status": "success",
+          "note": "2 schede aggiornate"
         }
       }
     },
@@ -566,15 +582,15 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Briefing completato"
+          "note": "12 email · scadenza F24"
         },
         "auguri-clienti": {
-          "status": "skipped",
-          "note": "Nessun compleanno"
+          "status": "success",
+          "note": "Nessun compleanno trovato"
         },
         "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmato (mercoledì)"
+          "status": "success",
+          "note": "HONIRO SRL completata"
         }
       }
     }
