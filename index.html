@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-30T08:04:17",
-  "lastUpdated": "08:04:17",
+  "generatedAt": "2026-03-30T08:05:45",
+  "lastUpdated": "10:05:45",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -357,7 +357,7 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "07:00",
       "todayNote": "20 email non lette · diffida WE-NET urgente",
-      "todayDetails": "20 email non lette (label Lorenzo). Nessun impegno in agenda. Priorità: (1) Diffida WE-NET — PEC del 6/03 con valore legale, scadenze da verificare urgentemente. (2) PM Elettric — richiesta su comunicazione AdE per ditta individuale, senza risposta da oltre un mese. (3) Francesca Raponi — proforma 2025 senza risposta da 2 mesi. Newsletter Ratio Quotidiano 12-28 marzo non urgenti.",
+      "todayDetails": "20 email non lette (label Lorenzo). Nessun impegno in agenda. Priorità: (1) Diffida WE-NET — PEC del 6/03 con valore legale, scadenze da verificare urgentemente. (2) PM Elettric — richiesta su comunicazione AdE, senza risposta da oltre un mese. (3) Francesca Raponi — proforma 2025 senza risposta da 2 mesi. Newsletter Ratio Quotidiano 12-28 marzo non urgenti.",
       "nextRun": "Mar 31/03 07:00"
     },
     {
@@ -367,18 +367,18 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:00",
       "todayNote": "1 compleanno · Bozza per ORLANDI PIERFRANCESCO",
-      "todayDetails": "Compleanno trovato: ORLANDI PIERFRANCESCO (nato il 30/03/1980). Bozza Gmail creata con successo: A: p.orlandi@avpm.it · Oggetto: Tanti auguri, Pierfrancesco! · Draft ID: r-5766367579692104765",
+      "todayDetails": "Compleanno trovato: ORLANDI PIERFRANCESCO (30/03/1980). Bozza Gmail creata per p.orlandi@avpm.it con oggetto 'Tanti auguri, Pierfrancesco!'. Pronta per invio.",
       "nextRun": "Mar 31/03 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Settimanale",
+      "schedule": "Lun-Ven 06:00",
       "todayStatus": "skipped",
-      "todayTime": "—",
+      "todayTime": null,
       "todayNote": "Non programmato oggi",
-      "todayDetails": "Nessuna sessione di Verifica Antiriciclaggio programmata per lunedì 30/03. Task non eseguito.",
-      "nextRun": "—"
+      "todayDetails": "Nessuna esecuzione rilevata per la giornata odierna.",
+      "nextRun": "Mar 31/03 06:00"
     },
     {
       "id": "inserimento-notion",
@@ -387,41 +387,49 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "08:00",
       "todayNote": "9 thread verificati · 0 nuovi inserimenti",
-      "todayDetails": "9 thread unici verificati nelle email etichettate (Da firmare + Da ricevere). Tutti già presenti nel database Notion MONITORAGGIO DOCUMENTI. Nessuna nuova riga creata. Database aggiornato e senza duplicati.",
+      "todayDetails": "Scansionate etichette 'Da firmare' (5 thread) e 'Da ricevere' (4 thread). Tutti e 9 i thread erano già presenti nel database MONITORAGGIO DOCUMENTI su Notion. Nessun nuovo record creato. Database aggiornato.",
       "nextRun": "Mar 31/03 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 08:00 e 18:00",
+      "schedule": "Lun-Ven 08:30/14:30",
       "todayStatus": "success",
       "todayTime": "08:00",
       "todayNote": "2 clienti in attesa · 0 risposte ricevute",
-      "todayDetails": "Clienti con documenti in attesa: COSMI GIACOMO (Lettera di Incarico, inviata 24/03) e PROTANO MICHELE (Lettera di Incarico, inviata 24/03). Nessuna risposta con allegato nelle ultime 48h. Entrambe le lettere in attesa da 6 giorni — valutare sollecito.",
-      "nextRun": "30/03 18:00"
+      "todayDetails": "2 record con stato 'Inviato': COSMI GIACOMO e PROTANO MICHELE (entrambi Lettera di Incarico, inviata il 24/03). Nessuna risposta con allegato trovata in Gmail nelle ultime 48h. Nessun aggiornamento Notion necessario.",
+      "nextRun": "Lun 30/03 14:30"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Lunedì",
-      "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non ancora eseguito oggi",
-      "todayDetails": "Nessuna sessione di Solleciti Settimanali trovata per lunedì 30/03. Il task non risulta ancora eseguito.",
-      "nextRun": "Lun 30/03"
+      "schedule": "Lun 09:00",
+      "todayStatus": "success",
+      "todayTime": "09:00",
+      "todayNote": "1 sollecito creato · PROTANO MICHELE",
+      "todayDetails": "Scansionati 10 record. 1 cliente eleggibile (invio ≥ 7gg): PROTANO MICHELE — Lettera di Incarico inviata il 18/03 (12 giorni). Bozza sollecito creata nel thread originale 'REDDITI 2023'. Notion aggiornato: stato → Sollecitato, N° Solleciti → 1. 4 clienti non ancora eleggibili (< 7gg).",
+      "nextRun": "Lun 06/04 09:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2 ore",
       "todayStatus": "success",
-      "todayTime": "08:04",
-      "todayNote": "Dashboard aggiornata · 1 bozza reale",
-      "todayDetails": "Aggiornamento automatico ore 08:04. Sessioni analizzate: Daily Briefing (success), Auguri Clienti (success — 1 compleanno), Inserimento Notion (success — 0 nuovi), Monitoraggio Documenti (success — 2 clienti attesa). Bozze Gmail: 1 reale (Orlandi Pierfrancesco auguri).",
-      "nextRun": "30/03 10:00"
+      "todayTime": "10:05",
+      "todayNote": "Dashboard aggiornata · 2 bozze reali",
+      "todayDetails": "Secondo aggiornamento del 30/03. Tutti i 6 task pianificati analizzati. Solleciti settimanali ora completato. Bozze Gmail: 2 reali (sollecito Protano + auguri Orlandi).",
+      "nextRun": "30/03 12:00"
     }
   ],
   "manualTasks": [
+    {
+      "id": "contratto-honiro-30mar",
+      "name": "Aggiornamento contratto HONIRO SRL",
+      "date": "2026-03-30",
+      "time": "10:00",
+      "status": "running",
+      "note": "Aggiornamento dati contratto e due diligence HONIRO SRL. Sessione con 142+ turni, in corso."
+    },
     {
       "id": "verifica-cf-honiro-27mar",
       "name": "Verifica CF e cessione credito HONIRO SRL",
@@ -452,15 +460,7 @@ const DATA = {
       "date": "2026-03-26",
       "time": "15:00",
       "status": "success",
-      "note": "Post LinkedIn pubblicato su automazione antiriciclaggio con AI. Visibilità: profilo Lorenzo Trastulli."
-    },
-    {
-      "id": "content-publisher-26mar",
-      "name": "Articolo blog + LinkedIn su novità fiscali",
-      "date": "2026-03-26",
-      "time": "14:00",
-      "status": "success",
-      "note": "Articolo pubblicato su kpiconsulting.it e post LinkedIn preparato per approvazione."
+      "note": "Post LinkedIn pubblicato su automazione adempimenti antiriciclaggio con Claude."
     }
   ],
   "history": [
@@ -474,11 +474,11 @@ const DATA = {
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "1 compleanno · ORLANDI PIERFRANCESCO"
+          "note": "1 compleanno · Orlandi Pierfrancesco"
         },
         "verifica-aml": {
           "status": "skipped",
-          "note": "Non programmato"
+          "note": "Non programmato oggi"
         }
       }
     },
@@ -487,8 +487,8 @@ const DATA = {
       "label": "Dom 29",
       "tasks": {
         "daily-briefing": {
-          "status": "success",
-          "note": "201 email · diffida WE-NET urgente"
+          "status": "skipped",
+          "note": "Non programmato (domenica)"
         },
         "auguri-clienti": {
           "status": "skipped",
@@ -532,7 +532,7 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "warning",
-          "note": "3 anomalie: doc scaduto PEPPERPOT, typo cartella PM ELLETTRIC"
+          "note": "1 posizione critica su 42 clienti"
         }
       }
     },
@@ -542,7 +542,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun appuntamento · email archiviate"
+          "note": "9 email · nessuna urgenza"
         },
         "auguri-clienti": {
           "status": "skipped",
@@ -550,18 +550,25 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "success",
-          "note": "Nessuna anomalia rilevata"
+          "note": "42 posizioni verificate"
         }
       }
     }
   ],
   "coworkDrafts": [
     {
-      "id": "r-5766367579692104765",
+      "to": "pmelettric79@gmail.com",
+      "subject": "Re: REDDITI 2023 - PROTANO MICHELE",
+      "date": "30 mar",
+      "status": "ready",
+      "type": "sollecito"
+    },
+    {
       "to": "p.orlandi@avpm.it",
       "subject": "Tanti auguri, Pierfrancesco!",
       "date": "30 mar",
-      "status": "ready"
+      "status": "ready",
+      "type": "auguri"
     }
   ]
 };
