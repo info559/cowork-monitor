@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-29T22:04:03",
-  "lastUpdated": "22:04:03",
+  "generatedAt": "2026-03-30T08:04:17",
+  "lastUpdated": "08:04:17",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,69 +356,69 @@ const DATA = {
       "schedule": "Lun-Ven 07:00",
       "todayStatus": "success",
       "todayTime": "07:00",
-      "todayNote": "201 email non lette · diffida WE-NET urgente",
-      "todayDetails": "201 email non lette (label Lorenzo). Nessun impegno in agenda. Priorità: (1) Diffida WE-NET — PEC con valore legale da oltre 3 settimane, scadenze da verificare urgentemente. (2) PM Elettric — richiesta consulenza su comunicazione AdE per ditta individuale, senza risposta da oltre un mese. (3) Francesca Raponi — chiarimento proforma 2025 senza risposta da 2 mesi. Newsletter Ratio Quotidiano non urgenti.",
-      "nextRun": "Lun 30/03 07:00"
+      "todayNote": "20 email non lette · diffida WE-NET urgente",
+      "todayDetails": "20 email non lette (label Lorenzo). Nessun impegno in agenda. Priorità: (1) Diffida WE-NET — PEC del 6/03 con valore legale, scadenze da verificare urgentemente. (2) PM Elettric — richiesta su comunicazione AdE per ditta individuale, senza risposta da oltre un mese. (3) Francesca Raponi — proforma 2025 senza risposta da 2 mesi. Newsletter Ratio Quotidiano 12-28 marzo non urgenti.",
+      "nextRun": "Mar 31/03 07:00"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
       "schedule": "Ogni giorno 05:00",
-      "todayStatus": "skipped",
+      "todayStatus": "success",
       "todayTime": "05:00",
-      "todayNote": "Nessun compleanno il 29/03",
-      "todayDetails": "Verificati 151 clienti nel database ANAGRAFICA CLIENTI: 111 con data di nascita. Nessuno nato il 29 marzo.",
-      "nextRun": "Lun 30/03 05:00"
+      "todayNote": "1 compleanno · Bozza per ORLANDI PIERFRANCESCO",
+      "todayDetails": "Compleanno trovato: ORLANDI PIERFRANCESCO (nato il 30/03/1980). Bozza Gmail creata con successo: A: p.orlandi@avpm.it · Oggetto: Tanti auguri, Pierfrancesco! · Draft ID: r-5766367579692104765",
+      "nextRun": "Mar 31/03 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Lun/Mer/Ven 08:00",
+      "schedule": "Settimanale",
       "todayStatus": "skipped",
       "todayTime": "—",
-      "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Task attivo solo lunedì, mercoledì e venerdì. Ultimo eseguito venerdì 27/03: 3 anomalie rilevate (documento scaduto PEPPERPOT, typo cartella PM ELLETTRIC). Prossima esecuzione lunedì 30/03.",
-      "nextRun": "Lun 30/03 08:00"
+      "todayNote": "Non programmato oggi",
+      "todayDetails": "Nessuna sessione di Verifica Antiriciclaggio programmata per lunedì 30/03. Task non eseguito.",
+      "nextRun": "—"
     },
     {
       "id": "inserimento-notion",
-      "name": "Inserimento Notion",
-      "schedule": "Lun-Ven 09:00",
-      "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Task attivo solo nei giorni feriali. Prossima esecuzione lunedì 30/03.",
-      "nextRun": "Lun 30/03 09:00"
+      "name": "Inserimento Notion da Gmail",
+      "schedule": "Lun-Ven 08:00",
+      "todayStatus": "success",
+      "todayTime": "08:00",
+      "todayNote": "9 thread verificati · 0 nuovi inserimenti",
+      "todayDetails": "9 thread unici verificati nelle email etichettate (Da firmare + Da ricevere). Tutti già presenti nel database Notion MONITORAGGIO DOCUMENTI. Nessuna nuova riga creata. Database aggiornato e senza duplicati.",
+      "nextRun": "Mar 31/03 08:00"
     },
     {
-      "id": "monitoraggio-doc",
+      "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 10:00 e 16:00",
-      "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Task attivo solo nei giorni feriali. Ultimo eseguito sabato 28/03: 5 clienti in attesa di documenti. Prossima esecuzione lunedì 30/03.",
-      "nextRun": "Lun 30/03 10:00"
+      "schedule": "Lun-Ven 08:00 e 18:00",
+      "todayStatus": "success",
+      "todayTime": "08:00",
+      "todayNote": "2 clienti in attesa · 0 risposte ricevute",
+      "todayDetails": "Clienti con documenti in attesa: COSMI GIACOMO (Lettera di Incarico, inviata 24/03) e PROTANO MICHELE (Lettera di Incarico, inviata 24/03). Nessuna risposta con allegato nelle ultime 48h. Entrambe le lettere in attesa da 6 giorni — valutare sollecito.",
+      "nextRun": "30/03 18:00"
     },
     {
-      "id": "solleciti",
+      "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Ven 16:00",
+      "schedule": "Lunedì",
       "todayStatus": "skipped",
       "todayTime": "—",
-      "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Task attivo solo il venerdì. Prossima esecuzione venerdì 03/04.",
-      "nextRun": "Ven 03/04 16:00"
+      "todayNote": "Non ancora eseguito oggi",
+      "todayDetails": "Nessuna sessione di Solleciti Settimanali trovata per lunedì 30/03. Il task non risulta ancora eseguito.",
+      "nextRun": "Lun 30/03"
     },
     {
       "id": "aggiorna-monitor",
-      "name": "Aggiorna Monitor",
-      "schedule": "Ogni ora 8:00-22:00",
+      "name": "Aggiorna Cowork Monitor",
+      "schedule": "Ogni 2 ore",
       "todayStatus": "success",
-      "todayTime": "22:04",
-      "todayNote": "Dashboard aggiornata · 0 bozze reali · 9° aggiornamento della giornata",
-      "todayDetails": "Aggiornamento automatico ore 22:04. Sessioni analizzate: Daily Briefing (success), Auguri Clienti (skipped), task domenicali non programmati. Bozze Gmail: 2 trovate, entrambe template senza destinatario → non visualizzate.",
-      "nextRun": "Lun 30/03 08:00"
+      "todayTime": "08:04",
+      "todayNote": "Dashboard aggiornata · 1 bozza reale",
+      "todayDetails": "Aggiornamento automatico ore 08:04. Sessioni analizzate: Daily Briefing (success), Auguri Clienti (success — 1 compleanno), Inserimento Notion (success — 0 nuovi), Monitoraggio Documenti (success — 2 clienti attesa). Bozze Gmail: 1 reale (Orlandi Pierfrancesco auguri).",
+      "nextRun": "30/03 10:00"
     }
   ],
   "manualTasks": [
@@ -464,6 +464,24 @@ const DATA = {
     }
   ],
   "history": [
+    {
+      "date": "2026-03-30",
+      "label": "Lun 30",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "20 email · diffida WE-NET urgente"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "1 compleanno · ORLANDI PIERFRANCESCO"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmato"
+        }
+      }
+    },
     {
       "date": "2026-03-29",
       "label": "Dom 29",
@@ -535,27 +553,17 @@ const DATA = {
           "note": "Nessuna anomalia rilevata"
         }
       }
-    },
-    {
-      "date": "2026-03-25",
-      "label": "Mer 25",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "Agenda libera"
-        },
-        "auguri-clienti": {
-          "status": "skipped",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmato (mercoledì)"
-        }
-      }
     }
   ],
-  "coworkDrafts": []
+  "coworkDrafts": [
+    {
+      "id": "r-5766367579692104765",
+      "to": "p.orlandi@avpm.it",
+      "subject": "Tanti auguri, Pierfrancesco!",
+      "date": "30 mar",
+      "status": "ready"
+    }
+  ]
 };
 
 // ══════════════════════════════════════════════
