@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-30T20:07:00",
-  "lastUpdated": "20:07:00",
+  "generatedAt": "2026-03-30T22:05:27",
+  "lastUpdated": "22:05:27",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,38 +367,38 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:00",
       "todayNote": "1 compleanno · Bozza per ORLANDI PIERFRANCESCO",
-      "todayDetails": "Trovato 1 compleanno: ORLANDI PIERFRANCESCO (nato il 30/03/1980). Bozza Gmail creata con auguri a p.orlandi@avpm.it. Bozza già inviata o eliminata (non più presente nelle bozze Gmail).",
+      "todayDetails": "Trovato 1 compleanno: ORLANDI PIERFRANCESCO (nato 30/03/1980). Bozza Gmail creata con oggetto 'Tanti auguri, Pierfrancesco!' a p.orlandi@avpm.it. Pronta per revisione e invio.",
       "nextRun": "Mar 31/03 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ven 08:00",
+      "schedule": "Mer-Ven 08:00",
       "todayStatus": "skipped",
       "todayTime": "-",
-      "todayNote": "Non programmata oggi (lunedì)",
-      "todayDetails": "La verifica antiriciclaggio è programmata solo il venerdì. Ultima esecuzione: 27/03 con 3 anomalie riscontrate (documento scaduto Pepperpot, incongruenza nome cartella PM Elettric).",
-      "nextRun": "Ven 03/04 08:00"
+      "todayNote": "Non programmata (lunedì)",
+      "todayDetails": "La verifica antiriciclaggio è pianificata solo Mer-Ven. Oggi lunedì non era prevista.",
+      "nextRun": "Mer 01/04 08:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "schedule": "Lun-Ven 09:00, 15:00",
+      "schedule": "Lun-Ven 09:00",
       "todayStatus": "success",
       "todayTime": "09:00",
       "todayNote": "9 thread verificati · 0 nuovi record",
-      "todayDetails": "Scansionate 13 email (9 thread unici) nelle etichette 'Da firmare' (5 thread) e 'Da ricevere' (4 thread). Tutti già presenti nel database MONITORAGGIO DOCUMENTI su Notion. Nessun nuovo record creato.",
+      "todayDetails": "Scansionate 11 email 'Da firmare' (5 thread) e 5 email 'Da ricevere' (4 thread). Tutti i 9 thread già presenti in Notion. Nessuna nuova riga creata.",
       "nextRun": "Mar 31/03 09:00"
     },
     {
       "id": "monitoraggio-docs",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 10:00, 16:00",
+      "schedule": "Lun-Ven 08:00/16:00",
       "todayStatus": "success",
-      "todayTime": "16:00",
-      "todayNote": "5 clienti in attesa · 0 risposte trovate",
-      "todayDetails": "Monitoraggio mattino e pomeriggio completati. 5 clienti in attesa: Pepperpot (doc identità), Cosmi Giacomo (lettera incarico), Protano Michele x2 (lettera incarico + REDDITI 2023), STR82L (contratto). Nessuna risposta con allegati nelle ultime 48h.",
-      "nextRun": "Mar 31/03 10:00"
+      "todayTime": "08:00/16:00",
+      "todayNote": "2-5 clienti in attesa · 0 risposte trovate",
+      "todayDetails": "Mattino: 2 record in attesa (Cosmi Giacomo, Protano Michele), 0 risposte con allegati. Pomeriggio: 5 record in attesa (inclusi Pepperpot, STR82L), 0 risposte. Nessun aggiornamento Notion effettuato.",
+      "nextRun": "Mar 31/03 08:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -406,8 +406,8 @@ const DATA = {
       "schedule": "Lun 09:00",
       "todayStatus": "success",
       "todayTime": "09:00",
-      "todayNote": "1 sollecito inviato · Protano Michele",
-      "todayDetails": "Analizzati 10 record. 1 bozza sollecito creata per PROTANO MICHELE (Lettera di Incarico inviata 18/03, 12 gg di attesa, 1° sollecito). Notion aggiornato: stato → Sollecitato. 4 record non ancora eleggibili (< 7 giorni). Prossimi eleggibili: 31/03-03/04.",
+      "todayNote": "1 sollecito · PROTANO MICHELE",
+      "todayDetails": "1 bozza sollecito creata per PROTANO MICHELE (Lettera di Incarico inviata 18/03, 12 gg di attesa, 1° sollecito). Notion aggiornato: stato → Sollecitato. 4 record non ancora eleggibili (< 7 giorni). Prossimi eleggibili: 31/03-03/04.",
       "nextRun": "Lun 06/04 09:00"
     },
     {
@@ -415,9 +415,9 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2 ore",
       "todayStatus": "success",
-      "todayTime": "20:07",
+      "todayTime": "22:05",
       "todayNote": "Dashboard aggiornata · 1 bozza reale",
-      "todayDetails": "Aggiornamento serale. Tutti i task della giornata completati con successo. 1 bozza Gmail reale presente (preventivo Stayfit). Bozza auguri Orlandi già gestita.",
+      "todayDetails": "Aggiornamento serale. Tutti i task della giornata completati con successo. 1 bozza Gmail reale presente (preventivo STAYFIT). Bozza auguri Orlandi già gestita.",
       "nextRun": "Mar 31/03 08:00"
     }
   ],
@@ -581,10 +581,8 @@ const DATA = {
   ],
   "coworkDrafts": [
     {
-      "id": "r-3607373463671572990",
-      "subject": "PREVENTIVI REVOCA AMM.RE MALCI+INIZIO ATTIVITA'",
       "to": "stayfit.subiaco@gmail.com",
-      "toName": "STAYFIT",
+      "subject": "PREVENTIVI REVOCA AMM.RE MALCI+INIZIO ATTIVITÀ",
       "date": "30 mar",
       "status": "ready"
     }
