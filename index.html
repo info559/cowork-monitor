@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-31T18:07:31.026Z",
-  "lastUpdated": "20:07:31",
+  "generatedAt": "2026-03-31T20:05:09.000Z",
+  "lastUpdated": "22:05:09",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,47 +367,47 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:00",
       "todayNote": "1 compleanno · Galimberti Paolo (80 anni)",
-      "todayDetails": "Trovato 1 cliente con compleanno oggi: GALIMBERTI PAOLO (nato 31/03/1946, 80 anni). Bozza Gmail creata per paologalimberti@icloud.com — oggetto: Tanti auguri, Paolo!",
+      "todayDetails": "Trovato 1 compleanno: GALIMBERTI PAOLO, nato 31/03/1946, compie 80 anni. Bozza Gmail creata e inviata a paologalimberti@icloud.com. Oggetto: Tanti auguri, Paolo!",
       "nextRun": "Mer 01/04 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Lun-Mer-Ven 06:00",
+      "schedule": "Ven 09:00",
       "todayStatus": "skipped",
-      "todayTime": "—",
+      "todayTime": null,
       "todayNote": "Non programmata (martedì)",
-      "todayDetails": "La verifica antiriciclaggio è pianificata per lunedì, mercoledì e venerdì. Oggi (martedì) non è prevista l'esecuzione.",
-      "nextRun": "Mer 01/04 06:00"
+      "todayDetails": "Il task è schedulato solo il venerdì.",
+      "nextRun": "Ven 03/04 09:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "schedule": "Lun-Ven 07:30 / 14:00",
+      "schedule": "Lun-Ven 07:30 / 12:00 / 17:00",
       "todayStatus": "success",
       "todayTime": "07:30",
       "todayNote": "0 nuovi record · DB già aggiornato",
-      "todayDetails": "Scansionate 13 email (8 Da firmare + 5 Da ricevere) in 9 thread unici. Tutti i thread risultano già presenti nel database MONITORAGGIO DOCUMENTI su Notion. Nessun nuovo record creato.",
+      "todayDetails": "3 esecuzioni oggi. Controllate etichette Da firmare (5 thread) e Da ricevere (4 thread). Tutti i thread già presenti in Notion. 0 nuove righe create.",
       "nextRun": "Mer 01/04 07:30"
     },
     {
-      "id": "monitoraggio-docs",
+      "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 09:00 / 16:00",
+      "schedule": "Lun-Ven 09:30 / 16:00",
       "todayStatus": "success",
       "todayTime": "16:00",
-      "todayNote": "1 risposta · PEPPERPOT → Ricevuto · 4 in attesa",
-      "todayDetails": "5 record in attesa controllati. Risposta trovata per PEPPERPOT S.R.L. (allegati C.I. e passaporto ricevuti il 31/03 ore 09:20). Record Notion aggiornato a stato Ricevuto. Ancora in attesa: COSMI GIACOMO, PROTANO MICHELE (x2), STR82L S.R.L.",
-      "nextRun": "Mer 01/04 09:00"
+      "todayNote": "1 risposta PEPPERPOT · 4 in attesa",
+      "todayDetails": "5 record esaminati. PEPPERPOT S.R.L.: risposta ricevuta con allegati C.I. e passaporto, record Notion aggiornato a Ricevuto. Ancora in attesa: COSMI GIACOMO, PROTANO MICHELE (x2), STR82L S.R.L.",
+      "nextRun": "Mer 01/04 09:30"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
       "schedule": "Lun 10:00",
       "todayStatus": "skipped",
-      "todayTime": "—",
+      "todayTime": null,
       "todayNote": "Non programmato (martedì)",
-      "todayDetails": "I solleciti settimanali sono pianificati per il lunedì. Ultimo run: 30/03 — 1 sollecito creato per PROTANO MICHELE (Lettera di Incarico, 12 gg di attesa).",
+      "todayDetails": "Il task è schedulato solo il lunedì. Ultima esecuzione: 30/03 con 1 sollecito creato per PROTANO MICHELE.",
       "nextRun": "Lun 06/04 10:00"
     },
     {
@@ -415,9 +415,9 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Lun-Ven 13:00 / 18:00",
       "todayStatus": "success",
-      "todayTime": "20:07",
+      "todayTime": "22:05",
       "todayNote": "Dashboard aggiornata · 0 bozze reali",
-      "todayDetails": "Analizzate 40 sessioni recenti. Letti transcript di 8 task pianificati e 3 task manuali. 2 bozze Gmail trovate ma entrambe template senza destinatario (escluse). Bozza auguri Galimberti e sollecito Protano già inviate.",
+      "todayDetails": "Analizzate 40 sessioni recenti. Letti transcript di 7 task pianificati e 3 task manuali. 2 bozze Gmail trovate ma entrambe template senza destinatario (escluse). Bozza auguri Galimberti già inviata.",
       "nextRun": "Mer 01/04 13:00"
     }
   ],
@@ -428,55 +428,63 @@ const DATA = {
       "date": "2026-03-31",
       "time": "17:30",
       "status": "warning",
-      "note": "Tentativo aggiornamento SKILL.md antiriciclaggio: cartella .claude/skills in sola lettura. File aggiornato salvato in AGENTE ANTIRICICLAGGIO per installazione manuale."
+      "note": "Tentativo aggiornamento SKILL.md: cartella .claude/skills in sola lettura. File salvato in AGENTE ANTIRICICLAGGIO per sostituzione manuale."
     },
     {
-      "id": "preventivo-revoca-31mar",
-      "name": "Preventivo revoca amm.re + inizio attività STAYFIT",
+      "id": "preventivi-stayfit-31mar",
+      "name": "Preventivi STAY FIT S.S.D. A R.L.",
       "date": "2026-03-31",
-      "time": "09:42",
+      "time": "16:00",
       "status": "success",
-      "note": "Preventivi 002_SC (revoca amm.re Malci) e 003_SC (SCIA + inizio attività CCIAA) rigenerati per STAYFIT S.S.D. A R.L."
+      "note": "Creati preventivi 002_SC (revoca amministratore €305) e 003_SC (SCIA palestra + CCIAA €430). Corretti da _SP a _SC."
     },
     {
-      "id": "due-diligence-honiro-30mar",
-      "name": "Aggiornamento Due Diligence HONIRO SRL",
+      "id": "honiro-duediligence-30mar",
+      "name": "Due Diligence HONIRO SRL",
+      "date": "2026-03-30",
+      "time": "21:00",
+      "status": "success",
+      "note": "Aggiornato frontespizio: rimossa riga visto di conformità. Titolo ora solo Attestazione credito d'imposta."
+    },
+    {
+      "id": "solleciti-30mar-auto",
+      "name": "Solleciti settimanali (automatico)",
+      "date": "2026-03-30",
+      "time": "10:00",
+      "status": "success",
+      "note": "1 sollecito creato: PROTANO MICHELE (Lettera di Incarico, 12 gg attesa)."
+    },
+    {
+      "id": "monitoraggio-pm-30mar",
+      "name": "Monitoraggio documenti pomeridiano",
       "date": "2026-03-30",
       "time": "16:00",
       "status": "success",
-      "note": "Rimossa riga visto di conformità dal frontespizio. File aggiornato e salvato."
+      "note": "Nessuna risposta trovata. 5 record ancora in attesa."
     },
     {
-      "id": "contratto-honiro-update-30mar",
-      "name": "Aggiornamento contratto HONIRO SRL",
+      "id": "notion-gmail-30mar",
+      "name": "Inserimento Notion da Gmail",
       "date": "2026-03-30",
-      "time": "14:00",
+      "time": "12:00",
       "status": "success",
-      "note": "Aggiornati dati amministratore nel contratto di incarico HONIRO SRL."
+      "note": "0 nuovi record. DB Notion già aggiornato."
     },
     {
-      "id": "preventivi-template-28mar",
-      "name": "Aggiornamento template preventivi",
-      "date": "2026-03-28",
-      "time": "10:00",
+      "id": "auguri-30mar",
+      "name": "Auguri clienti (automatico)",
+      "date": "2026-03-30",
+      "time": "05:00",
       "status": "success",
-      "note": "Template preventivi KPI e LT aggiornati con nuovi layout e placeholder."
+      "note": "1 compleanno: Orlandi Pierfrancesco."
     },
     {
-      "id": "replace-company-data-27mar",
-      "name": "Sostituzione dati società in documenti",
-      "date": "2026-03-27",
-      "time": "15:00",
+      "id": "briefing-30mar",
+      "name": "Daily Briefing",
+      "date": "2026-03-30",
+      "time": "07:00",
       "status": "success",
-      "note": "Aggiornati dati KPI Consulting in template e documenti base."
-    },
-    {
-      "id": "honiro-contratto-27mar",
-      "name": "Creazione contratto HONIRO SRL",
-      "date": "2026-03-27",
-      "time": "11:00",
-      "status": "success",
-      "note": "Contratto di incarico professionale creato per HONIRO SRL — crediti d'imposta."
+      "note": "Nessun evento calendario. 3 email prioritarie segnalate."
     }
   ],
   "history": [
@@ -486,7 +494,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "1 scadenza F24 OSEN · diffida WE-NET urgente"
+          "note": "1 scadenza F24 OSEN · diffida WE-NET"
         },
         "auguri-clienti": {
           "status": "success",
@@ -530,7 +538,7 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "success",
-          "note": "3 anomalie · doc scaduto Pepperpot"
+          "note": "Registro OK · 2 schede AV in scadenza"
         }
       }
     },
@@ -540,7 +548,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento · 3 email urgenti arretrate"
+          "note": "1 scadenza · 3 email prioritarie"
         },
         "auguri-clienti": {
           "status": "success",
@@ -554,11 +562,11 @@ const DATA = {
     },
     {
       "date": "2026-03-25",
-      "label": "Mar 25",
+      "label": "Mer 25",
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento calendario · 3 email urgenti"
+          "note": "Nessun evento · 2 email urgenti"
         },
         "auguri-clienti": {
           "status": "success",
@@ -566,7 +574,7 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "skipped",
-          "note": "Non programmata (martedì)"
+          "note": "Non programmata (mercoledì)"
         }
       }
     }
