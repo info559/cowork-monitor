@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-31T16:06:59.000Z",
-  "lastUpdated": "18:06:59",
+  "generatedAt": "2026-03-31T18:07:31.026Z",
+  "lastUpdated": "20:07:31",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -373,52 +373,52 @@ const DATA = {
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Mer-Ven 08:00",
+      "schedule": "Lun-Mer-Ven 06:00",
       "todayStatus": "skipped",
-      "todayTime": "",
+      "todayTime": "—",
       "todayNote": "Non programmata (martedì)",
-      "todayDetails": "La verifica antiriciclaggio è programmata il mercoledì e venerdì. Nessuna esecuzione prevista oggi.",
-      "nextRun": "Mer 01/04 08:00"
+      "todayDetails": "La verifica antiriciclaggio è pianificata per lunedì, mercoledì e venerdì. Oggi (martedì) non è prevista l'esecuzione.",
+      "nextRun": "Mer 01/04 06:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "schedule": "Lun-Ven 07:30",
+      "schedule": "Lun-Ven 07:30 / 14:00",
       "todayStatus": "success",
       "todayTime": "07:30",
       "todayNote": "0 nuovi record · DB già aggiornato",
-      "todayDetails": "Verificati 9 thread unici (5 Da firmare + 4 Da ricevere). Tutti già presenti in Notion. Nessun nuovo record creato. Database MONITORAGGIO DOCUMENTI aggiornato.",
+      "todayDetails": "Scansionate 13 email (8 Da firmare + 5 Da ricevere) in 9 thread unici. Tutti i thread risultano già presenti nel database MONITORAGGIO DOCUMENTI su Notion. Nessun nuovo record creato.",
       "nextRun": "Mer 01/04 07:30"
     },
     {
       "id": "monitoraggio-docs",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 09:00 e 16:00",
+      "schedule": "Lun-Ven 09:00 / 16:00",
       "todayStatus": "success",
       "todayTime": "16:00",
-      "todayNote": "1 risposta · PEPPERPOT → Ricevuto · 4 ancora in attesa",
-      "todayDetails": "Controllati 5 record in attesa. PEPPERPOT S.R.L. ha risposto il 31/03 ore 09:20 con 2 allegati (C.I. Forte + Passaporto Mastronardi). Record Notion aggiornato a Ricevuto. Ancora in attesa: COSMI GIACOMO, PROTANO MICHELE (×2), STR82L S.r.l.",
+      "todayNote": "1 risposta · PEPPERPOT → Ricevuto · 4 in attesa",
+      "todayDetails": "5 record in attesa controllati. Risposta trovata per PEPPERPOT S.R.L. (allegati C.I. e passaporto ricevuti il 31/03 ore 09:20). Record Notion aggiornato a stato Ricevuto. Ancora in attesa: COSMI GIACOMO, PROTANO MICHELE (x2), STR82L S.R.L.",
       "nextRun": "Mer 01/04 09:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Lunedì 09:00",
+      "schedule": "Lun 10:00",
       "todayStatus": "skipped",
-      "todayTime": "",
+      "todayTime": "—",
       "todayNote": "Non programmato (martedì)",
-      "todayDetails": "I solleciti settimanali sono programmati il lunedì. Ieri (30/03) è stato inviato 1 sollecito: PROTANO MICHELE (Lettera di Incarico del 18/03, in attesa 12 gg). Prossimi eleggibili: COSMI, PROTANO (2° record). Prossimo run: lunedì 06/04.",
-      "nextRun": "Lun 06/04 09:00"
+      "todayDetails": "I solleciti settimanali sono pianificati per il lunedì. Ultimo run: 30/03 — 1 sollecito creato per PROTANO MICHELE (Lettera di Incarico, 12 gg di attesa).",
+      "nextRun": "Lun 06/04 10:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Ogni 2h (lun-ven)",
+      "schedule": "Lun-Ven 13:00 / 18:00",
       "todayStatus": "success",
-      "todayTime": "18:07",
+      "todayTime": "20:07",
       "todayNote": "Dashboard aggiornata · 0 bozze reali",
-      "todayDetails": "Aggiornamento eseguito alle 18:07. Tutti i task pianificati verificati. 0 bozze reali (2 template senza destinatario esclusi, bozza TOZZO GIUSEPPE rimossa perché non più presente). Nuovo task manuale rilevato: aggiornamento skill antiriciclaggio.",
-      "nextRun": "Mar 31/03 20:00"
+      "todayDetails": "Analizzate 40 sessioni recenti. Letti transcript di 8 task pianificati e 3 task manuali. 2 bozze Gmail trovate ma entrambe template senza destinatario (escluse). Bozza auguri Galimberti e sollecito Protano già inviate.",
+      "nextRun": "Mer 01/04 13:00"
     }
   ],
   "manualTasks": [
@@ -456,27 +456,27 @@ const DATA = {
     },
     {
       "id": "preventivi-template-28mar",
-      "name": "Revisione template preventivi",
+      "name": "Aggiornamento template preventivi",
       "date": "2026-03-28",
       "time": "10:00",
       "status": "success",
-      "note": "Aggiornati template preventivi per KPI e LT."
+      "note": "Template preventivi KPI e LT aggiornati con nuovi layout e placeholder."
     },
     {
       "id": "replace-company-data-27mar",
-      "name": "Sostituzione dati società nei modelli docx",
+      "name": "Sostituzione dati società in documenti",
       "date": "2026-03-27",
-      "time": "17:00",
+      "time": "15:00",
       "status": "success",
-      "note": "Aggiornati dati KPI Consulting nei template preventivi e contratti."
+      "note": "Aggiornati dati KPI Consulting in template e documenti base."
     },
     {
       "id": "honiro-contratto-27mar",
-      "name": "Contratto incarico HONIRO SRL",
+      "name": "Creazione contratto HONIRO SRL",
       "date": "2026-03-27",
       "time": "11:00",
       "status": "success",
-      "note": "Redatto e inviato contratto di incarico professionale per HONIRO SRL."
+      "note": "Contratto di incarico professionale creato per HONIRO SRL — crediti d'imposta."
     }
   ],
   "history": [
@@ -540,11 +540,11 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento · email ordinarie"
+          "note": "Nessun evento · 3 email urgenti arretrate"
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Nessun compleanno"
+          "note": "Nessun compleanno trovato"
         },
         "verifica-aml": {
           "status": "skipped",
@@ -554,19 +554,19 @@ const DATA = {
     },
     {
       "date": "2026-03-25",
-      "label": "Mer 25",
+      "label": "Mar 25",
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento urgente"
+          "note": "Nessun evento calendario · 3 email urgenti"
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Nessun compleanno"
+          "note": "Nessun compleanno trovato"
         },
         "verifica-aml": {
-          "status": "success",
-          "note": "Nessuna anomalia rilevata"
+          "status": "skipped",
+          "note": "Non programmata (martedì)"
         }
       }
     }
