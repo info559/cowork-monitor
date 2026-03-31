@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-31T12:06:26.743Z",
-  "lastUpdated": "14:06:26",
+  "generatedAt": "2026-03-31T14:04:26.000Z",
+  "lastUpdated": "16:04:26",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -366,14 +366,14 @@ const DATA = {
       "schedule": "Ogni giorno 05:00",
       "todayStatus": "success",
       "todayTime": "05:00",
-      "todayNote": "1 compleanno · Bozza per GALIMBERTI PAOLO (80 anni)",
-      "todayDetails": "Trovato 1 compleanno: GALIMBERTI PAOLO — nato il 31/03/1946, compie 80 anni. Bozza email creata e pronta per invio a paologalimberti@icloud.com. Oggetto: Tanti auguri, Paolo!",
+      "todayNote": "1 compleanno · Galimberti Paolo (80 anni)",
+      "todayDetails": "Cliente trovato: GALIMBERTI PAOLO, nato il 31/03/1946, compie 80 anni. Bozza Gmail creata per paologalimberti@icloud.com. Oggetto: Tanti auguri, Paolo!",
       "nextRun": "Mer 01/04 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Mer/Ven 08:00",
+      "schedule": "Mer e Ven 08:00",
       "todayStatus": "skipped",
       "todayTime": "",
       "todayNote": "Non programmata (martedì)",
@@ -395,10 +395,10 @@ const DATA = {
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Ven 09:00 e 16:00",
       "todayStatus": "success",
-      "todayTime": "09:00",
-      "todayNote": "5 record pendenti · 0 risposte nelle ultime 48h",
-      "todayDetails": "Clienti in attesa: PEPPERPOT S.R.L. (doc identità), STR82L S.R.L. (contratto), PROTANO MICHELE (2 lettere incarico — 1 già sollecitata il 30/03), COSMI GIACOMO (lettera incarico). Nessuna risposta ricevuta nelle ultime 48h.",
-      "nextRun": "Mar 31/03 16:00"
+      "todayTime": "16:00",
+      "todayNote": "1 risposta ricevuta · PEPPERPOT → Ricevuto · 4 record ancora in attesa",
+      "todayDetails": "Run pomeriggio (16:00): PEPPERPOT S.R.L. ha risposto con C.I. Forte e Passaporto Mastronardi — record Notion aggiornato a Ricevuto. Ancora in attesa: STR82L S.R.L. (contratto, 27/03), PROTANO MICHELE (lettera incarico 24/03), PROTANO MICHELE (lettera incarico sollecitata 30/03), COSMI GIACOMO (lettera incarico 24/03).",
+      "nextRun": "Mer 01/04 09:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -406,8 +406,8 @@ const DATA = {
       "schedule": "Lunedì 09:00",
       "todayStatus": "skipped",
       "todayTime": "",
-      "todayNote": "Non programmato (martedì) · Eseguito ieri: 1 sollecito PROTANO",
-      "todayDetails": "Solleciti eseguiti ieri (lun 30/03): 1 bozza sollecito creata per PROTANO MICHELE (Lettera Incarico, attesa 12 gg). Prossimi eleggibili dal 31/03: PEPPERPOT, COSMI, PROTANO (2° record). Prossimo run: lunedì 06/04.",
+      "todayNote": "Non programmato (martedì) · ieri: 1 sollecito PROTANO",
+      "todayDetails": "I solleciti settimanali sono programmati il lunedì. Ieri (30/03) è stato inviato 1 sollecito: PROTANO MICHELE (Lettera di Incarico del 18/03, in attesa 12 gg). Prossimi eleggibili: PEPPERPOT ricevuto, COSMI, PROTANO (2° record). Prossimo run: lunedì 06/04.",
       "nextRun": "Lun 06/04 09:00"
     },
     {
@@ -415,10 +415,10 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2h (lun-ven)",
       "todayStatus": "success",
-      "todayTime": "14:06",
-      "todayNote": "Dashboard aggiornata · 0 bozze reali",
-      "todayDetails": "Aggiornamento eseguito alle 14:06. Tutti i task pianificati verificati. 2 bozze Gmail presenti sono template senza destinatario (escluse). Commit su GitHub Pages.",
-      "nextRun": "Mar 31/03 16:05"
+      "todayTime": "16:04",
+      "todayNote": "Dashboard aggiornata · 1 bozza reale",
+      "todayDetails": "Aggiornamento eseguito alle 16:04. Tutti i task pianificati verificati. 1 bozza reale con destinatario: Documenti TOZZO GIUSEPPE (progetti@deltagroups.it). 2 template senza destinatario esclusi. Commit su GitHub Pages.",
+      "nextRun": "Mar 31/03 18:05"
     }
   ],
   "manualTasks": [
@@ -436,15 +436,23 @@ const DATA = {
       "date": "2026-03-30",
       "time": "16:00",
       "status": "success",
-      "note": "Rimossa riga visto di conformità dal frontespizio Due Diligence HONIRO SRL."
+      "note": "Rimossa riga visto di conformità dal documento. File aggiornato e salvato."
     },
     {
-      "id": "preventivi-modelli-30mar",
-      "name": "Aggiornamento modelli preventivi SC/SP",
+      "id": "contratto-honiro-update-30mar",
+      "name": "Aggiornamento contratto HONIRO SRL",
       "date": "2026-03-30",
+      "time": "14:00",
+      "status": "success",
+      "note": "Aggiornati dati amministratore nel contratto di incarico HONIRO SRL."
+    },
+    {
+      "id": "preventivi-template-28mar",
+      "name": "Revisione template preventivi",
+      "date": "2026-03-28",
       "time": "10:00",
       "status": "success",
-      "note": "Aggiornati modelli SC e SP con sezionali separati per KPI e LT."
+      "note": "Aggiornati template preventivi per KPI e LT."
     },
     {
       "id": "replace-company-data-27mar",
@@ -479,10 +487,6 @@ const DATA = {
         "verifica-aml": {
           "status": "skipped",
           "note": "Non programmata (martedì)"
-        },
-        "aggiorna-monitor": {
-          "status": "success",
-          "note": "Dashboard aggiornata 14:06"
         }
       }
     },
@@ -559,7 +563,15 @@ const DATA = {
       }
     }
   ],
-  "coworkDrafts": []
+  "coworkDrafts": [
+    {
+      "id": "draft-tozzo-31mar",
+      "subject": "Documenti TOZZO GIUSEPPE",
+      "to": "progetti@deltagroups.it",
+      "date": "31 mar",
+      "status": "ready"
+    }
+  ]
 };
 
 // ══════════════════════════════════════════════
