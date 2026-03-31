@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-31T14:30:00",
-  "lastUpdated": "14:30:00",
+  "generatedAt": "2026-03-31T10:06:00",
+  "lastUpdated": "10:06:00",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -373,21 +373,21 @@ const DATA = {
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Mer-Ven 08:00",
+      "schedule": "Gio 22:00",
       "todayStatus": "skipped",
       "todayTime": "-",
       "todayNote": "Non programmata (martedì)",
-      "todayDetails": "Il task è pianificato per mercoledì, giovedì e venerdì. Oggi (martedì) non era prevista esecuzione.",
-      "nextRun": "Mer 01/04 08:00"
+      "todayDetails": "Il task è pianificato per il giovedì. Ultimo eseguito: Ven 27/03 (3 anomalie riscontrate: doc scaduto Pepperpot, incongruenza nome PM Elettric). Prossimo: Gio 02/04.",
+      "nextRun": "Gio 02/04 22:00"
     },
     {
-      "id": "notion-gmail",
+      "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Lun-Ven 07:30",
       "todayStatus": "success",
       "todayTime": "07:30",
       "todayNote": "0 nuovi record · DB già aggiornato",
-      "todayDetails": "Controllate etichette 'Da firmare' (5 thread) e 'Da ricevere' (4 thread). Tutti i thread risultano già presenti nel database MONITORAGGIO DOCUMENTI su Notion. Nessun nuovo record creato.",
+      "todayDetails": "Scansionate email con etichette Da firmare (5 thread) e Da ricevere (4 thread). Tutti i 9 thread già presenti nel database MONITORAGGIO DOCUMENTI su Notion. Nessun nuovo record creato.",
       "nextRun": "Mer 01/04 07:30"
     },
     {
@@ -407,48 +407,40 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "-",
       "todayNote": "Non programmato (martedì)",
-      "todayDetails": "Il task è pianificato per il lunedì. Ultimo eseguito: Lun 30/03. Prossimo: Lun 06/04.",
+      "todayDetails": "Il task è pianificato per il lunedì. Ultimo eseguito: Lun 30/03 — 1 sollecito inviato (Protano Michele). Prossimo: Lun 06/04.",
       "nextRun": "Lun 06/04 09:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Ogni 2 ore",
+      "schedule": "Lun-Ven ~10:00/15:00",
       "todayStatus": "success",
-      "todayTime": "14:30",
-      "todayNote": "Dashboard aggiornata · 2 bozze reali",
-      "todayDetails": "Aggiornamento pomeridiano. Tutti i task della giornata completati con successo. 2 bozze Gmail reali presenti (auguri Galimberti + preventivo STAYFIT).",
-      "nextRun": "Mar 31/03 16:30"
+      "todayTime": "10:06",
+      "todayNote": "Dashboard aggiornata · 1 bozza reale",
+      "todayDetails": "Aggiornamento dashboard GitHub Pages completato. Analizzate 7 sessioni pianificate del 31/03 + 2 task manuali recenti. Bozze Gmail: 1 reale (STAYFIT preventivi), 2 template esclusi. Rimossa bozza auguri Galimberti (già inviata).",
+      "nextRun": "Mer 01/04 10:00"
     }
   ],
   "manualTasks": [
     {
-      "id": "preventivo-revoca-amm-31mar",
-      "name": "Preventivo revoca amm.re Malci + SP",
+      "id": "preventivo-revoca-31mar",
+      "name": "Preventivo revoca amm.re + inizio attività STAYFIT",
       "date": "2026-03-31",
-      "time": "12:00",
+      "time": "09:42",
       "status": "running",
-      "note": "Elaborazione preventivi per STAYFIT: revoca amministratore e nuovi modelli SP. Sessione in corso."
+      "note": "Elaborazione preventivi revoca amministratore Malci e inizio attività per STAYFIT Subiaco."
     },
     {
-      "id": "preventivo-stayfit-revoca-30mar",
-      "name": "Preventivo revoca amm.re Malci + inizio attività",
+      "id": "due-diligence-honiro-30mar",
+      "name": "Aggiornamento Due Diligence HONIRO SRL",
       "date": "2026-03-30",
       "time": "16:00",
       "status": "success",
-      "note": "Elaborazione preventivi per STAYFIT: revoca amministratore Malci e inizio attività. Bozza email pronta per invio."
+      "note": "Rimossa riga visto di conformità dal frontespizio Due Diligence HONIRO SRL."
     },
     {
-      "id": "honiro-due-diligence-update-30mar",
-      "name": "Aggiornamento Due Diligence HONIRO SRL",
-      "date": "2026-03-30",
-      "time": "14:00",
-      "status": "success",
-      "note": "Rimossa riga 'visto di conformità' dal frontespizio della Due Diligence crediti HONIRO SRL."
-    },
-    {
-      "id": "preventivi-skill-update-30mar",
-      "name": "Aggiornamento skill Preventivi (sezionali SC/SP)",
+      "id": "preventivi-modelli-30mar",
+      "name": "Aggiornamento modelli preventivi SC/SP",
       "date": "2026-03-30",
       "time": "10:00",
       "status": "success",
@@ -468,7 +460,7 @@ const DATA = {
       "date": "2026-03-27",
       "time": "15:00",
       "status": "success",
-      "note": "Compilato contratto di incarico professionale per HONIRO SRL — crediti d'imposta."
+      "note": "Compilato contratto di incarico professionale per HONIRO SRL — crediti d’imposta."
     },
     {
       "id": "antiriciclaggio-honiro-26mar",
@@ -479,12 +471,20 @@ const DATA = {
       "note": "Scheda antiriciclaggio HONIRO SRL completata e caricata su Notion."
     },
     {
-      "id": "preventivo-honiro-26mar",
-      "name": "Preventivo Due Diligence HONIRO SRL",
+      "id": "linkedin-aml-26mar",
+      "name": "Post LinkedIn automazione antiriciclaggio",
       "date": "2026-03-26",
-      "time": "09:30",
+      "time": "10:00",
       "status": "success",
-      "note": "Preventivo singola prestazione per attestazione crediti d'imposta HONIRO SRL."
+      "note": "Pubblicato post LinkedIn su automazione adempimenti antiriciclaggio con IA."
+    },
+    {
+      "id": "articolo-forfetari-26mar",
+      "name": "Articolo blog regime forfetario 2026",
+      "date": "2026-03-26",
+      "time": "09:00",
+      "status": "success",
+      "note": "Pubblicato articolo WordPress + post LinkedIn sul regime forfetario 2026."
     }
   ],
   "history": [
@@ -494,11 +494,11 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "1 scadenza F24 OSEN · diffida WE-NET"
+          "note": "F24 OSEN scadenza oggi · diffida WE-NET"
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "1 compleanno · Galimberti Paolo (80)"
+          "note": "1 compleanno · Galimberti Paolo (80 anni)"
         },
         "verifica-aml": {
           "status": "skipped",
@@ -512,7 +512,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "20 email · diffida WE-NET urgente"
+          "note": "Nessun evento · 3 email prioritarie"
         },
         "auguri-clienti": {
           "status": "success",
@@ -581,15 +581,9 @@ const DATA = {
   ],
   "coworkDrafts": [
     {
-      "to": "paologalimberti@icloud.com",
-      "subject": "Tanti auguri, Paolo!",
-      "date": "30 mar",
-      "status": "ready"
-    },
-    {
       "to": "stayfit.subiaco@gmail.com",
       "subject": "PREVENTIVI REVOCA AMM.RE MALCI+INIZIO ATTIVITA'",
-      "date": "30 mar",
+      "date": "31 mar",
       "status": "ready"
     }
   ]
