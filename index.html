@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-31T12:04:15",
-  "lastUpdated": "12:04:15",
+  "generatedAt": "2026-03-31T12:06:26.743Z",
+  "lastUpdated": "14:06:26",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -373,12 +373,12 @@ const DATA = {
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Gio 22:00",
+      "schedule": "Mer/Ven 08:00",
       "todayStatus": "skipped",
-      "todayTime": "-",
+      "todayTime": "",
       "todayNote": "Non programmata (martedì)",
-      "todayDetails": "Il task è pianificato per il giovedì. Ultimo eseguito: Ven 27/03 (3 anomalie riscontrate: doc scaduto Pepperpot, incongruenza nome PM Elettric). Prossimo: Gio 02/04.",
-      "nextRun": "Gio 02/04 22:00"
+      "todayDetails": "La verifica AML è schedulata il mercoledì e venerdì. Oggi è martedì, nessuna esecuzione.",
+      "nextRun": "Mer 01/04 08:00"
     },
     {
       "id": "inserimento-notion",
@@ -387,38 +387,38 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "07:30",
       "todayNote": "0 nuovi record · DB già aggiornato",
-      "todayDetails": "Scansionate email con etichette Da firmare (5 thread) e Da ricevere (4 thread). Tutti i 9 thread già presenti nel database MONITORAGGIO DOCUMENTI su Notion. Nessun nuovo record creato.",
+      "todayDetails": "Scansionati 9 thread unici (5 Da firmare + 4 Da ricevere). Tutti già presenti in Notion. Nessun nuovo record creato. DB MONITORAGGIO DOCUMENTI aggiornato.",
       "nextRun": "Mer 01/04 07:30"
     },
     {
-      "id": "monitoraggio-docs",
+      "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 09:00/15:00",
+      "schedule": "Lun-Ven 09:00 e 16:00",
       "todayStatus": "success",
       "todayTime": "09:00",
-      "todayNote": "5 record pendenti · 0 risposte trovate",
-      "todayDetails": "Controllati 4 clienti in attesa (5 record pendenti): PEPPERPOT SRL, STR82L SRL, PROTANO MICHELE (2 record), COSMI GIACOMO. Nessuna risposta trovata nelle ultime 48h. Nessuna modifica su Notion.",
-      "nextRun": "Mer 01/04 09:00"
+      "todayNote": "5 record pendenti · 0 risposte nelle ultime 48h",
+      "todayDetails": "Clienti in attesa: PEPPERPOT S.R.L. (doc identità), STR82L S.R.L. (contratto), PROTANO MICHELE (2 lettere incarico — 1 già sollecitata il 30/03), COSMI GIACOMO (lettera incarico). Nessuna risposta ricevuta nelle ultime 48h.",
+      "nextRun": "Mar 31/03 16:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Lun 09:00",
+      "schedule": "Lunedì 09:00",
       "todayStatus": "skipped",
-      "todayTime": "-",
-      "todayNote": "Non programmato (martedì)",
-      "todayDetails": "Il task è pianificato per il lunedì. Ultimo eseguito: Lun 30/03 — 1 sollecito inviato (Protano Michele). Prossimo: Lun 06/04.",
+      "todayTime": "",
+      "todayNote": "Non programmato (martedì) · Eseguito ieri: 1 sollecito PROTANO",
+      "todayDetails": "Solleciti eseguiti ieri (lun 30/03): 1 bozza sollecito creata per PROTANO MICHELE (Lettera Incarico, attesa 12 gg). Prossimi eleggibili dal 31/03: PEPPERPOT, COSMI, PROTANO (2° record). Prossimo run: lunedì 06/04.",
       "nextRun": "Lun 06/04 09:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Lun-Ven ~10:00/15:00",
+      "schedule": "Ogni 2h (lun-ven)",
       "todayStatus": "success",
-      "todayTime": "12:04",
+      "todayTime": "14:06",
       "todayNote": "Dashboard aggiornata · 0 bozze reali",
-      "todayDetails": "Aggiornamento dashboard GitHub Pages completato ore 12:04. Analizzate 7 sessioni pianificate del 31/03 + task manuali recenti. Preventivi STAYFIT completati (002_SC e 003_SC). Bozze Gmail: 0 reali (2 template senza destinatario esclusi). Bozza STAYFIT rimossa (già elaborata).",
-      "nextRun": "Mer 01/04 10:00"
+      "todayDetails": "Aggiornamento eseguito alle 14:06. Tutti i task pianificati verificati. 2 bozze Gmail presenti sono template senza destinatario (escluse). Commit su GitHub Pages.",
+      "nextRun": "Mar 31/03 16:05"
     }
   ],
   "manualTasks": [
@@ -458,33 +458,9 @@ const DATA = {
       "id": "honiro-contratto-27mar",
       "name": "Contratto incarico HONIRO SRL",
       "date": "2026-03-27",
-      "time": "15:00",
-      "status": "success",
-      "note": "Compilato contratto di incarico professionale per HONIRO SRL — crediti d’imposta."
-    },
-    {
-      "id": "antiriciclaggio-honiro-26mar",
-      "name": "Adeguata verifica HONIRO SRL",
-      "date": "2026-03-26",
       "time": "11:00",
       "status": "success",
-      "note": "Scheda antiriciclaggio HONIRO SRL completata e caricata su Notion."
-    },
-    {
-      "id": "linkedin-aml-26mar",
-      "name": "Post LinkedIn automazione antiriciclaggio",
-      "date": "2026-03-26",
-      "time": "10:00",
-      "status": "success",
-      "note": "Pubblicato post LinkedIn su automazione adempimenti antiriciclaggio con IA."
-    },
-    {
-      "id": "articolo-forfetari-26mar",
-      "name": "Articolo blog regime forfetario 2026",
-      "date": "2026-03-26",
-      "time": "09:00",
-      "status": "success",
-      "note": "Pubblicato articolo WordPress + post LinkedIn sul regime forfetario 2026."
+      "note": "Redatto e inviato contratto di incarico professionale per HONIRO SRL."
     }
   ],
   "history": [
@@ -506,7 +482,7 @@ const DATA = {
         },
         "aggiorna-monitor": {
           "status": "success",
-          "note": "Dashboard aggiornata 12:04"
+          "note": "Dashboard aggiornata 14:06"
         }
       }
     },
@@ -552,15 +528,15 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Avviso sicurezza Google · doc Honiro attesi"
+          "note": "Nessun evento · email ordinarie"
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Nessun compleanno trovato"
+          "note": "Nessun compleanno"
         },
         "verifica-aml": {
-          "status": "success",
-          "note": "HONIRO SRL completata"
+          "status": "skipped",
+          "note": "Non programmata (giovedì)"
         }
       }
     },
@@ -570,15 +546,15 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "8 email · urgenza Francesca Raponi"
+          "note": "Nessun evento urgente"
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Nessun compleanno trovato"
+          "note": "Nessun compleanno"
         },
         "verifica-aml": {
           "status": "success",
-          "note": "Controllo settimanale OK"
+          "note": "Nessuna anomalia rilevata"
         }
       }
     }
