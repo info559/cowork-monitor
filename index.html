@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-01T13:14:32.000Z",
-  "lastUpdated": "15:14:32",
+  "generatedAt": "2026-04-01T14:05:58.967Z",
+  "lastUpdated": "16:05:58",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -357,67 +357,67 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "07:00",
       "todayNote": "Nessun evento in agenda · diffida WE-NET urgente",
-      "todayDetails": "Nessun evento sul calendario per oggi (mer 1 apr). ~200 email non lette (label Lorenzo). Urgenti: (1) Diffida PEC WE-NET del 6/03 — 26 giorni senza riscontro. (2) Verifica contratto Fiorenzo Checchi (allegato ricevuto, richiesta 30/03). (3) Simulazione costo operaio Filomena Pietrobono (per conoscenza).",
+      "todayDetails": "Nessun evento sul calendario per oggi (mer 1 apr). ~200 email non lette (label Lorenzo). Urgenti: (1) Diffida PEC WE-NET del 6/03 — 26 giorni senza riscontro. (2) Verifica contratto Fiorenzo Checchi (allegato 30/03). (3) Simulazione costo operaio Filomena Pietrobono (per conoscenza).",
       "nextRun": "Gio 02/04 07:00"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
       "schedule": "Ogni giorno 05:00",
-      "todayStatus": "running",
+      "todayStatus": "success",
       "todayTime": "05:00",
-      "todayNote": "In esecuzione · ricerca compleanni 1 apr",
-      "todayDetails": "Task in esecuzione (ore 15:14) — ricerca nei database Notion di clienti nati il 1 aprile.",
+      "todayNote": "1 compleanno · Ciocchetti Massimo · bozza creata",
+      "todayDetails": "Trovato 1 compleanno oggi: CIOCCHETTI MASSIMO (nato 01/04/1954, 72 anni). Bozza Gmail creata con oggetto “Tanti auguri, Massimo!” a valerio.ciocchetti86@gmail.com. Pronta per revisione e invio.",
       "nextRun": "Gio 02/04 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ven 09:00",
+      "schedule": "Ven 10:00",
       "todayStatus": "skipped",
       "todayTime": null,
       "todayNote": "Non programmata (mercoledì)",
-      "todayDetails": "Il task è schedulato solo il venerdì.",
-      "nextRun": "Ven 03/04 09:00"
+      "todayDetails": "La verifica antiriciclaggio periodica è programmata solo il venerdì.",
+      "nextRun": "Ven 03/04 10:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "schedule": "Lun-Ven 07:30 / 12:00 / 17:00",
+      "schedule": "Lun-Ven 07:30",
       "todayStatus": "success",
       "todayTime": "07:30",
       "todayNote": "0 nuovi record · DB già aggiornato",
-      "todayDetails": "Verificati 8 thread Gmail (4 Da firmare + 4 Da ricevere). Tutti già presenti in Notion. Nessun nuovo record creato.",
-      "nextRun": "Mer 01/04 17:00"
+      "todayDetails": "Controllate 8 email (4 “Da firmare” + 4 “Da ricevere”) degli ultimi 30 giorni. Tutti i thread erano già presenti nel database Notion MONITORAGGIO DOCUMENTI. Nessun nuovo record creato.",
+      "nextRun": "Gio 02/04 07:30"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 09:30 / 16:00",
-      "todayStatus": "running",
+      "schedule": "Lun-Ven 09:30/15:00",
+      "todayStatus": "success",
       "todayTime": "09:30",
-      "todayNote": "In esecuzione · verifica 4 clienti in attesa",
-      "todayDetails": "Task in esecuzione (ore 15:14) — verifica risposte da: COSMI GIACOMO (Lettera Incarico, 24/03), PROTANO MICHELE x2 (Lettera Incarico, 24/03 + sollecito 30/03), STR82L S.R.L. (27/03).",
-      "nextRun": "Mer 01/04 16:00"
+      "todayNote": "4 clienti in attesa · 0 risposte ricevute",
+      "todayDetails": "Verificati 4 clienti con documenti in attesa: Cosmi Giacomo (lettera incarico, 24/03), Protano Michele (lettera incarico 24/03 + pratica REDDITI 2023 sollecitata 30/03), STR82L Srl (contratto, 27/03). Nessun allegato ricevuto nelle ultime 48h. Protano ha la maggiore anzianità (14 giorni senza risposta).",
+      "nextRun": "Gio 02/04 09:30"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Lun 10:00",
+      "schedule": "Dom 18:00",
       "todayStatus": "skipped",
       "todayTime": null,
       "todayNote": "Non programmato (mercoledì)",
-      "todayDetails": "Il task è schedulato solo il lunedì. Ultima esecuzione: 30/03 con 1 sollecito creato per PROTANO MICHELE.",
-      "nextRun": "Lun 06/04 10:00"
+      "todayDetails": "I solleciti settimanali sono programmati la domenica. Ultima esecuzione: 30/03/2026.",
+      "nextRun": "Dom 05/04 18:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno 22:00",
-      "todayStatus": "running",
-      "todayTime": "15:14",
-      "todayNote": "In esecuzione · aggiornamento dashboard",
-      "todayDetails": "Task in esecuzione — aggiornamento dashboard con dati di oggi 1 apr 2026.",
+      "todayStatus": "success",
+      "todayTime": "16:05",
+      "todayNote": "Dashboard aggiornata con dati finali 1 apr",
+      "todayDetails": "Aggiornamento dashboard con tutti i task completati di oggi 1 apr 2026. Tutti i 5 task attivi completati con successo. 1 bozza Gmail reale (auguri Ciocchetti).",
       "nextRun": "Gio 02/04 22:00"
     }
   ],
@@ -444,61 +444,61 @@ const DATA = {
       "date": "2026-03-30",
       "time": "21:00",
       "status": "success",
-      "note": "Aggiornato frontespizio: rimossa riga visto di conformità. Titolo ora solo Attestazione credito d'imposta."
+      "note": "Aggiornato frontespizio: rimossa riga visto di conformità, mantenuta solo attestazione credito d’imposta."
     },
     {
-      "id": "solleciti-30mar-auto",
-      "name": "Solleciti settimanali (automatico)",
+      "id": "honiro-contratto-30mar",
+      "name": "Contratto HONIRO SRL",
       "date": "2026-03-30",
-      "time": "10:00",
+      "time": "20:00",
       "status": "success",
-      "note": "1 sollecito creato: PROTANO MICHELE (Lettera di Incarico, 12 gg attesa)."
+      "note": "Aggiornato contratto con dati societari HONIRO SRL e dettagli incarico."
     },
     {
-      "id": "monitoraggio-pm-30mar",
-      "name": "Monitoraggio documenti pomeridiano",
+      "id": "antiriciclaggio-registro-30mar",
+      "name": "Registro Antiriciclaggio",
       "date": "2026-03-30",
-      "time": "16:00",
+      "time": "15:00",
       "status": "success",
-      "note": "Nessuna risposta trovata. 5 record ancora in attesa."
+      "note": "Inseriti nuovi clienti nel registro antiriciclaggio e generate schede AV."
     },
     {
-      "id": "notion-gmail-30mar",
-      "name": "Inserimento Notion da Gmail",
-      "date": "2026-03-30",
-      "time": "12:00",
+      "id": "preventivo-rdea-26mar",
+      "name": "Preventivo RD’A Ingegneria",
+      "date": "2026-03-26",
+      "time": "14:00",
       "status": "success",
-      "note": "0 nuovi record. DB Notion già aggiornato."
+      "note": "Elaborato preventivo società di capitali per RD’A Ingegneria e Architettura Srl."
     },
     {
-      "id": "auguri-30mar",
-      "name": "Auguri clienti (automatico)",
-      "date": "2026-03-30",
-      "time": "05:00",
+      "id": "articolo-wp-25mar",
+      "name": "Articolo WordPress + LinkedIn",
+      "date": "2026-03-25",
+      "time": "11:00",
       "status": "success",
-      "note": "1 compleanno: Orlandi Pierfrancesco."
+      "note": "Pubblicato articolo su crediti d’imposta e post LinkedIn divulgativo."
     },
     {
-      "id": "briefing-30mar",
-      "name": "Daily Briefing",
-      "date": "2026-03-30",
-      "time": "07:00",
+      "id": "antiriciclaggio-25mar",
+      "name": "Adeguata Verifica clienti",
+      "date": "2026-03-25",
+      "time": "09:00",
       "status": "success",
-      "note": "Nessun evento · diffida WE-NET urgente · 20 email non lette."
+      "note": "Completata AV per nuovi clienti KPI e caricamento su Notion."
     }
   ],
   "history": [
     {
       "date": "2026-04-01",
-      "label": "Mer 1 apr",
+      "label": "Mer 1",
       "tasks": {
         "daily-briefing": {
           "status": "success",
           "note": "Nessun evento · diffida WE-NET urgente"
         },
         "auguri-clienti": {
-          "status": "running",
-          "note": "In esecuzione"
+          "status": "success",
+          "note": "1 compleanno · Ciocchetti Massimo"
         },
         "verifica-aml": {
           "status": "skipped",
@@ -512,7 +512,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "1 scadenza F24 OSEN · diffida WE-NET"
+          "note": "1 scadenza OSEN · diffida WE-NET urgente"
         },
         "auguri-clienti": {
           "status": "success",
@@ -579,7 +579,14 @@ const DATA = {
       }
     }
   ],
-  "coworkDrafts": []
+  "coworkDrafts": [
+    {
+      "to": "valerio.ciocchetti86@gmail.com",
+      "subject": "Tanti auguri, Massimo!",
+      "date": "1 apr",
+      "status": "ready"
+    }
+  ]
 };
 
 // ══════════════════════════════════════════════
