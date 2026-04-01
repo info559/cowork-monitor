@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-03-31T20:05:09.000Z",
-  "lastUpdated": "22:05:09",
+  "generatedAt": "2026-04-01T13:14:32.000Z",
+  "lastUpdated": "15:14:32",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,19 +356,19 @@ const DATA = {
       "schedule": "Lun-Ven 07:00",
       "todayStatus": "success",
       "todayTime": "07:00",
-      "todayNote": "1 scadenza F24 OSEN · diffida WE-NET urgente",
-      "todayDetails": "1 scadenza calendario: F24 avviso bonario IVA 2022 OSEN SRL (scade oggi). 20 email non lette (label Lorenzo). Priorità: (1) F24 OSEN SRL — scadenza oggi. (2) Diffida WE-NET — PEC del 6/03, senza riscontro da 25 giorni. (3) PM Elettric — richiesta verifica cartella AdE, attesa da 5 settimane. (4) Francesca Raponi — proforma senza risposta da 2 mesi.",
-      "nextRun": "Mer 01/04 07:00"
+      "todayNote": "Nessun evento in agenda · diffida WE-NET urgente",
+      "todayDetails": "Nessun evento sul calendario per oggi (mer 1 apr). ~200 email non lette (label Lorenzo). Urgenti: (1) Diffida PEC WE-NET del 6/03 — 26 giorni senza riscontro. (2) Verifica contratto Fiorenzo Checchi (allegato ricevuto, richiesta 30/03). (3) Simulazione costo operaio Filomena Pietrobono (per conoscenza).",
+      "nextRun": "Gio 02/04 07:00"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
       "schedule": "Ogni giorno 05:00",
-      "todayStatus": "success",
+      "todayStatus": "running",
       "todayTime": "05:00",
-      "todayNote": "1 compleanno · Galimberti Paolo (80 anni)",
-      "todayDetails": "Trovato 1 compleanno: GALIMBERTI PAOLO, nato 31/03/1946, compie 80 anni. Bozza Gmail creata e inviata a paologalimberti@icloud.com. Oggetto: Tanti auguri, Paolo!",
-      "nextRun": "Mer 01/04 05:00"
+      "todayNote": "In esecuzione · ricerca compleanni 1 apr",
+      "todayDetails": "Task in esecuzione (ore 15:14) — ricerca nei database Notion di clienti nati il 1 aprile.",
+      "nextRun": "Gio 02/04 05:00"
     },
     {
       "id": "verifica-aml",
@@ -376,7 +376,7 @@ const DATA = {
       "schedule": "Ven 09:00",
       "todayStatus": "skipped",
       "todayTime": null,
-      "todayNote": "Non programmata (martedì)",
+      "todayNote": "Non programmata (mercoledì)",
       "todayDetails": "Il task è schedulato solo il venerdì.",
       "nextRun": "Ven 03/04 09:00"
     },
@@ -387,18 +387,18 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "07:30",
       "todayNote": "0 nuovi record · DB già aggiornato",
-      "todayDetails": "3 esecuzioni oggi. Controllate etichette Da firmare (5 thread) e Da ricevere (4 thread). Tutti i thread già presenti in Notion. 0 nuove righe create.",
-      "nextRun": "Mer 01/04 07:30"
+      "todayDetails": "Verificati 8 thread Gmail (4 Da firmare + 4 Da ricevere). Tutti già presenti in Notion. Nessun nuovo record creato.",
+      "nextRun": "Mer 01/04 17:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Ven 09:30 / 16:00",
-      "todayStatus": "success",
-      "todayTime": "16:00",
-      "todayNote": "1 risposta PEPPERPOT · 4 in attesa",
-      "todayDetails": "5 record esaminati. PEPPERPOT S.R.L.: risposta ricevuta con allegati C.I. e passaporto, record Notion aggiornato a Ricevuto. Ancora in attesa: COSMI GIACOMO, PROTANO MICHELE (x2), STR82L S.R.L.",
-      "nextRun": "Mer 01/04 09:30"
+      "todayStatus": "running",
+      "todayTime": "09:30",
+      "todayNote": "In esecuzione · verifica 4 clienti in attesa",
+      "todayDetails": "Task in esecuzione (ore 15:14) — verifica risposte da: COSMI GIACOMO (Lettera Incarico, 24/03), PROTANO MICHELE x2 (Lettera Incarico, 24/03 + sollecito 30/03), STR82L S.R.L. (27/03).",
+      "nextRun": "Mer 01/04 16:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -406,32 +406,32 @@ const DATA = {
       "schedule": "Lun 10:00",
       "todayStatus": "skipped",
       "todayTime": null,
-      "todayNote": "Non programmato (martedì)",
+      "todayNote": "Non programmato (mercoledì)",
       "todayDetails": "Il task è schedulato solo il lunedì. Ultima esecuzione: 30/03 con 1 sollecito creato per PROTANO MICHELE.",
       "nextRun": "Lun 06/04 10:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Lun-Ven 13:00 / 18:00",
-      "todayStatus": "success",
-      "todayTime": "22:05",
-      "todayNote": "Dashboard aggiornata · 0 bozze reali",
-      "todayDetails": "Analizzate 40 sessioni recenti. Letti transcript di 7 task pianificati e 3 task manuali. 2 bozze Gmail trovate ma entrambe template senza destinatario (escluse). Bozza auguri Galimberti già inviata.",
-      "nextRun": "Mer 01/04 13:00"
+      "schedule": "Ogni giorno 22:00",
+      "todayStatus": "running",
+      "todayTime": "15:14",
+      "todayNote": "In esecuzione · aggiornamento dashboard",
+      "todayDetails": "Task in esecuzione — aggiornamento dashboard con dati di oggi 1 apr 2026.",
+      "nextRun": "Gio 02/04 22:00"
     }
   ],
   "manualTasks": [
     {
-      "id": "skill-aml-update-31mar",
-      "name": "Aggiornamento skill antiriciclaggio",
+      "id": "antiriciclaggio-skill-31mar",
+      "name": "Aggiornamento SKILL antiriciclaggio",
       "date": "2026-03-31",
-      "time": "17:30",
-      "status": "warning",
-      "note": "Tentativo aggiornamento SKILL.md: cartella .claude/skills in sola lettura. File salvato in AGENTE ANTIRICICLAGGIO per sostituzione manuale."
+      "time": "17:00",
+      "status": "success",
+      "note": "Aggiornata regola versionamento schede AV: nuovo file per ogni aggiornamento, no sovrascrittura storico."
     },
     {
-      "id": "preventivi-stayfit-31mar",
+      "id": "stayfit-31mar",
       "name": "Preventivi STAY FIT S.S.D. A R.L.",
       "date": "2026-03-31",
       "time": "16:00",
@@ -484,10 +484,28 @@ const DATA = {
       "date": "2026-03-30",
       "time": "07:00",
       "status": "success",
-      "note": "Nessun evento calendario. 3 email prioritarie segnalate."
+      "note": "Nessun evento · diffida WE-NET urgente · 20 email non lette."
     }
   ],
   "history": [
+    {
+      "date": "2026-04-01",
+      "label": "Mer 1 apr",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "Nessun evento · diffida WE-NET urgente"
+        },
+        "auguri-clienti": {
+          "status": "running",
+          "note": "In esecuzione"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (mercoledì)"
+        }
+      }
+    },
     {
       "date": "2026-03-31",
       "label": "Mar 31",
@@ -512,7 +530,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento · 3 email prioritarie"
+          "note": "Nessun evento · diffida WE-NET urgente"
         },
         "auguri-clienti": {
           "status": "success",
@@ -521,24 +539,6 @@ const DATA = {
         "verifica-aml": {
           "status": "skipped",
           "note": "Non programmata (lunedì)"
-        }
-      }
-    },
-    {
-      "date": "2026-03-27",
-      "label": "Ven 27",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "Diffida WE-NET urgente · link Edilfem in scadenza"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno trovato"
-        },
-        "verifica-aml": {
-          "status": "success",
-          "note": "Registro OK · 2 schede AV in scadenza"
         }
       }
     },
