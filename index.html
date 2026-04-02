@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-02T10:36:52.239Z",
-  "lastUpdated": "12:36:52",
+  "generatedAt": "2026-04-02T12:05:35.718Z",
+  "lastUpdated": "14:05:35",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -364,64 +364,72 @@ const DATA = {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
       "schedule": "Ogni giorno 05:00",
-      "todayStatus": "running",
+      "todayStatus": "success",
       "todayTime": "05:00",
-      "todayNote": "In esecuzione · trovato Di Pelino Donato",
-      "todayDetails": "Task ancora in esecuzione al momento dell’aggiornamento dashboard. Trovato almeno 1 compleanno: DI PELINO DONATO (2 aprile). Ricerca completa in corso.",
+      "todayNote": "1 compleanno · Di Pelino Donato (39 anni)",
+      "todayDetails": "Trovato 1 compleanno oggi: DI PELINO DONATO (02/04/1987, 39 anni). Bozza Gmail creata con successo per donato.dipelino@gmail.com, oggetto: Tanti auguri, Donato!",
       "nextRun": "Ven 03/04 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ven 10:00",
+      "schedule": "Lun, Mer, Ven 06:00",
       "todayStatus": "skipped",
-      "todayTime": null,
+      "todayTime": "—",
       "todayNote": "Non programmata (giovedì)",
-      "todayDetails": "La verifica antiriciclaggio periodica è programmata solo il venerdì.",
-      "nextRun": "Ven 03/04 10:00"
+      "todayDetails": "Il task è schedulato solo lunedì, mercoledì e venerdì. Oggi giovedì non è prevista l’esecuzione.",
+      "nextRun": "Ven 03/04 06:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "schedule": "Lun-Ven 07:30",
-      "todayStatus": "skipped",
-      "todayTime": null,
-      "todayNote": "Non ancora eseguito oggi",
-      "todayDetails": "Nessuna sessione avviata per il 2 aprile. Ultima esecuzione: 1 apr (0 nuovi record, DB già aggiornato).",
-      "nextRun": "Ven 03/04 07:30"
+      "schedule": "Lun-Ven 08:00, 14:00",
+      "todayStatus": "success",
+      "todayTime": "08:00",
+      "todayNote": "0 nuove righe · tutto già in Notion",
+      "todayDetails": "Controllate 4 email Da firmare e 5 email Da ricevere (4 thread unici). Tutti i record già presenti nel database MONITORAGGIO DOCUMENTI su Notion. Nessun nuovo inserimento necessario.",
+      "nextRun": "Ven 03/04 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 09:30/15:00",
-      "todayStatus": "skipped",
-      "todayTime": null,
-      "todayNote": "Non ancora eseguito oggi",
-      "todayDetails": "Nessuna sessione avviata per il 2 aprile. Ultima esecuzione: 1 apr (4 clienti in attesa, 0 risposte).",
-      "nextRun": "Ven 03/04 09:30"
+      "schedule": "Lun-Ven 09:00, 15:00",
+      "todayStatus": "success",
+      "todayTime": "09:00",
+      "todayNote": "3 clienti in attesa · 0 risposte",
+      "todayDetails": "3 clienti con stato Inviato: Cosmi Giacomo (lettera incarico, dal 24/03), Protano Michele (lettera incarico, dal 24/03), STR82L Srl (dal 27/03). Nessuna risposta ricevuta nelle ultime 48h. Suggerito sollecito per Cosmi e Protano (9 giorni).",
+      "nextRun": "Ven 03/04 09:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Dom 18:00",
+      "schedule": "Mercoledì 10:00",
       "todayStatus": "skipped",
-      "todayTime": null,
+      "todayTime": "—",
       "todayNote": "Non programmato (giovedì)",
-      "todayDetails": "I solleciti settimanali sono programmati la domenica. Ultima esecuzione: 30/03/2026 (1 sollecito a Protano Michele).",
-      "nextRun": "Dom 05/04 18:00"
+      "todayDetails": "Il task è schedulato solo il mercoledì. Prossima esecuzione mercoledì 8 aprile.",
+      "nextRun": "Mer 08/04 10:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Ogni giorno 22:00",
+      "schedule": "Lun-Ven 22:00",
       "todayStatus": "success",
-      "todayTime": "12:36",
-      "todayNote": "Dashboard aggiornata con dati 2 apr",
-      "todayDetails": "Aggiornamento dashboard 2 apr 2026. Daily briefing completato, auguri in esecuzione, inserimento Notion e monitoraggio non ancora eseguiti. 2 bozze Gmail reali.",
+      "todayTime": "14:05",
+      "todayNote": "Dashboard aggiornata · 7 task + 3 bozze",
+      "todayDetails": "Aggiornamento dashboard 2 apr 2026. Tutti i task pianificati completati con successo (2 skipped come da programma). 3 bozze Gmail reali aggiornate.",
       "nextRun": "Ven 03/04 22:00"
     }
   ],
   "manualTasks": [
+    {
+      "id": "preventivi-centroequestre-2apr",
+      "name": "Preventivi Centro Equestre S.Giorgio S.S.D. S.R.L.",
+      "date": "2026-04-02",
+      "time": "11:00",
+      "status": "success",
+      "note": "Creati preventivi 004_SC (deposito 7 bilanci CCIAA €2.500) e 005_SC (cessione 2 quote €2.090)."
+    },
     {
       "id": "antiriciclaggio-skill-31mar",
       "name": "Aggiornamento SKILL antiriciclaggio",
@@ -444,47 +452,39 @@ const DATA = {
       "date": "2026-03-30",
       "time": "21:00",
       "status": "success",
-      "note": "Aggiornato frontespizio: rimossa riga visto di conformità, mantenuta solo attestazione credito d’imposta."
+      "note": "Aggiornato documento Due Diligence: rimossa riga visto di conformità dal frontespizio."
     },
     {
-      "id": "honiro-contratto-30mar",
-      "name": "Contratto HONIRO SRL",
-      "date": "2026-03-30",
-      "time": "20:00",
-      "status": "success",
-      "note": "Aggiornato contratto con dati societari HONIRO SRL e dettagli incarico."
-    },
-    {
-      "id": "preventivo-stayfit-30mar",
-      "name": "Preventivo STAY FIT S.S.D.",
-      "date": "2026-03-30",
-      "time": "19:00",
-      "status": "success",
-      "note": "Preventivo singola prestazione: Revoca amministratore Malci, SCIA palestra e inizio attività CCIAA."
-    },
-    {
-      "id": "scheda-av-protano-28mar",
-      "name": "Scheda AV Protano Michele",
+      "id": "preventivo-osen-28mar",
+      "name": "Preventivo O.S.E.N. S.R.L.",
       "date": "2026-03-28",
       "time": "10:00",
       "status": "success",
-      "note": "Scheda di adeguata verifica completata e caricata su Notion."
+      "note": "Preventivo per assistenza fiscale e contabile società di capitali."
     },
     {
-      "id": "registro-aml-27mar",
-      "name": "Inserimento registro antiriciclaggio",
+      "id": "linkedin-bonus-27mar",
+      "name": "Articolo + LinkedIn Bonus Edilizi",
       "date": "2026-03-27",
+      "time": "15:00",
+      "status": "success",
+      "note": "Pubblicato articolo WordPress e post LinkedIn su Reverse Charge e Split Payment."
+    },
+    {
+      "id": "antiriciclaggio-rdaing-27mar",
+      "name": "Scheda AV RD'A Ingegneria",
+      "date": "2026-03-27",
+      "time": "11:00",
+      "status": "success",
+      "note": "Scheda adeguata verifica e inserimento registro antiriciclaggio KPI."
+    },
+    {
+      "id": "notion-sync-26mar",
+      "name": "Sync Registro Antiriciclaggio Notion",
+      "date": "2026-03-26",
       "time": "14:00",
       "status": "success",
-      "note": "Nuovi clienti inseriti nel registro AML: Cosmi, Protano, STR82L."
-    },
-    {
-      "id": "antiriciclaggio-25mar",
-      "name": "Adeguata Verifica clienti",
-      "date": "2026-03-25",
-      "time": "09:00",
-      "status": "success",
-      "note": "Completata AV per nuovi clienti KPI e caricamento su Notion."
+      "note": "Sincronizzati 45 record registro KPI su database Notion."
     }
   ],
   "history": [
@@ -497,8 +497,8 @@ const DATA = {
           "note": "Nessun evento · 3 email prioritarie"
         },
         "auguri-clienti": {
-          "status": "running",
-          "note": "In esecuzione · Di Pelino Donato trovato"
+          "status": "success",
+          "note": "1 compleanno · Di Pelino Donato"
         },
         "verifica-aml": {
           "status": "skipped",
@@ -552,34 +552,40 @@ const DATA = {
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "1 compleanno · Orlandi Pierfrancesco"
+          "note": "Nessun compleanno oggi"
         },
         "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (lunedì)"
+          "status": "success",
+          "note": "Registro OK · 45 posizioni verificate"
         }
       }
     },
     {
-      "date": "2026-03-26",
-      "label": "Gio 26",
+      "date": "2026-03-27",
+      "label": "Ven 27",
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "1 scadenza · 3 email prioritarie"
+          "note": "2 scadenze · email prioritarie"
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Nessun compleanno trovato"
+          "note": "Nessun compleanno"
         },
         "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (giovedì)"
+          "status": "success",
+          "note": "Registro OK · scheda RD'A Ingegneria"
         }
       }
     }
   ],
   "coworkDrafts": [
+    {
+      "to": "donato.dipelino@gmail.com",
+      "subject": "Tanti auguri, Donato!",
+      "date": "2 apr",
+      "status": "ready"
+    },
     {
       "to": "francesca.raponi@gmail.com",
       "subject": "Modifiche Associazione",
