@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-02T14:05:11.565Z",
-  "lastUpdated": "16:05:11",
+  "generatedAt": "2026-04-03T11:10:35+02:00",
+  "lastUpdated": "11:10:35",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -357,8 +357,8 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "07:00",
       "todayNote": "Nessun evento · 3 email con label Lorenzo (2 urgenti)",
-      "todayDetails": "Nessun evento in agenda per oggi (gio 2 apr). 3 email non lette con etichetta Lorenzo: (1) Simulazione costo operaio Filomena Pietrobono (31/03). (2) Richiesta verifica cartella AdE PM Elettric (22/02 — 5 settimane). (3) Bonifici e chiarimento Francesca Raponi (26/01 — oltre 2 mesi). Le email 2 e 3 sono urgenti.",
-      "nextRun": "Ven 03/04 07:00"
+      "todayDetails": "Nessun evento in agenda per oggi (ven 3 apr). 3 email non lette con etichetta Lorenzo: (1) Simulazione costo operaio Filomena Pietrobono (31/03, per conoscenza). (2) Richiesta verifica cartella AdE PM Elettric (22/02 — 5+ settimane, URGENTE). (3) Bonifici e chiarimento Francesca Raponi (26/01 — oltre 2 mesi, URGENTE). Bozza briefing creata a info@kpiconsulting.it.",
+      "nextRun": "Lun 06/04 07:00"
     },
     {
       "id": "auguri-clienti",
@@ -366,39 +366,39 @@ const DATA = {
       "schedule": "Ogni giorno 05:00",
       "todayStatus": "success",
       "todayTime": "05:00",
-      "todayNote": "1 compleanno · Di Pelino Donato (39 anni)",
-      "todayDetails": "Trovato 1 compleanno oggi: Di Pelino Donato (02/04/1987, 39 anni). Bozza Gmail creata con auguri personalizzati a donato.dipelino@gmail.com.",
-      "nextRun": "Ven 03/04 05:00"
+      "todayNote": "Nessun compleanno oggi (3 apr)",
+      "todayDetails": "Verificati 24 clienti con data di nascita nel database ANAGRAFICA CLIENTI. Nessun cliente nato il 03/04. Nessuna bozza Gmail creata.",
+      "nextRun": "Sab 04/04 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
       "schedule": "Lun, Mer, Ven 06:00",
-      "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non programmata (giovedì)",
-      "todayDetails": "La verifica antiriciclaggio non è pianificata per il giovedì.",
-      "nextRun": "Lun 06/04 09:00"
+      "todayStatus": "warning",
+      "todayTime": "11:00",
+      "todayNote": "⚠️ 1 anomalia · doc. identità PEPPERPOT S.R.L. scaduto (registro LT)",
+      "todayDetails": "Registro KPI: 11 clienti, 41 righe — 0 anomalie critiche. Note: cartella 'ELLETTRIC' (typo P.M ELETTRIC GROUP), codice Notion '00' per HONIRO S.R.L. Registro LT: 9 clienti, 36 righe — 1 anomalia: doc. identità legale rappresentante PEPPERPOT S.R.L. scaduto dal 26/07/2025 (251 giorni fa). Azione richiesta: acquisire documento valido. Report salvato in Verifica_Settimanale_20260403.md.",
+      "nextRun": "Lun 07/04 06:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Lun-Ven 08:00, 14:00",
-      "todayStatus": "success",
-      "todayTime": "08:30",
-      "todayNote": "0 nuovi record · tutte le email già in Notion",
-      "todayDetails": "Scansionate 9 email etichettate (Da firmare + Da ricevere) negli ultimi 30 giorni. Tutte già presenti nel database MONITORAGGIO DOCUMENTI su Notion. Nessun nuovo record creato.",
-      "nextRun": "Ven 03/04 08:30"
+      "todayStatus": "pending",
+      "todayTime": "—",
+      "todayNote": "Non ancora eseguito oggi",
+      "todayDetails": "Nessuna sessione trovata per il 3 aprile all’orario atteso (08:00). Ieri (2 apr): 0 nuovi record — tutte le email etichettate erano già presenti in Notion.",
+      "nextRun": "Ven 03/04 14:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Ven 09:00, 15:00",
-      "todayStatus": "success",
-      "todayTime": "09:00",
-      "todayNote": "3 clienti in attesa · 0 risposte",
-      "todayDetails": "3 clienti con stato Inviato: Cosmi Giacomo (lettera incarico, dal 24/03), Protano Michele (lettera incarico, dal 24/03), STR82L Srl (dal 27/03). Nessuna risposta ricevuta nelle ultime 48h. Suggerito sollecito per Cosmi e Protano (9 giorni).",
-      "nextRun": "Ven 03/04 09:00"
+      "todayStatus": "pending",
+      "todayTime": "—",
+      "todayNote": "Non ancora eseguito oggi",
+      "todayDetails": "Nessuna sessione trovata per il 3 aprile all’orario atteso (09:00). Ieri (2 apr): 4 clienti in attesa (Protano x2, Cosmi, STR82L) — 0 risposte ricevute nelle ultime 48h.",
+      "nextRun": "Ven 03/04 15:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -406,18 +406,18 @@ const DATA = {
       "schedule": "Mercoledì 10:00",
       "todayStatus": "skipped",
       "todayTime": "—",
-      "todayNote": "Non programmato (giovedì)",
-      "todayDetails": "I solleciti settimanali non sono pianificati per il giovedì.",
-      "nextRun": "Lun 06/04 10:00"
+      "todayNote": "Non programmato (venerdì)",
+      "todayDetails": "I solleciti settimanali sono programmati solo il mercoledì. Oggi è venerdì 3 aprile.",
+      "nextRun": "Mer 08/04 10:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Lun-Ven 22:00",
       "todayStatus": "success",
-      "todayTime": "16:05",
-      "todayNote": "Dashboard aggiornata · 7 task + 1 bozza",
-      "todayDetails": "Aggiornamento dashboard 2 apr 2026 (sera). Tutti i task pianificati completati con successo (2 skipped come da programma). 1 bozza Gmail reale aggiornata.",
+      "todayTime": "11:10",
+      "todayNote": "Dashboard aggiornata (run mattutino)",
+      "todayDetails": "Analizzate 3 sessioni completate oggi (3 apr): Daily Briefing ✓, Auguri Clienti ✓, Verifica AML ⚠. Inserimento Notion e Monitoraggio Documenti non ancora eseguiti. 1 bozza Gmail aggiornata. Dashboard pubblicata su GitHub Pages.",
       "nextRun": "Ven 03/04 22:00"
     }
   ],
@@ -489,6 +489,24 @@ const DATA = {
   ],
   "history": [
     {
+      "date": "2026-04-03",
+      "label": "Ven 3",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "Nessun evento · 3 email (2 urgenti)"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Nessun compleanno (3 apr)"
+        },
+        "verifica-aml": {
+          "status": "warning",
+          "note": "⚠️ 1 anomalia · PEPPERPOT doc. scaduto"
+        }
+      }
+    },
+    {
       "date": "2026-04-02",
       "label": "Gio 2",
       "tasks": {
@@ -559,31 +577,13 @@ const DATA = {
           "note": "Registro OK · 45 posizioni verificate"
         }
       }
-    },
-    {
-      "date": "2026-03-27",
-      "label": "Ven 27",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "2 scadenze · email prioritarie"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "success",
-          "note": "Registro OK · scheda RD'A Ingegneria"
-        }
-      }
     }
   ],
   "coworkDrafts": [
     {
-      "to": "francesca.raponi@gmail.com",
-      "subject": "Modifiche Associazione",
-      "date": "2 apr",
+      "to": "info@kpiconsulting.it",
+      "subject": "📋 Briefing Giornaliero – Venerdì 3 Aprile 2026",
+      "date": "3 apr",
       "status": "ready"
     }
   ]
