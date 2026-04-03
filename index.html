@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-03T20:06:01+02:00",
-  "lastUpdated": "20:06:01",
+  "generatedAt": "2026-04-03T22:05:32+02:00",
+  "lastUpdated": "22:05:32",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -373,12 +373,12 @@ const DATA = {
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Lunedì 06:00",
+      "schedule": "Venerdì 11:00",
       "todayStatus": "success",
       "todayTime": "11:00",
-      "todayNote": "Verifica completata · nessuna anomalia in entrambi i registri",
-      "todayDetails": "Registro KPI: 11 clienti, 41 righe — 0 anomalie critiche. Note: cartella 'ELLETTRIC' (typo P.M ELETTRIC GROUP), codice Notion '00' per HONIRO S.R.L. Registro LT: 9 clienti, 36 righe — 0 anomalie (segnalazione PEPPERPOT S.R.L. annullata: mandato LT cessato 30/09/2024, documento valido durante il rapporto). Report salvato in Verifica_Settimanale_20260403.md.",
-      "nextRun": "Lun 07/04 06:00"
+      "todayNote": "Nessuna anomalia · PEPPERPOT OK (doc scaduto post-cessione)",
+      "todayDetails": "Verifica KPI e LT completata. Segnalazione PEPPERPOT S.R.L. (mandato LT) risolta: documento d'identità scaduto 26/07/2025 ma mandato cessato il 30/09/2024 — doc era valido durante il rapporto. Nessuna anomalia effettiva. Aggiornata regola di verifica: la scadenza documenti si controlla solo per mandati attivi.",
+      "nextRun": "Ven 10/04 11:00"
     },
     {
       "id": "inserimento-notion",
@@ -387,7 +387,7 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "16:30",
       "todayNote": "0 nuovi record · tutti 8 thread già presenti in Notion",
-      "todayDetails": "Run mattutino bloccato da limite API. Run post-reset (16:30): 5 email 'Da firmare' (4 thread unici) e 5 email 'Da ricevere' (4 thread unici) analizzati — tutti già presenti in Notion. 0 nuove righe create. Database MONITORAGGIO DOCUMENTI aggiornato e completo.",
+      "todayDetails": "Run mattutino bloccato da limite API. Run post-reset (16:30) e run serale (dopo 20:06): 5 email 'Da firmare' (4 thread unici) e 5 email 'Da ricevere' (4 thread unici) analizzati — tutti già presenti in Notion in entrambi i run. 0 nuove righe create. Database MONITORAGGIO DOCUMENTI aggiornato e completo.",
       "nextRun": "Lun 06/04 08:00"
     },
     {
@@ -397,7 +397,7 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "17:00",
       "todayNote": "2 clienti in attesa · 0 risposte ricevute oggi",
-      "todayDetails": "Run mattutino bloccato da limite API. Run post-reset (17:00): 6 record totali in DB — 3 ricevuti (OTPA, RD'A x2, HONIRO), 2 ancora in attesa: COSMI GIACOMO e PROTANO MICHELE (Lettera Incarico inviata 24/03, 10 giorni fa). Nessuna risposta con allegato nelle ultime 48h. Si consiglia invio sollecito.",
+      "todayDetails": "Run mattutino bloccato da limite API. Run serale post-reset (17:00): 6 record totali in DB — 3 ricevuti (OTPA, RD'A x2, HONIRO), 2 ancora in attesa: COSMI GIACOMO e PROTANO MICHELE (Lettera Incarico inviata 24/03, 10 giorni senza risposta). Consigliato sollecito. Ulteriore run ore 20:xx interrotto per limite API.",
       "nextRun": "Lun 06/04 09:00"
     },
     {
@@ -415,9 +415,9 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Lun-Ven 22:00",
       "todayStatus": "success",
-      "todayTime": "20:06",
-      "todayNote": "Dashboard aggiornata · tutti task completati post-reset API",
-      "todayDetails": "Sessioni analizzate: Daily Briefing ✅, Auguri ✅, Verifica AML ✅, Inserimento Notion ✅ (0 nuovi record), Monitoraggio Docs ✅ (2 in attesa: Cosmi, Protano), Solleciti ⏭ (non previsto venerdì). Bozze Gmail: 1 (Briefing 3 apr). Dashboard pubblicata ore 20:06.",
+      "todayTime": "22:05",
+      "todayNote": "Dashboard aggiornata · run serale 22:00",
+      "todayDetails": "Sessioni analizzate: Daily Briefing ✅, Auguri ✅, Verifica AML ✅, Inserimento Notion ✅ (0 nuovi record, 3 run — 2 post-reset), Monitoraggio Docs ✅ (2 in attesa: Cosmi, Protano; ultimo run fallito per API limit), Solleciti ⏭ (non previsto venerdì). Bozze Gmail: 1 (Briefing 3 apr). Dashboard pubblicata ore 22:05.",
       "nextRun": "Lun 06/04 22:00"
     }
   ],
