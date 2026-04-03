@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-03T11:10:35+02:00",
-  "lastUpdated": "11:10:35",
+  "generatedAt": "2026-04-03T16:05:32+02:00",
+  "lastUpdated": "16:05:32",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,38 +367,38 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:00",
       "todayNote": "Nessun compleanno oggi (3 apr)",
-      "todayDetails": "Verificati 24 clienti con data di nascita nel database ANAGRAFICA CLIENTI. Nessun cliente nato il 03/04. Nessuna bozza Gmail creata.",
+      "todayDetails": "Verificati 24 clienti con data di nascita nel database ANAGRAFICA CLIENTI tramite view 'Compleanni 03 Aprile'. Nessun cliente nato il 3 aprile. Nessuna bozza Gmail creata.",
       "nextRun": "Sab 04/04 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Lun, Mer, Ven 06:00",
-      "todayStatus": "warning",
+      "schedule": "Lunedì 06:00",
+      "todayStatus": "success",
       "todayTime": "11:00",
-      "todayNote": "⚠️ 1 anomalia · doc. identità PEPPERPOT S.R.L. scaduto (registro LT)",
-      "todayDetails": "Registro KPI: 11 clienti, 41 righe — 0 anomalie critiche. Note: cartella 'ELLETTRIC' (typo P.M ELETTRIC GROUP), codice Notion '00' per HONIRO S.R.L. Registro LT: 9 clienti, 36 righe — 1 anomalia: doc. identità legale rappresentante PEPPERPOT S.R.L. scaduto dal 26/07/2025 (251 giorni fa). Azione richiesta: acquisire documento valido. Report salvato in Verifica_Settimanale_20260403.md.",
+      "todayNote": "Verifica completata · nessuna anomalia in entrambi i registri",
+      "todayDetails": "Registro KPI: 11 clienti, 41 righe — 0 anomalie critiche. Note: cartella 'ELLETTRIC' (typo P.M ELETTRIC GROUP), codice Notion '00' per HONIRO S.R.L. Registro LT: 9 clienti, 36 righe — 0 anomalie (segnalazione PEPPERPOT S.R.L. annullata: mandato LT cessato 30/09/2024, documento valido durante il rapporto). Report salvato in Verifica_Settimanale_20260403.md.",
       "nextRun": "Lun 07/04 06:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Lun-Ven 08:00, 14:00",
-      "todayStatus": "pending",
-      "todayTime": "—",
-      "todayNote": "Non ancora eseguito oggi",
-      "todayDetails": "Nessuna sessione trovata per il 3 aprile all’orario atteso (08:00). Ieri (2 apr): 0 nuovi record — tutte le email etichettate erano già presenti in Notion.",
-      "nextRun": "Ven 03/04 14:00"
+      "todayStatus": "warning",
+      "todayTime": "08:30",
+      "todayNote": "Run mattutino OK · run pomeriggio bloccato (limite API)",
+      "todayDetails": "Run mattutino (08:30): 0 nuovi record — tutti gli 8 thread etichettati già presenti in Notion (4 'Da firmare' + 4 'Da ricevere'). Run pomeriggio (14:00): sessione interrotta per limite utilizzo API (reset 16:00). Database Notion aggiornato.",
+      "nextRun": "Lun 06/04 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Ven 09:00, 15:00",
-      "todayStatus": "pending",
-      "todayTime": "—",
-      "todayNote": "Non ancora eseguito oggi",
-      "todayDetails": "Nessuna sessione trovata per il 3 aprile all’orario atteso (09:00). Ieri (2 apr): 4 clienti in attesa (Protano x2, Cosmi, STR82L) — 0 risposte ricevute nelle ultime 48h.",
-      "nextRun": "Ven 03/04 15:00"
+      "todayStatus": "warning",
+      "todayTime": "09:00",
+      "todayNote": "Run mattutino OK · run pomeriggio bloccato (limite API)",
+      "todayDetails": "Run mattutino (09:00): 6 record in DB — 2 in attesa (COSMI GIACOMO e PROTANO MICHELE, Lettera Incarico inviata 24/03, 10 giorni fa). Nessuna risposta con allegato nelle ultime 48h. Run pomeriggio (15:00): sessione interrotta per limite utilizzo API (reset 16:00). Si consiglia sollecito per i 2 clienti in attesa.",
+      "nextRun": "Lun 06/04 09:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -415,9 +415,9 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Lun-Ven 22:00",
       "todayStatus": "success",
-      "todayTime": "11:10",
-      "todayNote": "Dashboard aggiornata (run mattutino)",
-      "todayDetails": "Analizzate 3 sessioni completate oggi (3 apr): Daily Briefing ✓, Auguri Clienti ✓, Verifica AML ⚠. Inserimento Notion e Monitoraggio Documenti non ancora eseguiti. 1 bozza Gmail aggiornata. Dashboard pubblicata su GitHub Pages.",
+      "todayTime": "16:05",
+      "todayNote": "Dashboard aggiornata (run pomeriggio post-reset)",
+      "todayDetails": "Run pomeriggio post-reset API (16:05). Analizzate tutte le sessioni di oggi: Daily Briefing ✓, Auguri ✓, Verifica AML ✓ (corretta anomalia PEPPERPOT), Inserimento Notion ⚠ (run mattutino OK, pomeriggio bloccato), Monitoraggio Docs ⚠ (run mattutino OK, pomeriggio bloccato). 1 bozza Gmail aggiornata. Dashboard pubblicata su GitHub Pages.",
       "nextRun": "Ven 03/04 22:00"
     }
   ],
@@ -476,7 +476,7 @@ const DATA = {
       "date": "2026-03-27",
       "time": "11:00",
       "status": "success",
-      "note": "Scheda adeguata verifica e inserimento registro antiriciclaggio KPI."
+      "note": "Scheda adeguata verifica compilata e archiviata per RD'A Ingegneria e Architettura S.R.L."
     },
     {
       "id": "notion-sync-26mar",
@@ -501,8 +501,8 @@ const DATA = {
           "note": "Nessun compleanno (3 apr)"
         },
         "verifica-aml": {
-          "status": "warning",
-          "note": "⚠️ 1 anomalia · PEPPERPOT doc. scaduto"
+          "status": "success",
+          "note": "Nessuna anomalia · entrambi registri OK"
         }
       }
     },
@@ -530,7 +530,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento · diffida WE-NET urgente"
+          "note": "1 scadenza OSEN · diffida WE-NET urgente"
         },
         "auguri-clienti": {
           "status": "success",
