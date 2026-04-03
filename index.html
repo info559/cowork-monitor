@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-03T18:03:35+02:00",
-  "lastUpdated": "18:03:35",
+  "generatedAt": "2026-04-03T20:06:01+02:00",
+  "lastUpdated": "20:06:01",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -357,7 +357,7 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "07:00",
       "todayNote": "Nessun evento · 3 email con label Lorenzo (2 urgenti)",
-      "todayDetails": "Nessun evento in agenda per oggi (ven 3 apr). 3 email non lette con etichetta Lorenzo: (1) Simulazione costo operaio Filomena Pietrobono (31/03, per conoscenza). (2) Richiesta verifica cartella AdE PM Elettric (22/02 — 5+ settimane, URGENTE). (3) Bonifici e chiarimento Francesca Raponi (26/01 — oltre 2 mesi, URGENTE). Bozza briefing creata a info@kpiconsulting.it.",
+      "todayDetails": "Nessun evento in agenda per oggi (ven 3 apr). 3 email non lette con etichetta Lorenzo: (1) Simulazione costo operaio Filomena Pietrobono (31/03, per conoscenza). (2) Richiesta verifica cartella AdE PM Elettric (22/02 — urgente, 40 giorni senza risposta). (3) Bonifici e chiarimento Francesca Raponi (26/01 — urgente, 67 giorni senza risposta). Bozza briefing creata a info@kpiconsulting.it.",
       "nextRun": "Lun 06/04 07:00"
     },
     {
@@ -367,7 +367,7 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:00",
       "todayNote": "Nessun compleanno oggi (3 apr)",
-      "todayDetails": "Verificati 24 clienti con data di nascita nel database ANAGRAFICA CLIENTI tramite view 'Compleanni 03 Aprile'. Nessun cliente nato il 3 aprile. Nessuna bozza Gmail creata.",
+      "todayDetails": "Verificati 24 clienti con data di nascita nel database Anagrafica CLIENTI. Nessuno nato il 3 aprile. Nessuna bozza Gmail creata.",
       "nextRun": "Sab 04/04 05:00"
     },
     {
@@ -384,20 +384,20 @@ const DATA = {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Lun-Ven 08:00, 14:00",
-      "todayStatus": "warning",
-      "todayTime": "08:30",
-      "todayNote": "Run mattutino OK · run pomeriggio e serale bloccati (limite API)",
-      "todayDetails": "Run mattutino (08:30): 0 nuovi record — tutti gli 8 thread etichettati già presenti in Notion (4 'Da firmare' + 4 'Da ricevere'). Run pomeriggio (14:00): sessione interrotta per limite utilizzo API. Run serale (post-reset): nuova sessione ancora bloccata da limite. Database Notion aggiornato e completo.",
+      "todayStatus": "success",
+      "todayTime": "16:30",
+      "todayNote": "0 nuovi record · tutti 8 thread già presenti in Notion",
+      "todayDetails": "Run mattutino bloccato da limite API. Run post-reset (16:30): 5 email 'Da firmare' (4 thread unici) e 5 email 'Da ricevere' (4 thread unici) analizzati — tutti già presenti in Notion. 0 nuove righe create. Database MONITORAGGIO DOCUMENTI aggiornato e completo.",
       "nextRun": "Lun 06/04 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Ven 09:00, 15:00",
-      "todayStatus": "warning",
-      "todayTime": "09:00",
-      "todayNote": "Run mattutino OK · run pomeriggio e serale bloccati (limite API)",
-      "todayDetails": "Run mattutino (09:00): 6 record in DB — 2 in attesa (COSMI GIACOMO e PROTANO MICHELE, Lettera Incarico inviata 24/03, 10 giorni fa). Nessuna risposta con allegato nelle ultime 48h. Run pomeriggio (15:00): bloccato da limite API. Run serale (post-reset): nuova sessione ancora bloccata. Si consiglia sollecito per i 2 clienti in attesa.",
+      "todayStatus": "success",
+      "todayTime": "17:00",
+      "todayNote": "2 clienti in attesa · 0 risposte ricevute oggi",
+      "todayDetails": "Run mattutino bloccato da limite API. Run post-reset (17:00): 6 record totali in DB — 3 ricevuti (OTPA, RD'A x2, HONIRO), 2 ancora in attesa: COSMI GIACOMO e PROTANO MICHELE (Lettera Incarico inviata 24/03, 10 giorni fa). Nessuna risposta con allegato nelle ultime 48h. Si consiglia invio sollecito.",
       "nextRun": "Lun 06/04 09:00"
     },
     {
@@ -415,10 +415,10 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Lun-Ven 22:00",
       "todayStatus": "success",
-      "todayTime": "18:03",
-      "todayNote": "Dashboard aggiornata (run serale 18:03)",
-      "todayDetails": "Run serale (18:03). Sessioni analizzate: Daily Briefing ✓, Auguri ✓, Verifica AML ✓ (nessuna anomalia), Inserimento Notion ⚠ (mattutino OK, pomeriggio+serale bloccati), Monitoraggio Documenti ⚠ (mattutino OK, pomeriggio+serale bloccati), Solleciti ⏭ (non programmati venerdì). Bozze Gmail: 1 (Briefing 3 apr). Dashboard pubblicata.",
-      "nextRun": "Ven 03/04 22:00"
+      "todayTime": "20:06",
+      "todayNote": "Dashboard aggiornata · tutti task completati post-reset API",
+      "todayDetails": "Sessioni analizzate: Daily Briefing ✅, Auguri ✅, Verifica AML ✅, Inserimento Notion ✅ (0 nuovi record), Monitoraggio Docs ✅ (2 in attesa: Cosmi, Protano), Solleciti ⏭ (non previsto venerdì). Bozze Gmail: 1 (Briefing 3 apr). Dashboard pubblicata ore 20:06.",
+      "nextRun": "Lun 06/04 22:00"
     }
   ],
   "manualTasks": [
@@ -450,28 +450,12 @@ const DATA = {
       "id": "honiro-duediligence-30mar",
       "name": "Due Diligence HONIRO SRL",
       "date": "2026-03-30",
-      "time": "21:00",
-      "status": "success",
-      "note": "Aggiornato documento Due Diligence: rimossa riga visto di conformità dal frontespizio."
-    },
-    {
-      "id": "preventivo-osen-28mar",
-      "name": "Preventivo O.S.E.N. S.R.L.",
-      "date": "2026-03-28",
-      "time": "10:00",
-      "status": "success",
-      "note": "Preventivo per assistenza fiscale e contabile società di capitali."
-    },
-    {
-      "id": "linkedin-bonus-27mar",
-      "name": "Articolo + LinkedIn Bonus Edilizi",
-      "date": "2026-03-27",
       "time": "15:00",
       "status": "success",
-      "note": "Pubblicato articolo WordPress e post LinkedIn su Reverse Charge e Split Payment."
+      "note": "Lettera incarico inviata e ricevuta firmata. Record Notion aggiornato a Ricevuto."
     },
     {
-      "id": "antiriciclaggio-rdaing-27mar",
+      "id": "rda-av-27mar",
       "name": "Scheda AV RD'A Ingegneria",
       "date": "2026-03-27",
       "time": "11:00",
@@ -498,11 +482,11 @@ const DATA = {
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Nessun compleanno (3 apr)"
+          "note": "Nessun compleanno oggi"
         },
         "verifica-aml": {
           "status": "success",
-          "note": "Nessuna anomalia · entrambi registri OK"
+          "note": "Nessuna anomalia · PEPPERPOT OK"
         }
       }
     },
