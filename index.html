@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-04T20:04:35+02:00",
-  "lastUpdated": "20:04:35",
+  "generatedAt": "2026-04-04T22:04:11+02:00",
+  "lastUpdated": "22:04:11",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,47 +367,47 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:00",
       "todayNote": "Nessun compleanno oggi (4 apr)",
-      "todayDetails": "Verificati 24 clienti nel database Notion. Nessuno con data di nascita 04/04.",
+      "todayDetails": "Verificati 24 clienti nel database ANAGRAFICA CLIENTI. Nessun cliente nato il 4 aprile. Nessun messaggio di auguri inviato.",
       "nextRun": "Dom 05/04 05:00"
     },
     {
-      "id": "verifica-antiriciclaggio",
+      "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Venerdì 08:00",
+      "schedule": "Ogni venerdì 09:00",
       "todayStatus": "skipped",
-      "todayTime": "",
+      "todayTime": null,
       "todayNote": "Non programmata (sabato) · prossima Ven 10/04",
-      "todayDetails": "Task non eseguito oggi: programmato solo il venerdì. Ultima esecuzione: ven 3 apr.",
-      "nextRun": "Ven 10/04 08:00"
+      "todayDetails": "Task non schedulato per il sabato. Ultima esecuzione: venerdì 3 apr — nessuna anomalia rilevata (caso PEPPERPOT chiarito).",
+      "nextRun": "Ven 10/04 09:00"
     },
     {
-      "id": "inserimento-notion-gmail",
+      "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "schedule": "Lun-Ven 08:00",
+      "schedule": "Lun/Mer/Ven 08:00",
       "todayStatus": "skipped",
-      "todayTime": "",
+      "todayTime": null,
       "todayNote": "Non programmato (sabato) · prossimo Lun 07/04",
-      "todayDetails": "Task non eseguito oggi: programmato solo nei giorni feriali.",
+      "todayDetails": "Task non schedulato per il sabato. Ultima esecuzione: venerdì 3 apr.",
       "nextRun": "Lun 07/04 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Sab 09:00, 15:00",
+      "schedule": "Lun-Sab 09:00 e 15:00",
       "todayStatus": "success",
       "todayTime": "15:00",
       "todayNote": "Mattino: STR82L doc ricevuto (.p7m) · Pomeriggio: 0 nuove risposte · 2 in attesa (Cosmi, Protano)",
-      "todayDetails": "Run mattutino: STR82L S.R.L. ha risposto il 3 apr ore 11:09 con documento firmato digitalmente (.p7m — PKCS#7). Notion aggiornato: stato Ricevuto, data ricezione 2026-04-03. Run pomeridiano (15:00): 0 nuove risposte ricevute. Rimangono in attesa: COSMI GIACOMO (incarico 24/03, 11gg, 0 solleciti), PROTANO MICHELE (incarico 24/03 e sollecitato 30/03, 17gg, 1 sollecito).",
-      "nextRun": "Lun 07/04 09:00"
+      "todayDetails": "Run mattino: STR82L S.R.L. ha inviato documento firmato digitalmente (.p7m) il 3 apr ore 11:09 — Notion aggiornato a 'Ricevuto'. Run pomeriggio: 0 nuove risposte. Rimangono in attesa: COSMI GIACOMO (Lettera di Incarico, 11 gg) e PROTANO MICHELE (2 posizioni: Inviato 24/03 + Sollecitato 30/03).",
+      "nextRun": "Dom 05/04 09:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Mercoledì 10:00",
+      "schedule": "Ogni mercoledì 10:00",
       "todayStatus": "skipped",
-      "todayTime": "",
+      "todayTime": null,
       "todayNote": "Non programmato (sabato) · prossimo Mer 08/04",
-      "todayDetails": "Task non eseguito oggi: programmato solo il mercoledì.",
+      "todayDetails": "Task non schedulato per il sabato. Prossima esecuzione mercoledì 8 aprile.",
       "nextRun": "Mer 08/04 10:00"
     },
     {
@@ -415,9 +415,9 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno 20:00",
       "todayStatus": "success",
-      "todayTime": "20:04",
-      "todayNote": "Dashboard aggiornata — 7 task analizzati · 1 bozza Gmail · run serale completato",
-      "todayDetails": "Run serale (20:04): aggiornamento completo. Sessioni analizzate: daily-briefing (success 07:00), auguri-clienti (success 05:00), monitoraggio-documenti (2 run: mattino STR82L ricevuto, pomeriggio 0 risposte), verifica-aml skipped, inserimento-notion skipped, solleciti skipped. 1 bozza Gmail attiva (Briefing 3 apr → info@kpiconsulting.it). Pubblicato su GitHub Pages.",
+      "todayTime": "22:04",
+      "todayNote": "Dashboard aggiornata — 7 task analizzati · 1 bozza Gmail · run notturno completato",
+      "todayDetails": "Run notturno (22:04): aggiornamento completo. Sessioni analizzate: daily-briefing (success 07:00), auguri-clienti (success 05:00), monitoraggio-documenti (2 run: mattino STR82L ricevuto .p7m, pomeriggio 0 risposte — 2 clienti in attesa: Cosmi e Protano), verifica-aml skipped (sabato), inserimento-notion skipped (sabato), solleciti skipped (sabato). 1 bozza Gmail attiva (Briefing 3 apr → info@kpiconsulting.it). Pubblicato su GitHub Pages.",
       "nextRun": "Dom 05/04 20:00"
     }
   ],
@@ -565,8 +565,8 @@ const DATA = {
   ],
   "coworkDrafts": [
     {
-      "id": "r-4751928328716020573",
-      "subject": "📋 Briefing Giornaliero – Venerdì 3 Aprile 2026",
+      "id": "draft-briefing-3apr",
+      "subject": "Briefing Giornaliero – Venerdì 3 Aprile 2026",
       "to": "info@kpiconsulting.it",
       "date": "3 apr",
       "status": "ready"
