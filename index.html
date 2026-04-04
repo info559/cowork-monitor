@@ -347,18 +347,18 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-03T22:05:32+02:00",
-  "lastUpdated": "22:05:32",
+  "generatedAt": "2026-04-04T08:06:00+02:00",
+  "lastUpdated": "08:06:00",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
       "name": "Daily Briefing",
-      "schedule": "Lun-Ven 07:00",
+      "schedule": "Lun-Sab 07:00",
       "todayStatus": "success",
       "todayTime": "07:00",
-      "todayNote": "Nessun evento · 3 email con label Lorenzo (2 urgenti)",
-      "todayDetails": "Nessun evento in agenda per oggi (ven 3 apr). 3 email non lette con etichetta Lorenzo: (1) Simulazione costo operaio Filomena Pietrobono (31/03, per conoscenza). (2) Richiesta verifica cartella AdE PM Elettric (22/02 — urgente, 40 giorni senza risposta). (3) Bonifici e chiarimento Francesca Raponi (26/01 — urgente, 67 giorni senza risposta). Bozza briefing creata a info@kpiconsulting.it.",
-      "nextRun": "Lun 06/04 07:00"
+      "todayNote": "Nessun evento · 2 email non lette (Cogerp fattura urgente, PEC Telemaco)",
+      "todayDetails": "Nessun evento in agenda per sab 4 apr. 2 email non lette etichetta Lorenzo: (1) Fattura cessione mezzo GB845GF a Cogerp S.r.l. €4.500 — urgente, richiesta data 26/06/2026 da verificare (antedatata?). Dati Cogerp: P.IVA 09029061000, SDI SUBM70N. (2) PEC Telemaco: pratica camerale M26319P0919 evasa per KPI Consulting STP S.r.l.",
+      "nextRun": "Dom 05/04 07:00"
     },
     {
       "id": "auguri-clienti",
@@ -366,39 +366,39 @@ const DATA = {
       "schedule": "Ogni giorno 05:00",
       "todayStatus": "success",
       "todayTime": "05:00",
-      "todayNote": "Nessun compleanno oggi (3 apr)",
-      "todayDetails": "Verificati 24 clienti con data di nascita nel database Anagrafica CLIENTI. Nessuno nato il 3 aprile. Nessuna bozza Gmail creata.",
-      "nextRun": "Sab 04/04 05:00"
+      "todayNote": "Nessun compleanno oggi (4 apr)",
+      "todayDetails": "Verificati 24 clienti con data di nascita nel database Anagrafica CLIENTI. Nessuno nato il 4 aprile. Nessuna bozza Gmail creata.",
+      "nextRun": "Dom 05/04 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
       "schedule": "Venerdì 11:00",
-      "todayStatus": "success",
-      "todayTime": "11:00",
-      "todayNote": "Nessuna anomalia · PEPPERPOT OK (doc scaduto post-cessione)",
-      "todayDetails": "Verifica KPI e LT completata. Segnalazione PEPPERPOT S.R.L. (mandato LT) risolta: documento d'identità scaduto 26/07/2025 ma mandato cessato il 30/09/2024 — doc era valido durante il rapporto. Nessuna anomalia effettiva. Aggiornata regola di verifica: la scadenza documenti si controlla solo per mandati attivi.",
+      "todayStatus": "skipped",
+      "todayTime": "—",
+      "todayNote": "Non programmata (sabato) · ultima esecuzione ven 3 apr: OK",
+      "todayDetails": "La verifica antiriciclaggio è programmata solo il venerdì. Oggi è sabato 4 aprile. Ultima esecuzione: venerdì 3 apr — nessuna anomalia rilevata, PEPPERPOT OK (doc scaduto post-cessione mandato).",
       "nextRun": "Ven 10/04 11:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Lun-Ven 08:00, 14:00",
-      "todayStatus": "success",
-      "todayTime": "16:30",
-      "todayNote": "0 nuovi record · tutti 8 thread già presenti in Notion",
-      "todayDetails": "Run mattutino bloccato da limite API. Run post-reset (16:30) e run serale (dopo 20:06): 5 email 'Da firmare' (4 thread unici) e 5 email 'Da ricevere' (4 thread unici) analizzati — tutti già presenti in Notion in entrambi i run. 0 nuove righe create. Database MONITORAGGIO DOCUMENTI aggiornato e completo.",
-      "nextRun": "Lun 06/04 08:00"
+      "todayStatus": "skipped",
+      "todayTime": "—",
+      "todayNote": "Non programmato (sabato) · ultima esecuzione ven 3 apr: 0 nuovi record",
+      "todayDetails": "L'inserimento Notion è programmato Lun-Ven. Oggi è sabato 4 aprile. Ultima esecuzione: ven 3 apr — tutti 8 thread già presenti in Notion, 0 nuovi record creati.",
+      "nextRun": "Lun 07/04 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 09:00, 15:00",
+      "schedule": "Lun-Sab 09:00, 15:00",
       "todayStatus": "success",
-      "todayTime": "17:00",
-      "todayNote": "2 clienti in attesa · 0 risposte ricevute oggi",
-      "todayDetails": "Run mattutino bloccato da limite API. Run serale post-reset (17:00): 6 record totali in DB — 3 ricevuti (OTPA, RD'A x2, HONIRO), 2 ancora in attesa: COSMI GIACOMO e PROTANO MICHELE (Lettera Incarico inviata 24/03, 10 giorni senza risposta). Consigliato sollecito. Ulteriore run ore 20:xx interrotto per limite API.",
-      "nextRun": "Lun 06/04 09:00"
+      "todayTime": "08:00",
+      "todayNote": "STR82L documento ricevuto · 3 posizioni ancora in attesa",
+      "todayDetails": "STR82L S.R.L. ha risposto il 3 apr ore 11:09 con documento firmato digitalmente (.p7m — PKCS#7). Notion aggiornato: stato Ricevuto, data ricezione 2026-04-03. Rimangono in attesa: COSMI GIACOMO (incarico 24/03, 11gg, 0 solleciti), PROTANO MICHELE (incarico 24/03, 11gg, 0 solleciti), PROTANO MICHELE (sollecitato 30/03, incarico 18/03, 17gg, 1 sollecito).",
+      "nextRun": "Lun 07/04 09:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -406,19 +406,19 @@ const DATA = {
       "schedule": "Mercoledì 10:00",
       "todayStatus": "skipped",
       "todayTime": "—",
-      "todayNote": "Non programmato (venerdì)",
-      "todayDetails": "I solleciti settimanali sono programmati solo il mercoledì. Oggi è venerdì 3 aprile.",
+      "todayNote": "Non programmato (sabato)",
+      "todayDetails": "I solleciti settimanali sono programmati solo il mercoledì. Oggi è sabato 4 aprile.",
       "nextRun": "Mer 08/04 10:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Lun-Ven 22:00",
+      "schedule": "Lun-Sab 08:00",
       "todayStatus": "success",
-      "todayTime": "22:05",
-      "todayNote": "Dashboard aggiornata · run serale 22:00",
-      "todayDetails": "Sessioni analizzate: Daily Briefing ✅, Auguri ✅, Verifica AML ✅, Inserimento Notion ✅ (0 nuovi record, 3 run — 2 post-reset), Monitoraggio Docs ✅ (2 in attesa: Cosmi, Protano; ultimo run fallito per API limit), Solleciti ⏭ (non previsto venerdì). Bozze Gmail: 1 (Briefing 3 apr). Dashboard pubblicata ore 22:05.",
-      "nextRun": "Lun 06/04 22:00"
+      "todayTime": "08:06",
+      "todayNote": "Dashboard aggiornata · run mattutino 08:00",
+      "todayDetails": "Sessioni analizzate: Daily Briefing ✅ (2 email: Cogerp fattura urgente, PEC Telemaco), Auguri ✅ (nessun compleanno), Monitoraggio Docs ✅ (STR82L ricevuto, 3 in attesa), Verifica AML ⏭ (non prevista sabato, ultima ven 3 apr OK), Inserimento Notion ⏭ (non previsto sabato). Bozze Gmail: 1. Dashboard pubblicata ore 08:06.",
+      "nextRun": "Dom 05/04 08:00"
     }
   ],
   "manualTasks": [
@@ -472,6 +472,24 @@ const DATA = {
     }
   ],
   "history": [
+    {
+      "date": "2026-04-04",
+      "label": "Sab 4",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "Nessun evento · 2 email (Cogerp urgente, PEC Telemaco)"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Nessun compleanno oggi"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (sabato)"
+        }
+      }
+    },
     {
       "date": "2026-04-03",
       "label": "Ven 3",
@@ -541,24 +559,6 @@ const DATA = {
         "verifica-aml": {
           "status": "skipped",
           "note": "Non programmata (martedì)"
-        }
-      }
-    },
-    {
-      "date": "2026-03-30",
-      "label": "Lun 30",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "Nessun evento · diffida WE-NET urgente"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno oggi"
-        },
-        "verifica-aml": {
-          "status": "success",
-          "note": "Registro OK · 45 posizioni verificate"
         }
       }
     }
