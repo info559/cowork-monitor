@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-04T22:04:11+02:00",
-  "lastUpdated": "22:04:11",
+  "generatedAt": "2026-04-05T08:05:57+02:00",
+  "lastUpdated": "08:05:57",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,9 +356,9 @@ const DATA = {
       "schedule": "Lun-Sab 07:00",
       "todayStatus": "success",
       "todayTime": "07:00",
-      "todayNote": "Nessun evento · 2 email non lette (Cogerp fattura urgente, PEC Telemaco)",
-      "todayDetails": "Nessun evento in agenda per sab 4 apr. 2 email non lette etichetta Lorenzo: (1) Fattura cessione mezzo GB845GF a Cogerp S.r.l. €4.500 — urgente, richiesta data 26/06/2026 da verificare (antedatata?). Dati Cogerp: P.IVA 09029061000, SDI SUBM70N. (2) PEC Telemaco: pratica camerale M26319P0919 evasa per KPI Consulting STP S.r.l.",
-      "nextRun": "Dom 05/04 07:00"
+      "todayNote": "Nessun evento · 1 urgenza (Cogerp fattura GB845GF) · PEC Telemaco evasa",
+      "todayDetails": "Agenda libera per dom 5 apr. Email non lette etichetta Lorenzo: (1) URGENTE — Fattura cessione mezzo GB845GF da Centro Equestre San Giorgio Altipiani di Arcinazzo a Cogerp S.r.l. €4.500 IVA compresa — data richiesta 26/06/2026 da verificare (antedatata?). Dati Cogerp: P.IVA 09029061000, SDI SUBM70N, PEC cogerp@pec.it. (2) PEC Telemaco: pratica camerale M26319P0919 evasa per KPI Consulting STP S.r.l.",
+      "nextRun": "Lun 06/04 07:00"
     },
     {
       "id": "auguri-clienti",
@@ -366,9 +366,9 @@ const DATA = {
       "schedule": "Ogni giorno 05:00",
       "todayStatus": "success",
       "todayTime": "05:00",
-      "todayNote": "Nessun compleanno oggi (4 apr)",
-      "todayDetails": "Verificati 24 clienti nel database ANAGRAFICA CLIENTI. Nessun cliente nato il 4 aprile. Nessun messaggio di auguri inviato.",
-      "nextRun": "Dom 05/04 05:00"
+      "todayNote": "Nessun compleanno oggi (5 apr)",
+      "todayDetails": "Verificati 24 clienti nel database ANAGRAFICA CLIENTI. Nessun cliente nato il 5 aprile. Nessun messaggio di auguri inviato.",
+      "nextRun": "Lun 06/04 05:00"
     },
     {
       "id": "verifica-aml",
@@ -376,29 +376,29 @@ const DATA = {
       "schedule": "Ogni venerdì 09:00",
       "todayStatus": "skipped",
       "todayTime": null,
-      "todayNote": "Non programmata (sabato) · prossima Ven 10/04",
-      "todayDetails": "Task non schedulato per il sabato. Ultima esecuzione: venerdì 3 apr — nessuna anomalia rilevata (caso PEPPERPOT chiarito).",
+      "todayNote": "Non programmata (domenica) · prossima Ven 10/04",
+      "todayDetails": "Task non eseguito: domenica non è un giorno programmato per la verifica antiriciclaggio.",
       "nextRun": "Ven 10/04 09:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "schedule": "Lun/Mer/Ven 08:00",
+      "schedule": "Lun-Ven 08:00",
       "todayStatus": "skipped",
       "todayTime": null,
-      "todayNote": "Non programmato (sabato) · prossimo Lun 07/04",
-      "todayDetails": "Task non schedulato per il sabato. Ultima esecuzione: venerdì 3 apr.",
-      "nextRun": "Lun 07/04 08:00"
+      "todayNote": "Non programmato (domenica) · prossimo Lun 06/04",
+      "todayDetails": "Task non eseguito: domenica non è un giorno programmato per l'inserimento su Notion.",
+      "nextRun": "Lun 06/04 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Sab 09:00 e 15:00",
-      "todayStatus": "success",
-      "todayTime": "15:00",
-      "todayNote": "Mattino: STR82L doc ricevuto (.p7m) · Pomeriggio: 0 nuove risposte · 2 in attesa (Cosmi, Protano)",
-      "todayDetails": "Run mattino: STR82L S.R.L. ha inviato documento firmato digitalmente (.p7m) il 3 apr ore 11:09 — Notion aggiornato a 'Ricevuto'. Run pomeriggio: 0 nuove risposte. Rimangono in attesa: COSMI GIACOMO (Lettera di Incarico, 11 gg) e PROTANO MICHELE (2 posizioni: Inviato 24/03 + Sollecitato 30/03).",
-      "nextRun": "Dom 05/04 09:00"
+      "todayStatus": "skipped",
+      "todayTime": null,
+      "todayNote": "Non programmato (domenica) · prossimo Lun 06/04",
+      "todayDetails": "Task non eseguito oggi (domenica). Ultimo aggiornamento sabato 4 apr: STR82L documento ricevuto (.p7m), 2 posizioni ancora in attesa (Cosmi Giacomo e Protano Michele — Lettere di Incarico inviate 24/03, 11 giorni senza risposta).",
+      "nextRun": "Lun 06/04 09:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -406,19 +406,19 @@ const DATA = {
       "schedule": "Ogni mercoledì 10:00",
       "todayStatus": "skipped",
       "todayTime": null,
-      "todayNote": "Non programmato (sabato) · prossimo Mer 08/04",
-      "todayDetails": "Task non schedulato per il sabato. Prossima esecuzione mercoledì 8 aprile.",
+      "todayNote": "Non programmato (domenica) · prossimo Mer 08/04",
+      "todayDetails": "Task non eseguito: domenica non è un giorno programmato per i solleciti settimanali.",
       "nextRun": "Mer 08/04 10:00"
     },
     {
       "id": "aggiorna-cowork-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Ogni giorno 20:00",
+      "schedule": "Ogni giorno 22:00",
       "todayStatus": "success",
-      "todayTime": "22:04",
-      "todayNote": "Dashboard aggiornata — 7 task analizzati · 1 bozza Gmail · run notturno completato",
-      "todayDetails": "Run notturno (22:04): aggiornamento completo. Sessioni analizzate: daily-briefing (success 07:00), auguri-clienti (success 05:00), monitoraggio-documenti (2 run: mattino STR82L ricevuto .p7m, pomeriggio 0 risposte — 2 clienti in attesa: Cosmi e Protano), verifica-aml skipped (sabato), inserimento-notion skipped (sabato), solleciti skipped (sabato). 1 bozza Gmail attiva (Briefing 3 apr → info@kpiconsulting.it). Pubblicato su GitHub Pages.",
-      "nextRun": "Dom 05/04 20:00"
+      "todayTime": "08:05",
+      "todayNote": "Dashboard aggiornata — dom 5 apr 08:05",
+      "todayDetails": "Aggiornamento completato. Dati giornata domenica 5 aprile 2026: daily briefing ✓, auguri clienti ✓ (nessun compleanno), task settimanali non programmati (domenica). Bozze Gmail: 1.",
+      "nextRun": "Lun 06/04 22:00"
     }
   ],
   "manualTasks": [
@@ -472,6 +472,24 @@ const DATA = {
     }
   ],
   "history": [
+    {
+      "date": "2026-04-05",
+      "label": "Dom 5",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "Nessun evento · 1 urgenza (Cogerp GB845GF) · PEC Telemaco"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Nessun compleanno oggi"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (domenica)"
+        }
+      }
+    },
     {
       "date": "2026-04-04",
       "label": "Sab 4",
@@ -541,24 +559,6 @@ const DATA = {
         "verifica-aml": {
           "status": "skipped",
           "note": "Non programmata (mercoledì)"
-        }
-      }
-    },
-    {
-      "date": "2026-03-31",
-      "label": "Mar 31",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "Nessun evento · email varie"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno oggi"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (martedì)"
         }
       }
     }
