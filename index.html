@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-05T20:04:11+02:00",
-  "lastUpdated": "20:04:11",
+  "generatedAt": "2026-04-05T20:05:29+02:00",
+  "lastUpdated": "22:05:29",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -357,8 +357,8 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "07:00",
       "todayNote": "Nessun evento · 1 urgenza (Cogerp fattura GB845GF) · PEC Telemaco evasa",
-      "todayDetails": "Agenda libera per dom 5 apr. Email non lette etichetta Lorenzo: (1) URGENTE — Fattura cessione mezzo GB845GF da Centro Equestre San Giorgio Altipiani di Arcinazzo a Cogerp S.r.l. €4.500 IVA compresa — data richiesta 26/06/2026 da verificare (antedatata?). Dati Cogerp: P.IVA 09029061000, SDI SUBM70N, PEC cogerp@pec.it. (2) PEC Telemaco: pratica camerale M26319P0919 evasa per KPI Consulting STP S.r.l.",
-      "nextRun": "Lun 06/04 07:00"
+      "todayDetails": "Agenda libera. Email urgente: fattura vendita mezzo GB845GF € 4.500 per Cogerp S.r.l. (data richiesta 26/06/2026 da verificare). PEC Telemaco pratica M26319P0919 evasa.",
+      "nextRun": "2026-04-06T07:00:00"
     },
     {
       "id": "auguri-clienti",
@@ -367,48 +367,48 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:00",
       "todayNote": "Nessun compleanno oggi (24 clienti verificati)",
-      "todayDetails": "Verificati 24 clienti con data di nascita nel database ANAGRAFICA CLIENTI. Nessun cliente nato il 05/04.",
-      "nextRun": "Lun 06/04 05:00"
+      "todayDetails": "Nessun cliente con compleanno il 05/04. Database 24 clienti con data di nascita verificato.",
+      "nextRun": "2026-04-06T05:00:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
       "schedule": "Ogni venerdì 09:00",
       "todayStatus": "skipped",
-      "todayTime": "",
+      "todayTime": "—",
       "todayNote": "Non programmata (domenica)",
-      "todayDetails": "La verifica antiriciclaggio è programmata solo il venerdì. Ultima esecuzione: ven 3/04 — esito OK, nessuna anomalia rilevata nei registri KPI e LT.",
-      "nextRun": "Ven 10/04 09:00"
+      "todayDetails": "Task non eseguito nei giorni festivi. Prossima esecuzione: venerdì 10/04.",
+      "nextRun": "2026-04-10T09:00:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Lun-Ven 08:00",
       "todayStatus": "skipped",
-      "todayTime": "",
+      "todayTime": "—",
       "todayNote": "Non programmato (domenica)",
-      "todayDetails": "L'inserimento Notion è programmato solo nei giorni feriali. Ultima esecuzione: ven 3/04 — 0 nuovi record (tutti già presenti).",
-      "nextRun": "Lun 06/04 08:00"
+      "todayDetails": "Task non eseguito nei giorni festivi. Prossima esecuzione: lunedì 06/04.",
+      "nextRun": "2026-04-06T08:00:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Ven 09:00 e 16:00",
       "todayStatus": "skipped",
-      "todayTime": "",
-      "todayNote": "Non programmato (domenica) · 2 in attesa (Cosmi, Protano)",
-      "todayDetails": "Monitoraggio non programmato domenica. Ultima esecuzione: sab 4/04 — 2 clienti ancora in attesa: COSMI GIACOMO (lettera incarico dal 24/03) e PROTANO MICHELE (lettera incarico dal 24/03), entrambi da ~11 giorni.",
-      "nextRun": "Lun 06/04 09:00"
+      "todayTime": "—",
+      "todayNote": "Non programmato (domenica) · 2 doc in attesa (Cosmi, Protano)",
+      "todayDetails": "Task non eseguito nei giorni festivi. Ultimo controllo 04/04: 2 lettere di incarico in attesa (Cosmi Giacomo 11gg, Protano Michele 11gg).",
+      "nextRun": "2026-04-06T09:00:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
       "schedule": "Ogni mercoledì 10:00",
       "todayStatus": "skipped",
-      "todayTime": "",
+      "todayTime": "—",
       "todayNote": "Non programmato (domenica)",
-      "todayDetails": "I solleciti settimanali sono programmati solo il mercoledì. Clienti in attesa da sollecitare: COSMI GIACOMO e PROTANO MICHELE.",
-      "nextRun": "Mer 08/04 10:00"
+      "todayDetails": "Task non eseguito nei giorni festivi. Prossima esecuzione: mercoledì 08/04.",
+      "nextRun": "2026-04-08T10:00:00"
     },
     {
       "id": "aggiorna-cowork-monitor",
@@ -557,7 +557,7 @@ const DATA = {
   ],
   "coworkDrafts": [
     {
-      "id": "briefing-3apr",
+      "id": "draft-briefing-3apr",
       "subject": "📋 Briefing Giornaliero – Venerdì 3 Aprile 2026",
       "to": "info@kpiconsulting.it",
       "date": "3 apr",
