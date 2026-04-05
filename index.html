@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-05T08:05:57+02:00",
-  "lastUpdated": "08:05:57",
+  "generatedAt": "2026-04-05T10:04:57+02:00",
+  "lastUpdated": "10:04:57",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -377,7 +377,7 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": null,
       "todayNote": "Non programmata (domenica) · prossima Ven 10/04",
-      "todayDetails": "Task non eseguito: domenica non è un giorno programmato per la verifica antiriciclaggio.",
+      "todayDetails": "Task non eseguito: domenica non è un giorno programmato per la verifica antiriciclaggio. Ultima esecuzione: ven 3 apr — nessuna anomalia.",
       "nextRun": "Ven 10/04 09:00"
     },
     {
@@ -387,17 +387,17 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": null,
       "todayNote": "Non programmato (domenica) · prossimo Lun 06/04",
-      "todayDetails": "Task non eseguito: domenica non è un giorno programmato per l'inserimento su Notion.",
+      "todayDetails": "Task non eseguito: domenica non è un giorno programmato per l'inserimento Notion da Gmail.",
       "nextRun": "Lun 06/04 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Sab 09:00 e 15:00",
+      "schedule": "Lun-Sab 09:00 e 17:00",
       "todayStatus": "skipped",
       "todayTime": null,
-      "todayNote": "Non programmato (domenica) · prossimo Lun 06/04",
-      "todayDetails": "Task non eseguito oggi (domenica). Ultimo aggiornamento sabato 4 apr: STR82L documento ricevuto (.p7m), 2 posizioni ancora in attesa (Cosmi Giacomo e Protano Michele — Lettere di Incarico inviate 24/03, 11 giorni senza risposta).",
+      "todayNote": "Non programmato (domenica) · prossimo Lun 06/04 · 2 in attesa (Cosmi, Protano)",
+      "todayDetails": "Task non eseguito: domenica non è un giorno programmato. Ultimi dati (4 apr): COSMI GIACOMO e PROTANO MICHELE ancora in attesa di Lettera di Incarico firmata da 24/03/2026.",
       "nextRun": "Lun 06/04 09:00"
     },
     {
@@ -415,9 +415,9 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno 22:00",
       "todayStatus": "success",
-      "todayTime": "08:05",
-      "todayNote": "Dashboard aggiornata — dom 5 apr 08:05",
-      "todayDetails": "Aggiornamento completato. Dati giornata domenica 5 aprile 2026: daily briefing ✓, auguri clienti ✓ (nessun compleanno), task settimanali non programmati (domenica). Bozze Gmail: 1.",
+      "todayTime": "10:04",
+      "todayNote": "Dashboard aggiornata — dom 5 apr 10:04 (2° run)",
+      "todayDetails": "Secondo aggiornamento della giornata (1° alle 08:05). Dati confermati: daily briefing ✓, auguri clienti ✓ (nessun compleanno), task settimanali non programmati (domenica). Bozze Gmail: 1 (Briefing 3 apr).",
       "nextRun": "Lun 06/04 22:00"
     }
   ],
@@ -436,15 +436,7 @@ const DATA = {
       "date": "2026-03-31",
       "time": "17:00",
       "status": "success",
-      "note": "Aggiornata regola versionamento schede AV: nuovo file per ogni aggiornamento, no sovrascrittura storico."
-    },
-    {
-      "id": "stayfit-31mar",
-      "name": "Preventivi STAY FIT S.S.D. A R.L.",
-      "date": "2026-03-31",
-      "time": "16:00",
-      "status": "success",
-      "note": "Creati preventivi 002_SC (revoca amministratore €305) e 003_SC (SCIA palestra + CCIAA €430). Corretti da _SP a _SC."
+      "note": "Skill antiriciclaggio aggiornata con nuove istruzioni per sincronizzazione Notion."
     },
     {
       "id": "honiro-duediligence-30mar",
@@ -496,7 +488,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento · 2 email (Cogerp urgente, PEC Telemaco)"
+          "note": "Nessun evento · 2 urgenze (Cogerp, PEC Telemaco)"
         },
         "auguri-clienti": {
           "status": "success",
@@ -550,7 +542,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento · email Cogerp GB845GF"
+          "note": "Nessun evento · email routine"
         },
         "auguri-clienti": {
           "status": "success",
