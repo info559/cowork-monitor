@@ -347,85 +347,78 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-06T16:06:06.383Z",
-  "lastUpdated": "18:06:06",
+  "generatedAt": "2026-04-06T18:06:41.304Z",
+  "lastUpdated": "20:06:41",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
       "name": "Daily Briefing",
-      "schedule": "Ogni giorno · 07:00",
-      "description": "Agenda Google Calendar + email non lette etichetta Lorenzo",
+      "schedule": "Ogni giorno ore 07:00",
       "todayStatus": "success",
       "todayTime": "07:00",
       "todayNote": "Nessun evento · urgenza fattura Cogerp GB845GF €4.500 · PEC Telemaco M26319P0919 evasa",
-      "todayDetails": "2 email non lette (3 apr): PEC Telemaco pratica M26319P0919 evasa; email Cogerp S.r.l. – richiesta fattura mezzo GB845GF €4.500 IVA inc. con data 26/06/2026.",
+      "todayDetails": "2 thread non letti etichetta Lorenzo: (1) PEC Telemaco pratica M26319P0919 evasa per KPI Consulting STP S.r.l.; (2) Richiesta fattura da Cogerp S.r.l. per passaggio proprietà mezzo GB845GF €4.500 IVA compresa — data richiesta 26/06/2026. Nessun evento in calendario.",
       "nextRun": "2026-04-07T07:00:00"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
-      "schedule": "Ogni giorno · 05:00",
-      "description": "Verifica compleanni clienti da Notion e invio email auguri",
+      "schedule": "Ogni giorno ore 05:00",
       "todayStatus": "success",
       "todayTime": "05:00",
       "todayNote": "Nessun compleanno oggi (70+ clienti verificati)",
-      "todayDetails": "Controllo completato su tutte le anagrafiche individuali del database Notion. Nessun compleanno in data 06/04/2026.",
+      "todayDetails": "Verifica completata su oltre 70 anagrafiche clienti individuali. Nessun cliente con data di nascita 06/04.",
       "nextRun": "2026-04-07T05:00:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ogni venerdì · 09:00",
-      "description": "Controllo scadenze adeguata verifica e aggiornamenti AML",
+      "schedule": "Venerdì ore 09:00",
       "todayStatus": "skipped",
       "todayTime": "--",
       "todayNote": "Non programmata (lunedì) · prossima esecuzione venerdì 10/04",
-      "todayDetails": "Task schedulato solo il venerdì. Ultima esecuzione: venerdì 3 aprile 2026 – nessuna anomalia (pratica PEPPERPOT chiarita).",
+      "todayDetails": "Il task viene eseguito solo il venerdì. Oggi è lunedì 6 aprile 2026.",
       "nextRun": "2026-04-10T09:00:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "schedule": "Ogni giorno · 08:00",
-      "description": "Scansione etichette Gmail Da firmare / Da ricevere e inserimento in Notion",
+      "schedule": "Ogni giorno ore 08:00",
       "todayStatus": "success",
       "todayTime": "08:00",
       "todayNote": "8 thread verificati · 0 nuovi inserimenti (tutti già in Notion)",
-      "todayDetails": "Da firmare: 4 thread (STR82L, RD'A, Cosmi, Protano) – tutti già in Notion. Da ricevere: 4 thread (Pepperpot, OTPA, F&G, Protano REDDITI) – tutti già in Notion. Nessun record creato.",
+      "todayDetails": "Scansione etichette Da firmare e Da ricevere (ultimi 30 giorni). 4 thread Da firmare (Nardi/STR82L, RD'A, Cosmi, Protano) e 4 Da ricevere (Pepperpot, Ottavi/OTPA, F&G, Protano REDDITI) — tutti già presenti in Notion. Nessun nuovo record creato.",
       "nextRun": "2026-04-07T08:00:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Ogni giorno · 09:00 e 15:00",
-      "description": "Controllo risposte clienti con allegati e aggiornamento Notion",
+      "schedule": "Ogni giorno ore 09:00 e 15:00",
       "todayStatus": "success",
       "todayTime": "15:00",
-      "todayNote": "3 in attesa (Cosmi, Protano ×2 – 13-19 gg) · 0 risposte · 2° run serale",
-      "todayDetails": "COSMI GIACOMO (24/03, Inviato, 13 gg attesa) + PROTANO MICHELE (24/03, Inviato + 18/03, Sollecitato 1 volta). Nessuna risposta con allegati nelle ultime 48h. 2° monitoraggio pomeridiano confermato.",
+      "todayNote": "3 in attesa (Cosmi, Protano ×2 – 13-19 gg) · 0 risposte · 2 run completati",
+      "todayDetails": "10 record totali nel database. 3 in attesa: COSMI GIACOMO (Inviato 24/03), PROTANO MICHELE (Inviato 24/03 e Sollecitato 18/03). 7 già in stato Ricevuto. Ricerca Gmail 48h: 0 risposte con allegati da cosmi né protano. Nessuna modifica Notion.",
       "nextRun": "2026-04-07T09:00:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Ogni mercoledì · 10:00",
-      "description": "Invio solleciti automatici per documenti in attesa da >7 giorni",
+      "schedule": "Lunedì ore 10:00",
       "todayStatus": "warning",
       "todayTime": "--",
-      "todayNote": "Rate limit raggiunto · Protano + Cosmi non sollecitati",
-      "todayDetails": "Solleciti settimanali avviati ma interrotti per rate limit Gmail. Identificati 3 record da sollecitare: COSMI GIACOMO (1° sollecito, 24/03) e PROTANO MICHELE (2° sollecito, 18/03 + 24/03). Nessuna email inviata.",
-      "nextRun": "2026-04-08T10:00:00"
+      "todayNote": "Rate limit raggiunto · Protano (2° sollecito) e Cosmi (1° sollecito) non inviati",
+      "todayDetails": "Task interrotto per rate limit Gmail (You've hit your limit · resets 10am). Erano stati identificati: PROTANO MICHELE → 2° sollecito su thread contratto 19d1bdcc2b603856; COSMI GIACOMO → 1° sollecito. Nessuna email inviata. Riprovare manualmente.",
+      "nextRun": "2026-04-13T10:00:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Ogni giorno · 14:00 e 22:00",
-      "description": "Aggiornamento dashboard GitHub Pages con stato task e bozze Gmail",
+      "schedule": "Ogni giorno ore 08:30 e 18:00",
       "todayStatus": "success",
-      "todayTime": "18:06",
-      "todayNote": "2° run serale · tutti i task aggiornati · 1 bozza Gmail reale",
-      "todayDetails": "Aggiornamento serale completato alle 18:06. Stato task: Briefing ✓, Auguri ✓, AML skip (lun), Notion ✓, Monitoraggio ✓ (×2), Solleciti ⚠ rate limit. Bozze Gmail: 1 reale + 2 template esclusi.",
-      "nextRun": "2026-04-06T20:00:00"
+      "todayTime": "20:06",
+      "todayNote": "Dashboard aggiornata · 3° run giornaliero · 1 bozza Gmail reale",
+      "todayDetails": "Aggiornamento dati: 7 task pianificati analizzati, bozze Gmail sincronizzate (1 reale + 2 template esclusi), storico aggiornato.",
+      "nextRun": "2026-04-07T08:30:00"
     }
   ],
   "manualTasks": [
