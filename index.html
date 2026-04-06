@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-06T14:06:09.310Z",
-  "lastUpdated": "16:06:09",
+  "generatedAt": "2026-04-06T16:06:06.383Z",
+  "lastUpdated": "18:06:06",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -401,8 +401,8 @@ const DATA = {
       "description": "Controllo risposte clienti con allegati e aggiornamento Notion",
       "todayStatus": "success",
       "todayTime": "15:00",
-      "todayNote": "3 in attesa (Cosmi, Protano ×2) · 0 risposte ricevute",
-      "todayDetails": "Record in attesa: COSMI GIACOMO (Inviato 24/03 – 13gg), PROTANO MICHELE (Inviato 24/03 – 13gg), PROTANO MICHELE (Sollecitato 18/03 – 19gg, 1 sollecito già inviato 30/03). Nessuna risposta con allegati nelle ultime 48h. 7 record già in stato Ricevuto.",
+      "todayNote": "3 in attesa (Cosmi, Protano ×2 – 13-19 gg) · 0 risposte · 2° run serale",
+      "todayDetails": "COSMI GIACOMO (24/03, Inviato, 13 gg attesa) + PROTANO MICHELE (24/03, Inviato + 18/03, Sollecitato 1 volta). Nessuna risposta con allegati nelle ultime 48h. 2° monitoraggio pomeridiano confermato.",
       "nextRun": "2026-04-07T09:00:00"
     },
     {
@@ -412,8 +412,8 @@ const DATA = {
       "description": "Invio solleciti automatici per documenti in attesa da >7 giorni",
       "todayStatus": "warning",
       "todayTime": "--",
-      "todayNote": "Rate limit raggiunto · solleciti Protano + Cosmi non inviati",
-      "todayDetails": "Identificati da sollecitare: PROTANO MICHELE (2° sollecito – thread 19d1bdcc) e COSMI GIACOMO (1° sollecito – thread 19d1f2d5). Task interrotto per rate limit API. Prossima esecuzione mercoledì 08/04 ore 10:00.",
+      "todayNote": "Rate limit raggiunto · Protano + Cosmi non sollecitati",
+      "todayDetails": "Solleciti settimanali avviati ma interrotti per rate limit Gmail. Identificati 3 record da sollecitare: COSMI GIACOMO (1° sollecito, 24/03) e PROTANO MICHELE (2° sollecito, 18/03 + 24/03). Nessuna email inviata.",
       "nextRun": "2026-04-08T10:00:00"
     },
     {
@@ -422,10 +422,10 @@ const DATA = {
       "schedule": "Ogni giorno · 14:00 e 22:00",
       "description": "Aggiornamento dashboard GitHub Pages con stato task e bozze Gmail",
       "todayStatus": "success",
-      "todayTime": "16:06",
-      "todayNote": "Dashboard aggiornata · 1 bozza reale Gmail · run pomeridiano 16:06",
-      "todayDetails": "Sessioni analizzate: Daily Briefing ✓, Auguri ✓ (nessun compleanno), Inserimento Notion ✓ (0 nuovi), Monitoraggio ✓ (3 in attesa), Solleciti ⚠ (rate limit). Bozze Gmail: 1 reale (Briefing 3 apr). 2 template esclusi.",
-      "nextRun": "2026-04-06T22:00:00"
+      "todayTime": "18:06",
+      "todayNote": "2° run serale · tutti i task aggiornati · 1 bozza Gmail reale",
+      "todayDetails": "Aggiornamento serale completato alle 18:06. Stato task: Briefing ✓, Auguri ✓, AML skip (lun), Notion ✓, Monitoraggio ✓ (×2), Solleciti ⚠ rate limit. Bozze Gmail: 1 reale + 2 template esclusi.",
+      "nextRun": "2026-04-06T20:00:00"
     }
   ],
   "manualTasks": [
