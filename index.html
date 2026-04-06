@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-05T20:05:29+02:00",
-  "lastUpdated": "22:05:29",
+  "generatedAt": "2026-04-06T08:04:48+02:00",
+  "lastUpdated": "08:04:48",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,9 +356,9 @@ const DATA = {
       "schedule": "Lun-Sab 07:00",
       "todayStatus": "success",
       "todayTime": "07:00",
-      "todayNote": "Nessun evento · 1 urgenza (Cogerp fattura GB845GF) · PEC Telemaco evasa",
-      "todayDetails": "Agenda libera. Email urgente: fattura vendita mezzo GB845GF € 4.500 per Cogerp S.r.l. (data richiesta 26/06/2026 da verificare). PEC Telemaco pratica M26319P0919 evasa.",
-      "nextRun": "2026-04-06T07:00:00"
+      "todayNote": "Nessun evento · urgenza fattura Cogerp GB845GF · PEC Telemaco evasa",
+      "todayDetails": "Agenda libera. Email urgente: fattura vendita mezzo GB845GF € 4.500 per Cogerp S.r.l. (data richiesta 26/06/2026 da verificare fiscalmente). PEC Telemaco pratica M26319P0919 evasa.",
+      "nextRun": "2026-04-07T07:00:00"
     },
     {
       "id": "auguri-clienti",
@@ -366,39 +366,39 @@ const DATA = {
       "schedule": "Ogni giorno 05:00",
       "todayStatus": "success",
       "todayTime": "05:00",
-      "todayNote": "Nessun compleanno oggi (24 clienti verificati)",
-      "todayDetails": "Nessun cliente con compleanno il 05/04. Database 24 clienti con data di nascita verificato.",
-      "nextRun": "2026-04-06T05:00:00"
+      "todayNote": "Nessun compleanno oggi (70+ clienti verificati)",
+      "todayDetails": "Nessun cliente con compleanno il 06/04. Database 70+ clienti con data di nascita verificato completamente.",
+      "nextRun": "2026-04-07T05:00:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ogni venerdì 09:00",
+      "schedule": "Ogni venerdì 11:00",
       "todayStatus": "skipped",
       "todayTime": "—",
-      "todayNote": "Non programmata (domenica)",
-      "todayDetails": "Task non eseguito nei giorni festivi. Prossima esecuzione: venerdì 10/04.",
-      "nextRun": "2026-04-10T09:00:00"
+      "todayNote": "Non programmata (lunedì) · prossima Ven 10/04",
+      "todayDetails": "Task non eseguito oggi (lunedì). Ultimo controllo 03/04: nessuna anomalia, PEPPERPOT OK. Prossima esecuzione: venerdì 10/04.",
+      "nextRun": "2026-04-10T11:00:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Lun-Ven 08:00",
-      "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Task non eseguito nei giorni festivi. Prossima esecuzione: lunedì 06/04.",
-      "nextRun": "2026-04-06T08:00:00"
+      "todayStatus": "success",
+      "todayTime": "08:00",
+      "todayNote": "8 thread trovati · 0 nuovi inserimenti (tutti già in Notion)",
+      "todayDetails": "Scansionati 8 thread unici (4 etichetta Da firmare, 4 etichetta Da ricevere). Tutti i record già presenti in Notion. Nessuna scrittura eseguita.",
+      "nextRun": "2026-04-07T08:00:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Ven 09:00 e 16:00",
-      "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non programmato (domenica) · 2 doc in attesa (Cosmi, Protano)",
-      "todayDetails": "Task non eseguito nei giorni festivi. Ultimo controllo 04/04: 2 lettere di incarico in attesa (Cosmi Giacomo 11gg, Protano Michele 11gg).",
-      "nextRun": "2026-04-06T09:00:00"
+      "schedule": "Lun-Ven 09:00 e 15:00",
+      "todayStatus": "success",
+      "todayTime": "09:00",
+      "todayNote": "2 in attesa (Cosmi 13gg, Protano 13gg) · 0 risposte",
+      "todayDetails": "Cosmi Giacomo e Protano Michele entrambi con lettera incarico inviata il 24/03 (13 giorni). Nessuna risposta con allegati nelle ultime 48h. Si valuti l'invio di un sollecito.",
+      "nextRun": "2026-04-07T09:00:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -406,8 +406,8 @@ const DATA = {
       "schedule": "Ogni mercoledì 10:00",
       "todayStatus": "skipped",
       "todayTime": "—",
-      "todayNote": "Non programmato (domenica)",
-      "todayDetails": "Task non eseguito nei giorni festivi. Prossima esecuzione: mercoledì 08/04.",
+      "todayNote": "Non programmato (lunedì) · prossimo Mer 08/04",
+      "todayDetails": "Task non eseguito oggi (lunedì). Prossima esecuzione: mercoledì 08/04.",
       "nextRun": "2026-04-08T10:00:00"
     },
     {
@@ -415,10 +415,10 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno 22:00",
       "todayStatus": "success",
-      "todayTime": "20:04",
-      "todayNote": "7° run della giornata",
-      "todayDetails": "7° aggiornamento giornaliero — sessioni analizzate, bozze Gmail verificate (1 reale: Briefing 3 apr → info@kpiconsulting.it), tutti i task invariati rispetto ai run precedenti.",
-      "nextRun": "Lun 06/04 22:00"
+      "todayTime": "08:04",
+      "todayNote": "Run mattutino completato",
+      "todayDetails": "Aggiornamento mattutino 06/04 ore 08:04. Sessioni analizzate: Daily Briefing ✅, Auguri ✅, Inserimento Notion ✅, Monitoraggio Documenti ✅. Bozze Gmail: 1 reale (Briefing 3 apr → info@kpiconsulting.it).",
+      "nextRun": "2026-04-06T22:00:00"
     }
   ],
   "manualTasks": [
@@ -465,6 +465,24 @@ const DATA = {
   ],
   "history": [
     {
+      "date": "2026-04-06",
+      "label": "Lun 6",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "Nessun evento · urgenza fattura Cogerp GB845GF · PEC Telemaco evasa"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Nessun compleanno oggi (70+ clienti)"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (lunedì)"
+        }
+      }
+    },
+    {
       "date": "2026-04-05",
       "label": "Dom 5",
       "tasks": {
@@ -488,7 +506,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento · 2 urgenze (Cogerp, PEC Telemaco)"
+          "note": "Nessun evento · urgenza fattura Cogerp GB845GF"
         },
         "auguri-clienti": {
           "status": "success",
@@ -533,24 +551,6 @@ const DATA = {
         "verifica-aml": {
           "status": "skipped",
           "note": "Non programmata (giovedì)"
-        }
-      }
-    },
-    {
-      "date": "2026-04-01",
-      "label": "Mer 1",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "Nessun evento · email routine"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno oggi"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (mercoledì)"
         }
       }
     }
