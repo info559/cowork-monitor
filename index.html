@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-06T10:05:46+02:00",
-  "lastUpdated": "10:05:46",
+  "generatedAt": "2026-04-06T12:05:23+02:00",
+  "lastUpdated": "12:05:23",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -373,12 +373,12 @@ const DATA = {
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ogni venerdì 11:00",
+      "schedule": "Ven 09:00",
       "todayStatus": "skipped",
-      "todayTime": "—",
+      "todayTime": "--",
       "todayNote": "Non programmata (lunedì) · prossima Ven 10/04",
-      "todayDetails": "Task non eseguito oggi (lunedì). Prossima esecuzione: venerdì 10/04.",
-      "nextRun": "2026-04-10T11:00:00"
+      "todayDetails": "La verifica antiriciclaggio è pianificata solo il venerdì. Prossima esecuzione: venerdì 10 aprile 2026.",
+      "nextRun": "2026-04-10T09:00:00"
     },
     {
       "id": "inserimento-notion",
@@ -386,8 +386,8 @@ const DATA = {
       "schedule": "Lun-Ven 08:00",
       "todayStatus": "success",
       "todayTime": "08:00",
-      "todayNote": "8 thread trovati · 0 nuovi inserimenti (tutti già in Notion)",
-      "todayDetails": "Scansionati 8 thread unici (4 etichetta Da firmare, 4 etichetta Da ricevere). Tutti i record già presenti in Notion. Nessuna scrittura eseguita.",
+      "todayNote": "8 thread analizzati · 0 nuovi inserimenti (tutti già in Notion)",
+      "todayDetails": "Etichette 'Da firmare' e 'Da ricevere': 4+4 thread negli ultimi 30gg. Tutti già presenti in Notion. Nessuna scrittura eseguita.",
       "nextRun": "2026-04-07T08:00:00"
     },
     {
@@ -396,18 +396,18 @@ const DATA = {
       "schedule": "Lun-Ven 09:00 e 15:00",
       "todayStatus": "success",
       "todayTime": "09:00",
-      "todayNote": "2 in attesa (Cosmi 13gg, Protano 13gg) · 0 risposte",
-      "todayDetails": "Cosmi Giacomo e Protano Michele entrambi con lettera incarico inviata il 24/03 (13 giorni). Nessuna risposta con allegati nelle ultime 48h. Si valuti l’invio di un sollecito.",
-      "nextRun": "2026-04-07T09:00:00"
+      "todayNote": "2 clienti in attesa (Cosmi, Protano – 13gg) · 0 risposte ricevute",
+      "todayDetails": "Record in attesa: COSMI GIACOMO e PROTANO MICHELE (entrambi inviati 24/03/2026, 13 giorni fa). Nessun allegato ricevuto nelle ultime 48h.",
+      "nextRun": "2026-04-06T15:00:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Ogni mercoledì 10:00",
-      "todayStatus": "error",
-      "todayTime": "~09:30",
-      "todayNote": "API limit raggiunto prima del completamento · 3 solleciti da inviare",
-      "todayDetails": "Il task ha individuato 3 record da sollecitare (Cosmi Giacomo ×1, Protano Michele ×2) ma ha raggiunto il limite API prima di inviare le email. Reset previsto alle 10:00. Riprovare manualmente o attendere la prossima esecuzione mercoledì 08/04.",
+      "schedule": "Mer 10:00",
+      "todayStatus": "warning",
+      "todayTime": "--",
+      "todayNote": "API rate limit raggiunto durante esecuzione · prossimo Mer 08/04",
+      "todayDetails": "Il task ha avviato la procedura di sollecito per Cosmi e Protano, ma ha raggiunto il limite API Gmail prima del completamento. Il limite si resetta alle 10:00 (Europe/Rome). Prossimo tentativo: mercoledì 8 aprile 2026.",
       "nextRun": "2026-04-08T10:00:00"
     },
     {
@@ -415,9 +415,9 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno 22:00",
       "todayStatus": "success",
-      "todayTime": "10:05",
-      "todayNote": "Run aggiornamento completato · solleciti in errore per API limit",
-      "todayDetails": "Dashboard aggiornata alle 10:05. Rilevato errore task Solleciti (API limit). Bozze Gmail: 1 reale invariata.",
+      "todayTime": "12:05",
+      "todayNote": "Run pomeridiano completato · 1 bozza reale invariata",
+      "todayDetails": "Dashboard aggiornata alle 12:05. Solleciti: warning per API rate limit. Bozze Gmail: 1 reale (Briefing 3 apr → info@kpiconsulting.it).",
       "nextRun": "2026-04-06T22:00:00"
     }
   ],
@@ -448,11 +448,11 @@ const DATA = {
     },
     {
       "id": "rda-av-27mar",
-      "name": "Scheda AV RD’A Ingegneria",
+      "name": "Scheda AV RD'A Ingegneria",
       "date": "2026-03-27",
       "time": "11:00",
       "status": "success",
-      "note": "Scheda adeguata verifica compilata e archiviata per RD’A Ingegneria e Architettura S.r.l."
+      "note": "Scheda adeguata verifica compilata e archiviata per RD'A Ingegneria e Architettura S.r.l."
     }
   ],
   "history": [
@@ -466,47 +466,11 @@ const DATA = {
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Nessun compleanno oggi (70+ clienti)"
+          "note": "Nessun compleanno (70+ clienti verificati)"
         },
         "verifica-aml": {
           "status": "skipped",
           "note": "Non programmata (lunedì)"
-        }
-      }
-    },
-    {
-      "date": "2026-04-05",
-      "label": "Dom 5",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "Nessun evento · 1 urgenza (Cogerp GB845GF) · PEC Telemaco"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno oggi"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (domenica)"
-        }
-      }
-    },
-    {
-      "date": "2026-04-04",
-      "label": "Sab 4",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "Nessun evento · urgenza fattura Cogerp GB845GF"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno oggi"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (sabato)"
         }
       }
     },
