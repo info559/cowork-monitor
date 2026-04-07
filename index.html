@@ -347,78 +347,78 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-06T22:04:28.000Z",
-  "lastUpdated": "22:04:28",
+  "generatedAt": "2026-04-07T08:05:43.000Z",
+  "lastUpdated": "08:05:43",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
       "name": "Daily Briefing",
-      "schedule": "Ogni giorno ore 07:00",
+      "schedule": "Ogni giorno · 07:00",
       "todayStatus": "success",
       "todayTime": "07:00",
-      "todayNote": "Nessun evento · urgenza fattura Cogerp GB845GF €4.500 · PEC Telemaco M26319P0919 evasa",
-      "todayDetails": "2 thread non letti etichetta Lorenzo: (1) PEC Telemaco pratica M26319P0919 evasa per KPI Consulting STP S.r.l.; (2) Richiesta fattura da Cogerp S.r.l. per passaggio proprietà mezzo GB845GF €4.500 IVA compresa — data richiesta 26/06/2026. Nessun evento in calendario.",
-      "nextRun": "2026-04-07T07:00:00"
+      "todayNote": "Urgenza fattura Cogerp GB845GF €4.500 · PEC Telemaco M26319P0919",
+      "todayDetails": "2 email non lette (etichetta Lorenzo): (1) Fattura mezzo GB845GF da Cogerp S.r.l. — pagamento per cassa €4.500 IVA compresa, richiesta emissione data 26/06/2026 (valutare con Lorenzo). (2) PEC Infocamere — pratica M26319P0919 evasa per KPI Consulting STP S.r.l. Nessun evento in calendario.",
+      "nextRun": "Domani · 07:00"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
-      "schedule": "Ogni giorno ore 05:00",
+      "schedule": "Ogni giorno · 05:00",
       "todayStatus": "success",
       "todayTime": "05:00",
-      "todayNote": "Nessun compleanno oggi (70+ clienti verificati)",
-      "todayDetails": "Controllo su oltre 70 anagrafiche: nessun cliente con data di nascita 06/04.",
-      "nextRun": "2026-04-07T05:00:00"
+      "todayNote": "1 compleanno: OGIS MARIA CHIARA · bozza creata",
+      "todayDetails": "OGIS MARIA CHIARA (07/04/1988) — email: dolce.chiaretta@live.it. Bozza Gmail creata: 'Tanti auguri, Maria Chiara!' con firma KPI Consulting.",
+      "nextRun": "Domani · 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ogni venerdì ore 09:00",
+      "schedule": "Venerdì · 09:00",
       "todayStatus": "skipped",
       "todayTime": "--",
-      "todayNote": "Non programmata (lunedì)",
-      "todayDetails": "Prossima esecuzione: venerdì 10 aprile 2026.",
-      "nextRun": "2026-04-10T09:00:00"
+      "todayNote": "Non programmata (martedì) · prossima Ven 10/04",
+      "todayDetails": "Task non pianificato per il martedì. Prossima esecuzione: venerdì 10 aprile 2026.",
+      "nextRun": "Ven 10/04 · 09:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "schedule": "Lun–Ven ore 08:00",
+      "schedule": "Lun–Ven · 08:00",
       "todayStatus": "success",
       "todayTime": "08:00",
-      "todayNote": "8 thread verificati · 0 nuovi inserimenti",
-      "todayDetails": "Label Da firmare: 4 thread (Nardi, RD'A, Cosmi, Protano) già in Notion. Label Da ricevere: 4 thread (Mastronardi, Ottavi, Protano, F&G) già in Notion. Nessun nuovo record creato.",
-      "nextRun": "2026-04-07T08:00:00"
+      "todayNote": "8 thread analizzati · 0 nuovi inserimenti",
+      "todayDetails": "Tutti i thread Gmail etichettati 'Da firmare' e 'Da ricevere' (8 thread, 4+4) sono già presenti in Notion MONITORAGGIO DOCUMENTI. Nessun nuovo record creato.",
+      "nextRun": "Domani · 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun–Ven ore 09:00 e 15:00",
+      "schedule": "Lun–Ven · 09:00 e 15:00",
       "todayStatus": "success",
-      "todayTime": "15:00",
-      "todayNote": "3 in attesa (Cosmi, Protano ×2) · 0 risposte ricevute",
-      "todayDetails": "Record in attesa: COSMI GIACOMO (Lettera Incarico — Inviato 24/03, 13 giorni), PROTANO MICHELE (Lettera Incarico — Inviato 24/03), PROTANO MICHELE (Lettera Incarico — Sollecitato 18/03). Nessuna risposta con allegati nelle ultime 48h.",
-      "nextRun": "2026-04-07T09:00:00"
+      "todayTime": "09:00",
+      "todayNote": "2 in attesa (Cosmi, Protano) · 0 risposte ricevute",
+      "todayDetails": "COSMI GIACOMO — Lettera di Incarico (inviata 24/03, 14 giorni, Inviato). PROTANO MICHELE — Lettera di Incarico (inviata 24/03, 14 giorni, Inviato). Nessuna risposta con allegati trovata nelle ultime 48h. Run pomeridiano (15:00) ancora da eseguire.",
+      "nextRun": "Oggi · 15:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Ogni lunedì ore 10:00",
-      "todayStatus": "warning",
+      "schedule": "Mercoledì · 10:00",
+      "todayStatus": "skipped",
       "todayTime": "--",
-      "todayNote": "Rate limit raggiunto · Protano + Cosmi non sollecitati",
-      "todayDetails": "Task interrotto per rate limit API Gmail. Previsti: 1° sollecito a COSMI GIACOMO e 2° sollecito a PROTANO MICHELE. Da eseguire manualmente al ripristino del limite.",
-      "nextRun": "2026-04-13T10:00:00"
+      "todayNote": "Non programmato (martedì) · prossimo Mer 08/04",
+      "todayDetails": "Run di lunedì 06/04: rate limit Gmail raggiunto (resets 10:00), Cosmi e Protano non sollecitati. Prossimo tentativo: mercoledì 08/04.",
+      "nextRun": "Mer 08/04 · 10:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Automatico · più run/die",
+      "schedule": "Ogni giorno · 08:00 e 22:00",
       "todayStatus": "success",
-      "todayTime": "22:04",
-      "todayNote": "Dashboard aggiornata (4° run giornaliero)",
-      "todayDetails": "Run serale delle 22:04. Task schedulati tutti completati o registrati. 1 bozza Gmail reale presente (Briefing 3 apr).",
-      "nextRun": "2026-04-07T08:30:00"
+      "todayTime": "08:05",
+      "todayNote": "Dashboard aggiornata · 2 bozze Gmail attive",
+      "todayDetails": "Run mattutino. Sessioni analizzate: Daily Briefing, Auguri, Inserimento Notion, Monitoraggio (mat.), Solleciti (ieri). Bozze Gmail: 2 reali (auguri OGIS MARIA CHIARA + briefing 3 apr).",
+      "nextRun": "Oggi · 22:00"
     }
   ],
   "manualTasks": [
@@ -426,36 +426,54 @@ const DATA = {
       "id": "preventivi-centroequestre-2apr",
       "name": "Preventivi Centro Equestre S.Giorgio S.S.D. S.R.L.",
       "date": "2026-04-02",
-      "time": "11:00",
+      "time": "11:30",
       "status": "success",
-      "note": "Creati preventivi 004_SC (deposito 7 bilanci CCIAA €2.500) e 005_SC (cessione 2 quote €2.090)."
+      "note": "Preventivo SC elaborato e salvato"
     },
     {
       "id": "antiriciclaggio-skill-31mar",
       "name": "Aggiornamento SKILL antiriciclaggio",
       "date": "2026-03-31",
-      "time": "17:00",
+      "time": "15:00",
       "status": "success",
-      "note": "Skill antiriciclaggio aggiornata con nuove istruzioni per sincronizzazione Notion."
+      "note": "SKILL aggiornata con nuove istruzioni Notion"
     },
     {
       "id": "honiro-duediligence-30mar",
       "name": "Due Diligence HONIRO SRL",
       "date": "2026-03-30",
-      "time": "15:00",
+      "time": "10:00",
       "status": "success",
-      "note": "Lettera incarico inviata e ricevuta firmata. Record Notion aggiornato a Ricevuto."
+      "note": "Scheda AV e titolare effettivo completati"
     },
     {
       "id": "rda-av-27mar",
       "name": "Scheda AV RD'A Ingegneria",
       "date": "2026-03-27",
-      "time": "11:00",
+      "time": "14:00",
       "status": "success",
-      "note": "Scheda adeguata verifica compilata e archiviata per RD'A Ingegneria e Architettura S.r.l."
+      "note": "Adeguata verifica completata"
     }
   ],
   "history": [
+    {
+      "date": "2026-04-07",
+      "label": "Mar 7",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "Urgenza fattura Cogerp GB845GF · PEC Telemaco M26319P0919"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "1 compleanno: OGIS MARIA CHIARA"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (martedì)"
+        }
+      }
+    },
     {
       "date": "2026-04-06",
       "label": "Lun 6",
@@ -516,11 +534,11 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "1 scadenza · email WE-NET e Cogerp"
+          "note": ""
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Nessun compleanno oggi"
+          "note": "Nessun compleanno"
         },
         "verifica-aml": {
           "status": "skipped",
@@ -530,6 +548,13 @@ const DATA = {
     }
   ],
   "coworkDrafts": [
+    {
+      "id": "draft-auguri-ogis-7apr",
+      "subject": "Tanti auguri, Maria Chiara!",
+      "to": "dolce.chiaretta@live.it",
+      "date": "7 apr",
+      "status": "ready"
+    },
     {
       "id": "draft-briefing-3apr",
       "subject": "📋 Briefing Giornaliero – Venerdì 3 Aprile 2026",
