@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-07T14:06:16.281Z",
-  "lastUpdated": "16:06:16",
+  "generatedAt": "2026-04-07T16:07:33.000Z",
+  "lastUpdated": "18:07:33",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -397,13 +397,13 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "09:00 / 15:00",
       "todayNote": "2 in attesa (Cosmi, Protano) · 0 risposte · run 15:00 completata",
-      "todayDetails": "Run mattino (09:00) e pomeriggio (15:00) completati. 2 record in attesa: COSMI GIACOMO (Lettera Incarico, inviata 24/03, 14 gg) e PROTANO MICHELE (Lettera Incarico, inviata 24/03, 14 gg). Nessuna risposta con allegati ricevuta nelle ultime 48h. Valutare sollecito.",
+      "todayDetails": "Run mattino (09:00) e pomeriggio (15:00) completati. 2 record in attesa: COSMI GIACOMO (Lettera Incarico, inviata 24/03, 14 gg) e PROTANO MICHELE (Lettera Incarico, inviata 24/03). PROTANO MICHELE ha anche 1 record precedente già sollecitato (18/03). Nessuna risposta ricevuta in 48h.",
       "nextRun": "Domani · 09:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Mercoledì · 10:00",
+      "schedule": "Mar/Mer · 10:00",
       "todayStatus": "warning",
       "todayTime": "~09:30",
       "todayNote": "Rate limit Gmail raggiunto · Cosmi + Protano non sollecitati",
@@ -415,9 +415,9 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno · 08:00 e 22:00",
       "todayStatus": "success",
-      "todayTime": "16:06",
-      "todayNote": "Dashboard aggiornata · 1 bozza Gmail attiva · run 15:00 monitoraggio OK",
-      "todayDetails": "Run 16:06. Run pomeridiano monitoraggio completato (0 risposte, 2 clienti in attesa). Bozze Gmail: 1 bozza reale (Re: Passaggio di proprietà mezzo GB845GF — Cogerp S.r.l., 7 apr). Prossimo run: oggi 22:00.",
+      "todayTime": "18:07",
+      "todayNote": "Dashboard aggiornata · 1 bozza Gmail attiva · run serale",
+      "todayDetails": "Run 18:07 (run serale dopo 16:06). Nuova bozza Gmail rilevata: email a Alberto con allegati schede contabili Caboto/Addielle/ALB e fatture. Bozza auguri OGIS non più in bozze (inviata/gestita). Prossimo run: oggi 22:00.",
       "nextRun": "Oggi · 22:00"
     }
   ],
@@ -511,16 +511,16 @@ const DATA = {
       }
     },
     {
-      "date": "2026-04-04",
-      "label": "Sab 4",
+      "date": "2026-04-03",
+      "label": "Ven 3",
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento · 3 email (2 urgenti)"
+          "note": "Nessun evento · email ordinarie"
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Nessun compleanno oggi"
+          "note": "Nessun compleanno"
         },
         "verifica-aml": {
           "status": "success",
@@ -549,9 +549,9 @@ const DATA = {
   ],
   "coworkDrafts": [
     {
-      "id": "draft-passaggio-proprieta-cogerp-7apr",
-      "subject": "Re: Passaggio di proprietà mezzo GB845GF - Centro Equestre San Giorgio Altipiani di Arcinazzo",
-      "to": "ale@cogerp.it",
+      "id": "draft-alberto-caboto-addielle-7apr",
+      "subject": "Aggiornamento pratiche — Caboto Consulting, Addielle, ALB, bilanci e cessioni",
+      "to": "Alberto",
       "date": "7 apr",
       "status": "ready"
     }
