@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-07T08:05:43.000Z",
-  "lastUpdated": "08:05:43",
+  "generatedAt": "2026-04-07T10:04:30.000Z",
+  "lastUpdated": "10:04:30",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -404,10 +404,10 @@ const DATA = {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
       "schedule": "Mercoledì · 10:00",
-      "todayStatus": "skipped",
-      "todayTime": "--",
-      "todayNote": "Non programmato (martedì) · prossimo Mer 08/04",
-      "todayDetails": "Run di lunedì 06/04: rate limit Gmail raggiunto (resets 10:00), Cosmi e Protano non sollecitati. Prossimo tentativo: mercoledì 08/04.",
+      "todayStatus": "warning",
+      "todayTime": "~09:30",
+      "todayNote": "Rate limit Gmail raggiunto · Cosmi + Protano non sollecitati",
+      "todayDetails": "Tentativo odierno (mar 07/04): rate limit Gmail raggiunto prima dell'invio. COSMI GIACOMO (1° sollecito, 14 gg) e PROTANO MICHELE (2° sollecito, thread contratto) non sollecitati. Prossimo tentativo: mercoledì 08/04 ore 10:00.",
       "nextRun": "Mer 08/04 · 10:00"
     },
     {
@@ -415,9 +415,9 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno · 08:00 e 22:00",
       "todayStatus": "success",
-      "todayTime": "08:05",
+      "todayTime": "10:04",
       "todayNote": "Dashboard aggiornata · 2 bozze Gmail attive",
-      "todayDetails": "Run mattutino. Sessioni analizzate: Daily Briefing, Auguri, Inserimento Notion, Monitoraggio (mat.), Solleciti (ieri). Bozze Gmail: 2 reali (auguri OGIS MARIA CHIARA + briefing 3 apr).",
+      "todayDetails": "Run mattutino (2° aggiornamento). Nuova info: solleciti settimanali tentati ma bloccati da rate limit Gmail. Bozze Gmail: 2 reali (auguri OGIS MARIA CHIARA + briefing 3 apr). Prossimo run: oggi 22:00.",
       "nextRun": "Oggi · 22:00"
     }
   ],
@@ -498,11 +498,11 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento · stesse urgenze (Cogerp + Telemaco)"
+          "note": "Nessun evento · 1 email (pratica Telemaco)"
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Nessun compleanno oggi"
+          "note": "Nessun compleanno"
         },
         "verifica-aml": {
           "status": "skipped",
@@ -511,8 +511,8 @@ const DATA = {
       }
     },
     {
-      "date": "2026-04-03",
-      "label": "Ven 3",
+      "date": "2026-04-04",
+      "label": "Sab 4",
       "tasks": {
         "daily-briefing": {
           "status": "success",
