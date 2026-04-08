@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-08T16:05:00",
-  "lastUpdated": "16:05:00",
+  "generatedAt": "2026-04-08T18:30:00",
+  "lastUpdated": "18:30:00",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -386,8 +386,8 @@ const DATA = {
       "schedule": "Ogni giorno · 08:00",
       "todayStatus": "success",
       "todayTime": "08:00",
-      "todayNote": "8 thread Gmail analizzati · 0 nuovi record · tutti già in Notion",
-      "todayDetails": "Label 'Da firmare' (3 thread): RD'A Ingegneria IA+PRIVACY, Cosmi Lettera Incarico, Protano Lettera Incarico+doc — tutti già in Notion. Label 'Da ricevere' (4 thread): Pepperpot doc identità, OTPA doc identità Ottavi, F&G Contratto BMW, Protano Redditi 2023 — tutti già in Notion. Totale: 8 thread, 0 nuovi record creati. Sistema aggiornato.",
+      "todayNote": "8 email verificate — tutte già in Notion — 0 nuovi record",
+      "todayDetails": "Controllate 8 email (3 ‘Da firmare’ + 5 ‘Da ricevere’) negli ultimi 30 giorni. Tutti i thread Gmail risultano già registrati nel database MONITORAGGIO DOCUMENTI. Nessun nuovo record creato. Il sistema è aggiornato.",
       "nextRun": "Domani · 08:00"
     },
     {
@@ -395,9 +395,9 @@ const DATA = {
       "name": "Monitoraggio Documenti",
       "schedule": "2 volte al giorno · 09:00 e 15:00",
       "todayStatus": "success",
-      "todayTime": "15:00",
-      "todayNote": "3 clienti in attesa · PROTANO ha risposto ma solo su IVA/fattura (nessun doc firmato)",
-      "todayDetails": "Mattina (12:00): 2 clienti in attesa — Cosmi Giacomo (Lettera Incarico, inviata 24/03, nessuna risposta dopo 15 gg) e Protano Michele (Lettera Incarico, inviata 24/03, nessuna risposta dopo 15 gg). 0 aggiornamenti Notion. Pomeriggio (15:00): 3 clienti in attesa (aggiunto record Protano sollecitato 18/03). PROTANO ha risposto oggi (ore 12:12 e 12:26, thread 19cfca75537aee87) ma il contenuto riguarda IVA e pagamento fattura studio — nessun documento firmato allegato. 0 aggiornamenti Notion.",
+      "todayTime": "12:00 / 15:00",
+      "todayNote": "2 run completati — 0 documenti firmati ricevuti — 3 record in attesa",
+      "todayDetails": "Mattino (12:00): 2 clienti in attesa (Cosmi Giacomo, Protano Michele) — nessuna risposta con allegati. Pomeriggio (15:00): 3 record in attesa, Protano ha risposto (2 email) ma solo su IVA/fattura, nessun documento firmato allegato. Stato Notion invariato.",
       "nextRun": "Domani · 09:00"
     },
     {
@@ -406,8 +406,8 @@ const DATA = {
       "schedule": "Ogni mercoledì · 10:00",
       "todayStatus": "warning",
       "todayTime": "10:00",
-      "todayNote": "Rate limit Notion API — solleciti non inviati · Cosmi e Protano in attesa",
-      "todayDetails": "Eseguito oggi (mercoledì). Clienti da sollecitare: (1) Protano Michele — 2 record da sollecitare (contratto 24/03 con 1° sollecito 30/03 non registrato, e record redditi 18/03 con 1 sollecito); (2) Cosmi Giacomo — Lettera Incarico 24/03, 0 solleciti. Errore Notion API: 'You've hit your limit · resets 10am (Europe/Rome)'. Nessun sollecito email inviato. Da rieseguire dopo reset API.",
+      "todayNote": "Avviato ma interrotto per rate limit — Protano (2° sollecito) e Cosmi (1° sollecito) identificati",
+      "todayDetails": "Clienti da sollecitare: (1) Protano Michele — Lettera di Incarico inviata 24/03, già sollecitato 30/03, template 2° sollecito. (2) Cosmi Giacomo — Lettera di Incarico inviata 24/03, nessuna risposta dopo 15gg, template 1° sollecito. Esecuzione interrotta per raggiungimento limite API prima dell’invio delle bozze.",
       "nextRun": "10 apr · dopo reset Notion"
     },
     {
@@ -415,9 +415,9 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno · 08:00 e 16:00",
       "todayStatus": "success",
-      "todayTime": "16:05",
-      "todayNote": "Dashboard aggiornata · run pomeridiano",
-      "todayDetails": "Aggiornamento pomeridiano (16:05): tutti i task pianificati analizzati. Novità rispetto al run delle 14:04: monitoraggio pomeridiano (15:00) completato — PROTANO ha risposto ma solo su IVA/fattura, nessun documento firmato. Bozze Gmail: 2 template senza destinatario (escluse). coworkDrafts: vuoto.",
+      "todayTime": "18:30",
+      "todayNote": "Dashboard aggiornata · 3° run giornaliero (sera)",
+      "todayDetails": "Aggiornamento serale (18:30): tutti i task pianificati analizzati, transcript letti. Bozze Gmail: 2 template senza destinatario (esclusi). coworkDrafts svuotato.",
       "nextRun": "Domani · 08:00"
     }
   ],
@@ -462,7 +462,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "4 email · urgenza F24 Pietrobono 16/04 · STAYFIT revoca AMM.RE"
+          "note": "4 email, urgenza F24"
         },
         "auguri-clienti": {
           "status": "success",
@@ -470,7 +470,7 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "skipped",
-          "note": "Non programmata (mercoledì)"
+          "note": "Non programmata (mer)"
         }
       }
     },
