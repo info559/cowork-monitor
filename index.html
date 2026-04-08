@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-08T09:55:35.071Z",
-  "lastUpdated": "11:55:35",
+  "generatedAt": "2026-04-08T12:04:14+02:00",
+  "lastUpdated": "12:04:14",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,7 +367,7 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:00",
       "todayNote": "Nessun compleanno oggi — 08/04/2026",
-      "todayDetails": "Verifica sistematica di tutti i clienti con data di nascita registrata in Notion (24+ record). Nessun cliente ha il compleanno in data 08/04/2026. Nessuna bozza creata.",
+      "todayDetails": "Verifica sistematica di tutti i clienti con data di nascita registrata in Notion (24+ record). Nessun cliente ha il compleanno in data odierna (08/04). Nessun messaggio di auguri inviato.",
       "nextRun": "Domani · 05:00"
     },
     {
@@ -394,11 +394,11 @@ const DATA = {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun–Ven · 09:00 e 15:00",
-      "todayStatus": "error",
-      "todayTime": "09:00",
-      "todayNote": "Rate limit Notion — resets 10 apr ore 11:00",
-      "todayDetails": "Esecuzione mattutina bloccata da rate limit Notion. Il servizio riprenderà il 10 aprile 2026 alle 11:00 (Europe/Rome). In attesa: COSMI GIACOMO (Inviato 24/03) e PROTANO MICHELE (Inviato 24/03 + Sollecitato 18/03). Nessun aggiornamento possibile fino al reset.",
-      "nextRun": "10 apr · 11:00 (dopo reset Notion)"
+      "todayStatus": "success",
+      "todayTime": "12:04",
+      "todayNote": "2 clienti in attesa · 0 risposte ricevute · run pomeridiana completata",
+      "todayDetails": "Run pomeridiana (12:04): database Notion accessibile dopo reset rate limit. Clienti in attesa: COSMI GIACOMO (Lettera Incarico, inviata 24/03, 0 solleciti) e PROTANO MICHELE (Lettera Incarico, inviata 24/03, 0 solleciti). Cercate risposte Gmail con allegati nelle ultime 48h → 0 messaggi trovati. Nessun aggiornamento Notion necessario. Nota: PROTANO MICHELE ha anche pratica Redditi 2023 (Sollecitato 18/03, 1 sollecito inviato 30/03).",
+      "nextRun": "Domani · 09:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -415,10 +415,10 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno · 08:00 e 22:00",
       "todayStatus": "success",
-      "todayTime": "11:55",
-      "todayNote": "Dashboard aggiornata · 0 bozze Gmail · run mattutina",
-      "todayDetails": "Run 11:55 (run mattutina). Bozze Gmail: 2 template senza destinatario, 0 bozze reali. Task completati: daily-briefing ✓, auguri-clienti ✓ (0 compleanni), verifica-aml skipped (ven), inserimento-notion ✓, monitoraggio-documenti ✗ (rate limit Notion), solleciti-settimanali ⚠ (rate limit Notion).",
-      "nextRun": "Stasera · 22:00"
+      "todayTime": "12:04",
+      "todayNote": "Dashboard aggiornata · 0 bozze Gmail · run pomeridiana",
+      "todayDetails": "Run 12:04 (run pomeridiana). Bozze Gmail: 2 template senza destinatario, 0 bozze reali. Aggiornamento: monitoraggio-documenti ora success (run pomeridiana Notion accessibile). Task: daily-briefing ✓, auguri-clienti ✓ (0 compleanni), verifica-aml skipped (ven), inserimento-notion ✓, monitoraggio-documenti ✓, solleciti-settimanali ⚠ (rate limit).",
+      "nextRun": "Domani · 08:00"
     }
   ],
   "manualTasks": [
