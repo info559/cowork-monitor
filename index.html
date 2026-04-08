@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-08T12:04:14+02:00",
-  "lastUpdated": "12:04:14",
+  "generatedAt": "2026-04-08T14:04:00",
+  "lastUpdated": "14:04:00",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,57 +367,57 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:00",
       "todayNote": "Nessun compleanno oggi — 08/04/2026",
-      "todayDetails": "Verifica sistematica di tutti i clienti con data di nascita registrata in Notion (24+ record). Nessun cliente ha il compleanno in data odierna (08/04). Nessun messaggio di auguri inviato.",
+      "todayDetails": "Verifica sistematica database ANAGRAFICA CLIENTI: 24+ clienti con data di nascita verificati, pattern CF D08/D48 analizzati. Nessun cliente con compleanno in data odierna. Nessun messaggio di auguri inviato.",
       "nextRun": "Domani · 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ven · 09:00",
+      "schedule": "Ogni venerdì · 09:00",
       "todayStatus": "skipped",
       "todayTime": "—",
-      "todayNote": "Non programmata (mercoledì)",
-      "todayDetails": "La verifica antiriciclaggio è programmata il venerdì. Nessuna esecuzione oggi (mercoledì 08/04).",
+      "todayNote": "Non programmata oggi (mercoledì) — esegue venerdì",
+      "todayDetails": "Task pianificato solo per il venerdì. Oggi è mercoledì 08/04/2026: esecuzione saltata come da pianificazione.",
       "nextRun": "Ven 10/04 · 09:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
-      "schedule": "Lun–Ven · 08:00",
+      "schedule": "Ogni giorno · 08:00",
       "todayStatus": "success",
       "todayTime": "08:00",
-      "todayNote": "8 thread Gmail verificati · tutti già in Notion · 0 nuovi record",
-      "todayDetails": "Verificati 4 thread etichetta 'Da firmare' (STR82L S.r.l., RD'A Ingegneria x2, Cosmi Giacomo, Protano Michele) e 4 thread 'Da ricevere' (Pepperpot S.r.l., OTPA S.r.l., F. e G. S.r.l., Protano Michele). Tutti già presenti nel database MONITORAGGIO DOCUMENTI di Notion. Nessun nuovo record creato.",
+      "todayNote": "8 thread Gmail verificati — tutti già in Notion · 0 nuovi record creati",
+      "todayDetails": "Analisi etichette 'Da firmare' e 'Da ricevere': 3 thread Da firmare (RD'A IA+PRIVACY, COSMI incarico, PROTANO incarico+doc) e 5 thread Da ricevere (PEPPERPOT identità, OTPA identità Ottavi, F&G contratto BMW, PROTANO redditi 2023). Tutti già presenti in Notion MONITORAGGIO DOCUMENTI. Nessun nuovo record creato. Per RD'A risultano 2 record (Dichiarazione AI + Privacy) da precedente esecuzione.",
       "nextRun": "Domani · 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun–Ven · 09:00 e 15:00",
+      "schedule": "Ogni giorno · 09:00 e 14:00",
       "todayStatus": "success",
-      "todayTime": "12:04",
-      "todayNote": "2 clienti in attesa · 0 risposte ricevute · run pomeridiana completata",
-      "todayDetails": "Run pomeridiana (12:04): database Notion accessibile dopo reset rate limit. Clienti in attesa: COSMI GIACOMO (Lettera Incarico, inviata 24/03, 0 solleciti) e PROTANO MICHELE (Lettera Incarico, inviata 24/03, 0 solleciti). Cercate risposte Gmail con allegati nelle ultime 48h → 0 messaggi trovati. Nessun aggiornamento Notion necessario. Nota: PROTANO MICHELE ha anche pratica Redditi 2023 (Sollecitato 18/03, 1 sollecito inviato 30/03).",
+      "todayTime": "12:00",
+      "todayNote": "2 clienti in attesa · 0 risposte ricevute — COSMI e PROTANO senza risposta",
+      "todayDetails": "Clienti in attesa nel DB Notion: COSMI GIACOMO (incarico inviato 24/03, 0 solleciti) e PROTANO MICHELE (incarico inviato 24/03, 1 sollecito il 30/03). Thread Gmail verificati: nessuna risposta con allegati da nessuno dei due clienti. Nota: stato Notion di PROTANO ancora 'Inviato' pur avendo ricevuto un sollecito — potrebbe richiedere aggiornamento manuale a 'Sollecitato'.",
       "nextRun": "Domani · 09:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Mar/Mer · 10:00",
+      "schedule": "Ogni mercoledì · 10:00",
       "todayStatus": "warning",
       "todayTime": "10:00",
-      "todayNote": "Rate limit Notion durante esecuzione · Cosmi e Protano da sollecitare",
-      "todayDetails": "2 clienti identificati per sollecito: COSMI GIACOMO (1° sollecito, 15 gg attesa, thread 19d1f2d58bd85cae) e PROTANO MICHELE (2° sollecito, thread 19d1bdcc2b603856). Esecuzione interrotta per rate limit Notion. I solleciti non sono stati inviati. Riprova dopo reset Notion (10 apr ore 11:00).",
+      "todayNote": "Rate limit Notion API — solleciti a COSMI e PROTANO non inviati",
+      "todayDetails": "Task eseguito ma interrotto per rate limit Notion API (429). Da sollecitare: COSMI GIACOMO (template PRIMO SOLLECITO, thread contratto 19d1f2d58bd85cae, 0 solleciti precedenti) e PROTANO MICHELE (template SECONDO SOLLECITO, thread contratto 19d1bdcc2b603856, 1 sollecito già inviato il 30/03). Prossimo tentativo possibile dopo reset API (10:00 Europe/Rome).",
       "nextRun": "10 apr · dopo reset Notion"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Ogni giorno · 08:00 e 22:00",
+      "schedule": "Ogni giorno · 08:00 e 12:00",
       "todayStatus": "success",
-      "todayTime": "12:04",
-      "todayNote": "Dashboard aggiornata · 0 bozze Gmail · run pomeridiana",
-      "todayDetails": "Run 12:04 (run pomeridiana). Bozze Gmail: 2 template senza destinatario, 0 bozze reali. Aggiornamento: monitoraggio-documenti ora success (run pomeridiana Notion accessibile). Task: daily-briefing ✓, auguri-clienti ✓ (0 compleanni), verifica-aml skipped (ven), inserimento-notion ✓, monitoraggio-documenti ✓, solleciti-settimanali ⚠ (rate limit).",
+      "todayTime": "14:04",
+      "todayNote": "Dashboard aggiornata — run pomeridiano ore 14:04",
+      "todayDetails": "Run pomeridiano 08/04/2026 ore 14:04. Sessioni analizzate: 7 task pianificati. Bozze Gmail: 0 reali (2 template senza destinatario esclusi). Tutti i dati aggiornati su GitHub Pages.",
       "nextRun": "Domani · 08:00"
     }
   ],
@@ -480,11 +480,11 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Urgenza fattura Cogerp GB845GF · PEC Telemaco M26319P0919"
+          "note": ""
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "1 compleanno: OGIS MARIA CHIARA"
+          "note": ""
         },
         "verifica-aml": {
           "status": "skipped",
@@ -493,56 +493,56 @@ const DATA = {
       }
     },
     {
-      "date": "2026-04-06",
-      "label": "Lun 6",
+      "date": "2026-04-04",
+      "label": "Ven 4",
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento · urgenza fattura Cogerp GB845GF · PEC Telemaco evasa"
+          "note": ""
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Nessun compleanno (70+ clienti verificati)"
+          "note": ""
         },
         "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (lunedì)"
-        }
-      }
-    },
-    {
-      "date": "2026-04-05",
-      "label": "Dom 5",
-      "tasks": {
-        "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento · 1 email (pratica Telemaco)"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (domenica)"
+          "note": ""
         }
       }
     },
     {
       "date": "2026-04-03",
-      "label": "Ven 3",
+      "label": "Gio 3",
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "Nessun evento · email ordinarie"
+          "note": ""
         },
         "auguri-clienti": {
           "status": "success",
-          "note": "Nessun compleanno"
+          "note": ""
         },
         "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (giovedì)"
+        }
+      }
+    },
+    {
+      "date": "2026-04-02",
+      "label": "Mer 2",
+      "tasks": {
+        "daily-briefing": {
           "status": "success",
-          "note": "OK — nessuna anomalia (PEPPERPOT chiarita)"
+          "note": ""
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": ""
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (mercoledì)"
         }
       }
     }
