@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-08T18:30:00",
-  "lastUpdated": "18:30:00",
+  "generatedAt": "2026-04-08T20:06:54",
+  "lastUpdated": "22:06:54",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,8 +356,8 @@ const DATA = {
       "schedule": "Ogni giorno · 07:00",
       "todayStatus": "success",
       "todayTime": "07:00",
-      "todayNote": "4 email non lette · urgenza F24 Pietrobono 16/04 · STAYFIT revoca AMM.RE · ADE 10/04",
-      "todayDetails": "4 email non lette (etichetta Lorenzo): (1) Filomena Pietrobono – chiede crediti compensabili per F24 del 16/04 [URGENTE entro 8 gg]; (2) STAYFIT – conferma revoca AMM.RE e chiede istruzioni pagamento preventivo 002 del 31/03; (3) ADE Roma 5 Tuscolano – appuntamento 10/04/2026 ore 12:55 (Comunicazioni Irregolarità, CF: PRTMHL79C23H926D); (4) PEC Infocamere M26319P0919 evasa per KPI (già nota). Nessun evento in calendario.",
+      "todayNote": "4 email non lette · urgenza F24 Pietrobono 16/04 · STAYFIT revoca amm.re · appuntamento ADE 10/04",
+      "todayDetails": "4 email non lette (etichetta Lorenzo): (1) Filomena Pietrobono chiede crediti compensabili società Federico per F24 16/04 — URGENTE; (2) STAYFIT conferma pratica revoca amministratore, chiede istruzioni pagamento; (3) Prenotazione ADE Roma 5 Tuscolano 10/04 ore 12:55 per comunicazioni irregolarità; (4) PEC Infocamere pratica M26319P0919 evasa. Nessun evento in calendario.",
       "nextRun": "Domani · 07:00"
     },
     {
@@ -367,7 +367,7 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:00",
       "todayNote": "Nessun compleanno oggi — 08/04/2026",
-      "todayDetails": "Verifica sistematica database ANAGRAFICA CLIENTI: 24+ clienti verificati con data di nascita. Nessun cliente con compleanno in data 08/04. Analisi per pattern codice fiscale (D08/D48) confermata: nessuna corrispondenza. Nessun messaggio di auguri inviato.",
+      "todayDetails": "Verifica sistematica database ANAGRAFICA CLIENTI: 24+ clienti verificati, analisi codice fiscale (pattern D08/D48), nessuna corrispondenza trovata per il giorno 8 aprile.",
       "nextRun": "Domani · 05:00"
     },
     {
@@ -377,8 +377,8 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "—",
       "todayNote": "Non programmata (mercoledì) — prossima esecuzione venerdì 10/04",
-      "todayDetails": "Task non eseguito oggi: la verifica antiriciclaggio è programmata solo il venerdì. Prossima esecuzione prevista: venerdì 10/04/2026 ore 09:00.",
-      "nextRun": "Ven 10/04 · 09:00"
+      "todayDetails": "",
+      "nextRun": "Ven 10 apr · 09:00"
     },
     {
       "id": "inserimento-notion",
@@ -386,18 +386,18 @@ const DATA = {
       "schedule": "Ogni giorno · 08:00",
       "todayStatus": "success",
       "todayTime": "08:00",
-      "todayNote": "8 email verificate — tutte già in Notion — 0 nuovi record",
-      "todayDetails": "Controllate 8 email (3 ‘Da firmare’ + 5 ‘Da ricevere’) negli ultimi 30 giorni. Tutti i thread Gmail risultano già registrati nel database MONITORAGGIO DOCUMENTI. Nessun nuovo record creato. Il sistema è aggiornato.",
+      "todayNote": "8 email controllate · 0 nuovi record · tutto già in Notion",
+      "todayDetails": "3 email 'Da firmare' (RD'A Ingegneria, Cosmi Giacomo, Protano Michele) + 5 email 'Da ricevere' su 4 thread (Pepperpot, OTPA, F.e G., Protano). Tutti i record già presenti nel database MONITORAGGIO DOCUMENTI su Notion. 0 nuove righe create.",
       "nextRun": "Domani · 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "2 volte al giorno · 09:00 e 15:00",
+      "schedule": "Ogni giorno · 09:00 e 15:00",
       "todayStatus": "success",
-      "todayTime": "12:00 / 15:00",
+      "todayTime": "15:00",
       "todayNote": "2 run completati — 0 documenti firmati ricevuti — 3 record in attesa",
-      "todayDetails": "Mattino (12:00): 2 clienti in attesa (Cosmi Giacomo, Protano Michele) — nessuna risposta con allegati. Pomeriggio (15:00): 3 record in attesa, Protano ha risposto (2 email) ma solo su IVA/fattura, nessun documento firmato allegato. Stato Notion invariato.",
+      "todayDetails": "Mattino (12:00): 3 record in attesa (Cosmi Giacomo e Protano Michele x2). Protano ha risposto (12:12 e 12:26) ma solo messaggi su IVA/fattura, nessun documento firmato allegato. Pomeriggio (15:00): confermata stessa situazione. 0 aggiornamenti Notion.",
       "nextRun": "Domani · 09:00"
     },
     {
@@ -406,18 +406,18 @@ const DATA = {
       "schedule": "Ogni mercoledì · 10:00",
       "todayStatus": "warning",
       "todayTime": "10:00",
-      "todayNote": "Avviato ma interrotto per rate limit — Protano (2° sollecito) e Cosmi (1° sollecito) identificati",
-      "todayDetails": "Clienti da sollecitare: (1) Protano Michele — Lettera di Incarico inviata 24/03, già sollecitato 30/03, template 2° sollecito. (2) Cosmi Giacomo — Lettera di Incarico inviata 24/03, nessuna risposta dopo 15gg, template 1° sollecito. Esecuzione interrotta per raggiungimento limite API prima dell’invio delle bozze.",
-      "nextRun": "10 apr · dopo reset Notion"
+      "todayNote": "Avviato ma interrotto per rate limit — bozze sollecito non inviate",
+      "todayDetails": "Clienti da sollecitare: Protano Michele (2° sollecito, Lettera di Incarico dal 18/03) e Cosmi Giacomo (1° sollecito, Lettera di Incarico dal 24/03). Esecuzione interrotta per rate limit Notion prima della creazione delle bozze Gmail.",
+      "nextRun": "15 apr · 10:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno · 08:00 e 16:00",
       "todayStatus": "success",
-      "todayTime": "18:30",
-      "todayNote": "Dashboard aggiornata · 3° run giornaliero (sera)",
-      "todayDetails": "Aggiornamento serale (18:30): tutti i task pianificati analizzati, transcript letti. Bozze Gmail: 2 template senza destinatario (esclusi). coworkDrafts svuotato.",
+      "todayTime": "22:06",
+      "todayNote": "Dashboard aggiornata · 5° run giornaliero (sera)",
+      "todayDetails": "Aggiornamento serale (22:06): tutti i task pianificati analizzati, bozze Gmail verificate (2 template senza destinatario), dashboard pubblicata su GitHub Pages.",
       "nextRun": "Domani · 08:00"
     }
   ],
@@ -480,11 +480,11 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": ""
+          "note": "2 email, fattura Cogerp postdatata"
         },
         "auguri-clienti": {
           "status": "success",
-          "note": ""
+          "note": "Auguri Ogis Maria Chiara"
         },
         "verifica-aml": {
           "status": "skipped",
