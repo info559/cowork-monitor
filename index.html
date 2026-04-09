@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-09T12:04:47",
-  "lastUpdated": "12:04:47",
+  "generatedAt": "2026-04-09T14:05:09",
+  "lastUpdated": "14:05:09",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,9 +356,9 @@ const DATA = {
       "schedule": "Ogni giorno · 07:00",
       "todayStatus": "success",
       "todayTime": "07:00",
-      "todayNote": "3 email non lette · urgenza F24 Pietrobono 16/04 · prenotazione CUP AdE · credenziali RelaxBanking",
-      "todayDetails": "3 email non lette (etichetta Lorenzo): (1) Filomena Pietrobono — CREDITI DA COMPENSARE per società Federico, scadenza contributi 16/04/2026; (2) Agenzia delle Entrate — Prenotazione CUP Roma 5 Tuscolano; (3) RelaxBanking — Consegna credenziali autenticazione. Nessun appuntamento in calendario.",
-      "nextRun": "Domani · 07:00"
+      "todayNote": "3 email non lette, urgenza crediti compensazione Pietrobono (F24 16/04)",
+      "todayDetails": "Nessun appuntamento in calendario. 3 email: Pietrobono crediti da compensare (URGENTE), prenotazione CUP AdE, credenziali RelaxBanking.",
+      "nextRun": "Domani 07:00"
     },
     {
       "id": "auguri-clienti",
@@ -366,19 +366,19 @@ const DATA = {
       "schedule": "Ogni giorno · 05:00",
       "todayStatus": "success",
       "todayTime": "05:00",
-      "todayNote": "Nessun compleanno oggi — 09/04/2026",
-      "todayDetails": "Verifica sistematica database ANAGRAFICA CLIENTI: 75+ clienti individuali verificati. Nessun cliente con data di nascita 9 aprile.",
-      "nextRun": "Domani · 05:00"
+      "todayNote": "Nessun compleanno oggi",
+      "todayDetails": "Verificati 75+ clienti nel database Notion. Nessuna data di nascita corrispondente al 9 aprile.",
+      "nextRun": "Domani 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
       "schedule": "Ogni venerdì · 09:00",
       "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non programmata (giovedì) — prossima esecuzione venerdì 10/04",
-      "todayDetails": "",
-      "nextRun": "Ven 10 apr · 09:00"
+      "todayTime": null,
+      "todayNote": "Non programmata (giovedì)",
+      "todayDetails": "Task eseguito solo il lunedì.",
+      "nextRun": "Lunedì 13/04 ore 09:00"
     },
     {
       "id": "inserimento-notion",
@@ -386,9 +386,9 @@ const DATA = {
       "schedule": "Ogni giorno · 08:00",
       "todayStatus": "success",
       "todayTime": "08:00",
-      "todayNote": "0 nuovi record — 3 Da firmare + 5 Da ricevere già presenti in Notion",
-      "todayDetails": "Scansione etichette Gmail: 3 email 'Da firmare' (RD'A Ingegneria, Cosmi, Protano) e 5 email 'Da ricevere' (Pepperpot, OTPA, F&G, Protano). Tutti i thread già registrati nel database MONITORAGGIO DOCUMENTI su Notion. 0 righe create.",
-      "nextRun": "Domani · 08:00"
+      "todayNote": "0 nuovi record — 8 email già in Notion",
+      "todayDetails": "Da firmare: 3 email (RDA, Cosmi, Protano) tutte già presenti. Da ricevere: 5 email (4 thread: Pepperpot, OTPA, F&G, Protano) tutte già presenti.",
+      "nextRun": "Domani 08:00"
     },
     {
       "id": "monitoraggio-documenti",
@@ -405,20 +405,20 @@ const DATA = {
       "name": "Solleciti Settimanali",
       "schedule": "Ogni mercoledì · 10:00",
       "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non programmata (giovedì) — ultimo run 08/04 con warning (rate limit)",
-      "todayDetails": "Ultimo run mercoledì 08/04: avviato ma interrotto per rate limit. Bozze sollecito non inviate. Clienti da sollecitare: Protano Michele e Cosmi Giacomo.",
-      "nextRun": "15 apr · 10:00"
+      "todayTime": null,
+      "todayNote": "Non programmata (giovedì)",
+      "todayDetails": "Task eseguito solo il lunedì.",
+      "nextRun": "Lunedì 13/04 ore 10:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno · 08:00 e 16:00",
       "todayStatus": "success",
-      "todayTime": "12:04",
-      "todayNote": "3° run giornaliero — dashboard aggiornata",
-      "todayDetails": "3° aggiornamento giornaliero ore 12:04. Tutti i task mattutini confermati. Bozze Gmail: 2 template senza destinatario (SITUAZIONE CONTABILE ORDINARI + FORFETARI), coworkDrafts invariato (vuoto). Prossimo run pomeridiano previsto.",
-      "nextRun": "Oggi · 16:00"
+      "todayTime": "14:05",
+      "todayNote": "4° run giornaliero — dashboard aggiornata",
+      "todayDetails": "Aggiornati stati di tutti i 7 task pianificati. Bozze Gmail: 2 template senza destinatario, coworkDrafts vuoto.",
+      "nextRun": "Domani 08:10"
     }
   ],
   "manualTasks": [
