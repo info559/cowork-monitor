@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-09T14:05:09",
-  "lastUpdated": "14:05:09",
+  "generatedAt": "2026-04-09T16:05:38+02:00",
+  "lastUpdated": "16:05",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -366,18 +366,18 @@ const DATA = {
       "schedule": "Ogni giorno · 05:00",
       "todayStatus": "success",
       "todayTime": "05:00",
-      "todayNote": "Nessun compleanno oggi",
-      "todayDetails": "Verificati 75+ clienti nel database Notion. Nessuna data di nascita corrispondente al 9 aprile.",
+      "todayNote": "Nessun compleanno oggi (09/04)",
+      "todayDetails": "Controllati 75+ clienti nel database Notion ANAGRAFICA CLIENTI. Nessun cliente con data di nascita 9 aprile.",
       "nextRun": "Domani 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ogni venerdì · 09:00",
+      "schedule": "Lunedì · 09:00",
       "todayStatus": "skipped",
       "todayTime": null,
       "todayNote": "Non programmata (giovedì)",
-      "todayDetails": "Task eseguito solo il lunedì.",
+      "todayDetails": null,
       "nextRun": "Lunedì 13/04 ore 09:00"
     },
     {
@@ -386,8 +386,8 @@ const DATA = {
       "schedule": "Ogni giorno · 08:00",
       "todayStatus": "success",
       "todayTime": "08:00",
-      "todayNote": "0 nuovi record — 8 email già in Notion",
-      "todayDetails": "Da firmare: 3 email (RDA, Cosmi, Protano) tutte già presenti. Da ricevere: 5 email (4 thread: Pepperpot, OTPA, F&G, Protano) tutte già presenti.",
+      "todayNote": "0 nuovi record — tutti i thread già presenti in Notion",
+      "todayDetails": "8 email verificate (4 Da firmare + 4 Da ricevere). Tutti i Thread Gmail ID già registrati nel database MONITORAGGIO DOCUMENTI.",
       "nextRun": "Domani 08:00"
     },
     {
@@ -395,29 +395,29 @@ const DATA = {
       "name": "Monitoraggio Documenti",
       "schedule": "Ogni giorno · 08:05 e 15:00",
       "todayStatus": "success",
-      "todayTime": "08:05",
-      "todayNote": "3 record in attesa — 0 aggiornamenti — Cosmi e Protano senza documenti firmati",
-      "todayDetails": "3 record in attesa: Cosmi Giacomo (Lettera di Incarico, inviato 24/03), Protano Michele (2 Lettere di Incarico: inviato 24/03 + sollecitato 18/03 con 1 sollecito 30/03). Protano attivo via email su altri argomenti ma nessun documento firmato allegato.",
-      "nextRun": "Oggi · 15:00"
+      "todayTime": "15:00",
+      "todayNote": "3 record in attesa (Protano 2x + Cosmi 1x), 0 risposte ricevute",
+      "todayDetails": "2 clienti in attesa: PROTANO MICHELE (2 Lettere di Incarico, stato Inviato + Sollecitato), COSMI GIACOMO (1 Lettera di Incarico, stato Inviato). Nessuna risposta con documenti firmati nelle ultime 48h.",
+      "nextRun": "Domani 08:05"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Ogni mercoledì · 10:00",
+      "schedule": "Lunedì · 10:00",
       "todayStatus": "skipped",
       "todayTime": null,
       "todayNote": "Non programmata (giovedì)",
-      "todayDetails": "Task eseguito solo il lunedì.",
+      "todayDetails": null,
       "nextRun": "Lunedì 13/04 ore 10:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Ogni giorno · 08:00 e 16:00",
+      "schedule": "Più volte al giorno",
       "todayStatus": "success",
-      "todayTime": "14:05",
-      "todayNote": "4° run giornaliero — dashboard aggiornata",
-      "todayDetails": "Aggiornati stati di tutti i 7 task pianificati. Bozze Gmail: 2 template senza destinatario, coworkDrafts vuoto.",
+      "todayTime": "16:05",
+      "todayNote": "Dashboard aggiornata (5° run giornaliero)",
+      "todayDetails": "Aggiornati tutti i task pianificati, verificate bozze Gmail (2 template senza destinatario, 0 bozze reali).",
       "nextRun": "Domani 08:10"
     }
   ],
@@ -524,7 +524,7 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "success",
-          "note": "Verifica completata, 0 anomalie"
+          "note": "Controllo completato"
         }
       }
     },
@@ -534,7 +534,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "3 email, riunione ore 15"
+          "note": "2 email, PEC Infocamere"
         },
         "auguri-clienti": {
           "status": "success",
