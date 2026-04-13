@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-13T16:06:46+02:00",
-  "lastUpdated": "16:06:46",
+  "generatedAt": "2026-04-13T18:06:03+02:00",
+  "lastUpdated": "18:06:03",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -373,51 +373,51 @@ const DATA = {
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Settimanale · Giovedì 07:30",
+      "schedule": "Giovedì · 09:00",
       "todayStatus": "skipped",
       "todayTime": null,
       "todayNote": "Non programmata (lunedì)",
-      "todayDetails": "Ultima verifica: 10/04 — 2 anomalie: doc scaduto Pepperpot S.R.L., refuso cartella PM Elettric.",
-      "nextRun": "Giovedì 16/04 ore 07:30"
+      "todayDetails": "Ultima esecuzione 10/04: 2 anomalie riscontrate (documento scaduto Pepperpot Srl, refuso cartella PM Elettric).",
+      "nextRun": "Giovedì 16/04 ore 09:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Ogni giorno · 08:00",
-      "todayStatus": "skipped",
-      "todayTime": null,
-      "todayNote": "Non ancora eseguito oggi",
-      "todayDetails": "Ultima esecuzione 10/04: 10 nuovi record creati (Cosmi Giacomo 4 + Protano Michele 4 + F.e G. Srl 1 + Protano 1). 2 segnalazioni tipo documento non classificato.",
+      "todayStatus": "success",
+      "todayTime": "08:00",
+      "todayNote": "0 nuovi record — tutto già in Notion",
+      "todayDetails": "Scansionate 3 email 'Da firmare' e 5 email 'Da ricevere'. Tutti i thread già presenti in Notion dalle esecuzioni precedenti. Nessun nuovo inserimento necessario.",
       "nextRun": "Domani 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Ogni giorno · 08:05 e 15:00",
-      "todayStatus": "skipped",
-      "todayTime": null,
-      "todayNote": "Non ancora eseguito oggi",
-      "todayDetails": "Ultima esecuzione 10/04: 3 record in attesa (Protano 2x + Cosmi 1x), 0 risposte ricevute nelle ultime 48h.",
-      "nextRun": "Prossimo run 08:05"
+      "todayStatus": "success",
+      "todayTime": "08:05",
+      "todayNote": "6 record in attesa (Cosmi 4, Protano 2), 0 risposte",
+      "todayDetails": "Cosmi Giacomo: 4 doc in attesa dal 24/03 (Lettera Incarico x2, Scheda AML, Privacy). Protano Michele: 2 doc (Lettera Incarico inviata 24/03, Lettera Incarico sollecitata 18/03). Nessuna risposta ricevuta nelle ultime 48h.",
+      "nextRun": "Oggi 15:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
       "schedule": "Lunedì · 10:00",
-      "todayStatus": "skipped",
-      "todayTime": null,
-      "todayNote": "Non ancora eseguito oggi",
-      "todayDetails": "Programmato per oggi lunedì 13/04 ore 10:00. Non ancora partito.",
-      "nextRun": "Oggi 10:00"
+      "todayStatus": "success",
+      "todayTime": "10:00",
+      "todayNote": "3 bozze sollecito create (Cosmi, Protano, F&G Srl)",
+      "todayDetails": "Cosmi Giacomo: primo sollecito, 4 doc in attesa dal 24/03. Protano Michele: secondo sollecito, doc dal 24/03. F&G Srl: primo sollecito, contratto BMW dal 23/03. 10 record Notion aggiornati (stato Sollecitato).",
+      "nextRun": "Lunedì 20/04 ore 10:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Più volte al giorno",
-      "todayStatus": "running",
-      "todayTime": "16:06",
-      "todayNote": "Aggiornamento in corso",
-      "todayDetails": "Sessione corrente: aggiornamento dashboard con dati di oggi e storico 10/04.",
+      "todayStatus": "success",
+      "todayTime": "18:06",
+      "todayNote": "Dashboard aggiornata con tutti i task di oggi",
+      "todayDetails": "Aggiornati tutti i 7 task pianificati, bozze Gmail (4 reali), storico 5 giorni.",
       "nextRun": "Prossimo run automatico"
     }
   ],
@@ -484,7 +484,7 @@ const DATA = {
     },
     {
       "date": "2026-04-10",
-      "label": "Gio 10",
+      "label": "Ven 10",
       "tasks": {
         "daily-briefing": {
           "status": "success",
@@ -524,7 +524,7 @@ const DATA = {
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "4 email, urgenza F24"
+          "note": "5 email, nessuna urgenza"
         },
         "auguri-clienti": {
           "status": "success",
@@ -556,6 +556,24 @@ const DATA = {
     }
   ],
   "coworkDrafts": [
+    {
+      "to": "contabilita@laresilienza.it",
+      "subject": "Re: CONTRATTO BMW",
+      "date": "13 apr",
+      "status": "ready"
+    },
+    {
+      "to": "pmelettric79@gmail.com",
+      "subject": "Re: Contratto di incarico professionale e documentazione",
+      "date": "13 apr",
+      "status": "ready"
+    },
+    {
+      "to": "giacomo.cosmi@hotmail.it",
+      "subject": "Re: Contratto di incarico professionale",
+      "date": "13 apr",
+      "status": "ready"
+    },
     {
       "to": "flvpistoia@gmail.com",
       "subject": "Tanti auguri, Flavio!",
