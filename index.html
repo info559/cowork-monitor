@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-09T16:05:38+02:00",
-  "lastUpdated": "16:05",
+  "generatedAt": "2026-04-13T16:06:46+02:00",
+  "lastUpdated": "16:06:46",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,8 +356,8 @@ const DATA = {
       "schedule": "Ogni giorno · 07:00",
       "todayStatus": "success",
       "todayTime": "07:00",
-      "todayNote": "3 email non lette, urgenza crediti compensazione Pietrobono (F24 16/04)",
-      "todayDetails": "Nessun appuntamento in calendario. 3 email: Pietrobono crediti da compensare (URGENTE), prenotazione CUP AdE, credenziali RelaxBanking.",
+      "todayNote": "0 appuntamenti, 3 email non lette, urgenza crediti Pietrobono (F24 16/04)",
+      "todayDetails": "Nessun appuntamento in calendario. 3 email etichetta Lorenzo: Pietrobono crediti da compensare (URGENTE, scad 16/04), prenotazione CUP AdE, credenziali RelaxBanking.",
       "nextRun": "Domani 07:00"
     },
     {
@@ -366,39 +366,39 @@ const DATA = {
       "schedule": "Ogni giorno · 05:00",
       "todayStatus": "success",
       "todayTime": "05:00",
-      "todayNote": "Nessun compleanno oggi (09/04)",
-      "todayDetails": "Controllati 75+ clienti nel database Notion ANAGRAFICA CLIENTI. Nessun cliente con data di nascita 9 aprile.",
+      "todayNote": "Nessun compleanno oggi (13/04)",
+      "todayDetails": "Controllati tutti i clienti individuali nel database Notion ANAGRAFICA CLIENTI. Nessun cliente con data di nascita 13 aprile.",
       "nextRun": "Domani 05:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Lunedì · 09:00",
+      "schedule": "Settimanale · Giovedì 07:30",
       "todayStatus": "skipped",
       "todayTime": null,
-      "todayNote": "Non programmata (giovedì)",
-      "todayDetails": null,
-      "nextRun": "Lunedì 13/04 ore 09:00"
+      "todayNote": "Non programmata (lunedì)",
+      "todayDetails": "Ultima verifica: 10/04 — 2 anomalie: doc scaduto Pepperpot S.R.L., refuso cartella PM Elettric.",
+      "nextRun": "Giovedì 16/04 ore 07:30"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Ogni giorno · 08:00",
-      "todayStatus": "success",
-      "todayTime": "08:00",
-      "todayNote": "0 nuovi record — tutti i thread già presenti in Notion",
-      "todayDetails": "8 email verificate (4 Da firmare + 4 Da ricevere). Tutti i Thread Gmail ID già registrati nel database MONITORAGGIO DOCUMENTI.",
+      "todayStatus": "skipped",
+      "todayTime": null,
+      "todayNote": "Non ancora eseguito oggi",
+      "todayDetails": "Ultima esecuzione 10/04: 10 nuovi record creati (Cosmi Giacomo 4 + Protano Michele 4 + F.e G. Srl 1 + Protano 1). 2 segnalazioni tipo documento non classificato.",
       "nextRun": "Domani 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Ogni giorno · 08:05 e 15:00",
-      "todayStatus": "success",
-      "todayTime": "15:00",
-      "todayNote": "3 record in attesa (Protano 2x + Cosmi 1x), 0 risposte ricevute",
-      "todayDetails": "2 clienti in attesa: PROTANO MICHELE (2 Lettere di Incarico, stato Inviato + Sollecitato), COSMI GIACOMO (1 Lettera di Incarico, stato Inviato). Nessuna risposta con documenti firmati nelle ultime 48h.",
-      "nextRun": "Domani 08:05"
+      "todayStatus": "skipped",
+      "todayTime": null,
+      "todayNote": "Non ancora eseguito oggi",
+      "todayDetails": "Ultima esecuzione 10/04: 3 record in attesa (Protano 2x + Cosmi 1x), 0 risposte ricevute nelle ultime 48h.",
+      "nextRun": "Prossimo run 08:05"
     },
     {
       "id": "solleciti-settimanali",
@@ -406,22 +406,30 @@ const DATA = {
       "schedule": "Lunedì · 10:00",
       "todayStatus": "skipped",
       "todayTime": null,
-      "todayNote": "Non programmata (giovedì)",
-      "todayDetails": null,
-      "nextRun": "Lunedì 13/04 ore 10:00"
+      "todayNote": "Non ancora eseguito oggi",
+      "todayDetails": "Programmato per oggi lunedì 13/04 ore 10:00. Non ancora partito.",
+      "nextRun": "Oggi 10:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Più volte al giorno",
-      "todayStatus": "success",
-      "todayTime": "16:05",
-      "todayNote": "Dashboard aggiornata (5° run giornaliero)",
-      "todayDetails": "Aggiornati tutti i task pianificati, verificate bozze Gmail (2 template senza destinatario, 0 bozze reali).",
-      "nextRun": "Domani 08:10"
+      "todayStatus": "running",
+      "todayTime": "16:06",
+      "todayNote": "Aggiornamento in corso",
+      "todayDetails": "Sessione corrente: aggiornamento dashboard con dati di oggi e storico 10/04.",
+      "nextRun": "Prossimo run automatico"
     }
   ],
   "manualTasks": [
+    {
+      "id": "comodato-ambrosi-13apr",
+      "name": "Contratto Comodato d'Uso Gratuito Ambrosi",
+      "date": "2026-04-13",
+      "time": "10:00",
+      "status": "success",
+      "note": "Contratto comodato gratuito immobile redatto (14 articoli)"
+    },
     {
       "id": "preventivi-centroequestre-2apr",
       "name": "Preventivi Centro Equestre S.Giorgio S.S.D. S.R.L.",
@@ -457,12 +465,12 @@ const DATA = {
   ],
   "history": [
     {
-      "date": "2026-04-09",
-      "label": "Gio 9",
+      "date": "2026-04-13",
+      "label": "Lun 13",
       "tasks": {
         "daily-briefing": {
           "status": "success",
-          "note": "3 email, urgenza F24 Pietrobono"
+          "note": "3 email, urgenza Pietrobono"
         },
         "auguri-clienti": {
           "status": "success",
@@ -470,13 +478,31 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "skipped",
-          "note": "Non programmata (giovedì)"
+          "note": "Non programmata (lun)"
         }
       }
     },
     {
-      "date": "2026-04-08",
-      "label": "Mer 8",
+      "date": "2026-04-10",
+      "label": "Gio 10",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "3 email, urgenza Pietrobono"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Auguri Pistoia Flavio"
+        },
+        "verifica-aml": {
+          "status": "warning",
+          "note": "2 anomalie (doc scaduto, refuso)"
+        }
+      }
+    },
+    {
+      "date": "2026-04-09",
+      "label": "Mer 9",
       "tasks": {
         "daily-briefing": {
           "status": "success",
@@ -493,8 +519,26 @@ const DATA = {
       }
     },
     {
+      "date": "2026-04-08",
+      "label": "Mar 8",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "4 email, urgenza F24"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (mar)"
+        }
+      }
+    },
+    {
       "date": "2026-04-07",
-      "label": "Mar 7",
+      "label": "Lun 7",
       "tasks": {
         "daily-briefing": {
           "status": "success",
@@ -506,48 +550,19 @@ const DATA = {
         },
         "verifica-aml": {
           "status": "skipped",
-          "note": "Non programmata (martedì)"
-        }
-      }
-    },
-    {
-      "date": "2026-04-04",
-      "label": "Ven 4",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "5 email, scadenze aprile"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "success",
-          "note": "Controllo completato"
-        }
-      }
-    },
-    {
-      "date": "2026-04-03",
-      "label": "Gio 3",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "2 email, PEC Infocamere"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (giovedì)"
+          "note": "Non programmata (lun)"
         }
       }
     }
   ],
-  "coworkDrafts": []
+  "coworkDrafts": [
+    {
+      "to": "flvpistoia@gmail.com",
+      "subject": "Tanti auguri, Flavio!",
+      "date": "10 apr",
+      "status": "ready"
+    }
+  ]
 };
 
 // ══════════════════════════════════════════════
