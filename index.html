@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-14T12:06:08",
-  "lastUpdated": "12:06:08",
+  "generatedAt": "2026-04-14T14:03:50",
+  "lastUpdated": "14:03:50",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -373,51 +373,51 @@ const DATA = {
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Venerdì · 09:00",
+      "schedule": "Ogni venerdì · 09:00",
       "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non programmata (martedì) — ultima ven 10/04: 2 anomalie",
-      "todayDetails": "Ultimo run 10/04/2026: 2 anomalie — documento scaduto PEPPERPOT S.R.L. (LT), refuso cartella PM ELLETTRIC (KPI). Prossima esecuzione venerdì.",
-      "nextRun": "Ven 17/04 09:00"
+      "todayTime": "",
+      "todayNote": "Non programmata (martedì) — ultima esec ven 10/04: 2 anomalie rilevate",
+      "todayDetails": "Task non schedulato il martedì. Ultima esecuzione venerdì 10 aprile: rilevate 2 anomalie nei registri antiriciclaggio.",
+      "nextRun": "Ven 17/04 ore 09:00"
     },
     {
-      "id": "inserimento-notion-gmail",
+      "id": "inserimento-notion",
       "name": "Inserimento Notion da Gmail",
       "schedule": "Ogni giorno · 08:00",
       "todayStatus": "success",
       "todayTime": "08:00",
-      "todayNote": "0 nuovi record — tutto già in Notion",
-      "todayDetails": "3 email Da firmare + 5 email Da ricevere (4 thread unici). Tutti i Thread Gmail ID già presenti nel DB MONITORAGGIO DOCUMENTI.",
+      "todayNote": "0 nuovi record — tutte le email già presenti in Notion",
+      "todayDetails": "6 thread analizzati (3 Da firmare + 3 Da ricevere). Tutti già presenti nel database MONITORAGGIO DOCUMENTI. Nessuna nuova riga creata.",
       "nextRun": "Domani 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Ogni giorno · 09:00 e 16:00",
+      "schedule": "Ogni giorno · 09:00 e 15:00",
       "todayStatus": "success",
       "todayTime": "09:00",
       "todayNote": "15 record in attesa, 0 risposte ricevute",
-      "todayDetails": "15 record in stato Inviato/Sollecitato: Cosmi Giacomo (4 doc), Protano Michele (6 doc), F. e G. S.r.l. (2 doc). Ricerca Gmail: 0 risposte con allegati negli ultimi 2 giorni.",
-      "nextRun": "Oggi 16:00"
+      "todayDetails": "15 record in stato Inviato/Sollecitato: Cosmi Giacomo (4 doc), Protano Michele (6 doc), F. e G. S.R.L. (1 doc + 1 thread REDDITI 2023). Gmail 0 risposte con allegati nelle ultime 48h. Nessun aggiornamento Notion effettuato.",
+      "nextRun": "Oggi 15:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Lunedì · 10:00",
+      "schedule": "Ogni lunedì · 09:00",
       "todayStatus": "skipped",
-      "todayTime": "—",
-      "todayNote": "Non programmata (martedì) — ultima lun 13/04: 3 bozze create",
-      "todayDetails": "Ultimo run 13/04/2026: 3 bozze sollecito create — Cosmi Giacomo (1° sol.), Protano Michele (2° sol.), F. e G. S.r.l. (1° sol.).",
-      "nextRun": "Lun 20/04 10:00"
+      "todayTime": "",
+      "todayNote": "Non programmata (martedì) — ultima esec lun 13/04: 3 bozze create",
+      "todayDetails": "Task non schedulato il martedì. Ultima esecuzione lunedì 13 aprile: 3 bozze di sollecito create (Cosmi Giacomo - 1° sollecito, Protano Michele - 2° sollecito, F. e G. S.R.L. - 1° sollecito). Notion aggiornato per 10 record.",
+      "nextRun": "Lun 20/04 ore 09:00"
     },
     {
-      "id": "aggiorna-cowork-monitor",
+      "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno · 07:45 e 22:00",
       "todayStatus": "success",
-      "todayTime": "12:05",
+      "todayTime": "14:03",
       "todayNote": "Dashboard aggiornata — 0 bozze reali, 7 task analizzati",
-      "todayDetails": "Sessioni analizzate: 7. Tutti i task pianificati verificati. Bozze Gmail: 0 reali (3 bozze trovate, tutte senza destinatario: 2 template SITUAZIONE CONTABILE + 1 bozza vuota escluse). Encoding UTF-8 verificato ✓.",
+      "todayDetails": "Sessioni analizzate: 7. Tutti i task pianificati verificati. Bozze Gmail: 0 reali (2 template SITUAZIONE CONTABILE senza destinatario — esclusi correttamente). Encoding UTF-8 ✓.",
       "nextRun": "Oggi 22:00"
     }
   ],
