@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-13T20:05:16.537Z",
-  "lastUpdated": "22:05:16",
+  "generatedAt": "2026-04-14T07:51:39+02:00",
+  "lastUpdated": "07:51:39",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -357,68 +357,68 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "07:00",
       "todayNote": "0 appuntamenti, 3 email non lette, urgenza crediti Pietrobono (F24 16/04)",
-      "todayDetails": "Nessun appuntamento in calendario. 3 email etichetta Lorenzo: Pietrobono crediti da compensare (URGENTE, scad 16/04), prenotazione CUP AdE, credenziali RelaxBanking.",
+      "todayDetails": "Nessun appuntamento in calendario. 3 email etichetta Lorenzo: Pietrobono crediti da compensare (URGENTE, scad 16/04), Marta Micozzi apertura associazione, credenziali RelaxBanking.",
       "nextRun": "Domani 07:00"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
-      "schedule": "Ogni giorno · 05:00",
-      "todayStatus": "success",
-      "todayTime": "05:00",
-      "todayNote": "Nessun compleanno oggi (13/04)",
-      "todayDetails": "Controllati tutti i clienti individuali nel database Notion ANAGRAFICA CLIENTI. Nessun cliente con data di nascita 13 aprile.",
-      "nextRun": "Domani 05:00"
+      "schedule": "Ogni giorno · 07:00",
+      "todayStatus": "error",
+      "todayTime": "07:10",
+      "todayNote": "MCP non disponibili — task non eseguito",
+      "todayDetails": "Connettori Notion/Gmail assenti nella sessione schedulata. Impossibile verificare compleanni del 14/04/2026.",
+      "nextRun": "Domani 07:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
       "schedule": "Giovedì · 09:00",
       "todayStatus": "skipped",
-      "todayTime": null,
-      "todayNote": "Non programmata (lunedì)",
-      "todayDetails": "Ultima esecuzione 10/04: 2 anomalie riscontrate (documento scaduto Pepperpot Srl, refuso cartella PM Elettric).",
-      "nextRun": "Giovedì 16/04 ore 09:00"
+      "todayTime": "—",
+      "todayNote": "Non programmata (martedì)",
+      "todayDetails": "Ultima esecuzione: ven 10/04 — 2 anomalie (doc scaduto Pepperpot LT, refuso PM Elettric KPI).",
+      "nextRun": "Giovedì 09:00"
     },
     {
       "id": "inserimento-notion",
-      "name": "Inserimento Notion da Gmail",
+      "name": "Inserimento Notion Gmail",
       "schedule": "Ogni giorno · 08:00",
       "todayStatus": "success",
       "todayTime": "08:00",
       "todayNote": "0 nuovi record — tutto già in Notion",
-      "todayDetails": "Scansionate 3 email 'Da firmare' e 5 email 'Da ricevere'. Tutti i thread già presenti in Notion dalle esecuzioni precedenti. Nessun nuovo inserimento necessario.",
+      "todayDetails": "3 email Da firmare + 5 email Da ricevere (4 thread unici). Tutti i Thread Gmail ID già presenti nel DB MONITORAGGIO DOCUMENTI.",
       "nextRun": "Domani 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Ogni giorno · 08:05 e 15:00",
+      "schedule": "Ogni giorno · 08:05 e 16:00",
       "todayStatus": "success",
       "todayTime": "08:05",
-      "todayNote": "6 record in attesa (Cosmi 4, Protano 2), 0 risposte",
-      "todayDetails": "Cosmi Giacomo: 4 doc in attesa dal 24/03 (Lettera Incarico x2, Scheda AML, Privacy). Protano Michele: 2 doc (Lettera Incarico inviata 24/03, Lettera Incarico sollecitata 18/03). Nessuna risposta ricevuta nelle ultime 48h.",
-      "nextRun": "Oggi 15:00"
+      "todayNote": "15 record in attesa, 0 risposte ricevute",
+      "todayDetails": "15 record (13 Sollecitato, 2 Inviato): Cosmi Giacomo (4 doc), Protano Michele (6 doc), F.e G. S.r.l. (1+1). Nessuna risposta con allegato nelle ultime 48h.",
+      "nextRun": "Oggi 16:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
       "schedule": "Lunedì · 10:00",
-      "todayStatus": "success",
-      "todayTime": "10:00",
-      "todayNote": "3 bozze sollecito create (Cosmi, Protano, F&G Srl)",
-      "todayDetails": "Cosmi Giacomo: primo sollecito, 4 doc in attesa dal 24/03. Protano Michele: secondo sollecito, doc dal 24/03. F&G Srl: primo sollecito, contratto BMW dal 23/03. 10 record Notion aggiornati (stato Sollecitato).",
-      "nextRun": "Lunedì 20/04 ore 10:00"
+      "todayStatus": "skipped",
+      "todayTime": "—",
+      "todayNote": "Non programmata (martedì) — ultima lun 13/04: 3 bozze create",
+      "todayDetails": "Ultima esecuzione lun 13/04: bozze per Cosmi (1° sollecito), Protano (2° sollecito), F.e G. S.r.l. (1° sollecito). 10 record Notion aggiornati.",
+      "nextRun": "Lunedì 10:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Più volte al giorno",
+      "schedule": "Ogni giorno · 22:00",
       "todayStatus": "success",
-      "todayTime": "22:05",
-      "todayNote": "Dashboard aggiornata",
-      "todayDetails": "Esecuzione schedulata completata con successo. Bozze Gmail: 4 reali sincronizzate.",
-      "nextRun": "Prossima esecuzione schedulata"
+      "todayTime": "07:51",
+      "todayNote": "Dashboard aggiornata — 14/04 07:51",
+      "todayDetails": "Sessioni analizzate: 5. Bozze Gmail: 0 reali (2 template esclusi). Encoding UTF-8 verificato.",
+      "nextRun": "Domani 22:00"
     }
   ],
   "manualTasks": [
@@ -464,6 +464,24 @@ const DATA = {
     }
   ],
   "history": [
+    {
+      "date": "2026-04-14",
+      "label": "Mar 14",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "0 appt, 3 email, urgenza Pietrobono"
+        },
+        "auguri-clienti": {
+          "status": "error",
+          "note": "MCP non disponibili"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (mar)"
+        }
+      }
+    },
     {
       "date": "2026-04-13",
       "label": "Lun 13",
@@ -535,55 +553,12 @@ const DATA = {
           "note": "Non programmata (mar)"
         }
       }
-    },
-    {
-      "date": "2026-04-07",
-      "label": "Lun 7",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "2 email, fattura Cogerp postdatata"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Auguri Ogis Maria Chiara"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (lun)"
-        }
-      }
     }
   ],
-  "coworkDrafts": [
-    {
-      "to": "contabilita@laresilienza.it",
-      "subject": "Re: CONTRATTO BMW",
-      "date": "13 apr",
-      "status": "ready"
-    },
-    {
-      "to": "pmelettric79@gmail.com",
-      "subject": "Re: Contratto di incarico professionale e documentazione",
-      "date": "13 apr",
-      "status": "ready"
-    },
-    {
-      "to": "giacomo.cosmi@hotmail.it",
-      "subject": "Re: Contratto di incarico professionale",
-      "date": "13 apr",
-      "status": "ready"
-    },
-    {
-      "to": "flvpistoia@gmail.com",
-      "subject": "Tanti auguri, Flavio!",
-      "date": "10 apr",
-      "status": "ready"
-    }
-  ]
+  "coworkDrafts": []
 };
 
-    // ══════════════════════════════════════════════
+// ══════════════════════════════════════════════
 //  HELPERS
 // ══════════════════════════════════════════════
 const { useState } = React;
