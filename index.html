@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-14T08:11:44+02:00",
-  "lastUpdated": "08:11:44",
+  "generatedAt": "2026-04-14T08:47:21",
+  "lastUpdated": "08:47:21",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -364,10 +364,10 @@ const DATA = {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
       "schedule": "Ogni giorno · 07:00",
-      "todayStatus": "error",
-      "todayTime": "07:10",
-      "todayNote": "MCP non disponibili — task non eseguito",
-      "todayDetails": "Connettori Notion/Gmail assenti nella sessione schedulata. Impossibile verificare compleanni del 14/04/2026.",
+      "todayStatus": "success",
+      "todayTime": "08:20",
+      "todayNote": "Nessun compleanno il 14/04 — task eseguito correttamente",
+      "todayDetails": "Ricerca esaustiva sul database Notion: oltre 90 schede clienti verificate con query multiple. Nessun cliente ha data di nascita il 14 aprile 2026. Nessuna email di auguri inviata.",
       "nextRun": "Domani 07:00"
     },
     {
@@ -415,9 +415,9 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni giorno · 07:45 e 22:00",
       "todayStatus": "success",
-      "todayTime": "08:11",
+      "todayTime": "08:47",
       "todayNote": "Dashboard aggiornata — 0 bozze reali, 7 task analizzati",
-      "todayDetails": "Sessioni analizzate: 7. Bozze Gmail: 0 reali (2 template SITUAZIONE CONTABILE esclusi). Encoding UTF-8 verificato.",
+      "todayDetails": "Sessioni analizzate: 7. Auguri Clienti aggiornato da error a success (run completato ore 08:20). Bozze Gmail: 0 reali (2 template SITUAZIONE CONTABILE senza destinatario esclusi). Encoding UTF-8 verificato.",
       "nextRun": "Oggi 22:00"
     }
   ],
@@ -473,8 +473,8 @@ const DATA = {
           "note": "0 appt, 3 email, urgenza Pietrobono"
         },
         "auguri-clienti": {
-          "status": "error",
-          "note": "MCP non disponibili"
+          "status": "success",
+          "note": "Nessun compleanno"
         },
         "verifica-aml": {
           "status": "skipped",
