@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-14T16:03:50",
-  "lastUpdated": "16:03:50",
+  "generatedAt": "2026-04-14T18:04:13",
+  "lastUpdated": "18:04:13",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,18 +367,18 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "08:20",
       "todayNote": "Nessun compleanno il 14/04/2026 — task eseguito correttamente",
-      "todayDetails": "Ricerca esaustiva sul database Notion: oltre 90 schede clienti verificate con query multiple. Nessun cliente ha la data di nascita il 14 aprile.",
+      "todayDetails": "Ricerca esaustiva sul database Notion: oltre 90 schede clienti verificate con query multiple. Nessun cliente con data di nascita 14 aprile.",
       "nextRun": "Domani 07:00"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ogni venerdì",
+      "schedule": "Ven · 09:00",
       "todayStatus": "skipped",
-      "todayTime": "",
-      "todayNote": "Non programmata martedì — ultima run 10/04: 2 anomalie riscontrate",
-      "todayDetails": "Verifica del 10/04/2026: Pepperpot S.r.l. (registro LT) documento d’identità scaduto 26/07/2025. PM Ellettric Group (registro KPI) refuso nome cartella archivio. Tutti altri controlli conformi.",
-      "nextRun": "Ven 17/04"
+      "todayTime": null,
+      "todayNote": "Non programmata martedì — ultima venerdì 10/04: 2 anomalie rilevate",
+      "todayDetails": "Ultima esecuzione ven 10/04: 2 anomalie — documento scaduto Pepperpot S.r.l. (legale rapp.), refuso cartella PM Ellettric (KPI). Prossima verifica ven 17/04.",
+      "nextRun": "Ven 17/04 · 09:00"
     },
     {
       "id": "inserimento-notion",
@@ -386,28 +386,28 @@ const DATA = {
       "schedule": "Ogni giorno · 08:00",
       "todayStatus": "success",
       "todayTime": "08:00",
-      "todayNote": "0 nuovi record — 6 thread già presenti in Notion",
-      "todayDetails": "Etichetta Da firmare: 3 thread (RDA Ingegneria, Cosmi, Protano) già in Notion. Etichetta Da ricevere: 3 thread (Pepperpot, Ottavi/OTPA, Protano REDDITI) già in Notion. Database MONITORAGGIO DOCUMENTI aggiornato.",
+      "todayNote": "0 nuovi record — tutti i 6 thread già presenti in Notion",
+      "todayDetails": "Label Da firmare: 3 thread già in Notion (RD'A Ingegneria, Cosmi, Protano). Label Da ricevere: 3 thread già in Notion (Pepperpot, Ottavi/OTPA, Protano redditi). Nessuna azione necessaria.",
       "nextRun": "Domani 08:00"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Ogni giorno · 09:00 e 15:30",
+      "schedule": "2× al giorno",
       "todayStatus": "success",
-      "todayTime": "09:00 / 15:30",
+      "todayTime": "09:00 / 15:30 / 17:30",
       "todayNote": "10 record in attesa, 0 risposte ricevute (Cosmi, Protano)",
-      "todayDetails": "Mattino (09:00): 15 record in attesa per 3 clienti (Cosmi, Protano, F.G. S.r.l.). Pomeriggio (15:30): 10 record per 2 clienti (Cosmi, Protano). Nessuna risposta Gmail nelle ultime 48h. Solleciti inviati il 13/04.",
-      "nextRun": "Domani 09:00"
+      "todayDetails": "3 esecuzioni oggi. Clienti in attesa: Cosmi Giacomo (giacomo.cosmi@hotmail.it, 4 doc.) e Protano Michele (pmelettric79@gmail.com, 4 doc.) — sollecitati 13/04. Duplicati lettera incarico da verificare manualmente.",
+      "nextRun": "Domani mattina"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Ogni lunedì",
+      "schedule": "Lun · 09:00",
       "todayStatus": "skipped",
-      "todayTime": "",
+      "todayTime": null,
       "todayNote": "Non programmati martedì — ultima lun 13/04: 3 bozze create",
-      "todayDetails": "Run del 13/04/2026: bozze create per Cosmi Giacomo (1° sollecito), Protano Michele (2° sollecito), F.G. S.r.l. (1° sollecito). Record Notion aggiornati: 10 totali.",
+      "todayDetails": "Ultima esecuzione lun 13/04: bozze sollecito per Cosmi Giacomo (1° solle.), Protano Michele (2° solle.), F.G. S.r.l. (1° solle.). Record Notion aggiornati: 10 totali.",
       "nextRun": "Lun 20/04"
     },
     {
@@ -415,16 +415,16 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "2× al giorno",
       "todayStatus": "success",
-      "todayTime": "16:03",
-      "todayNote": "Dashboard aggiornata — tutti i task di oggi verificati",
-      "todayDetails": "Aggiornamento ore 16:03. Sessioni analizzate: Daily Briefing, Auguri, Inserimento Notion, Monitoraggio Documenti (mattino+pomeriggio). Bozze Gmail: 0 reali (2 template senza destinatario esclusi). Encoding UTF-8 verificato.",
+      "todayTime": "18:04",
+      "todayNote": "Dashboard aggiornata — 3ª esecuzione del giorno",
+      "todayDetails": "Aggiornamento ore 18:04. Sessioni analizzate: Daily Briefing, Auguri, Inserimento Notion, Monitoraggio Documenti (3 runs), Solleciti (skipped), Verifica AML (skipped). Bozze Gmail: 0 reali (2 template SITUAZIONE CONTABILE senza destinatario esclusi). Encoding UTF-8 ✓.",
       "nextRun": "Domani"
     }
   ],
   "manualTasks": [
     {
       "id": "comodato-ambrosi-13apr",
-      "name": "Contratto Comodato d'Uso Gratuito Ambrosi",
+      "name": "Contratto Comodato d’Uso Gratuito Ambrosi",
       "date": "2026-04-13",
       "time": "10:00",
       "status": "success",
@@ -440,7 +440,7 @@ const DATA = {
     },
     {
       "id": "rda-av-27mar",
-      "name": "Scheda AV RD'A Ingegneria",
+      "name": "Scheda AV RD’A Ingegneria",
       "date": "2026-03-27",
       "time": "14:00",
       "status": "success",
