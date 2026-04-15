@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-14T22:07:11",
-  "lastUpdated": "22:07:11",
+  "generatedAt": "2026-04-15T06:06:11.419Z",
+  "lastUpdated": "08:06:11",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,8 +356,8 @@ const DATA = {
       "schedule": "Ogni giorno · 07:00",
       "todayStatus": "success",
       "todayTime": "07:00",
-      "todayNote": "0 appuntamenti, 3 email non lette, urgenza crediti Pietrobono (F24 16/04)",
-      "todayDetails": "Nessun appuntamento in calendario. 3 email etichetta Lorenzo: Pietrobono crediti da compensare (URGENTE, scad 16/04), Marta Micozzi apertura associazione, credenziali RelaxBanking.",
+      "todayNote": "3 email: urgenza Pietrobono F24 16/04",
+      "todayDetails": "Crediti da compensare per soc. Federico (scad. 16/04 URGENTE), Marta Micozzi bozze statuto/atto APS, RelaxBanking credenziali. Calendario: accesso non disponibile in automatico.",
       "nextRun": "Domani 07:00"
     },
     {
@@ -365,9 +365,9 @@ const DATA = {
       "name": "Auguri Clienti",
       "schedule": "Ogni giorno · 07:00",
       "todayStatus": "success",
-      "todayTime": "08:20",
-      "todayNote": "Nessun compleanno il 14/04/2026",
-      "todayDetails": "Ricerca esaustiva sul database Notion: oltre 90 schede clienti verificate con query multiple. Nessun cliente nato il 14 aprile.",
+      "todayTime": "08:00",
+      "todayNote": "Nessun compleanno il 15/04",
+      "todayDetails": "Analizzati oltre 20 codici fiscali nel database Notion — nessun nato il 15 aprile.",
       "nextRun": "Domani 08:00"
     },
     {
@@ -375,19 +375,19 @@ const DATA = {
       "name": "Verifica Antiriciclaggio",
       "schedule": "Ven · 09:00",
       "todayStatus": "skipped",
-      "todayTime": null,
-      "todayNote": "Non programmata martedì — ultima ven 10/04: 2 anomalie rilevate",
-      "todayDetails": "Ultima esecuzione ven 10/04: 2 anomalie: (1) PEPPERPOT S.R.L. — doc identità scaduto 26/07/2025; (2) PM ELETTRIC GROUP — refuso cartella 'PM ELLETTRIC'. Report salvato.",
-      "nextRun": "Ven 17/04"
+      "todayTime": "-",
+      "todayNote": "Non programmata mercoledì",
+      "todayDetails": "Ultima esecuzione ven 10/04: 2 anomalie rilevate (documento scaduto, refuso nominativo).",
+      "nextRun": "Ven 17 apr 09:00"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion Gmail",
       "schedule": "Ogni giorno · 08:00",
       "todayStatus": "success",
-      "todayTime": "08:00 / 21:50",
-      "todayNote": "3 nuovi record creati — Cosmi e Protano incarico + REDDITI 2023 non classificato",
-      "todayDetails": "Mattina (08:00): 0 nuovi record, 6 thread già in Notion. Serale (21:50): 3 nuovi record — COSMI GIACOMO Lettera Incarico (24/03), PROTANO MICHELE Lettera Incarico (24/03), PROTANO MICHELE REDDITI 2023 non classificato (18/03, completamento manuale richiesto).",
+      "todayTime": "08:30",
+      "todayNote": "0 nuovi record (tutti già in Notion)",
+      "todayDetails": "3 thread Gmail verificati: Cosmi Giacomo (incarico), Protano Michele (incarico+redditi), RD'A Ingegneria (AI+privacy) — tutti già tracciati.",
       "nextRun": "Domani 08:00"
     },
     {
@@ -395,36 +395,36 @@ const DATA = {
       "name": "Monitoraggio Documenti",
       "schedule": "2× al giorno",
       "todayStatus": "success",
-      "todayTime": "09:00 / 15:30 / 17:30",
-      "todayNote": "15 record in attesa, 0 risposte ricevute (Cosmi, Protano, F.G. S.r.l.)",
-      "todayDetails": "3 clienti in attesa: Cosmi Giacomo 4 doc, Protano Michele 6 doc, F. e G. S.R.L. 1 doc. Tutti sollecitati il 13/04. 0 risposte nelle ultime 48h. Duplicati 'Lettera di Incarico' da verificare.",
-      "nextRun": "Domani mattina"
+      "todayTime": "09:00",
+      "todayNote": "10 record in attesa, 0 risposte ricevute",
+      "todayDetails": "Cosmi Giacomo: 5 doc (inviato/sollecitato dal 24/03). Protano Michele: 5 doc (sollecitato 13/04). Nessuna risposta in 48h.",
+      "nextRun": "Oggi pomeriggio 15:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
       "schedule": "Lun · 09:00",
       "todayStatus": "skipped",
-      "todayTime": null,
-      "todayNote": "Non programmati martedì — ultima lun 13/04: 3 bozze create",
-      "todayDetails": "Ultima esecuzione lun 13/04: sollecito per Cosmi Giacomo (1°), Protano Michele (2°), F.G. S.r.l. (1°). 10 record Notion aggiornati.",
-      "nextRun": "Lun 20/04"
+      "todayTime": "-",
+      "todayNote": "Non programmati mercoledì",
+      "todayDetails": "Ultima lun 13/04: 3 bozze create — Cosmi Giacomo (1° sollecito), Protano Michele (2° sollecito), F.G. S.r.l. (1° sollecito).",
+      "nextRun": "Lun 20 apr 09:00"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "schedule": "2× al giorno",
       "todayStatus": "success",
-      "todayTime": "22:07",
-      "todayNote": "Dashboard aggiornata — 5ª esecuzione del giorno",
-      "todayDetails": "Aggiornamento ore 22:07. Sessioni: Daily Briefing (07:00), Auguri (08:20), Inserimento Notion (08:00 + 21:50, 3 nuovi record), Monitoraggio Documenti (15 record, 3 clienti), Solleciti (skipped), Verifica AML (skipped). Bozze Gmail: 0 reali. Encoding UTF-8 ✓.",
-      "nextRun": "Domani"
+      "todayTime": "08:06",
+      "todayNote": "Dashboard aggiornata · 5 sessioni analizzate",
+      "todayDetails": "Sessioni lette: Daily Briefing, Auguri, Inserimento Notion, Monitoraggio Docs, prev. Monitor. Bozze Gmail: 0 reali (2 template esclusi). Encoding UTF-8 ✓.",
+      "nextRun": "Stasera 22:00"
     }
   ],
   "manualTasks": [
     {
       "id": "comodato-ambrosi-13apr",
-      "name": "Contratto Comodato d’Uso Gratuito Ambrosi",
+      "name": "Contratto Comodato d'Uso Gratuito Ambrosi",
       "date": "2026-04-13",
       "time": "10:00",
       "status": "success",
@@ -440,7 +440,7 @@ const DATA = {
     },
     {
       "id": "rda-av-27mar",
-      "name": "Scheda AV RD’A Ingegneria",
+      "name": "Scheda AV RD'A Ingegneria",
       "date": "2026-03-27",
       "time": "14:00",
       "status": "success",
@@ -448,6 +448,24 @@ const DATA = {
     }
   ],
   "history": [
+    {
+      "date": "2026-04-15",
+      "label": "Mer 15",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "3 email, urgenza Pietrobono F24"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (mer)"
+        }
+      }
+    },
     {
       "date": "2026-04-14",
       "label": "Mar 14",
@@ -517,24 +535,6 @@ const DATA = {
         "verifica-aml": {
           "status": "skipped",
           "note": "Non programmata (mer)"
-        }
-      }
-    },
-    {
-      "date": "2026-04-08",
-      "label": "Mar 8",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "2 email urgenti"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (mar)"
         }
       }
     }
