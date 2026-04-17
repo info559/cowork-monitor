@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-15T06:06:11.419Z",
-  "lastUpdated": "08:06:11",
+  "generatedAt": "2026-04-17T16:09:19.369Z",
+  "lastUpdated": "18:09:19",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,69 +356,69 @@ const DATA = {
       "schedule": "Ogni giorno · 07:00",
       "todayStatus": "success",
       "todayTime": "07:00",
-      "todayNote": "3 email: urgenza Pietrobono F24 16/04",
-      "todayDetails": "Crediti da compensare per soc. Federico (scad. 16/04 URGENTE), Marta Micozzi bozze statuto/atto APS, RelaxBanking credenziali. Calendario: accesso non disponibile in automatico.",
+      "todayNote": "7 email non lette, 2 urgenti (STAYFIT, Avv. Croce)",
+      "todayDetails": "Nessun impegno in calendario. 7 email nella label Lorenzo: STAYFIT attende coordinate pagamento per revoca amministratore (10gg scaduti), Avv. Croce inoltro proposta adesione Dionisi. Altri: Fedeli, Micozzi, credenziali RelaxBanking.",
       "nextRun": "Domani 07:00"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
-      "schedule": "Ogni giorno · 07:00",
+      "schedule": "Ogni giorno · 05:04",
       "todayStatus": "success",
-      "todayTime": "08:00",
-      "todayNote": "Nessun compleanno il 15/04",
-      "todayDetails": "Analizzati oltre 20 codici fiscali nel database Notion — nessun nato il 15 aprile.",
-      "nextRun": "Domani 08:00"
+      "todayTime": "05:04",
+      "todayNote": "1 compleanno: Ogis Biagio (78 anni)",
+      "todayDetails": "Bozza auguri Gmail creata per Ogis Biagio (ogisbiagio@gmail.com), nato il 17/04/1948. Identificato via pattern codice fiscale D17.",
+      "nextRun": "Domani 05:04"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ven · 09:00",
-      "todayStatus": "skipped",
-      "todayTime": "-",
-      "todayNote": "Non programmata mercoledì",
-      "todayDetails": "Ultima esecuzione ven 10/04: 2 anomalie rilevate (documento scaduto, refuso nominativo).",
-      "nextRun": "Ven 17 apr 09:00"
+      "schedule": "Ven · 04:06",
+      "todayStatus": "warning",
+      "todayTime": "04:06",
+      "todayNote": "4 anomalie rilevate (Registro LT)",
+      "todayDetails": "KPI: 11 clienti, 41 righe, nessuna anomalia. LT: 9 clienti, 36 righe, 4 anomalie tutte relative al passaporto YA8145509 di Mastronardi Gianluca (PEPPERPOT) scaduto il 26/07/2025. Mandato LT cessato, da verificare copia su KPI.",
+      "nextRun": "Ven 24 apr 04:06"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion Gmail",
-      "schedule": "Ogni giorno · 08:00",
+      "schedule": "Lun-Ven · 3× al giorno",
       "todayStatus": "success",
-      "todayTime": "08:30",
+      "todayTime": "13:07",
       "todayNote": "0 nuovi record (tutti già in Notion)",
-      "todayDetails": "3 thread Gmail verificati: Cosmi Giacomo (incarico), Protano Michele (incarico+redditi), RD'A Ingegneria (AI+privacy) — tutti già tracciati.",
-      "nextRun": "Domani 08:00"
+      "todayDetails": "Run 06:07 e 13:07: 7 email totali (3 Da firmare + 4 Da ricevere), 6 thread unici (RD'A, Cosmi, Protano, Pepperpot, OTPA, Redditi Protano) — tutti già tracciati nel database MONITORAGGIO DOCUMENTI. Deduplica via Thread Gmail ID funzionante.",
+      "nextRun": "Oggi 20:07"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "2× al giorno",
-      "todayStatus": "success",
-      "todayTime": "09:00",
-      "todayNote": "10 record in attesa, 0 risposte ricevute",
-      "todayDetails": "Cosmi Giacomo: 5 doc (inviato/sollecitato dal 24/03). Protano Michele: 5 doc (sollecitato 13/04). Nessuna risposta in 48h.",
-      "nextRun": "Oggi pomeriggio 15:00"
+      "schedule": "Lun-Sab · 07:00 e 15:00",
+      "todayStatus": "warning",
+      "todayTime": "15:07",
+      "todayNote": "Run 07:07 OK · Run 15:07 con tool Gmail non disponibile",
+      "todayDetails": "Mattina (07:07): 13 record in attesa per Cosmi e Protano, 0 risposte in 48h. Pomeriggio (15:07): 17 record identificati (Cosmi, Protano, F.e G.) ma query Gmail bloccata da upgrade connettore (\"This Google Workspace integration was just upgraded\"). Nessun record modificato.",
+      "nextRun": "Sab 18 apr 07:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Lun · 09:00",
+      "schedule": "Lun · 09:10",
       "todayStatus": "skipped",
       "todayTime": "-",
-      "todayNote": "Non programmati mercoledì",
-      "todayDetails": "Ultima lun 13/04: 3 bozze create — Cosmi Giacomo (1° sollecito), Protano Michele (2° sollecito), F.G. S.r.l. (1° sollecito).",
-      "nextRun": "Lun 20 apr 09:00"
+      "todayNote": "Programmato solo il lunedì",
+      "todayDetails": "Ultima esecuzione lun 13/04: bozze di sollecito create per Cosmi Giacomo, Protano Michele e F. e G. S.R.L.",
+      "nextRun": "Lun 20 apr 09:10"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "2× al giorno",
+      "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "08:06",
-      "todayNote": "Dashboard aggiornata · 5 sessioni analizzate",
-      "todayDetails": "Sessioni lette: Daily Briefing, Auguri, Inserimento Notion, Monitoraggio Docs, prev. Monitor. Bozze Gmail: 0 reali (2 template esclusi). Encoding UTF-8 ✓.",
-      "nextRun": "Stasera 22:00"
+      "todayTime": "18:02",
+      "todayNote": "Dashboard aggiornata · 7 sessioni analizzate",
+      "todayDetails": "Sessioni lette: Daily Briefing, Auguri (Ogis), Verifica AML, 2 Inserimento Notion, 2 Monitoraggio Docs. Bozze Gmail non aggiornate (connettore Gmail in upgrade). Push via git su GitHub (Chrome extension non raggiungibile).",
+      "nextRun": "Oggi 20:02"
     }
   ],
   "manualTasks": [
@@ -448,6 +448,42 @@ const DATA = {
     }
   ],
   "history": [
+    {
+      "date": "2026-04-17",
+      "label": "Ven 17",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "7 email, urgenze STAYFIT e Avv. Croce"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Auguri Ogis Biagio (78)"
+        },
+        "verifica-aml": {
+          "status": "warning",
+          "note": "4 anomalie passaporto Mastronardi"
+        }
+      }
+    },
+    {
+      "date": "2026-04-16",
+      "label": "Gio 16",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "Email arrivate in inbox (Fedeli successione)"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (gio)"
+        }
+      }
+    },
     {
       "date": "2026-04-15",
       "label": "Mer 15",
@@ -499,42 +535,6 @@ const DATA = {
         "verifica-aml": {
           "status": "skipped",
           "note": "Non programmata (lun)"
-        }
-      }
-    },
-    {
-      "date": "2026-04-10",
-      "label": "Ven 10",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "3 email, urgenza Pietrobono"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Auguri Pistoia Flavio"
-        },
-        "verifica-aml": {
-          "status": "warning",
-          "note": "2 anomalie (doc scaduto, refuso)"
-        }
-      }
-    },
-    {
-      "date": "2026-04-09",
-      "label": "Mer 9",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "4 email, urgenza F24"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (mer)"
         }
       }
     }
