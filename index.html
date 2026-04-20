@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-20T10:05:00.000Z",
-  "lastUpdated": "12:05:00",
+  "generatedAt": "2026-04-20T12:05:00.000Z",
+  "lastUpdated": "14:05:00",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,7 +367,7 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:04",
       "todayNote": "Nessun compleanno oggi",
-      "todayDetails": "Ricerca su database Notion ANAGRAFICA CLIENTI (sia semantica AI che workspace): nessun cliente con data di nascita 20/04. Nessuna bozza Gmail creata.",
+      "todayDetails": "Ricerca su database Notion ANAGRAFICA CLIENTI: nessun cliente con data di nascita 20/04. Nessuna bozza Gmail creata.",
       "nextRun": "Mar 21 apr 05:04"
     },
     {
@@ -384,21 +384,21 @@ const DATA = {
       "id": "inserimento-notion",
       "name": "Inserimento Notion Gmail",
       "schedule": "Lun-Ven · 3× al giorno",
-      "todayStatus": "warning",
-      "todayTime": "06:07",
-      "todayNote": "Run 06:07 bloccato · connettore Gmail in upgrade",
-      "todayDetails": "Il vecchio connettore Gmail risponde 'Google Workspace integration was just upgraded', il nuovo plugin:engineering:gmail richiede OAuth interattivo non eseguibile in sessione schedulata. Nessun record Notion creato. Schemi DB MONITORAGGIO DOCUMENTI e ANAGRAFICA CLIENTI verificati correttamente.",
-      "nextRun": "Oggi 13:07"
+      "todayStatus": "success",
+      "todayTime": "13:07",
+      "todayNote": "Run 13:07 OK · 0 nuovi record (tutti già presenti)",
+      "todayDetails": "Run 06:07 fallito per upgrade connettore Gmail. Run 13:07 eseguito con successo: 3 thread 'Da firmare' (RD'A Ingegneria IA+Privacy, Cosmi Giacomo, Protano Michele) e 2 thread 'Da ricevere' (Pepperpot, OTPA) tutti già presenti in Notion MONITORAGGIO DOCUMENTI. Deduplica via Thread ID funzionante. 0 nuovi record creati.",
+      "nextRun": "Oggi 20:06"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Sab · 07:00 e 15:00",
       "todayStatus": "success",
-      "todayTime": "07:00",
+      "todayTime": "07:07",
       "todayNote": "3 clienti in attesa (16 record) · 0 nuove risposte",
-      "todayDetails": "Run mattutino completato. Clienti pendenti: COSMI GIACOMO (6 record, 4 sollecitati + 2 inviati), PROTANO MICHELE (9 record, 6 sollecitati + 3 inviati), F. e G. S.R.L. (1 record - CONTRATTO BMW). Ricerca Gmail ultime 48h su tutti e 3 gli indirizzi: nessuna risposta con allegati. Nessun aggiornamento Notion necessario (regola prudenziale). Attesa run pomeridiano 15:00.",
-      "nextRun": "Oggi 15:00"
+      "todayDetails": "Run mattutino completato. Clienti pendenti: COSMI GIACOMO (6 record, 4 sollecitati + 2 inviati), PROTANO MICHELE (9 record, 6 sollecitati + 3 inviati), F. e G. S.R.L. (1 record - CONTRATTO BMW). Ricerca Gmail ultime 48h su tutti e 3 gli indirizzi: nessuna risposta con allegati. Nessun aggiornamento Notion necessario. Attesa run pomeridiano 15:00.",
+      "nextRun": "Oggi 15:06"
     },
     {
       "id": "solleciti-settimanali",
@@ -407,18 +407,18 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "09:10",
       "todayNote": "3 bozze SECONDO SOLLECITO create · 17 record Notion aggiornati",
-      "todayDetails": "Bozze Gmail create per: PROTANO MICHELE (pmelettric79 - 5 doc: Incarico REDDITI 2023, Incarico KPI, Scheda AV, Privacy, Dich. IA); COSMI GIACOMO (giacomo.cosmi - 4 doc); F. e G. S.R.L. (contabilita@laresilienza - CONTRATTO BMW). Tutti template SECONDO SOLLECITO. Notion: 17 record → Stato Sollecitato + Ultimo Sollecito 2026-04-20. Limitazione: connettore create_draft non supporta threadId, bozze senza oggetto da completare manualmente prima dell'invio.",
-      "nextRun": "Lun 27 apr 09:10"
+      "todayDetails": "Bozze Gmail create per: PROTANO MICHELE (pmelettric79 - 5 doc: Incarico REDDITI 2023, Incarico KPI, Scheda AV, Privacy, Dich. IA); COSMI GIACOMO (giacomo.cosmi - 4 doc); F. e G. S.R.L. (contabilita@laresilienza - CONTRATTO BMW). Tutti template SECONDO SOLLECITO. Notion: 17 record → Stato Sollecitato + Ultimo Sollecito 2026-04-20. Bozze tuttora presenti in Gmail in attesa di invio.",
+      "nextRun": "Lun 27 apr 09:09"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "12:05",
+      "todayTime": "14:05",
       "todayNote": "Dashboard aggiornata via git clone/push",
-      "todayDetails": "Run corrente: dashboard rigenerata con stati reali dei task odierni. Rilevati 3 run giornalieri riusciti (Daily Briefing, Monitoraggio Documenti mattutino, Solleciti Settimanali) che nella run precedente erano pending. coworkDrafts: 4 bozze reali (3 solleciti 20/04 + auguri Biagio 17/04). Chrome extension non connessa: push via git clone con token embedded.",
-      "nextRun": "Oggi 14:05"
+      "todayDetails": "Run corrente delle 14:05: stato Inserimento Notion Gmail aggiornato da warning→success (run 13:07 OK, 0 nuovi record dedotti via Thread ID). coworkDrafts confermate: 4 bozze reali (3 solleciti 20/04 + auguri Biagio 17/04). Chrome extension non connessa: push via git clone con token embedded.",
+      "nextRun": "Oggi 16:02"
     }
   ],
   "manualTasks": [
