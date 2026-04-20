@@ -347,78 +347,78 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-17T20:04:05.000Z",
-  "lastUpdated": "22:04:05",
+  "generatedAt": "2026-04-20T08:16:00.000Z",
+  "lastUpdated": "10:16:00",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
       "name": "Daily Briefing",
-      "schedule": "Ogni giorno \u00b7 07:00",
-      "todayStatus": "success",
-      "todayTime": "07:00",
-      "todayNote": "7 email non lette, 2 urgenti (STAYFIT, Avv. Croce)",
-      "todayDetails": "Nessun impegno in calendario. 7 email nella label Lorenzo: STAYFIT attende coordinate pagamento per revoca amministratore (10gg scaduti), Avv. Croce inoltro proposta adesione Dionisi. Altri: Fedeli, Micozzi, credenziali RelaxBanking.",
-      "nextRun": "Domani 07:00"
+      "schedule": "Ogni giorno · 07:00",
+      "todayStatus": "pending",
+      "todayTime": "-",
+      "todayNote": "Nessuna esecuzione rilevata oggi",
+      "todayDetails": "Il task era schedulato per le 07:00 ma nessuna sessione di oggi risulta nei log. Probabile mancato trigger legato al problema di autenticazione Gmail post-upgrade connettore.",
+      "nextRun": "Mar 21 apr 07:00"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
-      "schedule": "Ogni giorno \u00b7 05:04",
+      "schedule": "Ogni giorno · 05:04",
       "todayStatus": "success",
       "todayTime": "05:04",
-      "todayNote": "1 compleanno: Ogis Biagio (78 anni)",
-      "todayDetails": "Bozza auguri Gmail creata per Ogis Biagio (ogisbiagio@gmail.com), nato il 17/04/1948. Identificato via pattern codice fiscale D17.",
-      "nextRun": "Domani 05:04"
+      "todayNote": "Nessun compleanno oggi",
+      "todayDetails": "Ricerca su database Notion ANAGRAFICA CLIENTI: nessun cliente con data di nascita 20/04. Nessuna bozza Gmail creata.",
+      "nextRun": "Mar 21 apr 05:04"
     },
     {
       "id": "verifica-aml",
       "name": "Verifica Antiriciclaggio",
-      "schedule": "Ven \u00b7 04:06",
-      "todayStatus": "warning",
-      "todayTime": "04:06",
-      "todayNote": "4 anomalie rilevate (Registro LT)",
-      "todayDetails": "KPI: 11 clienti, 41 righe, nessuna anomalia. LT: 9 clienti, 36 righe, 4 anomalie tutte relative al passaporto YA8145509 di Mastronardi Gianluca (PEPPERPOT) scaduto il 26/07/2025. Mandato LT cessato, da verificare copia su KPI.",
+      "schedule": "Ven · 04:06",
+      "todayStatus": "skipped",
+      "todayTime": "-",
+      "todayNote": "Programmato solo il venerdì",
+      "todayDetails": "Ultima esecuzione ven 17/04: 4 anomalie sul Registro LT (passaporto YA8145509 Mastronardi/PEPPERPOT scaduto 26/07/2025).",
       "nextRun": "Ven 24 apr 04:06"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion Gmail",
-      "schedule": "Lun-Ven \u00b7 3\u00d7 al giorno",
+      "schedule": "Lun-Ven · 3× al giorno",
       "todayStatus": "warning",
-      "todayTime": "20:07",
-      "todayNote": "Run 06/13 OK \u00b7 Run 20:07 bloccato (connettore Gmail in upgrade)",
-      "todayDetails": "Run 06:07 e 13:07: 7 email totali (Da firmare + Da ricevere), tutti thread gi\u00e0 tracciati in MONITORAGGIO DOCUMENTI, 0 nuovi record. Run 20:07: bloccato perch\u00e9 il vecchio connettore Gmail non \u00e8 pi\u00f9 attivo (\"Google Workspace integration was just upgraded\") e il nuovo plugin:engineering:gmail richiede OAuth non eseguibile in sessione schedulata.",
-      "nextRun": "Lun 20 apr 06:07"
+      "todayTime": "06:07",
+      "todayNote": "Run 06:07 bloccato · connettore Gmail in upgrade",
+      "todayDetails": "Il vecchio connettore Gmail risponde 'Google Workspace integration was just upgraded', il nuovo plugin:engineering:gmail richiede OAuth interattivo non eseguibile in sessione schedulata. Nessun record Notion creato. Schemi DB MONITORAGGIO DOCUMENTI e ANAGRAFICA CLIENTI verificati correttamente.",
+      "nextRun": "Oggi 13:07"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
-      "schedule": "Lun-Sab \u00b7 07:00 e 15:00",
-      "todayStatus": "warning",
-      "todayTime": "15:07",
-      "todayNote": "Run 07:07 OK \u00b7 Run 15:07 con tool Gmail non disponibile",
-      "todayDetails": "Mattina (07:07): 13 record in attesa per Cosmi e Protano, 0 risposte in 48h. Pomeriggio (15:07): 17 record identificati (Cosmi, Protano, F.e G.) ma query Gmail bloccata da upgrade connettore. Nessun record modificato (regola prudenziale).",
-      "nextRun": "Sab 18 apr 07:00"
+      "schedule": "Lun-Sab · 07:00 e 15:00",
+      "todayStatus": "pending",
+      "todayTime": "-",
+      "todayNote": "Nessuna esecuzione mattutina rilevata",
+      "todayDetails": "Il run delle 07:00 non risulta nei log delle sessioni. Probabile mancato trigger a causa del problema Gmail. In attesa del run pomeridiano delle 15:00.",
+      "nextRun": "Oggi 15:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
-      "schedule": "Lun \u00b7 09:10",
-      "todayStatus": "skipped",
+      "schedule": "Lun · 09:10",
+      "todayStatus": "pending",
       "todayTime": "-",
-      "todayNote": "Programmato solo il luned\u00ec",
-      "todayDetails": "Ultima esecuzione lun 13/04: bozze di sollecito create per Cosmi Giacomo, Protano Michele e F. e G. S.R.L.",
-      "nextRun": "Lun 20 apr 09:10"
+      "todayNote": "Nessuna esecuzione delle 09:10 rilevata",
+      "todayDetails": "Task schedulato oggi (lunedì) alle 09:10, nessuna sessione corrispondente nei log. Probabile mancato trigger. Ultima esecuzione lun 13/04: bozze di sollecito create per Cosmi, Protano, F. e G. S.R.L.",
+      "nextRun": "Lun 27 apr 09:10"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
-      "schedule": "Ogni 2h (08\u201322)",
+      "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "22:04",
-      "todayNote": "Dashboard aggiornata \u00b7 run 20:02 in errore, run 22:04 OK",
-      "todayDetails": "Run 18:09 success (git clone/push), run 20:02 error (Chrome offline + Gmail upgrade + api.github.com non in allowlist), run 22:04 success via git clone. coworkDrafts: non aggiornabile (vecchio connettore deprecato, nuovo plugin:engineering:gmail richiede OAuth).",
-      "nextRun": "Domani 08:02"
+      "todayTime": "10:16",
+      "todayNote": "Dashboard aggiornata via git clone/push",
+      "todayDetails": "Run corrente: dashboard rigenerata. coworkDrafts: 1 bozza reale trovata (Ogis Biagio \"Tanti auguri\" del 17/04). Chrome extension non connessa e api.github.com non in allowlist: operazione completata via git clone/push con token embedded.",
+      "nextRun": "Oggi 12:02"
     }
   ],
   "manualTasks": [
@@ -449,52 +449,105 @@ const DATA = {
   ],
   "history": [
     {
+      "date": "2026-04-20",
+      "label": "Lun 20",
+      "tasks": {
+        "daily-briefing": {
+          "status": "pending",
+          "note": "Nessun run rilevato oggi"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (lun)"
+        }
+      }
+    },
+    {
       "date": "2026-04-17",
       "label": "Ven 17",
       "tasks": {
-        "daily-briefing": { "status": "success", "note": "7 email, urgenze STAYFIT e Avv. Croce" },
-        "auguri-clienti": { "status": "success", "note": "Auguri Ogis Biagio (78)" },
-        "verifica-aml": { "status": "warning", "note": "4 anomalie passaporto Mastronardi" }
+        "daily-briefing": {
+          "status": "success",
+          "note": "7 email, urgenze STAYFIT e Avv. Croce"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Auguri Ogis Biagio (78)"
+        },
+        "verifica-aml": {
+          "status": "warning",
+          "note": "4 anomalie passaporto Mastronardi"
+        }
       }
     },
     {
       "date": "2026-04-16",
       "label": "Gio 16",
       "tasks": {
-        "daily-briefing": { "status": "success", "note": "Email arrivate in inbox (Fedeli successione)" },
-        "auguri-clienti": { "status": "success", "note": "Nessun compleanno" },
-        "verifica-aml": { "status": "skipped", "note": "Non programmata (gio)" }
+        "daily-briefing": {
+          "status": "success",
+          "note": "Email arrivate in inbox (Fedeli successione)"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (gio)"
+        }
       }
     },
     {
       "date": "2026-04-15",
       "label": "Mer 15",
       "tasks": {
-        "daily-briefing": { "status": "success", "note": "3 email, urgenza Pietrobono F24" },
-        "auguri-clienti": { "status": "success", "note": "Nessun compleanno" },
-        "verifica-aml": { "status": "skipped", "note": "Non programmata (mer)" }
+        "daily-briefing": {
+          "status": "success",
+          "note": "3 email, urgenza Pietrobono F24"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (mer)"
+        }
       }
     },
     {
       "date": "2026-04-14",
       "label": "Mar 14",
       "tasks": {
-        "daily-briefing": { "status": "success", "note": "0 appt, 3 email, urgenza Pietrobono" },
-        "auguri-clienti": { "status": "success", "note": "Nessun compleanno" },
-        "verifica-aml": { "status": "skipped", "note": "Non programmata (mar)" }
-      }
-    },
-    {
-      "date": "2026-04-13",
-      "label": "Lun 13",
-      "tasks": {
-        "daily-briefing": { "status": "success", "note": "3 email, urgenza Micozzi" },
-        "auguri-clienti": { "status": "success", "note": "Nessun compleanno" },
-        "verifica-aml": { "status": "skipped", "note": "Non programmata (lun)" }
+        "daily-briefing": {
+          "status": "success",
+          "note": "0 appt, 3 email, urgenza Pietrobono"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (mar)"
+        }
       }
     }
   ],
-  "coworkDrafts": []
+  "coworkDrafts": [
+    {
+      "id": "19d9968d7bd9bf89",
+      "subject": "Tanti auguri, Biagio!",
+      "to": "ogisbiagio@gmail.com",
+      "date": "17 apr",
+      "status": "ready"
+    }
+  ]
 };
 
 // ══════════════════════════════════════════════
