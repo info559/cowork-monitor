@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-20T18:05:00.000Z",
-  "lastUpdated": "20:05:00",
+  "generatedAt": "2026-04-20T20:05:00.000Z",
+  "lastUpdated": "22:05:00",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -385,10 +385,10 @@ const DATA = {
       "name": "Inserimento Notion Gmail",
       "schedule": "Lun-Ven · 3× al giorno",
       "todayStatus": "success",
-      "todayTime": "13:07",
-      "todayNote": "Run 13:07 OK · 0 nuovi record (tutti già presenti) · Run 20:06 in attesa",
-      "todayDetails": "Run 06:07 fallito per upgrade connettore Gmail. Run 13:07 eseguito con successo: 3 thread 'Da firmare' (RD'A Ingegneria IA+Privacy, Cosmi Giacomo, Protano Michele) e 2 thread 'Da ricevere' (Pepperpot, OTPA) tutti già presenti in Notion MONITORAGGIO DOCUMENTI. Deduplica via Thread ID funzionante. 0 nuovi record creati. Run serale 20:06 previsto tra pochi minuti.",
-      "nextRun": "Oggi 20:06"
+      "todayTime": "20:06",
+      "todayNote": "Run 20:06 OK · 1 nuovo record creato (ATLANTE LAB S.R.L.)",
+      "todayDetails": "Run 06:07 fallito per upgrade connettore Gmail. Run 13:07 OK (0 nuovi record: 5 thread già presenti). Run 20:06 OK: etichetta 'Da firmare' → 4 thread (3 già in Notion + 1 nuovo ATLANTE LAB S.R.L. creato — martinaciucci85@gmail.com, firmataria CIUCCI MARTINA); etichetta 'Da ricevere' → 2 thread tutti già presenti. Campo 'Tipo Documento' su ATLANTE LAB lasciato vuoto (oggetto 'DOCUMENTI DA FIRMARE DIGITALMENTE' = deposito bilancio CCIAA, non classificabile tra categorie predefinite) — richiede classificazione manuale.",
+      "nextRun": "Mar 21 apr 06:07"
     },
     {
       "id": "monitoraggio-documenti",
@@ -415,10 +415,10 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "20:05",
+      "todayTime": "22:05",
       "todayNote": "Dashboard aggiornata via git clone/push",
-      "todayDetails": "Run corrente delle 20:05: nessuna variazione operativa rispetto alle 18:05. Stato invariato (5 task success + 1 skipped + 1 inserimento in attesa del run 20:06). coworkDrafts invariate: 4 bozze reali (3 solleciti 20/04 Protano/Cosmi/F.e G. + auguri Biagio 17/04). Chrome extension non raggiungibile: push via git clone con token embedded (workaround ricorrente da oltre 7 run consecutive oggi).",
-      "nextRun": "Oggi 22:05"
+      "todayDetails": "Run corrente delle 22:05: inserimento-notion aggiornato al run serale 20:06 (1 nuovo record ATLANTE LAB S.R.L. creato, campo Tipo Documento da classificare manualmente). Stato task core invariato (5 success + 1 skipped + inserimento-notion completato). coworkDrafts invariate: 4 bozze reali (3 solleciti 20/04 Protano/Cosmi/F.e G. + auguri Biagio 17/04). Chrome extension non raggiungibile per l'ottava run consecutiva oggi: push via git clone con token embedded (workaround stabile). Encoding verificato (U+2713 preservati).",
+      "nextRun": "Mar 21 apr 08:05"
     }
   ],
   "manualTasks": [
@@ -569,7 +569,7 @@ const DATA = {
       "status": "ready"
     }
   ]
-};
+};;
 
 // ══════════════════════════════════════════════
 //  HELPERS
