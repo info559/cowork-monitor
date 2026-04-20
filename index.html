@@ -347,17 +347,17 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-20T08:16:00.000Z",
-  "lastUpdated": "10:16:00",
+  "generatedAt": "2026-04-20T10:05:00.000Z",
+  "lastUpdated": "12:05:00",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
       "name": "Daily Briefing",
       "schedule": "Ogni giorno · 07:00",
-      "todayStatus": "pending",
-      "todayTime": "-",
-      "todayNote": "Nessuna esecuzione rilevata oggi",
-      "todayDetails": "Il task era schedulato per le 07:00 ma nessuna sessione di oggi risulta nei log. Probabile mancato trigger legato al problema di autenticazione Gmail post-upgrade connettore.",
+      "todayStatus": "success",
+      "todayTime": "07:00",
+      "todayNote": "Briefing completato: 0 appuntamenti, 6 email con etichetta Lorenzo",
+      "todayDetails": "Calendar vuoto. 6 thread riepilogati: 3 urgenti (Successione Fedeli - F/1 Tortora espropriata 10 anni fa; Avv. Croce - proposta adesione atto 2023 1T 27602; STAYFIT Subiaco - conferma preventivo 002 revoca amministratore), 1 in attesa (Marta Micozzi - bozze associazione), 2 informativi (RelaxBanking credenziali, DatevKoinos marketing).",
       "nextRun": "Mar 21 apr 07:00"
     },
     {
@@ -367,7 +367,7 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:04",
       "todayNote": "Nessun compleanno oggi",
-      "todayDetails": "Ricerca su database Notion ANAGRAFICA CLIENTI: nessun cliente con data di nascita 20/04. Nessuna bozza Gmail creata.",
+      "todayDetails": "Ricerca su database Notion ANAGRAFICA CLIENTI (sia semantica AI che workspace): nessun cliente con data di nascita 20/04. Nessuna bozza Gmail creata.",
       "nextRun": "Mar 21 apr 05:04"
     },
     {
@@ -394,20 +394,20 @@ const DATA = {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Sab · 07:00 e 15:00",
-      "todayStatus": "pending",
-      "todayTime": "-",
-      "todayNote": "Nessuna esecuzione mattutina rilevata",
-      "todayDetails": "Il run delle 07:00 non risulta nei log delle sessioni. Probabile mancato trigger a causa del problema Gmail. In attesa del run pomeridiano delle 15:00.",
+      "todayStatus": "success",
+      "todayTime": "07:00",
+      "todayNote": "3 clienti in attesa (16 record) · 0 nuove risposte",
+      "todayDetails": "Run mattutino completato. Clienti pendenti: COSMI GIACOMO (6 record, 4 sollecitati + 2 inviati), PROTANO MICHELE (9 record, 6 sollecitati + 3 inviati), F. e G. S.R.L. (1 record - CONTRATTO BMW). Ricerca Gmail ultime 48h su tutti e 3 gli indirizzi: nessuna risposta con allegati. Nessun aggiornamento Notion necessario (regola prudenziale). Attesa run pomeridiano 15:00.",
       "nextRun": "Oggi 15:00"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
       "schedule": "Lun · 09:10",
-      "todayStatus": "pending",
-      "todayTime": "-",
-      "todayNote": "Nessuna esecuzione delle 09:10 rilevata",
-      "todayDetails": "Task schedulato oggi (lunedì) alle 09:10, nessuna sessione corrispondente nei log. Probabile mancato trigger. Ultima esecuzione lun 13/04: bozze di sollecito create per Cosmi, Protano, F. e G. S.R.L.",
+      "todayStatus": "success",
+      "todayTime": "09:10",
+      "todayNote": "3 bozze SECONDO SOLLECITO create · 17 record Notion aggiornati",
+      "todayDetails": "Bozze Gmail create per: PROTANO MICHELE (pmelettric79 - 5 doc: Incarico REDDITI 2023, Incarico KPI, Scheda AV, Privacy, Dich. IA); COSMI GIACOMO (giacomo.cosmi - 4 doc); F. e G. S.R.L. (contabilita@laresilienza - CONTRATTO BMW). Tutti template SECONDO SOLLECITO. Notion: 17 record → Stato Sollecitato + Ultimo Sollecito 2026-04-20. Limitazione: connettore create_draft non supporta threadId, bozze senza oggetto da completare manualmente prima dell'invio.",
       "nextRun": "Lun 27 apr 09:10"
     },
     {
@@ -415,10 +415,10 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "10:16",
+      "todayTime": "12:05",
       "todayNote": "Dashboard aggiornata via git clone/push",
-      "todayDetails": "Run corrente: dashboard rigenerata. coworkDrafts: 1 bozza reale trovata (Ogis Biagio \"Tanti auguri\" del 17/04). Chrome extension non connessa e api.github.com non in allowlist: operazione completata via git clone/push con token embedded.",
-      "nextRun": "Oggi 12:02"
+      "todayDetails": "Run corrente: dashboard rigenerata con stati reali dei task odierni. Rilevati 3 run giornalieri riusciti (Daily Briefing, Monitoraggio Documenti mattutino, Solleciti Settimanali) che nella run precedente erano pending. coworkDrafts: 4 bozze reali (3 solleciti 20/04 + auguri Biagio 17/04). Chrome extension non connessa: push via git clone con token embedded.",
+      "nextRun": "Oggi 14:05"
     }
   ],
   "manualTasks": [
@@ -453,8 +453,8 @@ const DATA = {
       "label": "Lun 20",
       "tasks": {
         "daily-briefing": {
-          "status": "pending",
-          "note": "Nessun run rilevato oggi"
+          "status": "success",
+          "note": "6 email, 3 urgenze (Fedeli, Croce, Stayfit)"
         },
         "auguri-clienti": {
           "status": "success",
@@ -540,6 +540,27 @@ const DATA = {
     }
   ],
   "coworkDrafts": [
+    {
+      "id": "19da9f4cdc5d2401",
+      "subject": "Sollecito invio documenti – Protano Michele (2° sollecito)",
+      "to": "pmelettric79@gmail.com",
+      "date": "20 apr",
+      "status": "ready"
+    },
+    {
+      "id": "19da9f4d396cfd03",
+      "subject": "Sollecito invio documenti – Cosmi Giacomo (2° sollecito)",
+      "to": "giacomo.cosmi@hotmail.it",
+      "date": "20 apr",
+      "status": "ready"
+    },
+    {
+      "id": "19da9f4d82578e2a",
+      "subject": "Sollecito invio documenti – F. e G. S.r.l. (2° sollecito)",
+      "to": "contabilita@laresilienza.it",
+      "date": "20 apr",
+      "status": "ready"
+    },
     {
       "id": "19d9968d7bd9bf89",
       "subject": "Tanti auguri, Biagio!",
