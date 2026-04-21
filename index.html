@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 21/04/2026 alle 20:05
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-21T18:05:00.000Z",
-  "lastUpdated": "20:05:00",
+  "generatedAt": "2026-04-21T20:05:00.000Z",
+  "lastUpdated": "22:05:00",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -385,10 +385,10 @@ const DATA = {
       "name": "Inserimento Notion Gmail",
       "schedule": "Lun-Ven · 3× al giorno",
       "todayStatus": "success",
-      "todayTime": "13:07",
-      "todayNote": "Run pomeridiano OK · 0 nuovi record · 6 thread tutti già presenti",
-      "todayDetails": "Run delle 13:07 completato (secondo della giornata, dopo run 06:07). Etichetta 'Da firmare' → 4 thread (ATLANTE LAB 20/04, RD'A Ingegneria 25/03, Cosmi 24/03, Protano 24/03 — tutti già in Notion). Etichetta 'Da ricevere' → 2 thread (PEPPERPOT 24/03, OTPA 24/03 — entrambi già presenti). Nessuna nuova riga creata. Prossimo run previsto alle 20:06.",
-      "nextRun": "Mar 21 apr 20:06"
+      "todayTime": "20:06",
+      "todayNote": "Run serale OK · 0 nuovi record · 4 thread tutti già presenti",
+      "todayDetails": "Run delle 20:06 completato (terzo e ultimo della giornata, dopo 06:07 e 13:07). Etichetta 'Da firmare' → 4 thread (ATLANTE LAB 20/04, RD'A Ingegneria 25/03, Cosmi 24/03, Protano 24/03 — tutti già in Notion). Etichetta 'Da ricevere' → 0 thread negli ultimi 30 giorni. Nessuna nuova riga creata. Prossimo run mer 22/04 ore 06:07.",
+      "nextRun": "Mer 22 apr 06:07"
     },
     {
       "id": "monitoraggio-documenti",
@@ -415,10 +415,10 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "20:05",
-      "todayNote": "Settima run odierna · Nessuna variazione task · Chrome ancora offline",
-      "todayDetails": "Run delle 20:05 (settima della giornata dopo 08:06, 10:05, 12:05, 14:05, 16:04, 18:05). Nessuna variazione significativa vs run delle 18:05: nessun nuovo task pianificato ha eseguito tra le 18:05 e le 20:05 (prossimo atteso Inserimento Notion Gmail ore 20:06, tra ~1 minuto). Tutti e 7 i task odierni mantengono lo stato precedente: 4 success (daily-briefing 07:00, auguri-clienti 05:04, inserimento-notion 13:07, monitoraggio-documenti 15:07), 2 skipped (verifica-aml non-venerdì, solleciti-settimanali non-lunedì), 1 running (aggiorna-monitor). coworkDrafts invariate: 4 bozze reali (3 solleciti 20/04 a PROTANO/COSMI/F. e G. + auguri Biagio 17/04); 3 template senza destinatario (SITUAZIONE CONTABILE ORDINARI/FORFETARI + bozza 'Gentile E') correttamente esclusi. Chrome extension ancora non raggiungibile (7ª run consecutiva oggi, persistente dal 20/04): push via git clone con token embedded.",
-      "nextRun": "Mar 21 apr 22:05"
+      "todayTime": "22:05",
+      "todayNote": "Ottava e ultima run odierna · Inserimento Notion 20:06 completato · Chrome ancora offline",
+      "todayDetails": "Run delle 22:05 (ottava e ultima della giornata dopo 08:06, 10:05, 12:05, 14:05, 16:04, 18:05, 20:05). Variazione vs run 20:05: completata la run Inserimento Notion Gmail delle 20:06 (terzo giro serale, 4 thread 'Da firmare' tutti già presenti, 0 'Da ricevere', 0 nuovi record creati). Nessun altro task pianificato ha eseguito tra 20:05 e 22:05. Stato finale 7 task odierni: 4 success (daily-briefing, auguri-clienti, inserimento-notion, monitoraggio-documenti), 2 skipped (verifica-aml non-venerdì, solleciti-settimanali non-lunedì), 1 success in corso (aggiorna-monitor 22:05). coworkDrafts invariate: 4 bozze reali (3 solleciti 20/04 a PROTANO/COSMI/F. e G. + auguri Biagio 17/04); 3 template senza destinatario (SITUAZIONE CONTABILE ORDINARI/FORFETARI + 'Gentile E') correttamente esclusi. Chrome extension ancora non raggiungibile (8ª run consecutiva oggi, persistente dal 20/04): push via git clone con token embedded.",
+      "nextRun": "Mer 22 apr 08:06"
     }
   ],
   "manualTasks": [
