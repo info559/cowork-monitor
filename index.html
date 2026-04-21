@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 24/03/2026 alle 14:21
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-20T20:05:00.000Z",
-  "lastUpdated": "22:05:00",
+  "generatedAt": "2026-04-21T06:06:00.000Z",
+  "lastUpdated": "08:06:00",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -357,8 +357,8 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "07:00",
       "todayNote": "Briefing completato: 0 appuntamenti, 6 email con etichetta Lorenzo",
-      "todayDetails": "Calendar vuoto. 6 thread riepilogati: 3 urgenti (Successione Fedeli - F/1 Tortora espropriata 10 anni fa; Avv. Croce - proposta adesione atto 2023 1T 27602; STAYFIT Subiaco - conferma preventivo 002 revoca amministratore), 1 in attesa (Marta Micozzi - bozze associazione), 2 informativi (RelaxBanking credenziali, DatevKoinos marketing).",
-      "nextRun": "Mar 21 apr 07:00"
+      "todayDetails": "Calendar vuoto. 6 thread non letti: 3 urgenti (Avv. Croce - proposta adesione atto 2023 1T 27602; Fede Dionisi - chiarimento cartella AE; STAYFIT Subiaco - modalità pagamento preventivo 002 revoca amm.re); 2 da gestire (Marta Micozzi - bozze atto costitutivo/statuto associazione con 7 soci; Successione Fedeli - geom. Mecci su F/1 aggiuntivo); 1 informativa (RelaxBanking - consegna credenziali).",
+      "nextRun": "Mer 22 apr 07:00"
     },
     {
       "id": "auguri-clienti",
@@ -367,8 +367,8 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:04",
       "todayNote": "Nessun compleanno oggi",
-      "todayDetails": "Ricerca su database Notion ANAGRAFICA CLIENTI: nessun cliente con data di nascita 20/04. Nessuna bozza Gmail creata.",
-      "nextRun": "Mar 21 apr 05:04"
+      "todayDetails": "Ricerca su database Notion ANAGRAFICA CLIENTI: nessun cliente con data di nascita 21/04. Nessuna bozza Gmail creata.",
+      "nextRun": "Mer 22 apr 05:04"
     },
     {
       "id": "verifica-aml",
@@ -385,29 +385,29 @@ const DATA = {
       "name": "Inserimento Notion Gmail",
       "schedule": "Lun-Ven · 3× al giorno",
       "todayStatus": "success",
-      "todayTime": "20:06",
-      "todayNote": "Run 20:06 OK · 1 nuovo record creato (ATLANTE LAB S.R.L.)",
-      "todayDetails": "Run 06:07 fallito per upgrade connettore Gmail. Run 13:07 OK (0 nuovi record: 5 thread già presenti). Run 20:06 OK: etichetta 'Da firmare' → 4 thread (3 già in Notion + 1 nuovo ATLANTE LAB S.R.L. creato — martinaciucci85@gmail.com, firmataria CIUCCI MARTINA); etichetta 'Da ricevere' → 2 thread tutti già presenti. Campo 'Tipo Documento' su ATLANTE LAB lasciato vuoto (oggetto 'DOCUMENTI DA FIRMARE DIGITALMENTE' = deposito bilancio CCIAA, non classificabile tra categorie predefinite) — richiede classificazione manuale.",
-      "nextRun": "Mar 21 apr 06:07"
+      "todayTime": "06:07",
+      "todayNote": "Run mattutino OK · 0 nuovi record (6 thread tutti già presenti)",
+      "todayDetails": "Run 06:07 completato. Etichetta 'Da firmare' → 4 thread (tutti già in Notion: ATLANTE LAB 20/04, RDA Ingegneria 25/03, Cosmi 24/03, Protano 24/03). Etichetta 'Da ricevere' → 2 thread (PEPPERPOT 24/03, Ottavi Giovanni 24/03, entrambi già presenti). Nessuna azione Notion necessaria. Prossimi run previsti alle 13:07 e 20:06.",
+      "nextRun": "Mar 21 apr 13:07"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Sab · 07:00 e 15:00",
       "todayStatus": "success",
-      "todayTime": "15:07",
-      "todayNote": "Run pomeridiano OK · 3 clienti / 17 record pendenti · 0 nuove risposte",
-      "todayDetails": "Entrambi i run completati (07:07 mattutino + 15:07 pomeridiano). Clienti pendenti: COSMI GIACOMO (6 record, 4 sollecitati + 2 inviati), PROTANO MICHELE (10 record, 6 sollecitati + 4 con template SECONDO SOLLECITO post 09:10), F. e G. S.R.L. (1 record - CONTRATTO BMW). Ricerca Gmail ultime 48h su tutti e 3 gli indirizzi: nessuna risposta con allegati (solo scambi testuali su credito IVA Protano). Nessun aggiornamento Notion necessario (regola prudenziale: meglio non aggiornare che aggiornare per errore).",
-      "nextRun": "Mar 21 apr 07:06"
+      "todayTime": "07:07",
+      "todayNote": "Run mattutino OK · 1 cliente chiuso (ATLANTE LAB) · 17 record ancora pendenti",
+      "todayDetails": "Run mattutino completato. Clienti in attesa iniziali: 18 record su 4 clienti (ATLANTE LAB 1, COSMI 6, PROTANO 10, F. e G. 1). ATLANTE LAB S.R.L. → Stato 'Ricevuto' (3 email Martina Ciucci 20/04 con documenti firmati digitalmente: Verbale Assemblea totalitaria, XBRL bilancio, PDF firmato). Pendenti: COSMI 6 record, PROTANO 10 record (7 su Contratto incarico + 3 su REDDITI 2023), F. e G. 1 record (CONTRATTO BMW). Nessuna nuova risposta con allegato da Cosmi/Protano/F.e G. Run pomeridiano previsto alle 15:07.",
+      "nextRun": "Mar 21 apr 15:07"
     },
     {
       "id": "solleciti-settimanali",
       "name": "Solleciti Settimanali",
       "schedule": "Lun · 09:10",
-      "todayStatus": "success",
-      "todayTime": "09:10",
-      "todayNote": "3 bozze SECONDO SOLLECITO create · 17 record Notion aggiornati",
-      "todayDetails": "Bozze Gmail create per: PROTANO MICHELE (pmelettric79 - 5 doc: Incarico REDDITI 2023, Incarico KPI, Scheda AV, Privacy, Dich. IA); COSMI GIACOMO (giacomo.cosmi - 4 doc); F. e G. S.R.L. (contabilita@laresilienza - CONTRATTO BMW). Tutti template SECONDO SOLLECITO. Notion: 17 record → Stato Sollecitato + Ultimo Sollecito 2026-04-20. Bozze tuttora presenti in Gmail in attesa di invio (senza subject/threadId per limite connettore).",
+      "todayStatus": "skipped",
+      "todayTime": "-",
+      "todayNote": "Programmato solo il lunedì",
+      "todayDetails": "Ultima esecuzione Lun 20/04 ore 09:10: 3 bozze SECONDO SOLLECITO create (Protano, Cosmi, F. e G.) + 17 record Notion aggiornati a 'Sollecitato'. Bozze ancora presenti in Gmail in attesa di invio.",
       "nextRun": "Lun 27 apr 09:09"
     },
     {
@@ -415,10 +415,10 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "22:05",
-      "todayNote": "Dashboard aggiornata via git clone/push",
-      "todayDetails": "Run corrente delle 22:05: inserimento-notion aggiornato al run serale 20:06 (1 nuovo record ATLANTE LAB S.R.L. creato, campo Tipo Documento da classificare manualmente). Stato task core invariato (5 success + 1 skipped + inserimento-notion completato). coworkDrafts invariate: 4 bozze reali (3 solleciti 20/04 Protano/Cosmi/F.e G. + auguri Biagio 17/04). Chrome extension non raggiungibile per l'ottava run consecutiva oggi: push via git clone con token embedded (workaround stabile). Encoding verificato (U+2713 preservati).",
-      "nextRun": "Mar 21 apr 08:05"
+      "todayTime": "08:06",
+      "todayNote": "Dashboard aggiornata via git clone/push (Chrome non raggiungibile)",
+      "todayDetails": "Prima run della giornata (Mar 21/04 08:06). Stato task odierne: 4 success (daily-briefing 07:00, auguri-clienti 05:04, inserimento-notion 06:07, monitoraggio-documenti 07:07 run mattutino) + 2 skipped (verifica-aml non-venerdì, solleciti-settimanali non-lunedì). History scorrevole: aggiunto Mar 21 in testa, rimosso Mar 14. coworkDrafts invariate: 4 bozze reali (3 solleciti 20/04 + auguri Biagio 17/04); 3 template senza destinatario correttamente esclusi. Chrome extension persistentemente non raggiungibile dalla giornata di ieri: push via git clone con token embedded (workaround stabile).",
+      "nextRun": "Mar 21 apr 10:05"
     }
   ],
   "manualTasks": [
@@ -448,6 +448,24 @@ const DATA = {
     }
   ],
   "history": [
+    {
+      "date": "2026-04-21",
+      "label": "Mar 21",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "6 email, 3 urgenze (Croce, Dionisi, Stayfit)"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Nessun compleanno"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (mar)"
+        }
+      }
+    },
     {
       "date": "2026-04-20",
       "label": "Lun 20",
@@ -519,24 +537,6 @@ const DATA = {
           "note": "Non programmata (mer)"
         }
       }
-    },
-    {
-      "date": "2026-04-14",
-      "label": "Mar 14",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "0 appt, 3 email, urgenza Pietrobono"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (mar)"
-        }
-      }
     }
   ],
   "coworkDrafts": [
@@ -569,7 +569,7 @@ const DATA = {
       "status": "ready"
     }
   ]
-};;
+};
 
 // ══════════════════════════════════════════════
 //  HELPERS
