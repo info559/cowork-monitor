@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 22/04/2026 alle 08:04
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-22T06:04:31.000Z",
-  "lastUpdated": "08:04:31",
+  "generatedAt": "2026-04-22T08:04:12.000Z",
+  "lastUpdated": "10:04:12",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -364,10 +364,10 @@ const DATA = {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
       "schedule": "Ogni giorno · 05:04",
-      "todayStatus": "running",
+      "todayStatus": "success",
       "todayTime": "05:04",
-      "todayNote": "Run in corso da oltre 3 ore · bloccato su create_draft",
-      "todayDetails": "Sessione local_6ab003ab avviata alle 05:04 ma ancora running al momento del controllo (08:04), con 33 turni assistant eseguiti e ultima azione create_draft ripetuta. Nessuna nuova bozza visibile in Gmail con newer_than:1d. La run sembra bloccata/lenta. Da verificare nella prossima iterazione monitor se ha completato.",
+      "todayNote": "1 compleanno · bozza auguri CHIRICO ENRICO creata (echirico@gmail.com)",
+      "todayDetails": "Sessione local_6ab003ab avviata alle 05:04, completata in ritardo (bozza creata alle 09:50 Rome dopo lunga elaborazione). Identificato 1 compleanno odierno: CHIRICO ENRICO (CF CHRNRC74D22H501U, nato 22/04/1974) tramite ricerca incrociata CF italiani su Notion. Bozza personalizzata in Gmail (ID 19db42b25a540e10) con firma KPI Consulting, pronta per revisione/invio. Elaborazione lenta per limiti query Notion che hanno richiesto ricerca semantica multipla sui CF.",
       "nextRun": "Gio 23 apr 05:03"
     },
     {
@@ -415,10 +415,10 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "08:04",
-      "todayNote": "Prima run odierna · Chrome ancora offline (16+ run consecutive) · workaround git attivo",
-      "todayDetails": "Run delle 08:04 (prima della giornata, seguiranno 10/12/14/16/18/20/22). Rispetto a ieri sera 22:05: daily-briefing 07:01 OK (3 email etichetta Lorenzo, 2 urgenze Dionisi/Croce + 1 da riscontrare Micozzi); auguri-clienti 05:04 ancora RUNNING (sessione bloccata su create_draft da 3h, nessuna nuova bozza creata); inserimento-notion 06:07 OK (4 thread già presenti, 0 nuovi); monitoraggio-documenti 07:07 OK (Protano ha risposto con Lettera di Incarico firmata, 4 record aggiornati a Ricevuto, rimangono 9 pendenti tra PROTANO/COSMI). Chrome extension non raggiungibile (9ª run consecutiva con workaround, persistente dal 20/04): push via git clone+token embedded. coworkDrafts invariate: 4 bozze reali (3 solleciti 20/04 + auguri Biagio 17/04).",
-      "nextRun": "Mer 22 apr 10:02"
+      "todayTime": "10:04",
+      "todayNote": "2ª run odierna · Chrome ancora offline · workaround git attivo",
+      "todayDetails": "Run delle 10:04 (seconda della giornata, seguiranno 12/14/16/18/20/22). Rispetto alle 08:04: auguri-clienti chiuso in SUCCESS (1 bozza CHIRICO ENRICO creata alle 09:50 Rome, task sbloccato ma con lunga elaborazione per query Notion sui CF); daily-briefing, inserimento-notion, monitoraggio-documenti tutti OK e invariati. Chrome extension non raggiungibile (10ª run consecutiva con workaround, persistente dal 20/04): push via git clone+token embedded. coworkDrafts: +1 rispetto a 08:04 → ora 5 bozze reali (auguri Chirico 22/04 + 3 solleciti 20/04 + auguri Biagio 17/04).",
+      "nextRun": "Mer 22 apr 12:02"
     }
   ],
   "manualTasks": [
@@ -540,6 +540,13 @@ const DATA = {
     }
   ],
   "coworkDrafts": [
+    {
+      "id": "19db42b25a540e10",
+      "subject": "Tanti auguri, Enrico!",
+      "to": "echirico@gmail.com",
+      "date": "22 apr",
+      "status": "ready"
+    },
     {
       "id": "19da9f4cdc5d2401",
       "subject": "Sollecito invio documenti – Protano Michele (2° sollecito)",
