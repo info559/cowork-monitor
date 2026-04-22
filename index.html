@@ -344,11 +344,11 @@
 
 <script type="text/babel">
 // ══════════════════════════════════════════════
-//  DATI — aggiornati da Claude Cowork il 22/04/2026 alle 08:04
+//  DATI — aggiornati da Claude Cowork il 22/04/2026 alle 12:04
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-22T08:04:12.000Z",
-  "lastUpdated": "10:04:12",
+  "generatedAt": "2026-04-22T10:04:20.000Z",
+  "lastUpdated": "12:04:20",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -415,13 +415,21 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "10:04",
-      "todayNote": "2ª run odierna · Chrome ancora offline · workaround git attivo",
-      "todayDetails": "Run delle 10:04 (seconda della giornata, seguiranno 12/14/16/18/20/22). Rispetto alle 08:04: auguri-clienti chiuso in SUCCESS (1 bozza CHIRICO ENRICO creata alle 09:50 Rome, task sbloccato ma con lunga elaborazione per query Notion sui CF); daily-briefing, inserimento-notion, monitoraggio-documenti tutti OK e invariati. Chrome extension non raggiungibile (10ª run consecutiva con workaround, persistente dal 20/04): push via git clone+token embedded. coworkDrafts: +1 rispetto a 08:04 → ora 5 bozze reali (auguri Chirico 22/04 + 3 solleciti 20/04 + auguri Biagio 17/04).",
-      "nextRun": "Mer 22 apr 12:02"
+      "todayTime": "12:04",
+      "todayNote": "3ª run odierna · Chrome ancora offline · workaround git attivo · +1 bozza (Picerno)",
+      "todayDetails": "Run delle 12:04 (terza della giornata, seguiranno 14/16/18/20/22). Stato task invariato rispetto alle 10:04: daily-briefing, auguri-clienti, inserimento-notion e monitoraggio-documenti tutti in SUCCESS e stabili. Chrome extension non raggiungibile (11ª run consecutiva con workaround, persistente dal 20/04) → push via git clone+token embedded. coworkDrafts: +1 rispetto a 10:04 → ora 6 bozze reali. Nuova bozza rilevata alle 12:03:31 Rome per Dott. Albio Picerno (richiesta documentazione verifica posizione fiscale 2025, compenso €600 oltre CI).",
+      "nextRun": "Mer 22 apr 14:02"
     }
   ],
   "manualTasks": [
+    {
+      "id": "richiesta-docs-picerno-22apr",
+      "name": "Richiesta documentazione Dott. Picerno",
+      "date": "2026-04-22",
+      "time": "12:03",
+      "status": "success",
+      "note": "Bozza Gmail verifica posizione fiscale 2025 + proposta compenso €600 (forfetario)"
+    },
     {
       "id": "comodato-ambrosi-13apr",
       "name": "Contratto Comodato d'Uso Gratuito Ambrosi",
@@ -541,6 +549,13 @@ const DATA = {
   ],
   "coworkDrafts": [
     {
+      "id": "19db4a5190fdbd95",
+      "subject": "Richiesta documentazione per verifica posizione fiscale 2025",
+      "to": "albio.picerno@gmail.com",
+      "date": "22 apr",
+      "status": "ready"
+    },
+    {
       "id": "19db42b25a540e10",
       "subject": "Tanti auguri, Enrico!",
       "to": "echirico@gmail.com",
@@ -577,7 +592,6 @@ const DATA = {
     }
   ]
 };
-
 // ══════════════════════════════════════════════
 //  HELPERS
 // ══════════════════════════════════════════════
