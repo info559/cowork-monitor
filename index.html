@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 22/04/2026 alle 12:04
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-22T10:04:20.000Z",
-  "lastUpdated": "12:04:20",
+  "generatedAt": "2026-04-22T12:04:00.000Z",
+  "lastUpdated": "14:04:00",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -385,10 +385,10 @@ const DATA = {
       "name": "Inserimento Notion Gmail",
       "schedule": "Lun-Ven · 3× al giorno",
       "todayStatus": "success",
-      "todayTime": "06:07",
-      "todayNote": "Run mattutino OK · 0 nuovi record · 4 thread tutti già presenti",
-      "todayDetails": "Run delle 06:07 completato (primo dei 3 giornalieri). Etichetta 'Da firmare' → 4 thread (ATLANTE LAB 20/04, RD'A Ingegneria 25/03, Cosmi 24/03, Protano 24/03 — tutti già tracciati in Notion MONITORAGGIO DOCUMENTI, nessuna duplicazione). Etichetta 'Da ricevere' → 0 thread negli ultimi 30 giorni. Prossimi run oggi: 13:07 e 20:07.",
-      "nextRun": "Mer 22 apr 13:07"
+      "todayTime": "13:07",
+      "todayNote": "Run pomeridiano OK · 2 nuovi record · 1 Da firmare + 1 Da ricevere",
+      "todayDetails": "Run delle 13:07 completato (secondo dei 3 giornalieri). Etichetta 'Da firmare' → 5 thread, 1 nuovo record creato: MECCI MARCO (visura Fedeli successione, thread 19ce7ce422db3b1a). Etichetta 'Da ricevere' → 1 thread, 1 nuovo record creato: MICOZZI MARTA (RICHIESTA INFO, thread 19c708905d3fd154). Altri 4 thread 'Da firmare' già presenti (Atlante Lab, RD'A Ingegneria, Cosmi, Protano). Entrambi i nuovi record creati con Tipo Documento vuoto, da completare manualmente. Destinatario geometramecci@gmail.com non in Anagrafica. Prossimo run oggi 20:07.",
+      "nextRun": "Mer 22 apr 20:07"
     },
     {
       "id": "monitoraggio-documenti",
@@ -415,20 +415,28 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "12:04",
-      "todayNote": "3ª run odierna · Chrome ancora offline · workaround git attivo · +1 bozza (Picerno)",
-      "todayDetails": "Run delle 12:04 (terza della giornata, seguiranno 14/16/18/20/22). Stato task invariato rispetto alle 10:04: daily-briefing, auguri-clienti, inserimento-notion e monitoraggio-documenti tutti in SUCCESS e stabili. Chrome extension non raggiungibile (11ª run consecutiva con workaround, persistente dal 20/04) → push via git clone+token embedded. coworkDrafts: +1 rispetto a 10:04 → ora 6 bozze reali. Nuova bozza rilevata alle 12:03:31 Rome per Dott. Albio Picerno (richiesta documentazione verifica posizione fiscale 2025, compenso €600 oltre CI).",
-      "nextRun": "Mer 22 apr 14:02"
+      "todayTime": "14:04",
+      "todayNote": "4ª run odierna · Chrome ancora offline · workaround git attivo · Picerno inviata → 5 bozze",
+      "todayDetails": "Run delle 14:04 (quarta della giornata, seguiranno 16/18/20/22). Stato task invariato rispetto alle 12:04 per daily-briefing, auguri-clienti, monitoraggio-documenti. Inserimento Notion Gmail run 13:07 completato con 2 nuovi record (MECCI MARCO Da firmare + MICOZZI MARTA Da ricevere). Chrome extension non raggiungibile (12ª run consecutiva con workaround, persistente dal 20/04) → push via git clone+token embedded. coworkDrafts: -1 rispetto a 12:04 → ora 5 bozze reali. Bozza Picerno (22/04 12:03) risulta INVIATA alle 12:28 Rome dal thread 19db49be2ea51fca.",
+      "nextRun": "Mer 22 apr 16:02"
     }
   ],
   "manualTasks": [
+    {
+      "id": "micozzi-mandato-22apr",
+      "name": "Mandato+Privacy+AI+AML Micozzi Marta",
+      "date": "2026-04-22",
+      "time": "13:30",
+      "status": "success",
+      "note": "3 docx elaborati (Incarico €500/anno, Dichiarazione AI+Privacy, Scheda AML rischio Basso)"
+    },
     {
       "id": "richiesta-docs-picerno-22apr",
       "name": "Richiesta documentazione Dott. Picerno",
       "date": "2026-04-22",
       "time": "12:03",
       "status": "success",
-      "note": "Bozza Gmail verifica posizione fiscale 2025 + proposta compenso €600 (forfetario)"
+      "note": "Bozza verifica fiscale 2025 + compenso €600 → INVIATA 12:28"
     },
     {
       "id": "comodato-ambrosi-13apr",
@@ -549,13 +557,6 @@ const DATA = {
   ],
   "coworkDrafts": [
     {
-      "id": "19db4a5190fdbd95",
-      "subject": "Richiesta documentazione per verifica posizione fiscale 2025",
-      "to": "albio.picerno@gmail.com",
-      "date": "22 apr",
-      "status": "ready"
-    },
-    {
       "id": "19db42b25a540e10",
       "subject": "Tanti auguri, Enrico!",
       "to": "echirico@gmail.com",
@@ -592,6 +593,7 @@ const DATA = {
     }
   ]
 };
+
 // ══════════════════════════════════════════════
 //  HELPERS
 // ══════════════════════════════════════════════
