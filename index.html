@@ -344,31 +344,31 @@
 
 <script type="text/babel">
 // ══════════════════════════════════════════════
-//  DATI — aggiornati da Claude Cowork il 21/04/2026 alle 20:05
+//  DATI — aggiornati da Claude Cowork il 22/04/2026 alle 08:04
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-21T20:05:00.000Z",
-  "lastUpdated": "22:05:00",
+  "generatedAt": "2026-04-22T06:04:31.000Z",
+  "lastUpdated": "08:04:31",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
       "name": "Daily Briefing",
       "schedule": "Ogni giorno · 07:00",
       "todayStatus": "success",
-      "todayTime": "07:00",
-      "todayNote": "Briefing completato: 0 appuntamenti, 6 email con etichetta Lorenzo",
-      "todayDetails": "Calendar vuoto. 6 thread non letti: 3 urgenti (Avv. Croce - proposta adesione atto 2023 1T 27602; Fede Dionisi - chiarimento cartella AE; STAYFIT Subiaco - modalità pagamento preventivo 002 revoca amm.re); 2 da gestire (Marta Micozzi - bozze atto costitutivo/statuto associazione con 7 soci; Successione Fedeli - geom. Mecci su F/1 aggiuntivo); 1 informativa (RelaxBanking - consegna credenziali).",
-      "nextRun": "Mer 22 apr 07:00"
+      "todayTime": "07:01",
+      "todayNote": "Briefing completato: 0 appuntamenti, 3 email non lette etichetta Lorenzo",
+      "todayDetails": "Calendar vuoto. 3 thread non letti su etichetta Lorenzo: 2 URGENTI (Federica Dionisi - 2° sollecito cartella Agenzia Entrate/credito d'imposta da 5 giorni; Avv. Federica Croce - proposta adesione atto 2023 1T 27602 CH Relais & Sport Club/Galimberti, importo €10.815,81 con possibile rateizzazione 8 trimestri, richiesto parere convenienza) + 1 DA RISCONTRARE (Marta Micozzi - bozze atto costitutivo associazione con parti evidenziate in giallo, non letto da 14gg).",
+      "nextRun": "Gio 23 apr 07:00"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
       "schedule": "Ogni giorno · 05:04",
-      "todayStatus": "success",
+      "todayStatus": "running",
       "todayTime": "05:04",
-      "todayNote": "Nessun compleanno oggi",
-      "todayDetails": "Ricerca su database Notion ANAGRAFICA CLIENTI: nessun cliente con data di nascita 21/04. Nessuna bozza Gmail creata.",
-      "nextRun": "Mer 22 apr 05:04"
+      "todayNote": "Run in corso da oltre 3 ore · bloccato su create_draft",
+      "todayDetails": "Sessione local_6ab003ab avviata alle 05:04 ma ancora running al momento del controllo (08:04), con 33 turni assistant eseguiti e ultima azione create_draft ripetuta. Nessuna nuova bozza visibile in Gmail con newer_than:1d. La run sembra bloccata/lenta. Da verificare nella prossima iterazione monitor se ha completato.",
+      "nextRun": "Gio 23 apr 05:03"
     },
     {
       "id": "verifica-aml",
@@ -385,20 +385,20 @@ const DATA = {
       "name": "Inserimento Notion Gmail",
       "schedule": "Lun-Ven · 3× al giorno",
       "todayStatus": "success",
-      "todayTime": "20:06",
-      "todayNote": "Run serale OK · 0 nuovi record · 4 thread tutti già presenti",
-      "todayDetails": "Run delle 20:06 completato (terzo e ultimo della giornata, dopo 06:07 e 13:07). Etichetta 'Da firmare' → 4 thread (ATLANTE LAB 20/04, RD'A Ingegneria 25/03, Cosmi 24/03, Protano 24/03 — tutti già in Notion). Etichetta 'Da ricevere' → 0 thread negli ultimi 30 giorni. Nessuna nuova riga creata. Prossimo run mer 22/04 ore 06:07.",
-      "nextRun": "Mer 22 apr 06:07"
+      "todayTime": "06:07",
+      "todayNote": "Run mattutino OK · 0 nuovi record · 4 thread tutti già presenti",
+      "todayDetails": "Run delle 06:07 completato (primo dei 3 giornalieri). Etichetta 'Da firmare' → 4 thread (ATLANTE LAB 20/04, RD'A Ingegneria 25/03, Cosmi 24/03, Protano 24/03 — tutti già tracciati in Notion MONITORAGGIO DOCUMENTI, nessuna duplicazione). Etichetta 'Da ricevere' → 0 thread negli ultimi 30 giorni. Prossimi run oggi: 13:07 e 20:07.",
+      "nextRun": "Mer 22 apr 13:07"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Sab · 07:00 e 15:00",
       "todayStatus": "success",
-      "todayTime": "15:07",
-      "todayNote": "Run pomeridiano OK · 16 record ancora pendenti (PROTANO 9, COSMI 6, F. e G. 1)",
-      "todayDetails": "Run pomeridiano completato. Analizzati 16 record in stato 'Sollecitato': PROTANO MICHELE 9 record (pmelettric79@gmail.com), COSMI GIACOMO 6 record (giacomo.cosmi@hotmail.it), F. e G. S.R.L. 1 record Scheda/Contratto BMW (contabilita@laresilienza.it). Ricerche Gmail (ultime 48h, has:attachment): nessuna risposta con allegati dai 3 clienti in attesa. Email con allegati ricevute da clienti già 'Ricevuto' (STR82L, ATLANTE LAB) non modificate. Nessun aggiornamento Notion effettuato in questa run. Run mattutino 07:07 aveva chiuso ATLANTE LAB. Prossimo run: mer 22/04 ore 07:00.",
-      "nextRun": "Mer 22 apr 07:00"
+      "todayTime": "07:07",
+      "todayNote": "Run mattutino OK · 4 record aggiornati a 'Ricevuto' (PROTANO · Lettera di Incarico)",
+      "todayDetails": "Analizzati 13 record in stato 'Sollecitato': PROTANO MICHELE 7 record (pmelettric79@gmail.com, data invio 24/03, sollecito 20/04) + COSMI GIACOMO 6 record (giacomo.cosmi@hotmail.it). Ricerche Gmail ultime 48h: PROTANO ha risposto alle 03:06 del 22/04 con Lettera di Incarico firmata (thread 19db3279cb280ee7, allegato 'INCARICO PROFESSIONALE - P.M. ELETTRIC.pdf'); COSMI nessuna risposta. Aggiornati 4 record duplicati PROTANO 'Lettera di Incarico' → stato Ricevuto + Data Ricezione 2026-04-22. Non toccati Scheda AML/Privacy/AI di PROTANO (oggetto email non esplicito). 9 record ancora pendenti (PROTANO 3 + COSMI 6). Prossimo run oggi 15:00.",
+      "nextRun": "Mer 22 apr 15:07"
     },
     {
       "id": "solleciti-settimanali",
@@ -408,17 +408,17 @@ const DATA = {
       "todayTime": "-",
       "todayNote": "Programmato solo il lunedì",
       "todayDetails": "Ultima esecuzione Lun 20/04 ore 09:10: 3 bozze SECONDO SOLLECITO create (Protano, Cosmi, F. e G.) + 17 record Notion aggiornati a 'Sollecitato'. Bozze ancora presenti in Gmail in attesa di invio.",
-      "nextRun": "Lun 27 apr 09:09"
+      "nextRun": "Lun 27 apr 09:10"
     },
     {
       "id": "aggiorna-monitor",
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "22:05",
-      "todayNote": "Ottava e ultima run odierna · Inserimento Notion 20:06 completato · Chrome ancora offline",
-      "todayDetails": "Run delle 22:05 (ottava e ultima della giornata dopo 08:06, 10:05, 12:05, 14:05, 16:04, 18:05, 20:05). Variazione vs run 20:05: completata la run Inserimento Notion Gmail delle 20:06 (terzo giro serale, 4 thread 'Da firmare' tutti già presenti, 0 'Da ricevere', 0 nuovi record creati). Nessun altro task pianificato ha eseguito tra 20:05 e 22:05. Stato finale 7 task odierni: 4 success (daily-briefing, auguri-clienti, inserimento-notion, monitoraggio-documenti), 2 skipped (verifica-aml non-venerdì, solleciti-settimanali non-lunedì), 1 success in corso (aggiorna-monitor 22:05). coworkDrafts invariate: 4 bozze reali (3 solleciti 20/04 a PROTANO/COSMI/F. e G. + auguri Biagio 17/04); 3 template senza destinatario (SITUAZIONE CONTABILE ORDINARI/FORFETARI + 'Gentile E') correttamente esclusi. Chrome extension ancora non raggiungibile (8ª run consecutiva oggi, persistente dal 20/04): push via git clone con token embedded.",
-      "nextRun": "Mer 22 apr 08:06"
+      "todayTime": "08:04",
+      "todayNote": "Prima run odierna · Chrome ancora offline (16+ run consecutive) · workaround git attivo",
+      "todayDetails": "Run delle 08:04 (prima della giornata, seguiranno 10/12/14/16/18/20/22). Rispetto a ieri sera 22:05: daily-briefing 07:01 OK (3 email etichetta Lorenzo, 2 urgenze Dionisi/Croce + 1 da riscontrare Micozzi); auguri-clienti 05:04 ancora RUNNING (sessione bloccata su create_draft da 3h, nessuna nuova bozza creata); inserimento-notion 06:07 OK (4 thread già presenti, 0 nuovi); monitoraggio-documenti 07:07 OK (Protano ha risposto con Lettera di Incarico firmata, 4 record aggiornati a Ricevuto, rimangono 9 pendenti tra PROTANO/COSMI). Chrome extension non raggiungibile (9ª run consecutiva con workaround, persistente dal 20/04): push via git clone+token embedded. coworkDrafts invariate: 4 bozze reali (3 solleciti 20/04 + auguri Biagio 17/04).",
+      "nextRun": "Mer 22 apr 10:02"
     }
   ],
   "manualTasks": [
