@@ -344,11 +344,11 @@
 
 <script type="text/babel">
 // ══════════════════════════════════════════════
-//  DATI — aggiornati da Claude Cowork il 22/04/2026 alle 18:04
+//  DATI — aggiornati da Claude Cowork il 23/04/2026 alle 08:04
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-22T20:04:37.000Z",
-  "lastUpdated": "22:04:32",
+  "generatedAt": "2026-04-23T06:04:40.000Z",
+  "lastUpdated": "08:04:40",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -356,19 +356,19 @@ const DATA = {
       "schedule": "Ogni giorno · 07:00",
       "todayStatus": "success",
       "todayTime": "07:01",
-      "todayNote": "Briefing completato: 0 appuntamenti, 3 email non lette etichetta Lorenzo",
-      "todayDetails": "Calendar vuoto. 3 thread non letti su etichetta Lorenzo: 2 URGENTI (Federica Dionisi - 2° sollecito cartella Agenzia Entrate/credito d'imposta da 5 giorni; Avv. Federica Croce - proposta adesione atto 2023 1T 27602 CH Relais & Sport Club/Galimberti, importo €10.815,81 con possibile rateizzazione 8 trimestri, richiesto parere convenienza) + 1 DA RISCONTRARE (Marta Micozzi - bozze atto costitutivo associazione con parti evidenziate in giallo, non letto da 14gg).",
-      "nextRun": "Gio 23 apr 07:00"
+      "todayNote": "Briefing completato: 0 appuntamenti, 4 email non lette etichetta Lorenzo",
+      "todayDetails": "Calendar vuoto. 4 thread non letti su etichetta Lorenzo: 2 URGENTI (Federica Dionisi - 2° sollecito cartella AdE credito d'imposta inoltrato il 21/04 in CC Avv. Croce; Avv. Federica Croce - proposta adesione atto 2023 1T 27602 inoltrata il 14/04 con richiesta parere), 1 DA RISCONTRARE (Marta Micozzi - bozze atto costitutivo associazione del 08/04 con parti evidenziate), 1 INFORMATIVA (PEC Telemaco pratica M26420Q2441 Atlante Lab - solo presa visione).",
+      "nextRun": "Ven 24 apr 07:00"
     },
     {
       "id": "auguri-clienti",
       "name": "Auguri Clienti",
       "schedule": "Ogni giorno · 05:04",
       "todayStatus": "success",
-      "todayTime": "05:04",
-      "todayNote": "1 compleanno · bozza auguri CHIRICO ENRICO creata (echirico@gmail.com)",
-      "todayDetails": "Sessione local_6ab003ab avviata alle 05:04, completata in ritardo (bozza creata alle 09:50 Rome dopo lunga elaborazione). Identificato 1 compleanno odierno: CHIRICO ENRICO (CF CHRNRC74D22H501U, nato 22/04/1974) tramite ricerca incrociata CF italiani su Notion. Bozza personalizzata in Gmail (ID 19db42b25a540e10) con firma KPI Consulting, pronta per revisione/invio. Elaborazione lenta per limiti query Notion che hanno richiesto ricerca semantica multipla sui CF.",
-      "nextRun": "Gio 23 apr 05:03"
+      "todayTime": "05:07",
+      "todayNote": "1 compleanno · bozza auguri SCATTONE DAVID creata (davidscattone10@gmail.com)",
+      "todayDetails": "Sessione local_c2d67a7f completata. Identificato 1 compleanno odierno: SCATTONE DAVID (nato 23/04/1983) tramite ricerca mirata su database Notion ANAGRAFICA CLIENTI. Bozza personalizzata in Gmail (ID 19db84e1dbd19813) con oggetto 'Tanti auguri, David!', corpo auguri e firma HTML KPI Consulting, pronta per revisione/invio.",
+      "nextRun": "Ven 24 apr 05:04"
     },
     {
       "id": "verifica-aml",
@@ -377,28 +377,28 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "-",
       "todayNote": "Programmato solo il venerdì",
-      "todayDetails": "Ultima esecuzione ven 17/04: 4 anomalie sul Registro LT (passaporto YA8145509 Mastronardi/PEPPERPOT scaduto 26/07/2025).",
+      "todayDetails": "Ultima esecuzione ven 17/04: 4 anomalie sul Registro LT (passaporto YA8145509 Mastronardi/PEPPERPOT scaduto 26/07/2025). Prossima run domani mattina.",
       "nextRun": "Ven 24 apr 04:06"
     },
     {
       "id": "inserimento-notion",
       "name": "Inserimento Notion Gmail",
       "schedule": "Lun-Ven · 3× al giorno",
-      "todayStatus": "success",
-      "todayTime": "13:07",
-      "todayNote": "Run pomeridiano OK · 2 nuovi record · 3° run 20:07 atteso/non ancora tracciato",
-      "todayDetails": "Run delle 13:07 completato (secondo dei 3 giornalieri). Etichetta 'Da firmare' → 5 thread, 1 nuovo record creato: MECCI MARCO (visura Fedeli successione, thread 19ce7ce422db3b1a). Etichetta 'Da ricevere' → 1 thread, 1 nuovo record creato: MICOZZI MARTA (RICHIESTA INFO, thread 19c708905d3fd154). Altri 4 thread 'Da firmare' già presenti (Atlante Lab, RD'A Ingegneria, Cosmi, Protano). Entrambi i nuovi record creati con Tipo Documento vuoto, da completare manualmente. Destinatario geometramecci@gmail.com non in Anagrafica. Il run serale delle 20:07 era schedulato ma alla lettura delle sessioni alle 22:04 il transcript risulta vuoto: eventuale esito verrà consolidato alla prossima run monitor.",
-      "nextRun": "Gio 23 apr 08:07"
+      "todayStatus": "warning",
+      "todayTime": "07:07",
+      "todayNote": "Run mattutino con transcript vuoto · 2 run ancora attesi (13:07, 20:07)",
+      "todayDetails": "Sessione local_af77e2a3 risulta idle con transcript completamente vuoto, stesso pattern della run serale 20:07 del 22/04 (local_160aaf5c anch'essa vuota). Da monitorare: se il comportamento persiste è necessario verificare il runner scheduled-tasks. Restano in attesa il 2° run (13:07) e il 3° run (20:07) della giornata.",
+      "nextRun": "Gio 23 apr 13:07"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Sab · 07:00 e 15:00",
-      "todayStatus": "success",
-      "todayTime": "15:00",
-      "todayNote": "Run pomeridiano OK · 0 aggiornamenti · 15 record pendenti (5 clienti)",
-      "todayDetails": "Run pomeridiano completato: 15 record con stato 'Inviato' o 'Sollecitato' su 5 clienti (COSMI 6, PROTANO 6, F. e G. 1 CONTRATTO BMW, MICOZZI 1 RICHIESTA INFO, MECCI 1 visura Fedeli). Ricerche Gmail ultime 48h: 2 thread PROTANO trovati (INCARICO PROFESSIONALE del 22/04 già tracciato dalla run mattutina su 3 record 'Lettera di Incarico'; Estratto conto PM ELETTRIC GROUP del 21/04 non corrisponde a record pendenti). COSMI, F. e G., MICOZZI, MECCI → nessun messaggio nell'intervallo. 0 nuovi aggiornamenti in questa run (coerente con regola 'meglio non aggiornare che aggiornare per errore'). 6 record PROTANO residui (3 Lettera Incarico REDDITI 2023 dal 18/03 + 3 Privacy/AI/AML dal 24/03) senza risposta del cliente ai solleciti del 20/04. Prossimo run Gio 23/04 07:00.",
-      "nextRun": "Gio 23 apr 07:00"
+      "todayStatus": "warning",
+      "todayTime": "07:00",
+      "todayNote": "Run mattutino con transcript vuoto · attesa run pomeridiana 15:00",
+      "todayDetails": "Sessione local_b975a784 risulta idle con transcript vuoto: pattern analogo alla Inserimento Notion di stamattina. Al momento non ci sono evidenze di nuove interazioni Gmail elaborate. Stato al 22/04 sera: 15 record pendenti su 5 clienti (COSMI 6, PROTANO 6, F. e G. 1, MICOZZI 1, MECCI 1). Run pomeridiana attesa alle 15:00.",
+      "nextRun": "Gio 23 apr 15:00"
     },
     {
       "id": "solleciti-settimanali",
@@ -407,7 +407,7 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "-",
       "todayNote": "Programmato solo il lunedì",
-      "todayDetails": "Ultima esecuzione Lun 20/04 ore 09:10: 3 bozze SECONDO SOLLECITO create (Protano, Cosmi, F. e G.) + 17 record Notion aggiornati a 'Sollecitato'. Bozze ancora presenti in Gmail in attesa di invio.",
+      "todayDetails": "Ultima esecuzione Lun 20/04 ore 09:10: 3 bozze SECONDO SOLLECITO create (Protano, Cosmi, F. e G.) + 17 record Notion aggiornati a 'Sollecitato'. Le 3 bozze sono ancora presenti in Gmail in attesa di invio (4° giorno).",
       "nextRun": "Lun 27 apr 09:10"
     },
     {
@@ -415,10 +415,10 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "22:04",
-      "todayNote": "8ª e ultima run odierna · Chrome ancora offline · workaround git · 5 bozze invariate",
-      "todayDetails": "Run delle 22:04 (ottava e ultima della giornata, dopo 08/10/12/14/16/18/20). Nessuna variazione rispetto alla run delle 20:04: stato invariato per tutti i task pianificati (daily-briefing 07:01, auguri-clienti 05:04, verifica-aml skipped, inserimento-notion run 13:07 con 20:07 non tracciato, monitoraggio-documenti run 15:00 con 0 aggiornamenti e 15 record pendenti, solleciti-settimanali skipped). Chrome extension ancora non raggiungibile (16ª run consecutiva con workaround, persistente dal 20/04) → push via git clone+token embedded. coworkDrafts: 5 bozze invariate (Enrico auguri, 3 solleciti 20/04 Protano/Cosmi/F.e G., Biagio auguri 17/04). 3 template senza destinatario correttamente esclusi. Prossima run domani Gio 23/04 08:04.",
-      "nextRun": "Gio 23 apr 08:04"
+      "todayTime": "08:04",
+      "todayNote": "1ª run odierna · Chrome ancora offline · workaround git · 6 bozze (David auguri nuova)",
+      "todayDetails": "Prima run della giornata (08:04). Chrome extension non raggiungibile per la 17ª run consecutiva dal 20/04 → workaround git clone + push con token embedded. Rilevate oggi: daily-briefing 07:01 OK (4 email Lorenzo), auguri-clienti 05:07 OK (bozza David Scattone), inserimento-notion e monitoraggio-documenti con transcript vuoti (warning). coworkDrafts: 6 bozze reali (David auguri nuova di oggi + Enrico auguri 22/04 + 3 solleciti 20/04 Protano/Cosmi/F.e G. + Biagio auguri 17/04). Aggiunta Mer 22/04 allo storico.",
+      "nextRun": "Gio 23 apr 10:04"
     }
   ],
   "manualTasks": [
@@ -464,6 +464,24 @@ const DATA = {
     }
   ],
   "history": [
+    {
+      "date": "2026-04-22",
+      "label": "Mer 22",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "3 email Lorenzo (Dionisi 2° sollecito, Croce adesione CH Relais, Micozzi bozze)"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Auguri Chirico Enrico (bozza creata)"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (mer)"
+        }
+      }
+    },
     {
       "date": "2026-04-21",
       "label": "Mar 21",
@@ -535,27 +553,16 @@ const DATA = {
           "note": "Non programmata (gio)"
         }
       }
-    },
-    {
-      "date": "2026-04-15",
-      "label": "Mer 15",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "3 email, urgenza Pietrobono F24"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (mer)"
-        }
-      }
     }
   ],
   "coworkDrafts": [
+    {
+      "id": "19db84e1dbd19813",
+      "subject": "Tanti auguri, David!",
+      "to": "davidscattone10@gmail.com",
+      "date": "23 apr",
+      "status": "ready"
+    },
     {
       "id": "19db42b25a540e10",
       "subject": "Tanti auguri, Enrico!",
@@ -592,7 +599,7 @@ const DATA = {
       "status": "ready"
     }
   ]
-};;
+};
 
 // ══════════════════════════════════════════════
 //  HELPERS
