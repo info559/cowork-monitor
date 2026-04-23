@@ -347,8 +347,8 @@
 //  DATI — aggiornati da Claude Cowork il 23/04/2026 alle 08:04
 // ══════════════════════════════════════════════
 const DATA = {
-  "generatedAt": "2026-04-23T08:04:34.000Z",
-  "lastUpdated": "10:04:34",
+  "generatedAt": "2026-04-23T10:05:44.000Z",
+  "lastUpdated": "12:05:44",
   "scheduledTasks": [
     {
       "id": "daily-briefing",
@@ -367,7 +367,7 @@ const DATA = {
       "todayStatus": "success",
       "todayTime": "05:07",
       "todayNote": "1 compleanno · bozza auguri SCATTONE DAVID creata (davidscattone10@gmail.com)",
-      "todayDetails": "Sessione local_c2d67a7f completata. Identificato 1 compleanno odierno: SCATTONE DAVID (nato 23/04/1983) tramite ricerca mirata su database Notion ANAGRAFICA CLIENTI. Bozza personalizzata in Gmail (ID 19db84e1dbd19813) con oggetto 'Tanti auguri, David!', corpo auguri e firma HTML KPI Consulting, pronta per revisione/invio.",
+      "todayDetails": "Sessione local_c2d67a7f completata. Identificato 1 compleanno odierno: SCATTONE DAVID (nato 23/04/1983) tramite ricerca mirata su database Notion ANAGRAFICA CLIENTI. Bozza personalizzata in Gmail con oggetto 'Tanti auguri, David!', corpo auguri e firma HTML KPI Consulting. La bozza risulta ora non più presente in Gmail: presumibilmente inviata/rimossa da Lorenzo nel corso della mattina.",
       "nextRun": "Ven 24 apr 05:04"
     },
     {
@@ -384,20 +384,20 @@ const DATA = {
       "id": "inserimento-notion",
       "name": "Inserimento Notion Gmail",
       "schedule": "Lun-Ven · 3× al giorno",
-      "todayStatus": "warning",
+      "todayStatus": "success",
       "todayTime": "07:07",
-      "todayNote": "Run mattutino con transcript vuoto · 2 run ancora attesi (13:07, 20:07)",
-      "todayDetails": "Sessione local_af77e2a3 risulta idle con transcript completamente vuoto, stesso pattern della run serale 20:07 del 22/04 (local_160aaf5c anch'essa vuota). Da monitorare: se il comportamento persiste è necessario verificare il runner scheduled-tasks. Restano in attesa il 2° run (13:07) e il 3° run (20:07) della giornata.",
+      "todayNote": "5 thread 'Da firmare' + 1 'Da ricevere' già presenti in Notion · 0 nuovi inserimenti",
+      "todayDetails": "Sessione local_af77e2a3 completata con report dettagliato (era stata erroneamente classificata come warning alle 08:04/10:04). 5 thread etichettati 'Da firmare' ultimi 30gg: MARTINA CIUCCI/ATLANTE LAB, MECCI MARCO (visura catastale), RD'A INGEGNERIA (AI+Privacy x2), COSMI GIACOMO (contratto incarico), PROTANO MICHELE (contratto incarico) - tutti già in Notion. 1 thread 'Da ricevere': MICOZZI MARTA (richiesta info) già in Notion come 'Inviato'. Database allineato. Prossimi run 13:07 e 20:07.",
       "nextRun": "Gio 23 apr 13:07"
     },
     {
       "id": "monitoraggio-documenti",
       "name": "Monitoraggio Documenti",
       "schedule": "Lun-Sab · 07:00 e 15:00",
-      "todayStatus": "warning",
+      "todayStatus": "success",
       "todayTime": "07:00",
-      "todayNote": "Run mattutino con transcript vuoto · attesa run pomeridiana 15:00",
-      "todayDetails": "Sessione local_b975a784 risulta idle con transcript vuoto: pattern analogo alla Inserimento Notion di stamattina. Al momento non ci sono evidenze di nuove interazioni Gmail elaborate. Stato al 22/04 sera: 15 record pendenti su 5 clienti (COSMI 6, PROTANO 6, F. e G. 1, MICOZZI 1, MECCI 1). Run pomeridiana attesa alle 15:00.",
+      "todayNote": "13 record pending su 3 clienti (PROTANO 6, COSMI 6, F. e G. 1) · 0 aggiornamenti per prudenza",
+      "todayDetails": "Sessione local_b975a784 completata con report (era stata classificata warning alle 08:04/10:04). 13 record 'Sollecitato' per 3 clienti: PROTANO MICHELE 6 (Privacy, Scheda AML, Dichiarazione AI + 3 REDDITI 2023 sollecito 20/04 da oltre 1 mese), COSMI GIACOMO 6, F. e G. S.R.L. 1. Ricerca Gmail 48h: 2 thread da PROTANO (INCARICO PROFESSIONALE già registrato, estratto conto non pertinente), nessuna email da COSMI o F. e G. Nessun aggiornamento Notion per principio di prudenza. Raccomandato contatto telefonico COSMI (2° sollecito senza riscontro) e sollecito mirato PROTANO per documenti mancanti.",
       "nextRun": "Gio 23 apr 15:00"
     },
     {
@@ -407,7 +407,7 @@ const DATA = {
       "todayStatus": "skipped",
       "todayTime": "-",
       "todayNote": "Programmato solo il lunedì",
-      "todayDetails": "Ultima esecuzione Lun 20/04 ore 09:10: 3 bozze SECONDO SOLLECITO create (Protano, Cosmi, F. e G.) + 17 record Notion aggiornati a 'Sollecitato'. Le 3 bozze sono ancora presenti in Gmail in attesa di invio (4° giorno).",
+      "todayDetails": "Ultima esecuzione Lun 20/04 ore 09:10: 3 bozze SECONDO SOLLECITO create (Protano, Cosmi, F. e G.) + 17 record Notion aggiornati a 'Sollecitato'. Le 3 bozze di sollecito risultano ora non più presenti in Gmail: presumibilmente inviate/cancellate.",
       "nextRun": "Lun 27 apr 09:10"
     },
     {
@@ -415,10 +415,10 @@ const DATA = {
       "name": "Aggiorna Cowork Monitor",
       "schedule": "Ogni 2h (08–22)",
       "todayStatus": "success",
-      "todayTime": "10:04",
-      "todayNote": "2ª run odierna · Chrome ancora offline · workaround git · 6 bozze invariate",
-      "todayDetails": "Seconda run della giornata (10:04). Chrome extension non raggiungibile per la 18ª run consecutiva dal 20/04 → workaround git clone + push con token embedded. Nessuna nuova sessione rilevata dall'ultimo aggiornamento delle 08:04: daily-briefing 07:01 OK, auguri-clienti 05:07 OK (bozza David Scattone), inserimento-notion 07:07 e monitoraggio-documenti 07:00 warning con transcript vuoti (prossime run 13:07 e 15:00). coworkDrafts invariate: 6 bozze reali (David 23/04, Enrico 22/04, 3 solleciti 20/04, Biagio 17/04) + 3 template senza destinatario correttamente esclusi.",
-      "nextRun": "Gio 23 apr 12:04"
+      "todayTime": "12:05",
+      "todayNote": "3ª run odierna · Chrome ancora offline · workaround git · 1 bozza reale (da 6 a 1)",
+      "todayDetails": "Terza run della giornata (12:05). Chrome extension non raggiungibile per la 19ª run consecutiva dal 20/04 → workaround git clone + push con token embedded. Rilevati 2 aggiornamenti rispetto alle 10:04: (1) Inserimento Notion 07:07 e Monitoraggio Documenti 07:00 non sono più warning ma success, i rispettivi transcript contengono ora report completi; (2) le 6 bozze precedenti risultano tutte rimosse da Gmail (inviate o eliminate da Lorenzo), è presente invece 1 nuova bozza IMPIANTI ANTINCENDIO indirizzata a Protano Michele del 23/04 10:04. Prossima run Gio 23 apr 14:05.",
+      "nextRun": "Gio 23 apr 14:05"
     }
   ],
   "manualTasks": [
@@ -464,6 +464,24 @@ const DATA = {
     }
   ],
   "history": [
+    {
+      "date": "2026-04-23",
+      "label": "Gio 23",
+      "tasks": {
+        "daily-briefing": {
+          "status": "success",
+          "note": "4 email Lorenzo (Dionisi 2° AdE, Croce adesione, Micozzi, PEC Telemaco)"
+        },
+        "auguri-clienti": {
+          "status": "success",
+          "note": "Auguri Scattone David (43)"
+        },
+        "verifica-aml": {
+          "status": "skipped",
+          "note": "Non programmata (gio)"
+        }
+      }
+    },
     {
       "date": "2026-04-22",
       "label": "Mer 22",
@@ -535,67 +553,14 @@ const DATA = {
           "note": "4 anomalie passaporto Mastronardi"
         }
       }
-    },
-    {
-      "date": "2026-04-16",
-      "label": "Gio 16",
-      "tasks": {
-        "daily-briefing": {
-          "status": "success",
-          "note": "Email arrivate in inbox (Fedeli successione)"
-        },
-        "auguri-clienti": {
-          "status": "success",
-          "note": "Nessun compleanno"
-        },
-        "verifica-aml": {
-          "status": "skipped",
-          "note": "Non programmata (gio)"
-        }
-      }
     }
   ],
   "coworkDrafts": [
     {
-      "id": "19db84e1dbd19813",
-      "subject": "Tanti auguri, David!",
-      "to": "davidscattone10@gmail.com",
-      "date": "23 apr",
-      "status": "ready"
-    },
-    {
-      "id": "19db42b25a540e10",
-      "subject": "Tanti auguri, Enrico!",
-      "to": "echirico@gmail.com",
-      "date": "22 apr",
-      "status": "ready"
-    },
-    {
-      "id": "19da9f4cdc5d2401",
-      "subject": "Sollecito invio documenti – Protano Michele (2° sollecito)",
+      "id": "19db9cbefa3feaac",
+      "subject": "IMPIANTI ANTINCENDIO",
       "to": "pmelettric79@gmail.com",
-      "date": "20 apr",
-      "status": "ready"
-    },
-    {
-      "id": "19da9f4d396cfd03",
-      "subject": "Sollecito invio documenti – Cosmi Giacomo (2° sollecito)",
-      "to": "giacomo.cosmi@hotmail.it",
-      "date": "20 apr",
-      "status": "ready"
-    },
-    {
-      "id": "19da9f4d82578e2a",
-      "subject": "Sollecito invio documenti – F. e G. S.r.l. (2° sollecito)",
-      "to": "contabilita@laresilienza.it",
-      "date": "20 apr",
-      "status": "ready"
-    },
-    {
-      "id": "19d9968d7bd9bf89",
-      "subject": "Tanti auguri, Biagio!",
-      "to": "ogisbiagio@gmail.com",
-      "date": "17 apr",
+      "date": "23 apr",
       "status": "ready"
     }
   ]
